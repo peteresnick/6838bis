@@ -3,7 +3,7 @@ title: Media Type Specifications and Registration Procedures
 abbrev: Media Type Registration
 docname: draft-mediaman-6838bis-latest
 date: {DATE}
-category: std
+category: bcp
 obsoletes: 6838
 
 ipr: trust200902
@@ -14,7 +14,7 @@ smart_quotes: no
 pi: [toc, tocindent, sortrefs, symrefs, strict, compact, comments, inline]
 
 venue:
-  home: "https://github.com/ietf-wg-mediaman/6838bis/"
+  home: "https://datatracker.ietf.org/wg/mediaman/about/"
   repo: "https://github.com/ietf-wg-mediaman/6838bis/"
 
 github-issue-label: 6838bis
