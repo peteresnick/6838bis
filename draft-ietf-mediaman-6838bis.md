@@ -1,8 +1,8 @@
 ---
 title: Media Type Specifications and Registration Procedures
 abbrev: Media Type Registration
-docname: draft-mediaman-6838bis-latest
-date: {DATE}
+docname: draft-ietf-mediaman-6838bis-latest
+date:
 category: bcp
 obsoletes: 6838
 
