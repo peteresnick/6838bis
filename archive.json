@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-27T01:01:09.456305+00:00",
+  "timestamp": "2024-10-29T00:58:16.554953+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -63,6 +63,54 @@
       "body": "Draft name should be draft-ietf-mediaman-6838bis - this can wait until we have formally adopted the document.\r\n\r\n(Was surprised to see this come out without an -authorname- component)\r\n",
       "createdAt": "2024-10-08T12:58:54Z",
       "updatedAt": "2024-10-08T12:58:55Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOMdBaOc6cEGrx",
+      "title": "Incorporate -toplevel",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/2",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The content of [-toplevel ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-toplevel/) needs to be incorporated in 6838bis.\r\nThe historical portions can probably be left in the published RFC, which 6838bis will obsolete.\r\n",
+      "createdAt": "2024-10-28T12:43:34Z",
+      "updatedAt": "2024-10-28T12:43:34Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 3,
+      "id": "I_kwDOMdBaOc6cEHiS",
+      "title": "Incorporate -suffixes",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/3",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The content of [-suffixes ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/) needs to be incorporated into 6838bis.\r\nThe current text is deemed to represent WG consensus, but wordsmithing is expected.\r\n",
+      "createdAt": "2024-10-28T12:45:05Z",
+      "updatedAt": "2024-10-28T12:45:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 4,
+      "id": "I_kwDOMdBaOc6cEIyw",
+      "title": "Incorporate -standards-tree",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/4",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The content of [-standards-tree](https://datatracker.ietf.org/doc/draft-ietf-mediaman-standards-tree/) is deemed to represent rough consensus in the WG, and should be incorporated in 6838bis.\r\n",
+      "createdAt": "2024-10-28T12:47:15Z",
+      "updatedAt": "2024-10-28T12:47:15Z",
       "closedAt": null,
       "comments": []
     }
