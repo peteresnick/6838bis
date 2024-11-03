@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-10-31T00:57:43.580563+00:00",
+  "timestamp": "2024-11-03T01:01:06.726713+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -113,6 +113,44 @@
       "updatedAt": "2024-10-28T12:47:15Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 5,
+      "id": "I_kwDOMdBaOc6cx12i",
+      "title": "Cleanup for \"additional information\" in media type registration",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/5",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "From Paul Libbrecht:\r\n\r\nJust a reminder: if we update RFC 6838 then it would be cool to:\r\n\r\n*    remove \u201cMacintosh file type code(s)\u201d (which doesn\u2019t exist anymore since MacOSX)\r\n*    add \u201cWindows clipboard flavour\u201d and \u201cmacOS Universal Type Identifier\u201d among the additional information fields.\r\n\r\n",
+      "createdAt": "2023-11-05T19:31:03Z",
+      "updatedAt": "2024-11-02T08:26:17Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "polx",
+          "authorAssociation": "NONE",
+          "body": "@alvestrand : do you have a source of RFC-6838 I could make a suggested patch for?\r\nthanks in advance.\r\npaul",
+          "createdAt": "2024-02-23T08:05:39Z",
+          "updatedAt": "2024-02-23T08:05:39Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "The RFC Editors page at https://www.rfc-editor.org/info/rfc6838 seems to not list one. The RFC predates the universal presence of XML formats.\r\n\r\nThere's an XML format on the I-D page for the last-before-publication I-D: https://datatracker.ietf.org/doc/draft-ietf-appsawg-media-type-regs/14/\r\n\r\nI think either Tony Hansen or John Klensin might have one too.\r\n",
+          "createdAt": "2024-02-23T09:44:05Z",
+          "updatedAt": "2024-02-23T09:44:05Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "NONE",
+          "body": "OK. So here would be a patch and the resulting XML compared to [the last-before-publication I-D](https://datatracker.ietf.org/doc/draft-ietf-appsawg-media-type-regs/14/):\r\n\r\nIn substance:\r\n- replace the suggestion to the MacOS file type by the suggestions for macOS UTIs and Windows clipboard flavor names\r\n- replace the literature entry of MacOS file type (which was 21 y old and whose URL is no longer available, an [archive fetch](https://web.archive.org/web/20080517021842/http://www.info.apple.com/kbnum/n55381) exists still) by an explanation of the macOS UTIs and windows clipboard flavors.\r\n\r\nIs this enough for an inclusion? \r\nShould this be more text-oriented to be included in a new RFC?\r\nOr should the RFC 6838 be made into a newer document, maybe together with the mediaman release?\r\n\r\nthanks in advance.\r\nPaul\r\n\r\n* [add-clipboard-flavor-names.patch](https://github.com/ietf-wg-mediaman/procedures/files/14473152/add-clipboard-flavor-names.patch)\r\n* The resulting XML file is called `.txt` since GitHub considereds XML unsupported (LOL):  [draft-ietf-appsawg-media-type-regs-14.xml.txt](https://github.com/ietf-wg-mediaman/procedures/files/14473159/draft-ietf-appsawg-media-type-regs-14.xml.txt)\r\n",
+          "createdAt": "2024-03-03T13:52:34Z",
+          "updatedAt": "2024-03-03T13:55:29Z"
+        }
+      ]
     }
   ],
   "pulls": []
