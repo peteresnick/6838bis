@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-05T00:55:49.039877+00:00",
+  "timestamp": "2024-11-07T00:56:05.135737+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -55,16 +55,24 @@
       "id": "I_kwDOMdBaOc6ZXu1B",
       "title": "Draft name needs to conform to IETF pattern",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Draft name should be draft-ietf-mediaman-6838bis - this can wait until we have formally adopted the document.\r\n\r\n(Was surprised to see this come out without an -authorname- component)\r\n",
       "createdAt": "2024-10-08T12:58:54Z",
-      "updatedAt": "2024-10-08T12:58:55Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2024-11-05T16:40:09Z",
+      "closedAt": "2024-11-05T16:40:09Z",
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "Fixed by publishing of draft-ietf-mediaman-6838bis\r\n",
+          "createdAt": "2024-11-05T16:40:09Z",
+          "updatedAt": "2024-11-05T16:40:09Z"
+        }
+      ]
     },
     {
       "number": 2,
@@ -151,6 +159,38 @@
           "updatedAt": "2024-03-03T13:55:29Z"
         }
       ]
+    },
+    {
+      "number": 6,
+      "id": "I_kwDOMdBaOc6dIItg",
+      "title": "Appeal procedure could be more crisp",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/6",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The appeal procedure is borrowed from 2026. It may not be the right procedure.\r\n",
+      "createdAt": "2024-11-05T18:14:48Z",
+      "updatedAt": "2024-11-05T18:14:48Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 7,
+      "id": "I_kwDOMdBaOc6dKMYk",
+      "title": "Grandfathering requirements should apply to all unregistered media-types",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/7",
+      "state": "OPEN",
+      "author": "CxRes",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
+      "createdAt": "2024-11-05T23:20:32Z",
+      "updatedAt": "2024-11-05T23:20:32Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": []
