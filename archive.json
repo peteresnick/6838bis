@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-10T00:59:37.409217+00:00",
+  "timestamp": "2024-11-12T00:55:25.958496+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -102,9 +102,17 @@
       "labels": [],
       "body": "The content of [-suffixes ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/) needs to be incorporated into 6838bis.\r\nThe current text is deemed to represent WG consensus, but wordsmithing is expected.\r\n",
       "createdAt": "2024-10-28T12:45:05Z",
-      "updatedAt": "2024-10-28T12:45:05Z",
+      "updatedAt": "2024-11-11T21:34:47Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "As mentioned briefly at the 121 meeting, there are portions of the suffixes draft that should not be incorporated. \r\n\r\nThe [proceedings](https://datatracker.ietf.org/meeting/121/proceedings) still say \"No minutes\" but the session recordings are available:\r\nhttps://www.youtube.com/watch?v=aEgdzv7EsPk\r\nhttps://meetecho-player.ietf.org/playout/?session=IETF121-MEDIAMAN-20241105-1800\r\n",
+          "createdAt": "2024-11-11T21:34:46Z",
+          "updatedAt": "2024-11-11T21:34:46Z"
+        }
+      ]
     },
     {
       "number": 4,
@@ -172,9 +180,17 @@
       "labels": [],
       "body": "The appeal procedure is borrowed from 2026. It may not be the right procedure.\r\n",
       "createdAt": "2024-11-05T18:14:48Z",
-      "updatedAt": "2024-11-05T18:14:48Z",
+      "updatedAt": "2024-11-11T21:25:22Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "Murray mentioned this on list https://mailarchive.ietf.org/arch/msg/media-types/XXcfDsT_TSQTZ21pV1oNeLJ5YJw/ and I concur with the sentiment https://mailarchive.ietf.org/arch/msg/media-types/dxJvDOM3IADlrSXhc8sVqGVQiS8/ ",
+          "createdAt": "2024-11-11T21:25:21Z",
+          "updatedAt": "2024-11-11T21:25:21Z"
+        }
+      ]
     },
     {
       "number": 7,
@@ -189,6 +205,22 @@
       "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
       "createdAt": "2024-11-05T23:20:32Z",
       "updatedAt": "2024-11-05T23:20:32Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 8,
+      "id": "I_kwDOMdBaOc6d-tmE",
+      "title": "higher bar for IETF registrations than for external ones? ",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/8",
+      "state": "OPEN",
+      "author": "bc-pi",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "please see the thread https://mailarchive.ietf.org/arch/msg/media-types/Wlx2B1k_du8Ths2ojxL4jh7V7JM/ ",
+      "createdAt": "2024-11-11T21:37:49Z",
+      "updatedAt": "2024-11-11T21:37:49Z",
       "closedAt": null,
       "comments": []
     }
