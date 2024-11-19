@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-17T01:03:01.516495+00:00",
+  "timestamp": "2024-11-19T00:59:43.412567+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -223,6 +223,37 @@
       "updatedAt": "2024-11-11T21:37:49Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 9,
+      "id": "I_kwDOMdBaOc6fIvUG",
+      "title": "can \"Person\" be an IETF WG / mailing list?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/9",
+      "state": "OPEN",
+      "author": "rohanmahy",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
+      "createdAt": "2024-11-18T20:43:54Z",
+      "updatedAt": "2024-11-18T22:43:37Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "Personally, I'm skeptical of MLs as change controllers.\r\nI believe the IESG (or successor bodies) will live longer than most WGs.\r\nMailing lists are frequently closed when the WG is gone and the maintainer gets tired of dealing with the spam.\r\nAlso, mailing lists have no built-in decision procedure - how can you tell if a mailing list with 100+ mostly silent members agree on something?",
+          "createdAt": "2024-11-18T22:26:05Z",
+          "updatedAt": "2024-11-18T22:26:05Z"
+        },
+        {
+          "author": "martinthomson",
+          "authorAssociation": "NONE",
+          "body": "This isn't about change controllers.  There are three relevant fields in the template:\r\n\r\n*   Person and email address to contact for further information:\r\n*   Author:  \r\n*   Change controller: \r\n\r\nRecent registrations that I've created use \"IETF\" for the last and the document authors for the first two.  Rohan is interested in whether the WG mailing list is a better place to point people for the first (I think).  I'd also ask about the second for WG products.",
+          "createdAt": "2024-11-18T22:43:36Z",
+          "updatedAt": "2024-11-18T22:43:36Z"
+        }
+      ]
     }
   ],
   "pulls": []
