@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-19T00:59:43.412567+00:00",
+  "timestamp": "2024-11-21T00:59:05.836441+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -227,7 +227,7 @@
     {
       "number": 9,
       "id": "I_kwDOMdBaOc6fIvUG",
-      "title": "can \"Person\" be an IETF WG / mailing list?",
+      "title": "can \"Person for further info\" be an IETF WG / mailing list?",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/9",
       "state": "OPEN",
       "author": "rohanmahy",
@@ -236,7 +236,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2024-11-18T22:43:37Z",
+      "updatedAt": "2024-11-19T09:46:01Z",
       "closedAt": null,
       "comments": [
         {
@@ -252,6 +252,44 @@
           "body": "This isn't about change controllers.  There are three relevant fields in the template:\r\n\r\n*   Person and email address to contact for further information:\r\n*   Author:  \r\n*   Change controller: \r\n\r\nRecent registrations that I've created use \"IETF\" for the last and the document authors for the first two.  Rohan is interested in whether the WG mailing list is a better place to point people for the first (I think).  I'd also ask about the second for WG products.",
           "createdAt": "2024-11-18T22:43:36Z",
           "updatedAt": "2024-11-18T22:43:36Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "body": "Yes, as Martin said I am referring to the first \"Person & email address to\r\ncontact for further information:\"\r\nthanks,\r\n-rohan\r\n\r\n\r\nOn Mon, Nov 18, 2024, 14:43 Martin Thomson ***@***.***> wrote:\r\n\r\n> This isn't about change controllers. There are three relevant fields in\r\n> the template:\r\n>\r\n>    - Person and email address to contact for further information:\r\n>    - Author:\r\n>    - Change controller:\r\n>\r\n> Recent registrations that I've created use \"IETF\" for the last and the\r\n> document authors for the first two. Rohan is interested in whether the WG\r\n> mailing list is a better place to point people for the first (I think). I'd\r\n> also ask about the second for WG products.\r\n>\r\n> \u2014\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/ietf-wg-mediaman/6838bis/issues/9#issuecomment-2484287667>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/AADSQPSLILTZSPKQPVI4TET2BJUS3AVCNFSM6AAAAABSAREKHCVHI2DSMVQWIX3LMV43OSLTON2WKQ3PNVWWK3TUHMZDIOBUGI4DONRWG4>\r\n> .\r\n> You are receiving this because you authored the thread.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+          "createdAt": "2024-11-19T02:13:54Z",
+          "updatedAt": "2024-11-19T02:13:54Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "OK, changed the title. In that case, I think an IETF (or other org's) mailing list makes sense; it would be the change controller's responsibility to update the field when a mailing list shuts down.\r\n",
+          "createdAt": "2024-11-19T09:45:59Z",
+          "updatedAt": "2024-11-19T09:45:59Z"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOMdBaOc6feNsv",
+      "title": "What's the correct appeals procedure for DE decisions?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/10",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
+      "createdAt": "2024-11-20T11:12:17Z",
+      "updatedAt": "2024-11-20T11:16:50Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "Notes:\r\n- So far we have no appeals (AFAIK), so we don't know if the process works.\r\n- I believe the choice to point to 6.5.4 directly was deliberately done as \"we are reusing the appeals process for a different purpose than what it was originally written for\"\r\n- 6.5.4 doesn't specify the appeals chain; I believe the idea was that the response to an appeal under 6.5.4 would be an IESG action, which could then be appealed using the appeals chain in 6.5.2.\r\n",
+          "createdAt": "2024-11-20T11:16:49Z",
+          "updatedAt": "2024-11-20T11:16:49Z"
         }
       ]
     }
