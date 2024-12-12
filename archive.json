@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-12-10T01:03:20.780602+00:00",
+  "timestamp": "2024-12-12T01:01:58.860050+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -236,7 +236,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2024-11-19T09:46:01Z",
+      "updatedAt": "2024-12-10T23:09:08Z",
       "closedAt": null,
       "comments": [
         {
@@ -266,6 +266,13 @@
           "body": "OK, changed the title. In that case, I think an IETF (or other org's) mailing list makes sense; it would be the change controller's responsibility to update the field when a mailing list shuts down.\r\n",
           "createdAt": "2024-11-19T09:45:59Z",
           "updatedAt": "2024-11-19T09:45:59Z"
+        },
+        {
+          "author": "rohanmahy",
+          "authorAssociation": "NONE",
+          "body": "@mnot as the author do you want to weigh in on this? If you are amenable, I'll send you a short PR. Maybe instead of \"Person and email address to contact for further information\", it would be clearer: \"Contact name and email address for further information\". Then the text could explain that Contact name is an IETF/IRTF mailing list if the work is a product of the IETF, or the name/email of a human person otherwise?\r\n\r\nAnd you might as well give your views about the \"Author\" field as well.",
+          "createdAt": "2024-12-10T23:09:07Z",
+          "updatedAt": "2024-12-10T23:09:07Z"
         }
       ]
     },
