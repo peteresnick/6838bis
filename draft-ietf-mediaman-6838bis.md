@@ -23,7 +23,7 @@ author:
  -
     ins: M. Nottingham
     name: Mark Nottingham
-    organization:
+    organization: Cloudflare
     postal:
       - Prahran
     country: Australia
