@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-21T00:55:27.348402+00:00",
+  "timestamp": "2025-01-23T00:55:48.748240+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -236,7 +236,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2024-12-10T23:09:08Z",
+      "updatedAt": "2025-01-21T02:50:11Z",
       "closedAt": null,
       "comments": [
         {
@@ -273,6 +273,13 @@
           "body": "@mnot as the author do you want to weigh in on this? If you are amenable, I'll send you a short PR. Maybe instead of \"Person and email address to contact for further information\", it would be clearer: \"Contact name and email address for further information\". Then the text could explain that Contact name is an IETF/IRTF mailing list if the work is a product of the IETF, or the name/email of a human person otherwise?\r\n\r\nAnd you might as well give your views about the \"Author\" field as well.",
           "createdAt": "2024-12-10T23:09:07Z",
           "updatedAt": "2024-12-10T23:09:07Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think it's reasonable, but keeping it up to date requires action, and it's often not clear who the action holder is. Somewhat related, I'd like to do some work on clarifying what the responsibilities and powers of a designated expert are.",
+          "createdAt": "2025-01-21T02:50:10Z",
+          "updatedAt": "2025-01-21T02:50:10Z"
         }
       ]
     },
@@ -299,7 +306,76 @@
           "updatedAt": "2024-11-20T11:16:49Z"
         }
       ]
+    },
+    {
+      "number": 13,
+      "id": "I_kwDOMdBaOc6m7VQo",
+      "title": "Acknowledgements",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/13",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Including authors of incorporated drafts",
+      "createdAt": "2025-01-21T02:45:17Z",
+      "updatedAt": "2025-01-21T02:45:17Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 11,
+      "id": "PR_kwDOMdBaOc6IbLhs",
+      "title": "Standards tree",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/11",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-01-21T02:26:32Z",
+      "updatedAt": "2025-01-21T02:28:26Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "standards-tree",
+      "headRefOid": "6c6bfe3d59817757419d219dd702da1eb9f629d8",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 12,
+      "id": "PR_kwDOMdBaOc6IbOoO",
+      "title": "Add toplevel",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/12",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "- omitted IANA instructions as it appears they'll be published in a separate RFC\r\n- omitted history and introduction; should discuss whether they are necessary and how to incorporate if so",
+      "createdAt": "2025-01-21T02:43:22Z",
+      "updatedAt": "2025-01-21T02:43:22Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "toplevel",
+      "headRefOid": "978f08acdc44c770b66133e783cd3fff56fbd769",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
