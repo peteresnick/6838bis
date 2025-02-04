@@ -610,8 +610,7 @@ Table of Contents
 
    *  Top-level types can help humans with understanding and debugging.
       Therefore, evaluating how a new top-level type helps humans
-      understand types may be crucial.  But as often with humans,
-      opinions may widely differ.
+      understand types may be crucial.
 
    *  Common restrictions may apply to all subtypes of a top-level type.
       Examples are the restriction to CRLF line endings for subtypes of
