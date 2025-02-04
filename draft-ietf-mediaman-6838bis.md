@@ -255,7 +255,7 @@ The following is the list of required criteria for the definition of a new top-l
 
 * Desirability for common parameters: The fact that a group of (potential) types have (mostly) common parameters may be an indication that these belong under a common new top-level type.
 
-* Top-level types can help humans with understanding and debugging. Therefore, evaluating how a new top-level type helps humans understand types may be crucial. But as often with humans, opinions may widely differ.
+* Top-level types can help humans with understanding and debugging. Therefore, evaluating how a new top-level type helps humans understand types may be crucial.
 
 * Common restrictions may apply to all subtypes of a top-level type. Examples are the restriction to CRLF line endings for subtypes of type 'text' (at least in the context of electronic mail), or on subtypes of type 'multipart'.
 
