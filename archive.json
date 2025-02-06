@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-04T00:56:05.342118+00:00",
+  "timestamp": "2025-02-06T00:56:57.683982+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -322,6 +322,38 @@
       "updatedAt": "2025-01-21T02:45:17Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 15,
+      "id": "I_kwDOMdBaOc6oxL9g",
+      "title": "You might consider adding some override here, incase the existing change controller is not responsive.",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/15",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "              You might consider adding some override here, incase the existing change controller is not responsive.\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r1941375260_\r\n            ",
+      "createdAt": "2025-02-04T23:01:57Z",
+      "updatedAt": "2025-02-04T23:01:57Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 16,
+      "id": "I_kwDOMdBaOc6oxMJd",
+      "title": "If the intention is to discourage oid/nnnnn, this text could be clearer.",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/16",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "              If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/12#discussion_r1941490850_\r\n            ",
+      "createdAt": "2025-02-04T23:02:33Z",
+      "updatedAt": "2025-02-04T23:02:33Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -337,7 +369,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-01-21T02:26:32Z",
-      "updatedAt": "2025-01-21T02:28:26Z",
+      "updatedAt": "2025-02-04T16:21:13Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
@@ -349,7 +381,21 @@
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6alCCk",
+          "commit": {
+            "abbreviatedOid": "6c6bfe3"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-04T16:21:13Z",
+          "updatedAt": "2025-02-04T16:21:13Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 12,
@@ -363,19 +409,166 @@
       "labels": [],
       "body": "- omitted IANA instructions as it appears they'll be published in a separate RFC\r\n- omitted history and introduction; should discuss whether they are necessary and how to incorporate if so",
       "createdAt": "2025-01-21T02:43:22Z",
-      "updatedAt": "2025-01-21T02:43:22Z",
+      "updatedAt": "2025-02-04T23:03:14Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "toplevel",
-      "headRefOid": "978f08acdc44c770b66133e783cd3fff56fbd769",
+      "headRefOid": "88f567546d48091ab293590fddc8fa12c79d896e",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6ak-VG",
+          "commit": {
+            "abbreviatedOid": "978f08a"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-04T16:15:25Z",
+          "updatedAt": "2025-02-04T16:15:26Z",
+          "comments": [
+            {
+              "originalPosition": 37,
+              "body": "```suggestion\r\n* Top-level types can help humans with understanding and debugging. Therefore, evaluating how a new top-level type helps humans understand types may be crucial.\r\n```",
+              "createdAt": "2025-02-04T16:15:25Z",
+              "updatedAt": "2025-02-04T16:15:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6ak_w9",
+          "commit": {
+            "abbreviatedOid": "978f08a"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-04T16:17:42Z",
+          "updatedAt": "2025-02-04T16:17:42Z",
+          "comments": [
+            {
+              "originalPosition": 47,
+              "body": "If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....",
+              "createdAt": "2025-02-04T16:17:42Z",
+              "updatedAt": "2025-02-04T16:17:42Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6alAYD",
+          "commit": {
+            "abbreviatedOid": "978f08a"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-04T16:18:36Z",
+          "updatedAt": "2025-02-04T16:18:37Z",
+          "comments": [
+            {
+              "originalPosition": 49,
+              "body": "```suggestion\r\n* A top-level type MUST NOT be defined for the mapping of other protocol elements to media types. For example, while there may be some merit to a mapping from media types to URIs, e.g. in the context of RDF (Resource Description Framework), there is very limited merit in a reverse mapping, and even less merit in creating a top-level type for such a mapping. The same applies to other protocol elements such as file extensions or URI schemes. The recommended solution in case a mapping is needed is to choose a single type/subtype and put the additional information in an appropriately named parameter. As an example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.\r\n```",
+              "createdAt": "2025-02-04T16:18:36Z",
+              "updatedAt": "2025-02-04T16:18:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6alAx8",
+          "commit": {
+            "abbreviatedOid": "978f08a"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-04T16:19:13Z",
+          "updatedAt": "2025-02-04T16:19:13Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "id": "PR_kwDOMdBaOc6J7NIJ",
+      "title": "Rough in structured suffixes",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/14",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "from draft-ietf-mediaman-suffixes-08",
+      "createdAt": "2025-02-04T01:42:17Z",
+      "updatedAt": "2025-02-04T15:44:03Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "suffixes",
+      "headRefOid": "60d80278e9ee982aebf8687d2b747a88a8c62c51",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6aeHIn",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "msporny",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "LGTM as the Editor of the structured suffixes WG draft, thanks for merging in the structured suffixes text into 6838bis, @mnot.\r\n\r\nI presume this ends my work on structured suffixes and the hand off to you is complete. Let me know if that's not true.",
+          "createdAt": "2025-02-04T02:38:33Z",
+          "updatedAt": "2025-02-04T02:38:48Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6akRKf",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-04T15:16:32Z",
+          "updatedAt": "2025-02-04T15:16:32Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "You might consider adding some override here, incase the existing change controller is not responsive.",
+              "createdAt": "2025-02-04T15:16:32Z",
+              "updatedAt": "2025-02-04T15:16:32Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6aklKo",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "OR13",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-04T15:44:03Z",
+          "updatedAt": "2025-02-04T15:44:03Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
