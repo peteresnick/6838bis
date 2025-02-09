@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-06T00:56:57.683982+00:00",
+  "timestamp": "2025-02-09T00:59:37.296257+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -509,7 +509,7 @@
       "labels": [],
       "body": "from draft-ietf-mediaman-suffixes-08",
       "createdAt": "2025-02-04T01:42:17Z",
-      "updatedAt": "2025-02-04T15:44:03Z",
+      "updatedAt": "2025-02-06T22:41:02Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
@@ -567,6 +567,26 @@
           "createdAt": "2025-02-04T15:44:03Z",
           "updatedAt": "2025-02-04T15:44:03Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6a-8mK",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-02-06T22:41:01Z",
+          "updatedAt": "2025-02-06T22:41:02Z",
+          "comments": [
+            {
+              "originalPosition": 24,
+              "body": "Since the above language restricts structured suffixes to a single '+', perhaps this line can be removed entirely?\r\n\r\n```suggestion\r\n```",
+              "createdAt": "2025-02-06T22:41:02Z",
+              "updatedAt": "2025-02-06T22:41:02Z"
+            }
+          ]
         }
       ]
     }
