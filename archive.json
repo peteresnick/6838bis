@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-18T00:56:39.321599+00:00",
+  "timestamp": "2025-02-20T00:57:25.944751+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -369,7 +369,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2025-01-21T02:26:32Z",
-      "updatedAt": "2025-02-04T16:21:13Z",
+      "updatedAt": "2025-02-18T02:25:57Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
@@ -394,6 +394,19 @@
           "createdAt": "2025-02-04T16:21:13Z",
           "updatedAt": "2025-02-04T16:21:13Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6cTPbm",
+          "commit": {
+            "abbreviatedOid": "6c6bfe3"
+          },
+          "author": "aj-stein",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-18T02:25:57Z",
+          "updatedAt": "2025-02-18T02:25:57Z",
+          "comments": []
         }
       ]
     },
@@ -409,7 +422,7 @@
       "labels": [],
       "body": "- omitted IANA instructions as it appears they'll be published in a separate RFC\r\n- omitted history and introduction; should discuss whether they are necessary and how to incorporate if so",
       "createdAt": "2025-01-21T02:43:22Z",
-      "updatedAt": "2025-02-04T23:03:14Z",
+      "updatedAt": "2025-02-18T02:24:33Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
@@ -493,6 +506,19 @@
           "body": "",
           "createdAt": "2025-02-04T16:19:13Z",
           "updatedAt": "2025-02-04T16:19:13Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6cTPJm",
+          "commit": {
+            "abbreviatedOid": "88f5675"
+          },
+          "author": "aj-stein",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-18T02:24:33Z",
+          "updatedAt": "2025-02-18T02:24:33Z",
           "comments": []
         }
       ]
