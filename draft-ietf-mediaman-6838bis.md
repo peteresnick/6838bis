@@ -36,14 +36,23 @@ author:
     email: resnick@episteme.net
 
 informative:
-  MacOSFileTypes:
-    title: "Mac OS: File Type and Creator Codes, and File Formats"
-    target: http://www.info.apple.com/kbnum/n55381
+  MacOSUTIs:
+    title: "Framework: Uniform Type Identifiers"
+    target: https://developer.apple.com/documentation/uniformtypeidentifiers
     author:
      -
        org: Apple Computer, Inc.
-    refcontent: Apple Knowledge Base Article 55381
-    date: June 1993
+    refcontent: Apple Developer Documentation: Uniform Type Identifiers
+    date: March 2024
+
+  windowsClipboardNames:
+    title: "Clipboard Formats"
+    target: https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats
+    author:
+     -
+       org: MicroSoft Inc.
+    refcontent: Apple Developer Documentation: Uniform Type Identifiers
+    date: August 2020
 
 --- abstract
 
@@ -363,7 +372,9 @@ Various sorts of optional information SHOULD be included in the specification of
 
 * File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.
 
-* Mac OS File Type code(s) (4 octets) used to label files containing a given media type. Some discussion of Macintosh file type codes and their purpose can be found in {{MacOSFileTypes}}.
+* macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see {{MacOSUTIs}} for definitions and syntax).
+
+* windows cipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on MicroSoft Windows and related platforms (see {{windowsClipboardNames}} for definitions and syntax).
 
 In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.
 
