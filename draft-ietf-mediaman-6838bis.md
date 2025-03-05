@@ -42,7 +42,6 @@ informative:
     author:
      -
        org: Apple Computer, Inc.
-    refcontent: Apple Developer Documentation: Uniform Type Identifiers
     date: March 2024
 
   windowsClipboardNames:
@@ -51,7 +50,6 @@ informative:
     author:
      -
        org: MicroSoft Inc.
-    refcontent: Apple Developer Documentation: Uniform Type Identifiers
     date: August 2020
 
 --- abstract
