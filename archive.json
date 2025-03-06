@@ -1,52 +1,12 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-04T00:59:28.799546+00:00",
+  "timestamp": "2025-03-06T00:59:25.327875+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
-      "name": "bug",
-      "description": "Something isn't working",
-      "color": "d73a4a"
-    },
-    {
-      "name": "documentation",
-      "description": "Improvements or additions to documentation",
-      "color": "0075ca"
-    },
-    {
-      "name": "duplicate",
-      "description": "This issue or pull request already exists",
-      "color": "cfd3d7"
-    },
-    {
-      "name": "enhancement",
-      "description": "New feature or request",
-      "color": "a2eeef"
-    },
-    {
-      "name": "good first issue",
-      "description": "Good for newcomers",
-      "color": "7057ff"
-    },
-    {
-      "name": "help wanted",
-      "description": "Extra attention is needed",
-      "color": "008672"
-    },
-    {
-      "name": "invalid",
-      "description": "This doesn't seem right",
-      "color": "e4e669"
-    },
-    {
-      "name": "question",
-      "description": "Further information is requested",
-      "color": "d876e3"
-    },
-    {
-      "name": "wontfix",
-      "description": "This will not be worked on",
-      "color": "ffffff"
+      "name": "editorial",
+      "description": "",
+      "color": "07A2C9"
     }
   ],
   "issues": [
@@ -323,10 +283,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "editorial"
+      ],
       "body": "Including authors of incorporated drafts",
       "createdAt": "2025-01-21T02:45:17Z",
-      "updatedAt": "2025-01-21T02:45:17Z",
+      "updatedAt": "2025-03-04T06:36:03Z",
       "closedAt": null,
       "comments": []
     },
@@ -635,18 +597,26 @@
       "labels": [],
       "body": "Following https://github.com/ietf-wg-mediaman/6838bis/issues/5 this commit changes the additional information to:\r\n- remove the Macintosh 4-byte identifiers (not in use since decades) and\r\n- replaces them by the optional inclusion of clipboard flavour names",
       "createdAt": "2025-03-02T21:11:50Z",
-      "updatedAt": "2025-03-02T21:11:50Z",
+      "updatedAt": "2025-03-05T15:11:52Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
       "headRepository": "polx/6838bis",
       "headRefName": "patch-1",
-      "headRefOid": "1769a8b387518b2d01b9649ba43b2e4d3011de08",
+      "headRefOid": "e6b5b9314cdfb2cb804b5141d9ca1de104ef5740",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Create a corresponding issue, please.\r\n\r\nnever mind...",
+          "createdAt": "2025-03-04T06:33:33Z",
+          "updatedAt": "2025-03-04T06:36:40Z"
+        }
+      ],
       "reviews": []
     }
   ]
