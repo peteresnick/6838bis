@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-06T00:59:25.327875+00:00",
+  "timestamp": "2025-03-09T00:52:03.147008+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -321,6 +321,22 @@
       "body": "              If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/12#discussion_r1941490850_\r\n            ",
       "createdAt": "2025-02-04T23:02:33Z",
       "updatedAt": "2025-02-04T23:02:33Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 18,
+      "id": "I_kwDOMdBaOc6s4U9p",
+      "title": "Update Media Type registry to clearer indicate which media types do have RTP payload formats",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/18",
+      "state": "OPEN",
+      "author": "gloinul",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
+      "createdAt": "2025-03-06T13:39:56Z",
+      "updatedAt": "2025-03-06T13:39:56Z",
       "closedAt": null,
       "comments": []
     }
