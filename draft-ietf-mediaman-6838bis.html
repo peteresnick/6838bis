@@ -1853,7 +1853,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-4.12-2.2.1">File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.<a href="#section-4.12-2.2.1" class="pilcrow">¶</a></p>
 </li>
           <li class="normal" id="section-4.12-2.3">
-            <p id="section-4.12-2.3.1">Mac OS File Type code(s) (4 octets) used to label files containing a given media type. Some discussion of Macintosh file type codes and their purpose can be found in <span>[<a href="#MacOSFileTypes" class="cite xref">MacOSFileTypes</a>]</span>.<a href="#section-4.12-2.3.1" class="pilcrow">¶</a></p>
+            <p id="section-4.12-2.3.1">macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see <span>[<a href="#MacOSUTIs" class="cite xref">MacOSUTIs</a>]</span> for definitions and syntax).<a href="#section-4.12-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          <li class="normal" id="section-4.12-2.4">
+            <p id="section-4.12-2.4.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-4.12-2.4.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <p id="section-4.12-3">In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.<a href="#section-4.12-3" class="pilcrow">¶</a></p>
@@ -2290,9 +2293,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <dd>
 <span class="refAuthor">Muthusamy, Y. K.</span> and <span class="refAuthor">C. Ullrich</span>, <span class="refTitle">"The 'haptics' Top-level Media Type"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-mediaman-haptics-05</span>, <time datetime="2023-07-27" class="refDate">27 July 2023</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-mediaman-haptics-05">https://datatracker.ietf.org/doc/html/draft-ietf-mediaman-haptics-05</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="MacOSFileTypes">[MacOSFileTypes]</dt>
+<dt id="MacOSUTIs">[MacOSUTIs]</dt>
         <dd>
-<span class="refAuthor">Apple Computer, Inc.</span>, <span class="refTitle">"Mac OS: File Type and Creator Codes, and File Formats"</span>, <span class="refContent">Apple Knowledge Base Article 55381</span>, <time datetime="1993-06" class="refDate">June 1993</time>, <span>&lt;<a href="http://www.info.apple.com/kbnum/n55381">http://www.info.apple.com/kbnum/n55381</a>&gt;</span>. </dd>
+<span class="refAuthor">Apple Computer, Inc.</span>, <span class="refTitle">"Framework: Uniform Type Identifiers"</span>, <time datetime="2024-03" class="refDate">March 2024</time>, <span>&lt;<a href="https://developer.apple.com/documentation/uniformtypeidentifiers">https://developer.apple.com/documentation/uniformtypeidentifiers</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC2026">[RFC2026]</dt>
         <dd>
@@ -2323,8 +2326,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <span class="refAuthor">Reschke, J.</span>, <span class="refTitle">"Character Set and Language Encoding for Hypertext Transfer Protocol (HTTP) Header Field Parameters"</span>, <span class="seriesInfo">RFC 5987</span>, <span class="seriesInfo">DOI 10.17487/RFC5987</span>, <time datetime="2010-08" class="refDate">August 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5987">https://www.rfc-editor.org/rfc/rfc5987</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8081">[RFC8081]</dt>
-      <dd>
+        <dd>
 <span class="refAuthor">Lilley, C.</span>, <span class="refTitle">"The "font" Top-Level Media Type"</span>, <span class="seriesInfo">RFC 8081</span>, <span class="seriesInfo">DOI 10.17487/RFC8081</span>, <time datetime="2017-02" class="refDate">February 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8081">https://www.rfc-editor.org/rfc/rfc8081</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="windowsClipboardNames">[windowsClipboardNames]</dt>
+      <dd>
+<span class="refAuthor">MicroSoft Inc.</span>, <span class="refTitle">"Clipboard Formats"</span>, <time datetime="2020-08" class="refDate">August 2020</time>, <span>&lt;<a href="https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats">https://learn.microsoft.com/en-us/windows/win32/dataxchg/clipboard-formats</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 </dl>
 </section>
