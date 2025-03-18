@@ -572,8 +572,135 @@ Table of Contents
    defined top-level type names.  Such cases are expected to be quite
    rare.  However, if such a case does arise, a new type name can be
    defined to accommodate it.  Definition of a new top-level type name
-   MUST be done via a Standards Track RFC; no other mechanism can be
-   used to define additional type names.
+   MUST be done via a Standards Track RFC, taking into account the
+   criteria and guidelines given below; no other mechanism can be used
+   to define additional type names.
+
+4.2.7.1.  Required Criteria
+
+   The following is the list of required criteria for the definition of
+   a new top-level type.  Motivations for the requirements are also
+   included.
+
+   *  Every new top-level type MUST be defined in a Standards Track RFC
+      (see Section 4.9 of [RFC8126]).  This will make sure there is
+      sufficient community interest, review, and consensus appropriate
+      for a new top-level type.
+
+   *  The IANA Considerations section of an RFC defining a new top-level
+      type MUST request that IANA add this new top-level type to the
+      registry of top-level types.
+
+   *  The criteria for what types do and do not fall under the new top-
+      level type MUST be defined clearly.  Clear criteria are expected
+      to help expert reviewers to evaluate whether a subtype belongs
+      below the new type or not, and whether the registration template
+      for a subtype contains the appropriate information.  If the
+      criteria cannot be defined clearly, this is a strong indication
+      that whatever is being talked about is not suitable as a top-level
+      type.
+
+   *  Any RFC defining a new top-level type MUST clearly document the
+      security considerations applying to all or a significant subset of
+      subtypes.
+
+   *  At the minimum, one subtype MUST be described.  A top-level type
+      without any subtype serves no purpose.  Please note that the
+      'example' top-level describes a subtype 'example'.
+
+4.2.7.2.  Additional Considerations
+
+   *  Existing wide use of an unregistered top-level type may be an
+      indication of a need, and therefore an argument for formally
+      defining this new top-level type.
+
+   *  On the other hand, the use of unregistered top-level types is
+      highly discouraged.
+
+   *  Use of an IETF Working Group to define a new top-level type is not
+      needed, but may be advisable in some cases.  There are examples of
+      new top-level type definitions without a Working Group
+      ([RFC2077]), with a short, dedicated WG ([RFC8081]), and with a
+      Working Group that included other related work
+      ([I-D.ietf-mediaman-haptics]).
+
+   *  The document defining the new top-level type should include
+      initial registrations of actual subtypes.  The exception may be a
+      top-level type similar to 'example'.  This will help to show the
+      need for the new top-level type, will allow checking the
+      appropriateness of the definition of the new top-level type, will
+      avoid separate work for registering an initial slate of subtypes,
+      and will provide examples of what is considered a valid subtype
+      for future subtype registrations.
+
+   *  The registration and actual use of a certain number of subtypes
+      under the new top-level type should be expected.  The existence of
+      a single subtype should not be enough; it should be clear that new
+      similar types may appear in the future.  Otherwise, the creation
+      of a new top-level type is most probably not justified.
+
+   *  The proposers of the new top-level type and the wider community
+      should be willing to commit to emitting and consuming the new top-
+      level type in environments that they control.
+
+   *  Desirability for common parameters: The fact that a group of
+      (potential) types have (mostly) common parameters may be an
+      indication that these belong under a common new top-level type.
+
+   *  Top-level types can help humans with understanding and debugging.
+      Therefore, evaluating how a new top-level type helps humans
+      understand types may be crucial.
+
+   *  Common restrictions may apply to all subtypes of a top-level type.
+      Examples are the restriction to CRLF line endings for subtypes of
+      type 'text' (at least in the context of electronic mail), or on
+      subtypes of type 'multipart'.
+
+   *  Top-level types are also used frequently in dispatching code.  For
+      example "multipart/*" is frequently handled as multipart/mixed,
+      without understanding of a specific subtype.  The top-level types
+      'image', 'audio', and 'video' are also often handled generically.
+      Documents with these top-level types can be passed to applications
+      handling a wide variety of image, audio, or video formats.  HTML
+      generating applications can select different HTML elements (e.g.
+      <img> or <audio>) for including data of different top-level types.
+      Applications can select different icons to represent unknown types
+      in different top-level types.
+
+4.2.7.3.  Negative Criteria
+
+   This subsection lists negative criteria for top-level types,
+   identifying criteria that are explicitly not reasons for a top-level
+   type registration.
+
+   *  A top-level type is not a pointer into another registration space
+      that offers duplicate registrations for existing media types.
+      Example: a top-level type of 'oid', leading to types of the form
+      oid/nnnnn, where nnn is an OID (Object Identifier) designating a
+      specific media format,
+
+   *  A top-level type MUST NOT be defined for the mapping of other
+      protocol elements to media types.  For example, while there may be
+      some merit to a mapping from media types to URIs, e.g. in the
+      context of RDF (Resource Description Framework), there is very
+      limited merit in a reverse mapping, and even less merit in
+      creating a top-level type for such a mapping.  The same applies to
+      other protocol elements such as file extensions or URI schemes.
+      The recommended solution in case a mapping is needed is to choose
+      a single type/subtype and put the additional information in an
+      appropriately named parameter.  As an example, information on a
+      file extension '.dcat' can be encoded as 'application/octet-
+      string; filename=foo.dcat'.
+
+   *  Media types are not a general type system.  A top-level type MUST
+      NOT be defined if its main or only purpose is to map other type
+      systems, e.g. in programming languages or ontologies.
+
+   *  A new top-level type SHOULD NOT generate aliases for existing
+      widely used types or subtypes.
+
+   *  Top-level types with an "X-" prefix cannot be registered, and
+      SHOULD NOT be used.  This is in line with [RFC6648].
 
 4.2.8.  Structured Syntax Name Suffixes
 
@@ -1353,6 +1480,12 @@ Table of Contents
               Email Headers", RFC 6532, DOI 10.17487/RFC6532, February
               2012, <https://www.rfc-editor.org/rfc/rfc6532>.
 
+   [RFC6648]  Saint-Andre, P., Crocker, D., and M. Nottingham,
+              "Deprecating the "X-" Prefix and Similar Constructs in
+              Application Protocols", BCP 178, RFC 6648,
+              DOI 10.17487/RFC6648, June 2012,
+              <https://www.rfc-editor.org/rfc/rfc6648>.
+
    [RFC6657]  Melnikov, A. and J. Reschke, "Update to MIME regarding
               "charset" Parameter Handling in Textual Media Types",
               RFC 6657, DOI 10.17487/RFC6657, July 2012,
@@ -1363,7 +1496,19 @@ Table of Contents
               DOI 10.17487/RFC6839, January 2013,
               <https://www.rfc-editor.org/rfc/rfc6839>.
 
+   [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
+              Writing an IANA Considerations Section in RFCs", BCP 26,
+              RFC 8126, DOI 10.17487/RFC8126, June 2017,
+              <https://www.rfc-editor.org/rfc/rfc8126>.
+
 10.2.  Informative References
+
+   [I-D.ietf-mediaman-haptics]
+              Muthusamy, Y. K. and C. Ullrich, "The 'haptics' Top-level
+              Media Type", Work in Progress, Internet-Draft, draft-ietf-
+              mediaman-haptics-05, 27 July 2023,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-
+              mediaman-haptics-05>.
 
    [MacOSFileTypes]
               Apple Computer, Inc., "Mac OS: File Type and Creator
@@ -1379,6 +1524,11 @@ Table of Contents
               Internet Mail Extensions (MIME) Part Four: Registration
               Procedures", RFC 2048, DOI 10.17487/RFC2048, November
               1996, <https://www.rfc-editor.org/rfc/rfc2048>.
+
+   [RFC2077]  Nelson, S., Parks, C., and Mitra, "The Model Primary
+              Content Type for Multipurpose Internet Mail Extensions",
+              RFC 2077, DOI 10.17487/RFC2077, January 1997,
+              <https://www.rfc-editor.org/rfc/rfc2077>.
 
    [RFC2231]  Freed, N. and K. Moore, "MIME Parameter Value and Encoded
               Word Extensions: Character Sets, Languages, and
@@ -1400,11 +1550,9 @@ Table of Contents
               Parameters", RFC 5987, DOI 10.17487/RFC5987, August 2010,
               <https://www.rfc-editor.org/rfc/rfc5987>.
 
-   [RFC6648]  Saint-Andre, P., Crocker, D., and M. Nottingham,
-              "Deprecating the "X-" Prefix and Similar Constructs in
-              Application Protocols", BCP 178, RFC 6648,
-              DOI 10.17487/RFC6648, June 2012,
-              <https://www.rfc-editor.org/rfc/rfc6648>.
+   [RFC8081]  Lilley, C., "The "font" Top-Level Media Type", RFC 8081,
+              DOI 10.17487/RFC8081, February 2017,
+              <https://www.rfc-editor.org/rfc/rfc8081>.
 
 Appendix A.  Grandfathered Media Types
 
