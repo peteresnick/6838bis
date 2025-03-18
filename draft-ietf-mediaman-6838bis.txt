@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                   21 January 2025
-Expires: 25 July 2025
+Intended status: Best Current Practice                     18 March 2025
+Expires: 19 September 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 July 2025.
+   This Internet-Draft will expire on 19 September 2025.
 
 Copyright Notice
 
@@ -70,10 +70,11 @@ Table of Contents
    2.  Media Type Registration Preliminaries
    3.  Registration Trees and Subtype Names
      3.1.  Standards Tree
-     3.2.  Vendor Tree
-     3.3.  Personal or Vanity Tree
-     3.4.  Unregistered x.  Tree
-     3.5.  Additional Registration Trees
+     3.2.  Community Formats in the Standards Tree
+     3.3.  Vendor Tree
+     3.4.  Personal or Vanity Tree
+     3.5.  Unregistered x.  Tree
+     3.6.  Additional Registration Trees
    4.  Registration Requirements
      4.1.  Functionality Requirement
      4.2.  Naming Requirements
@@ -212,7 +213,10 @@ Table of Contents
 
    2.  registered by a recognized standards-related organization using
        the "Specification Required" IANA registration policy [RFC5226]
-       (which implies Expert Review).
+       (which implies Expert Review), or
+
+   3.  approved by the Designated Expert(s) as identifying a "community
+       format", as described in Section 3.2.
 
    The first procedure is used for registrations from IETF Consensus
    documents, or in rare cases when registering a grandfathered (see
@@ -235,6 +239,8 @@ Table of Contents
    formal standards specification produced by the submitting standards-
    related organization.
 
+   The third case is described in Section 3.2.
+
    Media types in the standards tree MUST NOT have faceted names, unless
    they are grandfathered in using the process described in Appendix A.
 
@@ -251,7 +257,40 @@ Table of Contents
    Expert Reviewer(s) will, among other things, ensure that the required
    specification provides adequate documentation.
 
-3.2.  Vendor Tree
+3.2.  Community Formats in the Standards Tree
+
+   Some formats are interoperable (i.e., they are supported by more than
+   one implementation), but their specifications are not published by a
+   recognized standards-related organization.  To accommodate these
+   cases, the Designated Expert(s) are empowered to approve
+   registrations in the standards tree that meet the following criteria:
+
+   *  There is a well-defined specification for the format
+
+   *  That specification is not tied to or heavily associated with one
+      implementation
+
+   *  The specification is freely available at a stable location
+
+   *  There are multiple interoperable implementations of the
+      specification, or they are likely to emerge
+
+   *  The requested name is appropriate to the use case, and not so
+      generic that it may be considered 'squatting'
+
+   *  There is no conflict with IETF work or work at other recognised
+      SDOs (present or future)
+
+   *  There is evidence of broad adoption
+
+   The Designated Expert(s) have discretion in applying these criteria;
+   in rare cases, they might judge it best to register an entry that
+   fails one or more.
+
+   Note that such registrations still go through preliminary community
+   review (Section 5.1), and decisions can be appealed (Section 5.3).
+
+3.3.  Vendor Tree
 
    The vendor tree is used for media types associated with publicly
    available products.  "Vendor" and "producer" are construed very
@@ -287,7 +326,7 @@ Table of Contents
    submitted directly to the IANA, where they will undergo Expert Review
    [RFC5226] prior to approval.
 
-3.3.  Personal or Vanity Tree
+3.4.  Personal or Vanity Tree
 
    Registrations for media types created experimentally or as part of
    products that are not distributed commercially may be registered in
@@ -305,7 +344,7 @@ Table of Contents
    tree may be submitted directly to the IANA, where they will undergo
    Expert Review [RFC5226] prior to approval.
 
-3.4.  Unregistered x.  Tree
+3.5.  Unregistered x.  Tree
 
    Subtype names with "x." as the first facet may be used for types
    intended exclusively for use in private, local environments.  Types
@@ -324,7 +363,7 @@ Table of Contents
    name in an alternative tree by following the procedure defined in
    Appendix A.
 
-3.5.  Additional Registration Trees
+3.6.  Additional Registration Trees
 
    From time to time and as required by the community, new top-level
    registration trees may be created by IETF Standards Action.  It is
