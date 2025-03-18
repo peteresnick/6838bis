@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-16T01:04:27.384858+00:00",
+  "timestamp": "2025-03-18T01:00:16.376739+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -62,7 +62,7 @@
       "labels": [],
       "body": "The content of [-suffixes ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/) needs to be incorporated into 6838bis.\r\nThe current text is deemed to represent WG consensus, but wordsmithing is expected.\r\n",
       "createdAt": "2024-10-28T12:45:05Z",
-      "updatedAt": "2024-11-11T21:34:47Z",
+      "updatedAt": "2025-03-17T01:44:33Z",
       "closedAt": null,
       "comments": [
         {
@@ -71,6 +71,13 @@
           "body": "As mentioned briefly at the 121 meeting, there are portions of the suffixes draft that should not be incorporated. \r\n\r\nThe [proceedings](https://datatracker.ietf.org/meeting/121/proceedings) still say \"No minutes\" but the session recordings are available:\r\nhttps://www.youtube.com/watch?v=aEgdzv7EsPk\r\nhttps://meetecho-player.ietf.org/playout/?session=IETF121-MEDIAMAN-20241105-1800\r\n",
           "createdAt": "2024-11-11T21:34:46Z",
           "updatedAt": "2024-11-11T21:34:46Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "Just to close the comment on minutes - minutes are now here: https://datatracker.ietf.org/meeting/121/materials/minutes-121-mediaman-202411051800-01\n",
+          "createdAt": "2025-03-17T01:44:32Z",
+          "updatedAt": "2025-03-17T01:44:32Z"
         }
       ]
     },
@@ -140,15 +147,15 @@
       "id": "I_kwDOMdBaOc6dIItg",
       "title": "Appeal procedure could be more crisp",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/6",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "The appeal procedure is borrowed from 2026. It may not be the right procedure.\r\n",
       "createdAt": "2024-11-05T18:14:48Z",
-      "updatedAt": "2024-11-11T21:25:22Z",
-      "closedAt": null,
+      "updatedAt": "2025-03-17T01:45:45Z",
+      "closedAt": "2025-03-17T01:45:44Z",
       "comments": [
         {
           "author": "bc-pi",
@@ -156,6 +163,13 @@
           "body": "Murray mentioned this on list https://mailarchive.ietf.org/arch/msg/media-types/XXcfDsT_TSQTZ21pV1oNeLJ5YJw/ and I concur with the sentiment https://mailarchive.ietf.org/arch/msg/media-types/dxJvDOM3IADlrSXhc8sVqGVQiS8/ ",
           "createdAt": "2024-11-11T21:25:21Z",
           "updatedAt": "2024-11-11T21:25:21Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "Duplicate of #10 ",
+          "createdAt": "2025-03-17T01:45:44Z",
+          "updatedAt": "2025-03-17T01:45:44Z"
         }
       ]
     },
@@ -320,9 +334,17 @@
       "labels": [],
       "body": "              If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/12#discussion_r1941490850_\r\n            ",
       "createdAt": "2025-02-04T23:02:33Z",
-      "updatedAt": "2025-02-04T23:02:33Z",
+      "updatedAt": "2025-03-17T01:40:20Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "body": "The \"negative criteria\" section was added after a discussion on the list where someone suggested a top-level type that would register by implication some huge number of other entities (I think it was, among other things, going to have a separate media type for integers).\n\nWe concluded that such a thing would be a Bad Idea, and tried to find some way of incorporating that into the RFC. The \"negative criteria\" were the result.\n\nWe could reformulate it in such a way that either the intro says \"the registration process SHOULD/MUST reject attempts to register top level types that satisfies the following criteria\", or that each criterion starts off with \"You SHOULD NOT attempt to register .....\"\n\nI think choosing between these forms is editor's privillege.\n",
+          "createdAt": "2025-03-17T01:40:19Z",
+          "updatedAt": "2025-03-17T01:40:19Z"
+        }
+      ]
     },
     {
       "number": 18,
@@ -613,13 +635,13 @@
       "labels": [],
       "body": "Following https://github.com/ietf-wg-mediaman/6838bis/issues/5 this commit changes the additional information to:\r\n- remove the Macintosh 4-byte identifiers (not in use since decades) and\r\n- replaces them by the optional inclusion of clipboard flavour names",
       "createdAt": "2025-03-02T21:11:50Z",
-      "updatedAt": "2025-03-05T15:11:52Z",
+      "updatedAt": "2025-03-17T07:09:32Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
       "headRepository": "polx/6838bis",
       "headRefName": "patch-1",
-      "headRefOid": "e6b5b9314cdfb2cb804b5141d9ca1de104ef5740",
+      "headRefOid": "64fcb73b69604c1f9fb5cd318c8f550621c2a523",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
@@ -633,7 +655,28 @@
           "updatedAt": "2025-03-04T06:36:40Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6gRhNf",
+          "commit": {
+            "abbreviatedOid": "e6b5b93"
+          },
+          "author": "alvestrand",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-17T01:42:47Z",
+          "updatedAt": "2025-03-17T01:42:48Z",
+          "comments": [
+            {
+              "originalPosition": 34,
+              "body": "```suggestion\r\n* Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see {{windowsClipboardNames}} for definitions and syntax).\r\n```",
+              "createdAt": "2025-03-17T01:42:47Z",
+              "updatedAt": "2025-03-17T01:42:48Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
