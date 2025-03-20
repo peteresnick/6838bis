@@ -1,12 +1,17 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-18T01:00:16.376739+00:00",
+  "timestamp": "2025-03-20T00:59:35.480284+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
       "name": "editorial",
       "description": "",
       "color": "07A2C9"
+    },
+    {
+      "name": "Ready for PR",
+      "description": "",
+      "color": "02CE60"
     }
   ],
   "issues": [
@@ -17,7 +22,7 @@
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/1",
       "state": "CLOSED",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Draft name should be draft-ietf-mediaman-6838bis - this can wait until we have formally adopted the document.\r\n\r\n(Was surprised to see this come out without an -authorname- component)\r\n",
@@ -27,7 +32,7 @@
       "comments": [
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Fixed by publishing of draft-ietf-mediaman-6838bis\r\n",
           "createdAt": "2024-11-05T16:40:09Z",
           "updatedAt": "2024-11-05T16:40:09Z"
@@ -39,15 +44,15 @@
       "id": "I_kwDOMdBaOc6cEGrx",
       "title": "Incorporate -toplevel",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The content of [-toplevel ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-toplevel/) needs to be incorporated in 6838bis.\r\nThe historical portions can probably be left in the published RFC, which 6838bis will obsolete.\r\n",
       "createdAt": "2024-10-28T12:43:34Z",
-      "updatedAt": "2024-10-28T12:43:34Z",
-      "closedAt": null,
+      "updatedAt": "2025-03-18T10:16:46Z",
+      "closedAt": "2025-03-18T10:16:46Z",
       "comments": []
     },
     {
@@ -57,7 +62,7 @@
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/3",
       "state": "OPEN",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The content of [-suffixes ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/) needs to be incorporated into 6838bis.\r\nThe current text is deemed to represent WG consensus, but wordsmithing is expected.\r\n",
@@ -74,7 +79,7 @@
         },
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Just to close the comment on minutes - minutes are now here: https://datatracker.ietf.org/meeting/121/materials/minutes-121-mediaman-202411051800-01\n",
           "createdAt": "2025-03-17T01:44:32Z",
           "updatedAt": "2025-03-17T01:44:32Z"
@@ -86,15 +91,15 @@
       "id": "I_kwDOMdBaOc6cEIyw",
       "title": "Incorporate -standards-tree",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/4",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The content of [-standards-tree](https://datatracker.ietf.org/doc/draft-ietf-mediaman-standards-tree/) is deemed to represent rough consensus in the WG, and should be incorporated in 6838bis.\r\n",
       "createdAt": "2024-10-28T12:47:15Z",
-      "updatedAt": "2024-10-28T12:47:15Z",
-      "closedAt": null,
+      "updatedAt": "2025-03-18T10:14:37Z",
+      "closedAt": "2025-03-18T10:14:37Z",
       "comments": []
     },
     {
@@ -102,43 +107,57 @@
       "id": "I_kwDOMdBaOc6cx12i",
       "title": "Cleanup for \"additional information\" in media type registration",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "From Paul Libbrecht:\r\n\r\nJust a reminder: if we update RFC 6838 then it would be cool to:\r\n\r\n*    remove \u201cMacintosh file type code(s)\u201d (which doesn\u2019t exist anymore since MacOSX)\r\n*    add \u201cWindows clipboard flavour\u201d and \u201cmacOS Universal Type Identifier\u201d among the additional information fields.\r\n\r\n",
       "createdAt": "2023-11-05T19:31:03Z",
-      "updatedAt": "2025-03-02T21:13:06Z",
-      "closedAt": null,
+      "updatedAt": "2025-03-18T10:31:33Z",
+      "closedAt": "2025-03-18T10:26:24Z",
       "comments": [
         {
           "author": "polx",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "@alvestrand : do you have a source of RFC-6838 I could make a suggested patch for?\r\nthanks in advance.\r\npaul",
           "createdAt": "2024-02-23T08:05:39Z",
           "updatedAt": "2024-02-23T08:05:39Z"
         },
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "The RFC Editors page at https://www.rfc-editor.org/info/rfc6838 seems to not list one. The RFC predates the universal presence of XML formats.\r\n\r\nThere's an XML format on the I-D page for the last-before-publication I-D: https://datatracker.ietf.org/doc/draft-ietf-appsawg-media-type-regs/14/\r\n\r\nI think either Tony Hansen or John Klensin might have one too.\r\n",
           "createdAt": "2024-02-23T09:44:05Z",
           "updatedAt": "2024-02-23T09:44:05Z"
         },
         {
           "author": "polx",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "OK. So here would be a patch and the resulting XML compared to [the last-before-publication I-D](https://datatracker.ietf.org/doc/draft-ietf-appsawg-media-type-regs/14/):\r\n\r\nIn substance:\r\n- replace the suggestion to the MacOS file type by the suggestions for macOS UTIs and Windows clipboard flavor names\r\n- replace the literature entry of MacOS file type (which was 21 y old and whose URL is no longer available, an [archive fetch](https://web.archive.org/web/20080517021842/http://www.info.apple.com/kbnum/n55381) exists still) by an explanation of the macOS UTIs and windows clipboard flavors.\r\n\r\nIs this enough for an inclusion? \r\nShould this be more text-oriented to be included in a new RFC?\r\nOr should the RFC 6838 be made into a newer document, maybe together with the mediaman release?\r\n\r\nthanks in advance.\r\nPaul\r\n\r\n* [add-clipboard-flavor-names.patch](https://github.com/ietf-wg-mediaman/procedures/files/14473152/add-clipboard-flavor-names.patch)\r\n* The resulting XML file is called `.txt` since GitHub considereds XML unsupported (LOL):  [draft-ietf-appsawg-media-type-regs-14.xml.txt](https://github.com/ietf-wg-mediaman/procedures/files/14473159/draft-ietf-appsawg-media-type-regs-14.xml.txt)\r\n",
           "createdAt": "2024-03-03T13:52:34Z",
           "updatedAt": "2024-03-03T13:55:29Z"
         },
         {
           "author": "polx",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Following the existing pull-requests, I added a pull-request against the current markdown source in the git repo to address the same changes.",
           "createdAt": "2025-03-02T21:13:05Z",
           "updatedAt": "2025-03-02T21:13:05Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Fixed by #17 - new issues may be raised for the topics mentioned in the PR.\n",
+          "createdAt": "2025-03-18T10:26:24Z",
+          "updatedAt": "2025-03-18T10:26:24Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thank you very much.\n\n> Discussion in Bangkok: Perfectly reasonable to do, worry about whether backfill can be done for older types.\n\nThe first step would be to take the official specs of the vendors and back-fill with the content of these.  I am happy to hear about process suggestions.",
+          "createdAt": "2025-03-18T10:31:32Z",
+          "updatedAt": "2025-03-18T10:31:32Z"
         }
       ]
     },
@@ -149,7 +168,7 @@
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/6",
       "state": "CLOSED",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The appeal procedure is borrowed from 2026. It may not be the right procedure.\r\n",
@@ -166,7 +185,7 @@
         },
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Duplicate of #10 ",
           "createdAt": "2025-03-17T01:45:44Z",
           "updatedAt": "2025-03-17T01:45:44Z"
@@ -201,9 +220,24 @@
       "labels": [],
       "body": "please see the thread https://mailarchive.ietf.org/arch/msg/media-types/Wlx2B1k_du8Ths2ojxL4jh7V7JM/ ",
       "createdAt": "2024-11-11T21:37:49Z",
-      "updatedAt": "2024-11-11T21:37:49Z",
+      "updatedAt": "2025-03-18T10:40:37Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussion in Bangkok:\nYes, this is by design (says Alexey as DE)\nWe may want a procedure for early registration - the IANABIS WG may be working on this.\n\n",
+          "createdAt": "2025-03-18T10:30:49Z",
+          "updatedAt": "2025-03-18T10:30:49Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Decision in Bangkok: Yes, this is the current rule.\nNew issue: Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\nNew issue: Should we talk about what we expect from other standards organizations in maturity before they (allocate/register) names?\n\n",
+          "createdAt": "2025-03-18T10:40:36Z",
+          "updatedAt": "2025-03-18T10:40:36Z"
+        }
+      ]
     },
     {
       "number": 9,
@@ -217,12 +251,12 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-01-21T02:50:11Z",
+      "updatedAt": "2025-03-18T10:59:25Z",
       "closedAt": null,
       "comments": [
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Personally, I'm skeptical of MLs as change controllers.\r\nI believe the IESG (or successor bodies) will live longer than most WGs.\r\nMailing lists are frequently closed when the WG is gone and the maintainer gets tired of dealing with the spam.\r\nAlso, mailing lists have no built-in decision procedure - how can you tell if a mailing list with 100+ mostly silent members agree on something?",
           "createdAt": "2024-11-18T22:26:05Z",
           "updatedAt": "2024-11-18T22:26:05Z"
@@ -243,7 +277,7 @@
         },
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "OK, changed the title. In that case, I think an IETF (or other org's) mailing list makes sense; it would be the change controller's responsibility to update the field when a mailing list shuts down.\r\n",
           "createdAt": "2024-11-19T09:45:59Z",
           "updatedAt": "2024-11-19T09:45:59Z"
@@ -261,6 +295,13 @@
           "body": "I think it's reasonable, but keeping it up to date requires action, and it's often not clear who the action holder is. Somewhat related, I'd like to do some work on clarifying what the responsibilities and powers of a designated expert are.",
           "createdAt": "2025-01-21T02:50:10Z",
           "updatedAt": "2025-01-21T02:50:10Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussion in Bangkok:\nWGs don't last forever, so if we accept that, we need a procedure to update the pointer when they are defunct.\n(The same applies to people, but on a longer timescale)\nShould we have a fallback pointer? A procedure to get the fallback, depending on change controller?\nFallback pointer may be change controller pointer.\nResolution: Continue discussion in issue.\n",
+          "createdAt": "2025-03-18T10:58:52Z",
+          "updatedAt": "2025-03-18T10:59:24Z"
         }
       ]
     },
@@ -271,20 +312,27 @@
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/10",
       "state": "OPEN",
       "author": "alvestrand",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
       "createdAt": "2024-11-20T11:12:17Z",
-      "updatedAt": "2024-11-20T11:16:50Z",
+      "updatedAt": "2025-03-18T11:02:30Z",
       "closedAt": null,
       "comments": [
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "Notes:\r\n- So far we have no appeals (AFAIK), so we don't know if the process works.\r\n- I believe the choice to point to 6.5.4 directly was deliberately done as \"we are reusing the appeals process for a different purpose than what it was originally written for\"\r\n- 6.5.4 doesn't specify the appeals chain; I believe the idea was that the response to an appeal under 6.5.4 would be an IESG action, which could then be appealed using the appeals chain in 6.5.2.\r\n",
           "createdAt": "2024-11-20T11:16:49Z",
           "updatedAt": "2024-11-20T11:16:49Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This may be an IANABIS problem.\n",
+          "createdAt": "2025-03-18T11:02:29Z",
+          "updatedAt": "2025-03-18T11:02:29Z"
         }
       ]
     },
@@ -339,7 +387,7 @@
       "comments": [
         {
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "body": "The \"negative criteria\" section was added after a discussion on the list where someone suggested a top-level type that would register by implication some huge number of other entities (I think it was, among other things, going to have a separate media type for integers).\n\nWe concluded that such a thing would be a Bad Idea, and tried to find some way of incorporating that into the RFC. The \"negative criteria\" were the result.\n\nWe could reformulate it in such a way that either the intro says \"the registration process SHOULD/MUST reject attempts to register top level types that satisfies the following criteria\", or that each criterion starts off with \"You SHOULD NOT attempt to register .....\"\n\nI think choosing between these forms is editor's privillege.\n",
           "createdAt": "2025-03-17T01:40:19Z",
           "updatedAt": "2025-03-17T01:40:19Z"
@@ -361,6 +409,46 @@
       "updatedAt": "2025-03-06T13:39:56Z",
       "closedAt": null,
       "comments": []
+    },
+    {
+      "number": 19,
+      "id": "I_kwDOMdBaOc6uhdt7",
+      "title": "Should the bucket format parameters from RFC 6381 be noted as something to consider?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/19",
+      "state": "OPEN",
+      "author": "gloinul",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "https://datatracker.ietf.org/doc/rfc6381/ defines parameters that are used to describe further properties of like codec capabilities of what is included in file formats that are so called bucket types, like the ISO based media file formats. \n\nShould there be a reference to these parameters and the consideration in the media type registry to ensure that this aspect is not forgotten. I can see that this could be either part of the relevant media top levels that commonly have these, or possibly under the parameter encoding section. \n\n",
+      "createdAt": "2025-03-18T10:41:39Z",
+      "updatedAt": "2025-03-18T10:55:49Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "gloinul",
+          "authorAssociation": "NONE",
+          "body": "I would also note that RFC 8088 do comment some other parameters that RTP payload format has used with the same definition over multiple media types used to register RTP payload format. I don't know if these needs to be noted or referenced that they exist to help registrants to include them if applicable.  ",
+          "createdAt": "2025-03-18T10:55:48Z",
+          "updatedAt": "2025-03-18T10:55:48Z"
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "id": "I_kwDOMdBaOc6uiD2p",
+      "title": "Instructions for other SDOs on how to maintain registrations",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/20",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
+      "createdAt": "2025-03-18T11:25:08Z",
+      "updatedAt": "2025-03-18T11:25:08Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
@@ -369,24 +457,26 @@
       "id": "PR_kwDOMdBaOc6IbLhs",
       "title": "Standards tree",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/11",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-01-21T02:26:32Z",
-      "updatedAt": "2025-02-18T02:25:57Z",
+      "updatedAt": "2025-03-18T10:14:36Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "standards-tree",
       "headRefOid": "6c6bfe3d59817757419d219dd702da1eb9f629d8",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-03-18T10:14:36Z",
+      "mergedAt": "2025-03-18T10:14:36Z",
+      "mergedBy": "alvestrand",
+      "mergeCommit": {
+        "oid": "e4208029e3e12435cf3fd1dcb1550e15b1adf21b"
+      },
       "comments": [],
       "reviews": [
         {
@@ -395,7 +485,7 @@
             "abbreviatedOid": "6c6bfe3"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "",
           "createdAt": "2025-02-04T16:21:13Z",
@@ -422,25 +512,35 @@
       "id": "PR_kwDOMdBaOc6IbOoO",
       "title": "Add toplevel",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/12",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "- omitted IANA instructions as it appears they'll be published in a separate RFC\r\n- omitted history and introduction; should discuss whether they are necessary and how to incorporate if so",
       "createdAt": "2025-01-21T02:43:22Z",
-      "updatedAt": "2025-02-18T02:24:33Z",
+      "updatedAt": "2025-03-18T10:17:18Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "b0367b519410675ba19be909936bc0f753c9945e",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "toplevel",
       "headRefOid": "88f567546d48091ab293590fddc8fa12c79d896e",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "closedAt": "2025-03-18T10:16:45Z",
+      "mergedAt": "2025-03-18T10:16:45Z",
+      "mergedBy": "alvestrand",
+      "mergeCommit": {
+        "oid": "dd68688206486b4e0291e60e9aceb2d1b6b294d8"
+      },
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "After discussion in Bangkok",
+          "createdAt": "2025-03-18T10:17:17Z",
+          "updatedAt": "2025-03-18T10:17:17Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOMdBaOc6ak-VG",
@@ -448,7 +548,7 @@
             "abbreviatedOid": "978f08a"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-02-04T16:15:25Z",
@@ -468,7 +568,7 @@
             "abbreviatedOid": "978f08a"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-02-04T16:17:42Z",
@@ -476,9 +576,9 @@
           "comments": [
             {
               "originalPosition": 47,
-              "body": "If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....",
+              "body": "If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels which are pointers ....",
               "createdAt": "2025-02-04T16:17:42Z",
-              "updatedAt": "2025-02-04T16:17:42Z"
+              "updatedAt": "2025-03-18T10:16:20Z"
             }
           ]
         },
@@ -488,7 +588,7 @@
             "abbreviatedOid": "978f08a"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-02-04T16:18:36Z",
@@ -508,7 +608,7 @@
             "abbreviatedOid": "978f08a"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "",
           "createdAt": "2025-02-04T16:19:13Z",
@@ -542,7 +642,7 @@
       "labels": [],
       "body": "from draft-ietf-mediaman-suffixes-08",
       "createdAt": "2025-02-04T01:42:17Z",
-      "updatedAt": "2025-02-06T22:41:02Z",
+      "updatedAt": "2025-03-18T11:02:05Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
@@ -553,7 +653,15 @@
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Bangkok: Hold for more discussion online\r\n",
+          "createdAt": "2025-03-18T10:20:56Z",
+          "updatedAt": "2025-03-18T10:20:56Z"
+        }
+      ],
       "reviews": [
         {
           "id": "PRR_kwDOMdBaOc6aeHIn",
@@ -574,7 +682,7 @@
             "abbreviatedOid": "60d8027"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-02-04T15:16:32Z",
@@ -594,7 +702,7 @@
             "abbreviatedOid": "60d8027"
           },
           "author": "OR13",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "APPROVED",
           "body": "",
           "createdAt": "2025-02-04T15:44:03Z",
@@ -620,6 +728,106 @@
               "updatedAt": "2025-02-06T22:41:02Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gkMAT",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-18T10:19:58Z",
+          "updatedAt": "2025-03-18T10:19:58Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "This (power to deny given to first registrant) always worried me too.\r\n",
+              "createdAt": "2025-03-18T10:19:58Z",
+              "updatedAt": "2025-03-18T10:20:23Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gkNgs",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2025-03-18T10:21:55Z",
+          "updatedAt": "2025-03-18T10:23:51Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs. ",
+              "createdAt": "2025-03-18T10:21:55Z",
+              "updatedAt": "2025-03-18T10:23:51Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gkP39",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-18T10:25:00Z",
+          "updatedAt": "2025-03-18T10:25:00Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "https://datatracker.ietf.org/meeting/121/materials/minutes-121-mediaman-202411051800-01",
+              "createdAt": "2025-03-18T10:25:00Z",
+              "updatedAt": "2025-03-18T10:25:00Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gk51w",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-18T11:01:16Z",
+          "updatedAt": "2025-03-18T11:01:17Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "https://mailarchive.ietf.org/arch/msg/media-types/0uFNmOANPD-vECTWzsampRvKGtc/ \r\nhttps://mailarchive.ietf.org/arch/msg/media-types/gipt2Qv0uKw2ZBN97Jo4Mddnw_I/\r\nhttps://mailarchive.ietf.org/arch/msg/media-types/eM5ljPWq_fFaz9Mrt-vBHJi8fXE/\r\n\r\nI don't remember and/or can't find at the moment all the right conversations. But I am questioning the cost/value of such participation at all. ",
+              "createdAt": "2025-03-18T11:01:17Z",
+              "updatedAt": "2025-03-18T11:01:17Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gk7O7",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-18T11:02:05Z",
+          "updatedAt": "2025-03-18T11:02:05Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "this too https://github.com/ietf-wg-mediaman/6838bis/pull/14/files#r2000685271",
+              "createdAt": "2025-03-18T11:02:05Z",
+              "updatedAt": "2025-03-18T11:02:05Z"
+            }
+          ]
         }
       ]
     },
@@ -628,24 +836,26 @@
       "id": "PR_kwDOMdBaOc6NE0Vx",
       "title": "Clean-up for \"additional information\"",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/17",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "polx",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Following https://github.com/ietf-wg-mediaman/6838bis/issues/5 this commit changes the additional information to:\r\n- remove the Macintosh 4-byte identifiers (not in use since decades) and\r\n- replaces them by the optional inclusion of clipboard flavour names",
       "createdAt": "2025-03-02T21:11:50Z",
-      "updatedAt": "2025-03-17T07:09:32Z",
+      "updatedAt": "2025-03-18T10:24:55Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
       "headRepository": "polx/6838bis",
       "headRefName": "patch-1",
       "headRefOid": "64fcb73b69604c1f9fb5cd318c8f550621c2a523",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-03-18T10:24:55Z",
+      "mergedAt": "2025-03-18T10:24:55Z",
+      "mergedBy": "alvestrand",
+      "mergeCommit": {
+        "oid": "5401c0197a693a0dc94d341a0d9cf58916d1646f"
+      },
       "comments": [
         {
           "author": "mnot",
@@ -653,6 +863,13 @@
           "body": "> Create a corresponding issue, please.\r\n\r\nnever mind...",
           "createdAt": "2025-03-04T06:33:33Z",
           "updatedAt": "2025-03-04T06:36:40Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Discussion in Bangkok: Perfectly reasonable to do, worry about whether backfill can be done for older types.\r\nWe would like to put in stuff that might be in use for other platforms (iOS, Android) if they exist and are different.\r\n\r\n",
+          "createdAt": "2025-03-18T10:23:53Z",
+          "updatedAt": "2025-03-18T10:24:49Z"
         }
       ],
       "reviews": [
@@ -662,7 +879,7 @@
             "abbreviatedOid": "e6b5b93"
           },
           "author": "alvestrand",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-03-17T01:42:47Z",
@@ -675,6 +892,19 @@
               "updatedAt": "2025-03-17T01:42:48Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6gkOfH",
+          "commit": {
+            "abbreviatedOid": "64fcb73"
+          },
+          "author": "aj-stein",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-03-18T10:23:15Z",
+          "updatedAt": "2025-03-18T10:23:15Z",
+          "comments": []
         }
       ]
     }
