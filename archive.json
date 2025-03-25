@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-23T01:04:59.190616+00:00",
+  "timestamp": "2025-03-25T01:01:31.192501+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -642,7 +642,7 @@
       "labels": [],
       "body": "from draft-ietf-mediaman-suffixes-08",
       "createdAt": "2025-02-04T01:42:17Z",
-      "updatedAt": "2025-03-18T11:02:05Z",
+      "updatedAt": "2025-03-24T03:36:54Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
@@ -828,6 +828,26 @@
               "updatedAt": "2025-03-18T11:02:05Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6heJbZ",
+          "commit": {
+            "abbreviatedOid": "60d8027"
+          },
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-03-24T03:36:53Z",
+          "updatedAt": "2025-03-24T03:36:54Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "@OR13 could you open that as a separate issue?",
+              "createdAt": "2025-03-24T03:36:54Z",
+              "updatedAt": "2025-03-24T03:36:54Z"
+            }
+          ]
         }
       ]
     },
@@ -843,7 +863,7 @@
       "labels": [],
       "body": "Following https://github.com/ietf-wg-mediaman/6838bis/issues/5 this commit changes the additional information to:\r\n- remove the Macintosh 4-byte identifiers (not in use since decades) and\r\n- replaces them by the optional inclusion of clipboard flavour names",
       "createdAt": "2025-03-02T21:11:50Z",
-      "updatedAt": "2025-03-18T10:24:55Z",
+      "updatedAt": "2025-03-24T18:31:38Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
@@ -870,6 +890,27 @@
           "body": "Discussion in Bangkok: Perfectly reasonable to do, worry about whether backfill can be done for older types.\r\nWe would like to put in stuff that might be in use for other platforms (iOS, Android) if they exist and are different.\r\n\r\n",
           "createdAt": "2025-03-18T10:23:53Z",
           "updatedAt": "2025-03-18T10:24:49Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "Should we open a new issue for backfills?",
+          "createdAt": "2025-03-24T13:12:57Z",
+          "updatedAt": "2025-03-24T13:12:57Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Yes, do that in the \"procedures\" repo, which is intended for procedural issues that do not involve changes to 6838bis.\r\n",
+          "createdAt": "2025-03-24T17:44:44Z",
+          "updatedAt": "2025-03-24T17:44:44Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Issue [#7 of procedures](https://github.com/ietf-wg-mediaman/procedures/issues/7) is opened. Thanks.",
+          "createdAt": "2025-03-24T18:31:37Z",
+          "updatedAt": "2025-03-24T18:31:37Z"
         }
       ],
       "reviews": [
