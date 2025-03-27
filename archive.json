@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-25T01:01:31.192501+00:00",
+  "timestamp": "2025-03-27T01:00:54.673823+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -251,7 +251,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-03-18T10:59:25Z",
+      "updatedAt": "2025-03-26T13:13:42Z",
       "closedAt": null,
       "comments": [
         {
@@ -302,6 +302,13 @@
           "body": "Discussion in Bangkok:\nWGs don't last forever, so if we accept that, we need a procedure to update the pointer when they are defunct.\n(The same applies to people, but on a longer timescale)\nShould we have a fallback pointer? A procedure to get the fallback, depending on change controller?\nFallback pointer may be change controller pointer.\nResolution: Continue discussion in issue.\n",
           "createdAt": "2025-03-18T10:58:52Z",
           "updatedAt": "2025-03-18T10:59:24Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Formally, I think the change controller needs to be responsible for updating the \"Person to contact for further info\".\nI don't like encumbering the DE with too much proactive responsibility - we might ask IANABIS whether they should maintain a database of contact addresses and take the responsibility of flushing out contacts that don't work any more.\n",
+          "createdAt": "2025-03-26T13:13:41Z",
+          "updatedAt": "2025-03-26T13:13:41Z"
         }
       ]
     },
