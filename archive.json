@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-03-30T01:07:48.361632+00:00",
+  "timestamp": "2025-04-01T01:09:08.362851+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -251,7 +251,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-03-26T13:13:42Z",
+      "updatedAt": "2025-03-30T08:08:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -309,6 +309,13 @@
           "body": "Formally, I think the change controller needs to be responsible for updating the \"Person to contact for further info\".\nI don't like encumbering the DE with too much proactive responsibility - we might ask IANABIS whether they should maintain a database of contact addresses and take the responsibility of flushing out contacts that don't work any more.\n",
           "createdAt": "2025-03-26T13:13:41Z",
           "updatedAt": "2025-03-26T13:13:41Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Assuming the media-types mailing-list is still alive, isn't the procedure used in the media-type declaration (but with a different template) to post an actualization of the contact-addresses at the media-types mailing-list then handling by directors the right method?\n\nThe same \"authority inspection\" worries are concerned here, or? And making it transparent is publicly important for sure.",
+          "createdAt": "2025-03-30T08:08:16Z",
+          "updatedAt": "2025-03-30T08:08:16Z"
         }
       ]
     },
