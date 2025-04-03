@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-01T01:09:08.362851+00:00",
+  "timestamp": "2025-04-03T01:01:45.840767+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -251,7 +251,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-03-30T08:08:18Z",
+      "updatedAt": "2025-04-01T11:54:28Z",
       "closedAt": null,
       "comments": [
         {
@@ -316,6 +316,13 @@
           "body": "Assuming the media-types mailing-list is still alive, isn't the procedure used in the media-type declaration (but with a different template) to post an actualization of the contact-addresses at the media-types mailing-list then handling by directors the right method?\n\nThe same \"authority inspection\" worries are concerned here, or? And making it transparent is publicly important for sure.",
           "createdAt": "2025-03-30T08:08:16Z",
           "updatedAt": "2025-03-30T08:08:16Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "This (update procedure) seems to be a more generic question, pertaining to section 6.1 \"change procedures\". I filed #21 to track that question.\n",
+          "createdAt": "2025-04-01T11:54:26Z",
+          "updatedAt": "2025-04-01T11:54:26Z"
         }
       ]
     },
@@ -461,6 +468,22 @@
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
       "updatedAt": "2025-03-18T11:25:08Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 21,
+      "id": "I_kwDOMdBaOc6wnwnN",
+      "title": "More detailed change procedures?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/21",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
+      "createdAt": "2025-04-01T11:53:52Z",
+      "updatedAt": "2025-04-01T11:53:52Z",
       "closedAt": null,
       "comments": []
     }
