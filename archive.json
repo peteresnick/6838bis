@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-08T01:01:44.320655+00:00",
+  "timestamp": "2025-04-13T02:31:03.217188+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -499,15 +499,22 @@
       "labels": [],
       "body": "6838 lists media-types@iana.org as the email to send registrations. However, this is just a forwarder to media-types@ietf.org. I suggest skipping the forwarder and changing the email address in 6838bis to media-types@ietf.org.\n\nAlso, it might be helpful to have an informative reference to the [list archive](https://mailarchive.ietf.org/arch/browse/media-types/).",
       "createdAt": "2025-04-07T19:56:37Z",
-      "updatedAt": "2025-04-07T21:24:12Z",
+      "updatedAt": "2025-04-11T04:43:37Z",
       "closedAt": null,
       "comments": [
         {
           "author": "alvestrand",
           "authorAssociation": "CONTRIBUTOR",
-          "body": "We might want to ask IANATRANS to formulate a general policy on IETF-related review list addresses, if we don't have one.\n",
+          "body": "We might want to ask IANABIS to formulate a general policy on IETF-related review list addresses, if we don't have one.\n",
           "createdAt": "2025-04-07T21:24:11Z",
-          "updatedAt": "2025-04-07T21:24:11Z"
+          "updatedAt": "2025-04-11T04:43:10Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Sent off a quick note today. https://mailarchive.ietf.org/arch/msg/ianabis/IneNOsZleuL7pnJ-oeSOf09_4D4/\n",
+          "createdAt": "2025-04-11T04:43:36Z",
+          "updatedAt": "2025-04-11T04:43:36Z"
         }
       ]
     }
