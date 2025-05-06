@@ -78,7 +78,11 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 # Registration Trees and Subtype Names
 
-In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered to accommodate the different natural requirements for, e.g., a subtype that will be recommended for wide support and implementation by the Internet community, or a subtype that is used to move files associated with proprietary software. The following subsections define registration "trees" that are distinguished by the use of faceted names, e.g., subtype names that begin with a "tree." prefix. Note that some media types defined prior to this document do not conform to the naming conventions described below. See {{grandfather}} for a discussion of them.
+In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in distinct "trees," distinguished with faceted names.
+
+For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the Standards Tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the Vendor Tree, and so its name would begin with a "vnd." prefix.
+
+Note that some previously defined media types do not conform to the naming conventions described below. See {{grandfather}} for a discussion of them.
 
 ## Standards Tree
 
