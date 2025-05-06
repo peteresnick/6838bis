@@ -10,18 +10,18 @@
 <meta content="
        This document defines procedures for the specification and registration of media types for use in HTTP, MIME, and other Internet protocols. 
     " name="description">
-<meta content="xml2rfc 3.28.0" name="generator">
+<meta content="xml2rfc 3.28.1" name="generator">
 <meta content="Internet-Draft" name="keyword">
 <meta content="draft-ietf-mediaman-6838bis-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.28.0
-    Python 3.12.9
+  xml2rfc 3.28.1
+    Python 3.12.10
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
     Jinja2 3.1.6
     lxml 5.3.0
-    platformdirs 4.3.6
+    platformdirs 4.3.7
     pycountry 24.6.1
     PyYAML 6.0.2
     requests 2.32.3
@@ -1045,11 +1045,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">Media Type Registration</td>
-<td class="right">March 2025</td>
+<td class="right">May 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 19 September 2025</td>
+<td class="center">Expires 7 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6838" class="eref">6838</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-03-18" class="published">18 March 2025</time>
+<time datetime="2025-05-06" class="published">6 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-09-19">19 September 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-07">7 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1119,7 +1119,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 19 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 7 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1224,34 +1224,50 @@ svg :is([fill="white"], [fill^="#fff"]) {
                 </ul>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3">
-                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-parameter-requirements" class="internal xref">Parameter Requirements</a></p>
+                <p id="section-toc.1-1.4.2.3.1"><a href="#section-4.3" class="auto internal xref">4.3</a>.  <a href="#name-structured-suffixes" class="internal xref">Structured Suffixes</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3.2.1">
+                    <p id="section-toc.1-1.4.2.3.2.1.1"><a href="#section-4.3.1" class="auto internal xref">4.3.1</a>.  <a href="#name-common-suffix-patterns" class="internal xref">Common Suffix Patterns</a></p>
+</li>
+                  <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.3.2.2">
+                    <p id="section-toc.1-1.4.2.3.2.2.1"><a href="#section-4.3.2" class="auto internal xref">4.3.2</a>.  <a href="#name-fragment-identifiers" class="internal xref">Fragment Identifiers</a></p>
+</li>
+                </ul>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.4">
-                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-canonicalization-and-format" class="internal xref">Canonicalization and Format Requirements</a></p>
+                <p id="section-toc.1-1.4.2.4.1"><a href="#section-4.4" class="auto internal xref">4.4</a>.  <a href="#name-parameter-requirements" class="internal xref">Parameter Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.5">
-                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-interchange-recommendations" class="internal xref">Interchange Recommendations</a></p>
+                <p id="section-toc.1-1.4.2.5.1"><a href="#section-4.5" class="auto internal xref">4.5</a>.  <a href="#name-canonicalization-and-format" class="internal xref">Canonicalization and Format Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.6">
-                <p id="section-toc.1-1.4.2.6.1"><a href="#section-4.6" class="auto internal xref">4.6</a>.  <a href="#name-security-requirements" class="internal xref">Security Requirements</a></p>
+                <p id="section-toc.1-1.4.2.6.1"><a href="#section-4.6" class="auto internal xref">4.6</a>.  <a href="#name-interchange-recommendations" class="internal xref">Interchange Recommendations</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.7">
-                <p id="section-toc.1-1.4.2.7.1"><a href="#section-4.7" class="auto internal xref">4.7</a>.  <a href="#name-requirements-specific-to-xm" class="internal xref">Requirements Specific to XML Media Types</a></p>
+                <p id="section-toc.1-1.4.2.7.1"><a href="#section-4.7" class="auto internal xref">4.7</a>.  <a href="#name-security-requirements" class="internal xref">Security Requirements</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.7.2.1">
+                    <p id="section-toc.1-1.4.2.7.2.1.1"><a href="#section-4.7.1" class="auto internal xref">4.7.1</a>.  <a href="#name-structured-suffixes-2" class="internal xref">Structured Suffixes</a></p>
+</li>
+                </ul>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.8">
-                <p id="section-toc.1-1.4.2.8.1"><a href="#section-4.8" class="auto internal xref">4.8</a>.  <a href="#name-encoding-requirements" class="internal xref">Encoding Requirements</a></p>
+                <p id="section-toc.1-1.4.2.8.1"><a href="#section-4.8" class="auto internal xref">4.8</a>.  <a href="#name-requirements-specific-to-xm" class="internal xref">Requirements Specific to XML Media Types</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.9">
-                <p id="section-toc.1-1.4.2.9.1"><a href="#section-4.9" class="auto internal xref">4.9</a>.  <a href="#name-usage-and-implementation-no" class="internal xref">Usage and Implementation Non-Requirements</a></p>
+                <p id="section-toc.1-1.4.2.9.1"><a href="#section-4.9" class="auto internal xref">4.9</a>.  <a href="#name-encoding-requirements" class="internal xref">Encoding Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.10">
-                <p id="section-toc.1-1.4.2.10.1"><a href="#section-4.10" class="auto internal xref">4.10</a>. <a href="#name-publication-requirements" class="internal xref">Publication Requirements</a></p>
+                <p id="section-toc.1-1.4.2.10.1"><a href="#section-4.10" class="auto internal xref">4.10</a>. <a href="#name-usage-and-implementation-no" class="internal xref">Usage and Implementation Non-Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.11">
-                <p id="section-toc.1-1.4.2.11.1"><a href="#section-4.11" class="auto internal xref">4.11</a>. <a href="#name-fragment-identifier-require" class="internal xref">Fragment Identifier Requirements</a></p>
+                <p id="section-toc.1-1.4.2.11.1"><a href="#section-4.11" class="auto internal xref">4.11</a>. <a href="#name-publication-requirements" class="internal xref">Publication Requirements</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.12">
-                <p id="section-toc.1-1.4.2.12.1"><a href="#section-4.12" class="auto internal xref">4.12</a>. <a href="#name-additional-information" class="internal xref">Additional Information</a></p>
+                <p id="section-toc.1-1.4.2.12.1"><a href="#section-4.12" class="auto internal xref">4.12</a>. <a href="#name-fragment-identifier-require" class="internal xref">Fragment Identifier Requirements</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4.2.13">
+                <p id="section-toc.1-1.4.2.13.1"><a href="#section-4.13" class="auto internal xref">4.13</a>. <a href="#name-additional-information" class="internal xref">Additional Information</a></p>
 </li>
             </ul>
 </li>
@@ -1345,7 +1361,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-historical-note" class="section-name selfRef">Historical Note</a>
         </h3>
 <p id="section-1.1-1">The media type registration process was initially defined for registering media types for use in the context of the asynchronous Internet mail environment. In this mail environment, there is a need to limit the number of possible media types, to increase the likelihood of interoperability when the capabilities of the remote mail system are not known. As media types are used in new environments in which the proliferation of media types is not a hindrance to interoperability, the original procedure proved excessively restrictive and had to be generalized. This was initially done in <span>[<a href="#RFC2048" class="cite xref">RFC2048</a>]</span>, but the procedure defined there was still part of the MIME document set. The media type specification and registration procedure is now a separate document, to make it clear that it is independent of MIME.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
-<p id="section-1.1-2">It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See <a href="#non-requirements" class="auto internal xref">Section 4.9</a> for additional discussion.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+<p id="section-1.1-2">It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See <a href="#non-requirements" class="auto internal xref">Section 4.10</a> for additional discussion.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="conventions-used-in-this-document">
@@ -1686,6 +1702,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-4.2.8-4">Since this was published, the de facto practice has arisen for using this suffix convention for other well-known structuring syntaxes. In particular, media types have been registered with suffixes such as "+der", "+fastinfoset", and "+json". This specification formalizes this practice and sets up a registry for structured type name suffixes.<a href="#section-4.2.8-4" class="pilcrow">¶</a></p>
 <p id="section-4.2.8-5">The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.<a href="#section-4.2.8-5" class="pilcrow">¶</a></p>
 <p id="section-4.2.8-6">Media types that make use of a named structured syntax SHOULD use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.<a href="#section-4.2.8-6" class="pilcrow">¶</a></p>
+<p id="section-4.2.8-7">Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing base subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the base subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing base subtype names in the media type registry.<a href="#section-4.2.8-7" class="pilcrow">¶</a></p>
+<p id="section-4.2.8-8">Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing Change Controller for the associated base subtype name to register the new media type.<a href="#section-4.2.8-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="deprecated-aliases">
@@ -1698,168 +1716,255 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </div>
 </section>
 </div>
-<div id="parameter-requirements">
+<div id="structured-suffixes">
 <section id="section-4.3">
-        <h3 id="name-parameter-requirements">
-<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-parameter-requirements" class="section-name selfRef">Parameter Requirements</a>
+        <h3 id="name-structured-suffixes">
+<a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-structured-suffixes" class="section-name selfRef">Structured Suffixes</a>
         </h3>
-<p id="section-4.3-1">Media types MAY elect to use one or more media type parameters, or some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes. In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
-<p id="section-4.3-2">Parameter names have the syntax as media type names and values:<a href="#section-4.3-2" class="pilcrow">¶</a></p>
-<div class="lang-abnf sourcecode" id="section-4.3-3">
+<p id="section-4.3-1">A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign. As an example, given the "application/foo+bar" media type: "application" is the top-level type, "foo" is the base subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<div id="common-suffix-patterns">
+<section id="section-4.3.1">
+          <h4 id="name-common-suffix-patterns">
+<a href="#section-4.3.1" class="section-number selfRef">4.3.1. </a><a href="#name-common-suffix-patterns" class="section-name selfRef">Common Suffix Patterns</a>
+          </h4>
+<p id="section-4.3.1-1">There are a few common patterns that are utilized for media types that use structured suffixes. These patterns include expressing that the data associated with a media type:<a href="#section-4.3.1-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="section-4.3.1-2.1">
+              <p id="section-4.3.1-2.1.1">Utilizes a structured data format such as "+xml", "+json", "+yaml", or "+cbor".<a href="#section-4.3.1-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-4.3.1-2.2">
+              <p id="section-4.3.1-2.2.1">Is compressed using a binary compression format such as "+zip" or "+gzip".<a href="#section-4.3.1-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li class="normal" id="section-4.3.1-2.3">
+              <p id="section-4.3.1-2.3.1">Is encoded in a digitally signature format such as "+jwt" or "+cose".<a href="#section-4.3.1-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ul>
+<p id="section-4.3.1-3">While it is conceivable that suffixes such as "+xml+zip" are possible, such usage is NOT RECOMMENDED due to the large number of combinatorial possibilities that could occur and the negative impact that might have on security considerations for toolchains that attempt to safely process all of the possibilities.<a href="#section-4.3.1-3" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="fragment-identifiers">
+<section id="section-4.3.2">
+          <h4 id="name-fragment-identifiers">
+<a href="#section-4.3.2" class="section-number selfRef">4.3.2. </a><a href="#name-fragment-identifiers" class="section-name selfRef">Fragment Identifiers</a>
+          </h4>
+<p id="section-4.3.2-1">The syntax and semantics for fragment identifiers are specified in the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry. In general, when processing fragment identifiers associated with a structured syntax suffix, the following rules SHOULD be followed:<a href="#section-4.3.2-1" class="pilcrow">¶</a></p>
+<ol start="1" type="1" class="normal type-1" id="section-4.3.2-2">
+<li id="section-4.3.2-2.1">
+              <p id="section-4.3.2-2.1.1">For cases defined for the structured syntax suffix, where the fragment identifier does resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry.<a href="#section-4.3.2-2.1.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-4.3.2-2.2">
+              <p id="section-4.3.2-2.2.1">For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.<a href="#section-4.3.2-2.2.1" class="pilcrow">¶</a></p>
+</li>
+            <li id="section-4.3.2-2.3">
+              <p id="section-4.3.2-2.3.1">For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.<a href="#section-4.3.2-2.3.1" class="pilcrow">¶</a></p>
+</li>
+          </ol>
+</section>
+</div>
+</section>
+</div>
+<div id="parameter-requirements">
+<section id="section-4.4">
+        <h3 id="name-parameter-requirements">
+<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-parameter-requirements" class="section-name selfRef">Parameter Requirements</a>
+        </h3>
+<p id="section-4.4-1">Media types MAY elect to use one or more media type parameters, or some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes. In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-2">Parameter names have the syntax as media type names and values:<a href="#section-4.4-2" class="pilcrow">¶</a></p>
+<div class="lang-abnf sourcecode" id="section-4.4-3">
 <pre>
     parameter-name = restricted-name
-</pre><a href="#section-4.3-3" class="pilcrow">¶</a>
+</pre><a href="#section-4.4-3" class="pilcrow">¶</a>
 </div>
-<p id="section-4.3-4">Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
-<p id="section-4.3-5">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-4.3-5" class="pilcrow">¶</a></p>
-<p id="section-4.3-6">There is no defined syntax for parameter values. Therefore, registrations MUST specify parameter value syntax. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; e.g., pure binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-4.3-6" class="pilcrow">¶</a></p>
-<p id="section-4.3-7">Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span> and HTTP <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC5987" class="cite xref">RFC5987</a>]</span> allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.<a href="#section-4.3-7" class="pilcrow">¶</a></p>
-<p id="section-4.3-8">New parameters SHOULD NOT be defined as a way to introduce new functionality in types registered in the standards tree, although new parameters MAY be added to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.<a href="#section-4.3-8" class="pilcrow">¶</a></p>
-<p id="section-4.3-9">Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see <a href="#change" class="auto internal xref">Section 5.5</a>.<a href="#section-4.3-9" class="pilcrow">¶</a></p>
+<p id="section-4.4-4">Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-4.4-4" class="pilcrow">¶</a></p>
+<p id="section-4.4-5">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
+<p id="section-4.4-6">There is no defined syntax for parameter values. Therefore, registrations MUST specify parameter value syntax. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; e.g., pure binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-4.4-6" class="pilcrow">¶</a></p>
+<p id="section-4.4-7">Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span> and HTTP <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC5987" class="cite xref">RFC5987</a>]</span> allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.<a href="#section-4.4-7" class="pilcrow">¶</a></p>
+<p id="section-4.4-8">New parameters SHOULD NOT be defined as a way to introduce new functionality in types registered in the standards tree, although new parameters MAY be added to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.<a href="#section-4.4-8" class="pilcrow">¶</a></p>
+<p id="section-4.4-9">Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see <a href="#change" class="auto internal xref">Section 5.5</a>.<a href="#section-4.4-9" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="canonicalization-and-format-requirements">
-<section id="section-4.4">
+<section id="section-4.5">
         <h3 id="name-canonicalization-and-format">
-<a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-canonicalization-and-format" class="section-name selfRef">Canonicalization and Format Requirements</a>
+<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-canonicalization-and-format" class="section-name selfRef">Canonicalization and Format Requirements</a>
         </h3>
-<p id="section-4.4-1">All registered media types MUST employ a single, canonical data format, regardless of registration tree.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
-<p id="section-4.4-2">A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. This specification MUST at a minimum be referenced by, if it is not actually included in, the media type registration proposal itself.<a href="#section-4.4-2" class="pilcrow">¶</a></p>
-<p id="section-4.4-3">The specifications of format and processing particulars may or may not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.<a href="#section-4.4-3" class="pilcrow">¶</a></p>
-<p id="section-4.4-4">Some media types involve the use of patented technology. The registration of media types involving patented technology is specifically permitted. However, the restrictions set forth in BCP 79 <span>[<a href="#RFC3979" class="cite xref">RFC3979</a>]</span> and BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span> on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.<a href="#section-4.4-4" class="pilcrow">¶</a></p>
-<p id="section-4.4-5">Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.<a href="#section-4.4-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-1">All registered media types MUST employ a single, canonical data format, regardless of registration tree.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. This specification MUST at a minimum be referenced by, if it is not actually included in, the media type registration proposal itself.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-3">The specifications of format and processing particulars may or may not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">Some media types involve the use of patented technology. The registration of media types involving patented technology is specifically permitted. However, the restrictions set forth in BCP 79 <span>[<a href="#RFC3979" class="cite xref">RFC3979</a>]</span> and BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span> on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="interchange-recommendations">
-<section id="section-4.5">
+<section id="section-4.6">
         <h3 id="name-interchange-recommendations">
-<a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-interchange-recommendations" class="section-name selfRef">Interchange Recommendations</a>
+<a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-interchange-recommendations" class="section-name selfRef">Interchange Recommendations</a>
         </h3>
-<p id="section-4.5-1">Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. Problems with different versions, byte ordering, and specifics of gateway handling can and will arise.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.5-2">Universal interoperability of media types is not required, but known interoperability issues SHOULD be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
-<p id="section-4.5-3">The recommendations in this subsection apply regardless of the registration tree involved.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
+<p id="section-4.6-1">Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. Problems with different versions, byte ordering, and specifics of gateway handling can and will arise.<a href="#section-4.6-1" class="pilcrow">¶</a></p>
+<p id="section-4.6-2">Universal interoperability of media types is not required, but known interoperability issues SHOULD be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
+<p id="section-4.6-3">The recommendations in this subsection apply regardless of the registration tree involved.<a href="#section-4.6-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="secreq">
-<section id="section-4.6">
+<section id="section-4.7">
         <h3 id="name-security-requirements">
-<a href="#section-4.6" class="section-number selfRef">4.6. </a><a href="#name-security-requirements" class="section-name selfRef">Security Requirements</a>
+<a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-security-requirements" class="section-name selfRef">Security Requirements</a>
         </h3>
-<p id="section-4.6-1">An analysis of security issues MUST be done for all types registered in the standards tree. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required. However, regardless of what security analysis has or has not been done, all descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".<a href="#section-4.6-1" class="pilcrow">¶</a></p>
-<p id="section-4.6-2">There is absolutely no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.<a href="#section-4.6-2" class="pilcrow">¶</a></p>
-<p id="section-4.6-3">The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in <a href="#comments" class="auto internal xref">Section 5.4</a> below.<a href="#section-4.6-3" class="pilcrow">¶</a></p>
-<p id="section-4.6-4">Some of the issues that need to be examined and described in a security analysis of a media type are:<a href="#section-4.6-4" class="pilcrow">¶</a></p>
+<p id="section-4.7-1">An analysis of security issues MUST be done for all types registered in the standards tree. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required. However, regardless of what security analysis has or has not been done, all descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".<a href="#section-4.7-1" class="pilcrow">¶</a></p>
+<p id="section-4.7-2">There is absolutely no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.<a href="#section-4.7-2" class="pilcrow">¶</a></p>
+<p id="section-4.7-3">The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in <a href="#comments" class="auto internal xref">Section 5.4</a> below.<a href="#section-4.7-3" class="pilcrow">¶</a></p>
+<p id="section-4.7-4">Some of the issues that need to be examined and described in a security analysis of a media type are:<a href="#section-4.7-4" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.6-5.1">
-            <p id="section-4.6-5.1.1">Complex media types may include provisions for directives that institute actions on a recipient's files or other resources. In many cases, provision is made for originators to specify arbitrary actions in an unrestricted fashion that may then have devastating effects. See the registration of the application/postscript media type in <span>[<a href="#RFC2046" class="cite xref">RFC2046</a>]</span> for an example of such directives and how they can be described in a media type registration.<a href="#section-4.6-5.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4.7-5.1">
+            <p id="section-4.7-5.1.1">Complex media types may include provisions for directives that institute actions on a recipient's files or other resources. In many cases, provision is made for originators to specify arbitrary actions in an unrestricted fashion that may then have devastating effects. See the registration of the application/postscript media type in <span>[<a href="#RFC2046" class="cite xref">RFC2046</a>]</span> for an example of such directives and how they can be described in a media type registration.<a href="#section-4.7-5.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.6-5.2">
-            <p id="section-4.6-5.2.1">Any security analysis MUST state whether or not they employ such "active content"; if they do, they MUST state what steps have been taken, or MUST be taken by applications of the media type, to protect users of the media type from harm.<a href="#section-4.6-5.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.7-5.2">
+            <p id="section-4.7-5.2.1">Any security analysis MUST state whether or not they employ such "active content"; if they do, they MUST state what steps have been taken, or MUST be taken by applications of the media type, to protect users of the media type from harm.<a href="#section-4.7-5.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.6-5.3">
-            <p id="section-4.6-5.3.1">Complex media types may include provisions for directives that institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.<a href="#section-4.6-5.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.7-5.3">
+            <p id="section-4.7-5.3.1">Complex media types may include provisions for directives that institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.<a href="#section-4.7-5.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.6-5.4">
-            <p id="section-4.6-5.4.1">A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.<a href="#section-4.6-5.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.7-5.4">
+            <p id="section-4.7-5.4.1">A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.<a href="#section-4.7-5.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.6-5.5">
-            <p id="section-4.6-5.5.1">A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types SHOULD always document whether or not they need such services in their security considerations.<a href="#section-4.6-5.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.7-5.5">
+            <p id="section-4.7-5.5.1">A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types SHOULD always document whether or not they need such services in their security considerations.<a href="#section-4.7-5.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
+<div id="structured-suffixes-1">
+<section id="section-4.7.1">
+          <h4 id="name-structured-suffixes-2">
+<a href="#section-4.7.1" class="section-number selfRef">4.7.1. </a><a href="#name-structured-suffixes-2" class="section-name selfRef">Structured Suffixes</a>
+          </h4>
+<div id="document-validity">
+<section id="section-4.7.1.1">
+            <h5 id="name-document-validity">
+<a href="#section-4.7.1.1" class="section-number selfRef">4.7.1.1. </a><a href="#name-document-validity" class="section-name selfRef">Document Validity</a>
+            </h5>
+<p id="section-4.7.1.1-1">If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured suffix will be valid for a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.<a href="#section-4.7.1.1-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="fragment-semantics">
+<section id="section-4.7.1.2">
+            <h5 id="name-fragment-semantics">
+<a href="#section-4.7.1.2" class="section-number selfRef">4.7.1.2. </a><a href="#name-fragment-semantics" class="section-name selfRef">Fragment Semantics</a>
+            </h5>
+<p id="section-4.7.1.2-1">If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.<a href="#section-4.7.1.2-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security-characteristics">
+<section id="section-4.7.1.3">
+            <h5 id="name-security-characteristics">
+<a href="#section-4.7.1.3" class="section-number selfRef">4.7.1.3. </a><a href="#name-security-characteristics" class="section-name selfRef">Security Characteristics</a>
+            </h5>
+<p id="section-4.7.1.3-1">Toolchains cannot assume that the security characteristics of processing based on structured suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.<a href="#section-4.7.1.3-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="partial-processing">
+<section id="section-4.7.1.4">
+            <h5 id="name-partial-processing">
+<a href="#section-4.7.1.4" class="section-number selfRef">4.7.1.4. </a><a href="#name-partial-processing" class="section-name selfRef">Partial Processing</a>
+            </h5>
+<p id="section-4.7.1.4-1">It is conceivable that an attacker could utilize structured suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.<a href="#section-4.7.1.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.7.1.4-2">Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.<a href="#section-4.7.1.4-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+</section>
+</div>
 </section>
 </div>
 <div id="requirements-specific-to-xml-media-types">
-<section id="section-4.7">
+<section id="section-4.8">
         <h3 id="name-requirements-specific-to-xm">
-<a href="#section-4.7" class="section-number selfRef">4.7. </a><a href="#name-requirements-specific-to-xm" class="section-name selfRef">Requirements Specific to XML Media Types</a>
+<a href="#section-4.8" class="section-number selfRef">4.8. </a><a href="#name-requirements-specific-to-xm" class="section-name selfRef">Requirements Specific to XML Media Types</a>
         </h3>
-<p id="section-4.7-1">There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in <span>[<a href="#RFC3023" class="cite xref">RFC3023</a>]</span>.<a href="#section-4.7-1" class="pilcrow">¶</a></p>
+<p id="section-4.8-1">There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in <span>[<a href="#RFC3023" class="cite xref">RFC3023</a>]</span>.<a href="#section-4.8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="encoding">
-<section id="section-4.8">
+<section id="section-4.9">
         <h3 id="name-encoding-requirements">
-<a href="#section-4.8" class="section-number selfRef">4.8. </a><a href="#name-encoding-requirements" class="section-name selfRef">Encoding Requirements</a>
+<a href="#section-4.9" class="section-number selfRef">4.9. </a><a href="#name-encoding-requirements" class="section-name selfRef">Encoding Requirements</a>
         </h3>
-<p id="section-4.8-1">Some transports impose restrictions on the type of data they can carry. For example, Internet mail traditionally was limited to 7bit US-ASCII text. Encoding schemes are often used to work around such transport limitations.<a href="#section-4.8-1" class="pilcrow">¶</a></p>
-<p id="section-4.8-2">It is therefore useful to note what sort of data a media type can consist of as part of its registration. An "encoding considerations" field is provided for this purpose. Possible values of this field are:<a href="#section-4.8-2" class="pilcrow">¶</a></p>
-<span class="break"></span><dl class="dlParallel" id="section-4.8-3">
-          <dt id="section-4.8-3.1">7bit:</dt>
-          <dd style="margin-left: 1.5em" id="section-4.8-3.2">
-            <p id="section-4.8-3.2.1">The content of the media type consists solely of CRLF- delimited 7bit US-ASCII text.<a href="#section-4.8-3.2.1" class="pilcrow">¶</a></p>
+<p id="section-4.9-1">Some transports impose restrictions on the type of data they can carry. For example, Internet mail traditionally was limited to 7bit US-ASCII text. Encoding schemes are often used to work around such transport limitations.<a href="#section-4.9-1" class="pilcrow">¶</a></p>
+<p id="section-4.9-2">It is therefore useful to note what sort of data a media type can consist of as part of its registration. An "encoding considerations" field is provided for this purpose. Possible values of this field are:<a href="#section-4.9-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="section-4.9-3">
+          <dt id="section-4.9-3.1">7bit:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.9-3.2">
+            <p id="section-4.9-3.2.1">The content of the media type consists solely of CRLF- delimited 7bit US-ASCII text.<a href="#section-4.9-3.2.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-4.8-3.3">8bit:</dt>
-          <dd style="margin-left: 1.5em" id="section-4.8-3.4">
-            <p id="section-4.8-3.4.1">The content of the media type consists solely of CRLF- delimited 8bit text.<a href="#section-4.8-3.4.1" class="pilcrow">¶</a></p>
+<dt id="section-4.9-3.3">8bit:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.9-3.4">
+            <p id="section-4.9-3.4.1">The content of the media type consists solely of CRLF- delimited 8bit text.<a href="#section-4.9-3.4.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-4.8-3.5">binary:</dt>
-          <dd style="margin-left: 1.5em" id="section-4.8-3.6">
-            <p id="section-4.8-3.6.1">The content consists of an unrestricted sequence of octets.<a href="#section-4.8-3.6.1" class="pilcrow">¶</a></p>
+<dt id="section-4.9-3.5">binary:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.9-3.6">
+            <p id="section-4.9-3.6.1">The content consists of an unrestricted sequence of octets.<a href="#section-4.9-3.6.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
-<dt id="section-4.8-3.7">framed:</dt>
-          <dd style="margin-left: 1.5em" id="section-4.8-3.8">
-            <p id="section-4.8-3.8.1">The content consists of a series of frames or packets without internal framing or alignment indicators. Additional out- of-band information is needed to interpret the data properly, including but not necessarily limited to knowledge of the boundaries between successive frames and knowledge of the transport mechanism. Note that media types of this sort cannot simply be stored in a file or transported as a simple stream of octets; therefore, such media types are unsuitable for use in many traditional protocols. A commonly used transport with framed encoding is the Real-time Transport Protocol, RTP. Additional rules for framed encodings defined for transport using RTP are given in <span>[<a href="#RFC4855" class="cite xref">RFC4855</a>]</span>.<a href="#section-4.8-3.8.1" class="pilcrow">¶</a></p>
+<dt id="section-4.9-3.7">framed:</dt>
+          <dd style="margin-left: 1.5em" id="section-4.9-3.8">
+            <p id="section-4.9-3.8.1">The content consists of a series of frames or packets without internal framing or alignment indicators. Additional out- of-band information is needed to interpret the data properly, including but not necessarily limited to knowledge of the boundaries between successive frames and knowledge of the transport mechanism. Note that media types of this sort cannot simply be stored in a file or transported as a simple stream of octets; therefore, such media types are unsuitable for use in many traditional protocols. A commonly used transport with framed encoding is the Real-time Transport Protocol, RTP. Additional rules for framed encodings defined for transport using RTP are given in <span>[<a href="#RFC4855" class="cite xref">RFC4855</a>]</span>.<a href="#section-4.9-3.8.1" class="pilcrow">¶</a></p>
 </dd>
         <dd class="break"></dd>
 </dl>
-<p id="section-4.8-4">Additional restrictions on 7bit and 8bit text are given in <span><a href="https://rfc-editor.org/rfc/rfc2046#section-4.1.1" class="relref">Section 4.1.1</a> of [<a href="#RFC2046" class="cite xref">RFC2046</a>]</span>.<a href="#section-4.8-4" class="pilcrow">¶</a></p>
+<p id="section-4.9-4">Additional restrictions on 7bit and 8bit text are given in <span><a href="https://rfc-editor.org/rfc/rfc2046#section-4.1.1" class="relref">Section 4.1.1</a> of [<a href="#RFC2046" class="cite xref">RFC2046</a>]</span>.<a href="#section-4.9-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="non-requirements">
-<section id="section-4.9">
+<section id="section-4.10">
         <h3 id="name-usage-and-implementation-no">
-<a href="#section-4.9" class="section-number selfRef">4.9. </a><a href="#name-usage-and-implementation-no" class="section-name selfRef">Usage and Implementation Non-Requirements</a>
+<a href="#section-4.10" class="section-number selfRef">4.10. </a><a href="#name-usage-and-implementation-no" class="section-name selfRef">Usage and Implementation Non-Requirements</a>
         </h3>
-<p id="section-4.9-1">In the asynchronous mail environment, where information on the capabilities of the remote mail agent is frequently not available to the sender, maximum interoperability is attained by restricting the media types used to those "common" formats expected to be widely implemented. This was asserted in the past as a reason to limit the number of possible media types, and resulted in a registration process with a significant hurdle and delay for those registering media types.<a href="#section-4.9-1" class="pilcrow">¶</a></p>
-<p id="section-4.9-2">However, the need for "common" media types does not require limiting the registration of new media types. If a limited set of media types is recommended for a particular application, that should be asserted by a separate applicability statement specific for the application and/or environment.<a href="#section-4.9-2" class="pilcrow">¶</a></p>
-<p id="section-4.9-3">Therefore, universal support and implementation of a media type are NOT a requirement for registration. However, if a media type is explicitly intended for limited use, this MUST be noted in its registration. The "Restrictions on Usage" field is provided for this purpose.<a href="#section-4.9-3" class="pilcrow">¶</a></p>
+<p id="section-4.10-1">In the asynchronous mail environment, where information on the capabilities of the remote mail agent is frequently not available to the sender, maximum interoperability is attained by restricting the media types used to those "common" formats expected to be widely implemented. This was asserted in the past as a reason to limit the number of possible media types, and resulted in a registration process with a significant hurdle and delay for those registering media types.<a href="#section-4.10-1" class="pilcrow">¶</a></p>
+<p id="section-4.10-2">However, the need for "common" media types does not require limiting the registration of new media types. If a limited set of media types is recommended for a particular application, that should be asserted by a separate applicability statement specific for the application and/or environment.<a href="#section-4.10-2" class="pilcrow">¶</a></p>
+<p id="section-4.10-3">Therefore, universal support and implementation of a media type are NOT a requirement for registration. However, if a media type is explicitly intended for limited use, this MUST be noted in its registration. The "Restrictions on Usage" field is provided for this purpose.<a href="#section-4.10-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="publication-requirements">
-<section id="section-4.10">
+<section id="section-4.11">
         <h3 id="name-publication-requirements">
-<a href="#section-4.10" class="section-number selfRef">4.10. </a><a href="#name-publication-requirements" class="section-name selfRef">Publication Requirements</a>
+<a href="#section-4.11" class="section-number selfRef">4.11. </a><a href="#name-publication-requirements" class="section-name selfRef">Publication Requirements</a>
         </h3>
-<p id="section-4.10-1">Media types registered in the standards tree by the IETF itself MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and "publish" them as part of the media types registration tree itself.<a href="#section-4.10-1" class="pilcrow">¶</a></p>
-<p id="section-4.10-2">As stated previously, standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.<a href="#section-4.10-2" class="pilcrow">¶</a></p>
-<p id="section-4.10-3">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate. To become an IETF standard, a protocol or data object must go through the IETF standards process. While it provides additional assurances when it is appropriate, this is too difficult and too lengthy a process for the convenient registration of media types.<a href="#section-4.10-3" class="pilcrow">¶</a></p>
-<p id="section-4.10-4">The standards tree exists for media types that do require a substantive review and approval process in a recognized standards- related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.<a href="#section-4.10-4" class="pilcrow">¶</a></p>
-<p id="section-4.10-5">As discussed above, registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.<a href="#section-4.10-5" class="pilcrow">¶</a></p>
+<p id="section-4.11-1">Media types registered in the standards tree by the IETF itself MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and "publish" them as part of the media types registration tree itself.<a href="#section-4.11-1" class="pilcrow">¶</a></p>
+<p id="section-4.11-2">As stated previously, standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.<a href="#section-4.11-2" class="pilcrow">¶</a></p>
+<p id="section-4.11-3">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate. To become an IETF standard, a protocol or data object must go through the IETF standards process. While it provides additional assurances when it is appropriate, this is too difficult and too lengthy a process for the convenient registration of media types.<a href="#section-4.11-3" class="pilcrow">¶</a></p>
+<p id="section-4.11-4">The standards tree exists for media types that do require a substantive review and approval process in a recognized standards- related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.<a href="#section-4.11-4" class="pilcrow">¶</a></p>
+<p id="section-4.11-5">As discussed above, registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.<a href="#section-4.11-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="fragment-identifier-requirements">
-<section id="section-4.11">
+<section id="section-4.12">
         <h3 id="name-fragment-identifier-require">
-<a href="#section-4.11" class="section-number selfRef">4.11. </a><a href="#name-fragment-identifier-require" class="section-name selfRef">Fragment Identifier Requirements</a>
+<a href="#section-4.12" class="section-number selfRef">4.12. </a><a href="#name-fragment-identifier-require" class="section-name selfRef">Fragment Identifier Requirements</a>
         </h3>
-<p id="section-4.11-1">Media type registrations can specify how applications should interpret fragment identifiers (specified in <span><a href="https://rfc-editor.org/rfc/rfc3986#section-3.5" class="relref">Section 3.5</a> of [<a href="#RFC3986" class="cite xref">RFC3986</a>]</span>) associated with the media type.<a href="#section-4.11-1" class="pilcrow">¶</a></p>
-<p id="section-4.11-2">Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types. In particular, media types that use a named structured syntax with a registered "+suffix" MUST follow whatever fragment identifier rules are given in the structured syntax suffix registration.<a href="#section-4.11-2" class="pilcrow">¶</a></p>
+<p id="section-4.12-1">Media type registrations can specify how applications should interpret fragment identifiers (specified in <span><a href="https://rfc-editor.org/rfc/rfc3986#section-3.5" class="relref">Section 3.5</a> of [<a href="#RFC3986" class="cite xref">RFC3986</a>]</span>) associated with the media type.<a href="#section-4.12-1" class="pilcrow">¶</a></p>
+<p id="section-4.12-2">Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types. In particular, media types that use a named structured syntax with a registered "+suffix" MUST follow whatever fragment identifier rules are given in the structured syntax suffix registration.<a href="#section-4.12-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="additional-information">
-<section id="section-4.12">
+<section id="section-4.13">
         <h3 id="name-additional-information">
-<a href="#section-4.12" class="section-number selfRef">4.12. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
+<a href="#section-4.13" class="section-number selfRef">4.13. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
         </h3>
-<p id="section-4.12-1">Various sorts of optional information SHOULD be included in the specification of a media type if it is available:<a href="#section-4.12-1" class="pilcrow">¶</a></p>
+<p id="section-4.13-1">Various sorts of optional information SHOULD be included in the specification of a media type if it is available:<a href="#section-4.13-1" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-4.12-2.1">
-            <p id="section-4.12-2.1.1">Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file and thus can be used to identify entities as being of a given media type.<a href="#section-4.12-2.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-4.13-2.1">
+            <p id="section-4.13-2.1.1">Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file and thus can be used to identify entities as being of a given media type.<a href="#section-4.13-2.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.12-2.2">
-            <p id="section-4.12-2.2.1">File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.<a href="#section-4.12-2.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.13-2.2">
+            <p id="section-4.13-2.2.1">File name extension(s) commonly used on one or more platforms to indicate that some file contains a given media type.<a href="#section-4.13-2.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.12-2.3">
-            <p id="section-4.12-2.3.1">macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see <span>[<a href="#MacOSUTIs" class="cite xref">MacOSUTIs</a>]</span> for definitions and syntax).<a href="#section-4.12-2.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.13-2.3">
+            <p id="section-4.13-2.3.1">macOS Uniform Type Identifier (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on macOS and related platforms (see <span>[<a href="#MacOSUTIs" class="cite xref">MacOSUTIs</a>]</span> for definitions and syntax).<a href="#section-4.13-2.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-4.12-2.4">
-            <p id="section-4.12-2.4.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-4.12-2.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-4.13-2.4">
+            <p id="section-4.13-2.4.1">Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see <span>[<a href="#windowsClipboardNames" class="cite xref">windowsClipboardNames</a>]</span> for definitions and syntax).<a href="#section-4.13-2.4.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-4.12-3">In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.<a href="#section-4.12-3" class="pilcrow">¶</a></p>
+<p id="section-4.13-3">In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.<a href="#section-4.13-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -2118,22 +2223,22 @@ svg :is([fill="white"], [fill^="#fff"]) {
           <dd class="break"></dd>
 <dt id="section-6.2-2.7">Encoding considerations</dt>
           <dd style="margin-left: 1.5em" id="section-6.2-2.8">
-            <p id="section-6.2-2.8.1">General guidance regarding encoding considerations for any type employing this syntax should be given here. The same requirements for media type encoding considerations given in <a href="#encoding" class="auto internal xref">Section 4.8</a> apply here.<a href="#section-6.2-2.8.1" class="pilcrow">¶</a></p>
+            <p id="section-6.2-2.8.1">A full citation to a section in a specification that provides general guidance regarding encoding considerations for any type employing this syntax. The same requirements for media type encoding considerations given in <a href="#encoding" class="auto internal xref">Section 4.9</a> apply here.<a href="#section-6.2-2.8.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-6.2-2.9">Interoperability considerations</dt>
           <dd style="margin-left: 1.5em" id="section-6.2-2.10">
-            <p id="section-6.2-2.10.1">Any issues regarding the interoperable use of types employing this structured syntax should be given here. Examples would include the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.<a href="#section-6.2-2.10.1" class="pilcrow">¶</a></p>
+            <p id="section-6.2-2.10.1">A full citation to a section in a specification that documents any issues regarding the interoperable use of types employing this structured syntax should be given here. Examples would include the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.<a href="#section-6.2-2.10.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-6.2-2.11">Fragment identifier considerations</dt>
           <dd style="margin-left: 1.5em" id="section-6.2-2.12">
-            <p id="section-6.2-2.12.1">Generic processing of fragment identifiers for any type employing this syntax should be described here.<a href="#section-6.2-2.12.1" class="pilcrow">¶</a></p>
+            <p id="section-6.2-2.12.1">A full citation to a section in a specification that documents the generic processing rules of fragment identifiers for any type employing this syntax should be described here.<a href="#section-6.2-2.12.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-6.2-2.13">Security considerations</dt>
           <dd style="margin-left: 1.5em" id="section-6.2-2.14">
-            <p id="section-6.2-2.14.1">Security considerations shared by media types employing this structured syntax must be specified here. The same requirements for media type security considerations given in <a href="#secreq" class="auto internal xref">Section 4.6</a> apply here, with the exception that the option of not assessing the security considerations is not available for suffix registrations.<a href="#section-6.2-2.14.1" class="pilcrow">¶</a></p>
+            <p id="section-6.2-2.14.1">A full citation to a section in a specification that provides security considerations shared by media types employing this structured syntax must be specified here. The same requirements for media type security considerations given in <a href="#secreq" class="auto internal xref">Section 4.7</a> apply here, with the exception that the option of not assessing the security considerations is not available for suffix registrations.<a href="#section-6.2-2.14.1" class="pilcrow">¶</a></p>
 </dd>
           <dd class="break"></dd>
 <dt id="section-6.2-2.15">Contact</dt>
@@ -2156,7 +2261,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-security-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
-<p id="section-7-1">Security requirements for both media type and media type suffix registrations are discussed in <a href="#secreq" class="auto internal xref">Section 4.6</a>.<a href="#section-7-1" class="pilcrow">¶</a></p>
+<p id="section-7-1">Security requirements for both media type and media type suffix registrations are discussed in <a href="#secreq" class="auto internal xref">Section 4.7</a>.<a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
