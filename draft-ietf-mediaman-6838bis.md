@@ -316,9 +316,35 @@ The primary guideline for whether a structured type name suffix is registrable i
 
 Media types that make use of a named structured syntax SHOULD use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.
 
+Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing base subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the base subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing base subtype names in the media type registry.
+
+Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing Change Controller for the associated base subtype name to register the new media type.
+
 ### Deprecated Aliases {#deprecated-aliases}
 
 In some cases, a single media type may have been widely deployed prior to registration under multiple names. In such cases, a preferred name MUST be chosen for the media type, and applications MUST use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known MAY be supplied as additional information in order to assist applications in processing the media type properly.
+
+## Structured Suffixes
+
+A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign. As an example, given the "application/foo+bar" media type: "application" is the top-level type, "foo" is the base subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.
+
+### Common Suffix Patterns
+
+There are a few common patterns that are utilized for media types that use structured suffixes. These patterns include expressing that the data associated with a media type:
+
+* Utilizes a structured data format such as "+xml", "+json", "+yaml", or "+cbor".
+* Is compressed using a binary compression format such as "+zip" or "+gzip".
+* Is encoded in a digitally signature format such as "+jwt" or "+cose".
+
+While it is conceivable that suffixes such as "+xml+zip" are possible, such usage is NOT RECOMMENDED due to the large number of combinatorial possibilities that could occur and the negative impact that might have on security considerations for toolchains that attempt to safely process all of the possibilities.
+
+### Fragment Identifiers
+
+The syntax and semantics for fragment identifiers are specified in the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry. In general, when processing fragment identifiers associated with a structured syntax suffix, the following rules SHOULD be followed:
+
+1. For cases defined for the structured syntax suffix, where the fragment identifier does resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry.
+2. For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.
+3. For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.
 
 ## Parameter Requirements
 
@@ -381,6 +407,27 @@ Some of the issues that need to be examined and described in a security analysis
 * A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.
 
 * A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types SHOULD always document whether or not they need such services in their security considerations.
+
+### Structured Suffixes
+
+#### Document Validity
+
+If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured suffix will be valid for a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.
+
+#### Fragment Semantics
+
+If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.
+
+#### Security Characteristics
+
+Toolchains cannot assume that the security characteristics of processing based on structured suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
+
+#### Partial Processing
+
+It is conceivable that an attacker could utilize structured suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.
+
+Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
+
 
 ## Requirements Specific to XML Media Types
 
@@ -589,16 +636,16 @@ References
 : Include full citations for all specifications necessary to understand the structured syntax.
 
 Encoding considerations
-: General guidance regarding encoding considerations for any type employing this syntax should be given here. The same requirements for media type encoding considerations given in {{encoding}} apply here.
+: A full citation to a section in a specification that provides general guidance regarding encoding considerations for any type employing this syntax. The same requirements for media type encoding considerations given in {{encoding}} apply here.
 
 Interoperability considerations
-: Any issues regarding the interoperable use of types employing this structured syntax should be given here. Examples would include the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.
+: A full citation to a section in a specification that documents any issues regarding the interoperable use of types employing this structured syntax should be given here. Examples would include the existence of incompatible versions of the syntax, issues combining certain charsets with the syntax, or incompatibilities with other types or protocols.
 
 Fragment identifier considerations
-: Generic processing of fragment identifiers for any type employing this syntax should be described here.
+: A full citation to a section in a specification that documents the generic processing rules of fragment identifiers for any type employing this syntax should be described here.
 
 Security considerations
-: Security considerations shared by media types employing this structured syntax must be specified here. The same requirements for media type security considerations given in {{secreq}} apply here, with the exception that the option of not assessing the security considerations is not available for suffix registrations.
+: A full citation to a section in a specification that provides security considerations shared by media types employing this structured syntax must be specified here. The same requirements for media type security considerations given in {{secreq}} apply here, with the exception that the option of not assessing the security considerations is not available for suffix registrations.
 
 Contact
 : Person (including contact information) to contact for further information.
