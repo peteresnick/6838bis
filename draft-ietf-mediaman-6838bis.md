@@ -60,13 +60,11 @@ This document defines procedures for the specification and registration of media
 
 # Introduction
 
-Internet application protocols are been carefully designed to be easily extensible in certain areas. In particular, many protocols, including but not limited to HTTP {{?RFC9110}} and MIME {{!RFC2045}}, are capable of carrying arbitrary labeled content.
+Internet application protocols are capable of carrying arbitrary labeled content, including but not limited to HTTP {{?RFC9110}} and MIME {{!RFC2045}}.
 
-The mechanism used to label such content is a media type, consisting of a top-level type and a subtype, which is further structured into trees. Optionally, media types can define companion data, known as parameters.
+Such labels are known as media types. A media type consists of a top-level type and a subtype, which is further structured into trees. Optionally, a media type can be defined to allow companion data, known as parameters.
 
-A registration process is needed for these labels, so that the set of such values are defined in a reasonably orderly, well-specified, and public manner.
-
-This document specifies the criteria for media type registrations and defines the procedures to be used to register media types ({{procedures}}) as well as media type structured suffixes ({{suffix-procedures}}) in the Internet Assigned Numbers Authority (IANA) central registry.
+This document defines the criteria and procedures to be used to register media types ({{procedures}}) as well as media type structured suffixes ({{suffix-procedures}}) in the Internet Assigned Numbers Authority (IANA) registry.
 
 The location of the media type registry managed by these procedures is:
 
