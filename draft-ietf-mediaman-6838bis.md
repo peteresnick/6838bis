@@ -60,7 +60,7 @@ This document defines procedures for the specification and registration of media
 
 # Introduction
 
-Internet application protocols are been carefully designed to be easily extensible in certain areas. In particular, many protocols, including but not limited to HTTP {{?RFC2616}} and MIME {{!RFC2045}}, are capable of carrying arbitrary labeled content.
+Internet application protocols are been carefully designed to be easily extensible in certain areas. In particular, many protocols, including but not limited to HTTP {{?RFC9110}} and MIME {{!RFC2045}}, are capable of carrying arbitrary labeled content.
 
 The mechanism used to label such content is a media type, consisting of a top-level type and a subtype, which is further structured into trees. Optionally, media types can define companion data, known as parameters.
 
@@ -98,7 +98,7 @@ The standards tree is intended for types of general interest to the Internet com
 
 1. in the case of registrations associated with IETF specifications, approved directly by the IESG, or
 
-2. registered by a recognized standards-related organization using the "Specification Required" IANA registration policy {{!RFC5226}} (which implies Expert Review), or
+2. registered by a recognized standards-related organization using the "Specification Required" IANA registration policy {{Section 4.6 of !RFC8126}} (which implies Expert Review), or
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
@@ -112,7 +112,7 @@ Media types in the standards tree MUST NOT have faceted names, unless they are g
 
 The "owner" of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
-Standards-tree registrations from recognized standards-related organizations are submitted directly to the IANA, where they will undergo Expert Review {{!RFC5226}} prior to approval. In this case, the Expert Reviewer(s) will, among other things, ensure that the required specification provides adequate documentation.
+Standards-tree registrations from recognized standards-related organizations are submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval. In this case, the Expert Reviewer(s) will, among other things, ensure that the required specification provides adequate documentation.
 
 ## Community Formats in the Standards Tree {#community}
 
@@ -140,7 +140,7 @@ When a third party registers a type on behalf of someone else, both entities SHO
 
 Vendor-tree registrations will be distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
 
-While public exposure and review of media types to be registered in the vendor tree are not required, using the media-types@iana.org mailing list for review is encouraged, to improve the quality of those specifications. Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{!RFC5226}} prior to approval.
+While public exposure and review of media types to be registered in the vendor tree are not required, using the media-types@iana.org mailing list for review is encouraged, to improve the quality of those specifications. Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
 ## Personal or Vanity Tree
 
@@ -148,7 +148,7 @@ Registrations for media types created experimentally or as part of products that
 
 The owner of "personal" registrations and associated specifications is the person or entity making the registration, or one to whom responsibility has been transferred as described below.
 
-While public exposure and review of media types to be registered in the personal tree are not required, using the media-types@iana.org mailing list (see {{preliminary-review}}) for review is encouraged, to improve the quality of those specifications. Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{!RFC5226}} prior to approval.
+While public exposure and review of media types to be registered in the personal tree are not required, using the media-types@iana.org mailing list (see {{preliminary-review}}) for review is encouraged, to improve the quality of those specifications. Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
 ## Unregistered x. Tree
 
@@ -304,7 +304,7 @@ This subsection lists negative criteria for top-level types, identifying criteri
 
 ### Structured Syntax Name Suffixes {#suffixes}
 
-XML in MIME {{!RFC3023}} defined the first such augmentation to the media type definition to additionally specify the underlying structure of that media type. To quote:
+XML in MIME {{?RFC3023}} defined the first such augmentation to the media type definition to additionally specify the underlying structure of that media type. To quote:
 
 > This document also standardizes a convention (using the suffix '+xml') for naming media types ... when those media types represent XML MIME (Multipurpose Internet Mail Extensions) entities.
 
@@ -362,7 +362,7 @@ Parameter names are case-insensitive and no meaning is attached to the order in 
 
 There is no defined syntax for parameter values. Therefore, registrations MUST specify parameter value syntax. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; e.g., pure binary valued parameters, while permitted in some protocols, are best avoided.
 
-Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC2045}} {{?RFC5987}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.
+Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC9110}} {{?RFC8187}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.
 
 New parameters SHOULD NOT be defined as a way to introduce new functionality in types registered in the standards tree, although new parameters MAY be added to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.
 
@@ -376,7 +376,7 @@ A permanent and readily available public specification of the format for the med
 
 The specifications of format and processing particulars may or may not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.
 
-Some media types involve the use of patented technology. The registration of media types involving patented technology is specifically permitted. However, the restrictions set forth in BCP 79 {{!RFC3979}} and BCP 78 {{!RFC5378}} on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.
+Some media types involve the use of patented technology. The registration of media types involving patented technology is specifically permitted. However, the restrictions set forth in BCP 79 {{!RFC8179}} and BCP 78 {{!RFC5378}} on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.
 
 Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.
 
@@ -431,7 +431,7 @@ Enterprising attackers might take advantage of toolchains that partially process
 
 ## Requirements Specific to XML Media Types
 
-There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in {{!RFC3023}}.
+There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in {{!RFC7303}}.
 
 ## Encoding Requirements {#encoding}
 
@@ -615,7 +615,7 @@ Upon receipt of a structured syntax suffix registration request,
 
 5. If Expert Review recommends registration, IANA adds the registration to the appropriate registry.
 
-The initial registry content specification {{!RFC6839}} provides examples of structured syntax suffix registrations.
+The initial registry content specification {{?RFC6839}} provides examples of structured syntax suffix registrations.
 
 ## Change Procedures
 
