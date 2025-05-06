@@ -76,10 +76,6 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234}} notation, including the core rules defined in Appendix B of that document.
 
-# Media Type Registration Preliminaries
-
-Registration of a new media type or types starts with the construction of a registration proposal. Registration may occur within several different registration trees that have different requirements, as discussed below. In general, a new registration proposal is circulated and reviewed in a fashion appropriate to the tree involved. The media type is then registered if the proposal is acceptable. The following sections describe the requirements and procedures used for each of the different registration trees.
-
 # Registration Trees and Subtype Names
 
 In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered to accommodate the different natural requirements for, e.g., a subtype that will be recommended for wide support and implementation by the Internet community, or a subtype that is used to move files associated with proprietary software. The following subsections define registration "trees" that are distinguished by the use of faceted names, e.g., subtype names that begin with a "tree." prefix. Note that some media types defined prior to this document do not conform to the naming conventions described below. See {{grandfather}} for a discussion of them.
