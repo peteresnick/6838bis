@@ -60,7 +60,7 @@ This document defines procedures for the specification and registration of media
 
 # Introduction
 
-Recent Internet protocols have been carefully designed to be easily extensible in certain areas. In particular, many protocols, including but not limited to HTTP {{?RFC2616}} and MIME {{!RFC2045}}, are capable of carrying arbitrary labeled content.
+Internet application protocols are been carefully designed to be easily extensible in certain areas. In particular, many protocols, including but not limited to HTTP {{?RFC2616}} and MIME {{!RFC2045}}, are capable of carrying arbitrary labeled content.
 
 The mechanism used to label such content is a media type, consisting of a top-level type and a subtype, which is further structured into trees. Optionally, media types can define companion data, known as parameters.
 
