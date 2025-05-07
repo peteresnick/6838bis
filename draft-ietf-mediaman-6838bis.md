@@ -260,7 +260,7 @@ All subtypes of multipart and message MUST conform to the syntax rules and other
 
 ### Additional Top-Level Types
 
-In some cases, a new media type may not "fit" under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new type name can be defined to accommodate it. Definition of a new top-level type name MUST be done via a Standards Track RFC, taking into account the criteria and guidelines given below; no other mechanism can be used to define additional type names.
+In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new type name can be defined to accommodate it. Definition of a new top-level type name MUST be done via a Standards Track RFC, taking into account the criteria and guidelines given below; no other mechanism can be used to define additional type names.
 
 #### Required Criteria
 
