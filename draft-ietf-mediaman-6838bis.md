@@ -264,7 +264,7 @@ In some cases, a new media type may not be easily classified under any currently
 
 #### Required Criteria
 
-The following is the list of required criteria for the definition of a new top-level type. Motivations for the requirements are also included.
+Definitions of new top-level types are required to fulfil the following criteria:
 
 * Every new top-level type MUST be defined in a Standards Track RFC (see {{Section 4.9 of !RFC8126}}). This will make sure there is sufficient community interest, review, and consensus appropriate for a new top-level type.
 
