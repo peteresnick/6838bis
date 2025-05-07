@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                        6 May 2025
-Expires: 7 November 2025
+Intended status: Best Current Practice                        7 May 2025
+Expires: 8 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 November 2025.
+   This Internet-Draft will expire on 8 November 2025.
 
 Copyright Notice
 
@@ -70,7 +70,7 @@ Table of Contents
      2.1.  Standards Tree
      2.2.  Community Formats in the Standards Tree
      2.3.  Vendor Tree
-     2.4.  Personal or Vanity Tree
+     2.4.  Personal Tree
      2.5.  Unregistered x.  Tree
      2.6.  Additional Registration Trees
    3.  Registration Requirements
@@ -277,7 +277,7 @@ Table of Contents
    registration.  One possible format for this would be "Foo, on behalf
    of Bar".
 
-   Vendor-tree registrations are distinguished by the leading facet
+   Vendor tree registrations are distinguished by the leading facet
    "vnd.".  That may be followed, at the discretion of the registrant,
    by either a media subtype name from a well-known producer (e.g.,
    "vnd.mudpie") or by an IANA-approved designation of the producer's
@@ -293,56 +293,62 @@ Table of Contents
    IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
    prior to approval.
 
-2.4.  Personal or Vanity Tree
+2.4.  Personal Tree
 
-   Registrations for media types created experimentally or as part of
-   products that are not distributed commercially may be registered in
-   the personal or vanity tree.  The registrations are distinguished by
-   the leading facet "prs.".
+   The personal tree is intended for media types created experimentally
+   or as part of products that are not distributed commercially.  This
+   tree is sometimes referred to as the "vanity" tree.
+
+   Personal tree registrations are distinguished by the leading facet
+   "prs.".
 
    The owner of "personal" registrations and associated specifications
    is the person or entity making the registration, or one to whom
    responsibility has been transferred as described below.
 
    While public exposure and review of media types to be registered in
-   the personal tree are not required, using the media-types@iana.org
-   mailing list (see Section 4.1) for review is encouraged, to improve
-   the quality of those specifications.  Registrations in the personal
-   tree may be submitted directly to the IANA, where they will undergo
-   Expert Review Section 4.5 of [RFC8126] prior to approval.
+   the personal tree are not required, requesting review on the media-
+   types@iana.org mailing list is encouraged, to improve the quality of
+   those specifications.
+
+   Registrations in the personal tree may be submitted directly to the
+   IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
+   prior to approval.
 
 2.5.  Unregistered x.  Tree
 
-   Subtype names with "x." as the first facet may be used for types
-   intended exclusively for use in private, local environments.  Types
-   in this tree cannot be registered and are intended for use only with
-   the active agreement of the parties exchanging them.
+   Subtype names with "x." as the first facet are intended exclusively
+   for use in private, local environments.  Subtypes using this tree
+   cannot be registered and are intended for use only with the active
+   agreement of the parties exchanging them.
 
-   However, with the simplified registration procedures described above
-   for vendor and personal trees, it should rarely, if ever, be
-   necessary to use unregistered types.  Therefore, use of types in the
-   "x." tree is strongly discouraged.
+   The low barrier to registration in the vendor and personal trees
+   means it should rarely, if ever, be necessary to use unregistered
+   types.  Therefore, use of types in the "x." tree is strongly
+   discouraged.
 
    Note that types with names beginning with "x-" are no longer
    considered to be members of this tree (see [RFC6648]).  Also note
-   that if a generally useful and widely deployed type incorrectly ends
-   up with an "x-" name prefix, it MAY be registered using its current
-   name in an alternative tree by following the procedure defined in
-   Appendix B.
+   that if a generally useful and widely deployed type incorrectly uses
+   an "x-" name prefix, it MAY be registered using its current name in
+   an alternative tree by following the procedure defined in Appendix B.
 
 2.6.  Additional Registration Trees
 
    From time to time and as required by the community, new top-level
-   registration trees may be created by IETF Standards Action.  It is
-   explicitly assumed that these trees may be created for external
+   registration trees may be created by IETF Standards Action.
+
+   It is explicitly assumed that these trees may be created for external
    registration and management by well-known permanent organizations;
    for example, scientific societies may register media types specific
    to the sciences they cover.  In general, the quality of review of
    specifications for one of these additional registration trees is
    expected to be equivalent to registrations in the standards tree by a
-   recognized standards-related organization.  When the IETF performs
-   such review, it needs to consider the greater expertise of the
-   requesting organization with respect to the subject media type.
+   recognized standards-related organization.
+
+   When the IETF performs such review, it needs to consider the greater
+   expertise of the requesting organization with respect to the subject
+   media type.
 
 3.  Registration Requirements
 
