@@ -194,17 +194,21 @@ Type and subtype names MUST conform to the following ABNF:
                                ; specify a structured syntax suffix
 ~~~
 
-Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
+Note that this syntax is somewhat more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
 
-Although the name syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards- tree registrations cannot use periods in the subtype name.
+Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.
 
 Similarly, the final "+" in a subtype name introduces a structured syntax specifier suffix. Structured syntax suffix requirements are specified in {{suffixes}}.
 
-While it is possible for a given media type to be assigned additional names, the use of different names to identify the same media type is discouraged.
+While it is possible for a given media type to be assigned more than one name, the use of different names to identify the same media type is discouraged.
 
 These requirements apply regardless of the registration tree involved.
 
-The choice of top-level type MUST take into account the nature of media type involved. New subtypes of top-level types MUST conform to the restrictions of the top-level type, if any. The following sections describe each of the initial set of top-level types and their associated restrictions. Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport. (See {{!RFC2046}} for additional information on the restrictions MIME imposes.)
+## Top-Level Type Names
+
+The choice of top-level type MUST take into account the nature of media type involved. New subtypes of top-level types MUST conform to the restrictions of the top-level type, if any.
+
+The following sections describe each of the initial set of top-level types and their associated restrictions. Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport. (See {{!RFC2046}} for additional information on the restrictions MIME imposes.)
 
 ### Text Media Types
 
