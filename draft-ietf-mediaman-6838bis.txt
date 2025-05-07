@@ -76,29 +76,30 @@ Table of Contents
    3.  Registration Requirements
      3.1.  Functionality Requirement
      3.2.  Naming Requirements
-       3.2.1.  Text Media Types
-       3.2.2.  Image Media Types
-       3.2.3.  Audio Media Types
-       3.2.4.  Video Media Types
-       3.2.5.  Application Media Types
-       3.2.6.  Multipart and Message Media Types
-       3.2.7.  Additional Top-Level Types
-       3.2.8.  Structured Syntax Name Suffixes
-       3.2.9.  Deprecated Aliases
-     3.3.  Structured Suffixes
-       3.3.1.  Common Suffix Patterns
-       3.3.2.  Fragment Identifiers
-     3.4.  Parameter Requirements
-     3.5.  Canonicalization and Format Requirements
-     3.6.  Interchange Recommendations
-     3.7.  Security Requirements
-       3.7.1.  Structured Suffixes
-     3.8.  Requirements Specific to XML Media Types
-     3.9.  Encoding Requirements
-     3.10. Usage and Implementation Non-Requirements
-     3.11. Publication Requirements
-     3.12. Fragment Identifier Requirements
-     3.13. Additional Information
+     3.3.  Top-Level Type Names
+       3.3.1.  Text Media Types
+       3.3.2.  Image Media Types
+       3.3.3.  Audio Media Types
+       3.3.4.  Video Media Types
+       3.3.5.  Application Media Types
+       3.3.6.  Multipart and Message Media Types
+       3.3.7.  Additional Top-Level Types
+       3.3.8.  Structured Syntax Name Suffixes
+       3.3.9.  Deprecated Aliases
+     3.4.  Structured Suffixes
+       3.4.1.  Common Suffix Patterns
+       3.4.2.  Fragment Identifiers
+     3.5.  Parameter Requirements
+     3.6.  Canonicalization and Format Requirements
+     3.7.  Interchange Recommendations
+     3.8.  Security Requirements
+       3.8.1.  Structured Suffixes
+     3.9.  Requirements Specific to XML Media Types
+     3.10. Encoding Requirements
+     3.11. Usage and Implementation Non-Requirements
+     3.12. Publication Requirements
+     3.13. Fragment Identifier Requirements
+     3.14. Additional Information
    4.  Media Type Registration Procedures
      4.1.  Preliminary Community Review
      4.2.  Submit Request to IANA
@@ -352,10 +353,9 @@ Table of Contents
 
 3.  Registration Requirements
 
-   Media type registrations are all expected to conform to various
-   requirements laid out in the following sections.  Note that
-   requirement specifics sometimes vary depending on the registration
-   tree, again as detailed in the following sections.
+   Media type registrations are expected to conform to various
+   requirements laid out in the following sections.  Note that specific
+   requirements can vary depending on the registration tree.
 
 3.1.  Functionality Requirement
 
@@ -392,41 +392,68 @@ Table of Contents
                                   ; specify a structured syntax suffix
 
    Note that this syntax is somewhat more restrictive than what is
-   allowed by the ABNF in Section 5.1 of [RFC2045] or Section 4.2 of
-   [RFC4288].  Also note that while this syntax allows names of up to
-   127 characters, implementation limits may make such long names
+   allowed by Section 5.1 of [RFC2045] or Section 4.2 of [RFC4288].
+   Also note that while this syntax allows names of up to 127
+   characters, implementation limits may make such long names
    problematic.  For this reason, 'type-name' and 'subtype-name' SHOULD
    be limited to 64 characters.
 
-   Although the name syntax treats "." as equivalent to any other
-   character, characters before any initial "." always specify the
-   registration facet.  Note that this means that facet-less standards-
-   tree registrations cannot use periods in the subtype name.
+   Although this syntax treats "." as equivalent to any other character,
+   characters before any initial "." always specify the registration
+   facet.  Note that this means that facet-less standards tree
+   registrations cannot use periods in the subtype name.
 
    Similarly, the final "+" in a subtype name introduces a structured
    syntax specifier suffix.  Structured syntax suffix requirements are
-   specified in Section 3.2.8.
+   specified in Section 3.3.8.
 
-   While it is possible for a given media type to be assigned additional
-   names, the use of different names to identify the same media type is
-   discouraged.
+   While it is possible for a given media type to be assigned more than
+   one name, the use of different names to identify the same media type
+   is discouraged.
 
    These requirements apply regardless of the registration tree
    involved.
 
+3.3.  Top-Level Type Names
+
    The choice of top-level type MUST take into account the nature of
    media type involved.  New subtypes of top-level types MUST conform to
-   the restrictions of the top-level type, if any.  The following
-   sections describe each of the initial set of top-level types and
-   their associated restrictions.  Additionally, various protocols,
-   including but not limited to HTTP and MIME, MAY impose additional
-   restrictions on the media types they can transport.  (See [RFC2046]
-   for additional information on the restrictions MIME imposes.)
+   the restrictions of the top-level type, if any.
 
-3.2.1.  Text Media Types
+   The following sections describe each of the initial set of top-level
+   types and their associated restrictions.  Additionally, various
+   protocols, including but not limited to HTTP and MIME, MAY impose
+   additional restrictions on the media types they can transport.  (See
+   [RFC2046] for additional information on the restrictions MIME
+   imposes.)
 
-   The "text" top-level type is intended for sending material that is
-   principally textual in form.
+3.3.1.  Text Media Types
+
+   A top-level type of "text" indicates that the content is principally
+   textual in form.
+
+   Text that does not provide for or allow formatting commands, font
+   attribute specifications, processing instructions, interpretation
+   directives, or content markup is known as "plain text".  Plain text
+   is seen simply as a linear sequence of characters, possibly
+   interrupted by line breaks or page breaks.  Plain text MAY allow the
+   stacking of several characters in the same position in the text.
+   Plain text in scripts like Arabic and Hebrew may also include
+   facilities that allow the arbitrary mixing of text segments with
+   different writing directions.
+
+   Beyond plain text, there are many formats for representing what might
+   be known as "rich text".  An interesting characteristic of many such
+   representations is that they are to some extent readable even without
+   the software that interprets them.  It is useful to distinguish them,
+   at the highest level, from such unreadable data as images, audio, or
+   text represented in an unreadable form.  In the absence of
+   appropriate interpretation software, it is reasonable to present
+   subtypes of "text" to the user, while it is not reasonable to do so
+   with most non-textual data.  Such formatted textual data can be
+   represented using subtypes of "text".
+
+3.3.1.1.  The Charset Parameter
 
    Many subtypes of text, notably including the subtype "text/plain",
    which is a generic subtype for plain text defined in [RFC2046],
@@ -454,64 +481,44 @@ Table of Contents
    permitted.  If explanatory text is needed, this SHOULD be placed in
    the additional information section of the registration.
 
-   Plain text does not provide for or allow formatting commands, font
-   attribute specifications, processing instructions, interpretation
-   directives, or content markup.  Plain text is seen simply as a linear
-   sequence of characters, possibly interrupted by line breaks or page
-   breaks.  Plain text MAY allow the stacking of several characters in
-   the same position in the text.  Plain text in scripts like Arabic and
-   Hebrew may also include facilities that allow the arbitrary mixing of
-   text segments with different writing directions.
+3.3.2.  Image Media Types
 
-   Beyond plain text, there are many formats for representing what might
-   be known as "rich text".  An interesting characteristic of many such
-   representations is that they are to some extent readable even without
-   the software that interprets them.  It is useful to distinguish them,
-   at the highest level, from such unreadable data as images, audio, or
-   text represented in an unreadable form.  In the absence of
-   appropriate interpretation software, it is reasonable to present
-   subtypes of "text" to the user, while it is not reasonable to do so
-   with most non-textual data.  Such formatted textual data can be
-   represented using subtypes of "text".
+   A top-level type of "image" indicates that the content is one or more
+   individual images.  The subtype names the specific image format.
 
-3.2.2.  Image Media Types
+3.3.3.  Audio Media Types
 
-   A top-level type of "image" indicates that the content specifies one
-   or more individual images.  The subtype names the specific image
-   format.
+   A top-level type of "audio" indicates that the content is audio data.
+   The subtype names the specific audio format.
 
-3.2.3.  Audio Media Types
+3.3.4.  Video Media Types
 
-   A top-level type of "audio" indicates that the content contains audio
-   data.  The subtype names the specific audio format.
-
-3.2.4.  Video Media Types
-
-   A top-level type of "video" indicates that the content specifies a
-   time-varying-picture image, possibly with color and coordinated
-   sound.  The term 'video' is used in its most generic sense, rather
-   than with reference to any particular technology or format, and is
-   not meant to preclude subtypes such as animated drawings encoded
-   compactly.
+   A top-level type of "video" indicates that the content is a time-
+   varying-picture image, possibly with color and coordinated sound.
+   The term 'video' is used in its most generic sense, rather than with
+   reference to any particular technology or format, and is not meant to
+   preclude subtypes such as animated drawings encoded compactly.
 
    Note that although in general the mixing of multiple kinds of media
    in a single body is discouraged [RFC2046], it is recognized that many
    video formats include a representation for synchronized audio and/or
    text, and this is explicitly permitted for subtypes of "video".
 
-3.2.5.  Application Media Types
+3.3.5.  Application Media Types
 
-   The "application" top-level type is to be used for discrete data that
-   do not fit under any of the other type names, and particularly for
-   data to be processed by some type of application program.  This is
-   information that must be processed by an application before it is
-   viewable or usable by a user.  Expected uses for the "application"
-   type name include but are not limited to file transfer, spreadsheets,
-   presentations, scheduling data, and languages for "active"
-   (computational) material.  (The last, in particular, can pose
-   security problems that must be understood by implementors.  The
-   "application/postscript" media type registration in [RFC2046]
-   provides a good example of how to handle these issues.)
+   A top-level type of "application" indicates that the content is
+   discrete data that do not fit under any of the other type names, and
+   particularly for data to be processed by some type of application
+   program.  This is information that must be processed by an
+   application before it is viewable or usable by a user.
+
+   Expected uses for the "application" type name include but are not
+   limited to file transfer, spreadsheets, presentations, scheduling
+   data, and languages for "active" (computational) material.  (The
+   last, in particular, can pose security problems that must be
+   understood by implementors.  The "application/postscript" media type
+   registration in [RFC2046] provides a good example of how to handle
+   these issues.)
 
    For example, a meeting scheduler might define a standard
    representation for information about proposed meeting dates.  An
@@ -529,17 +536,17 @@ Table of Contents
    simply be used freely as a subtype of "application"; the subtype
    needs to be registered.
 
-3.2.6.  Multipart and Message Media Types
+3.3.6.  Multipart and Message Media Types
 
-   Multipart and message are composite types; that is, they provide a
-   means of encapsulating zero or more objects, each one a separate
-   media type.
+   A top-level type of "multipart" or "message" indicates that the
+   content is a composite type; that is, they provide a means of
+   encapsulating zero or more objects, each one a separate media type.
 
    All subtypes of multipart and message MUST conform to the syntax
    rules and other requirements specified in [RFC2046] and amended by
    Section 3.5 of [RFC6532].
 
-3.2.7.  Additional Top-Level Types
+3.3.7.  Additional Top-Level Types
 
    In some cases, a new media type may not "fit" under any currently
    defined top-level type names.  Such cases are expected to be quite
@@ -549,7 +556,7 @@ Table of Contents
    criteria and guidelines given below; no other mechanism can be used
    to define additional type names.
 
-3.2.7.1.  Required Criteria
+3.3.7.1.  Required Criteria
 
    The following is the list of required criteria for the definition of
    a new top-level type.  Motivations for the requirements are also
@@ -581,7 +588,7 @@ Table of Contents
       without any subtype serves no purpose.  Please note that the
       'example' top-level describes a subtype 'example'.
 
-3.2.7.2.  Additional Considerations
+3.3.7.2.  Additional Considerations
 
    *  Existing wide use of an unregistered top-level type may be an
       indication of a need, and therefore an argument for formally
@@ -640,7 +647,7 @@ Table of Contents
       Applications can select different icons to represent unknown types
       in different top-level types.
 
-3.2.7.3.  Negative Criteria
+3.3.7.3.  Negative Criteria
 
    This subsection lists negative criteria for top-level types,
    identifying criteria that are explicitly not reasons for a top-level
@@ -675,7 +682,7 @@ Table of Contents
    *  Top-level types with an "X-" prefix cannot be registered, and
       SHOULD NOT be used.  This is in line with [RFC6648].
 
-3.2.8.  Structured Syntax Name Suffixes
+3.3.8.  Structured Syntax Name Suffixes
 
    XML in MIME [RFC3023] defined the first such augmentation to the
    media type definition to additionally specify the underlying
@@ -726,7 +733,7 @@ Table of Contents
    have consent from the existing Change Controller for the associated
    base subtype name to register the new media type.
 
-3.2.9.  Deprecated Aliases
+3.3.9.  Deprecated Aliases
 
    In some cases, a single media type may have been widely deployed
    prior to registration under multiple names.  In such cases, a
@@ -736,7 +743,7 @@ Table of Contents
    supplied as additional information in order to assist applications in
    processing the media type properly.
 
-3.3.  Structured Suffixes
+3.4.  Structured Suffixes
 
    A structured suffix is defined as all of the characters to the right
    of the left-most "+" sign in a media type, including the left-most
@@ -746,7 +753,7 @@ Table of Contents
    name, and "+bar" is the structured suffix.  A media type such as
    "application/foo+bar+baz" is not allowed.
 
-3.3.1.  Common Suffix Patterns
+3.4.1.  Common Suffix Patterns
 
    There are a few common patterns that are utilized for media types
    that use structured suffixes.  These patterns include expressing that
@@ -767,7 +774,7 @@ Table of Contents
    that might have on security considerations for toolchains that
    attempt to safely process all of the possibilities.
 
-3.3.2.  Fragment Identifiers
+3.4.2.  Fragment Identifiers
 
    The syntax and semantics for fragment identifiers are specified in
    the "Fragment Identifier Considerations" column in the IANA
@@ -790,7 +797,7 @@ Table of Contents
        proceed as specified by the specification associated with the
        full media type.
 
-3.4.  Parameter Requirements
+3.5.  Parameter Requirements
 
    Media types MAY elect to use one or more media type parameters, or
    some parameters may be automatically made available to the media type
@@ -838,7 +845,7 @@ Table of Contents
    managed in the same manner as other changes to the media type; see
    Section 4.5.
 
-3.5.  Canonicalization and Format Requirements
+3.6.  Canonicalization and Format Requirements
 
    All registered media types MUST employ a single, canonical data
    format, regardless of registration tree.
@@ -876,7 +883,7 @@ Table of Contents
    Intellectual Property Rights (IPR) disclosures for registrations in
    the vendor and personal trees are encouraged but not required.
 
-3.6.  Interchange Recommendations
+3.7.  Interchange Recommendations
 
    Ideally, media types will be defined so they interoperate across as
    many systems and applications as possible.  However, some media types
@@ -893,7 +900,7 @@ Table of Contents
    The recommendations in this subsection apply regardless of the
    registration tree involved.
 
-3.7.  Security Requirements
+3.8.  Security Requirements
 
    An analysis of security issues MUST be done for all types registered
    in the standards tree.  A similar analysis for media types registered
@@ -956,9 +963,9 @@ Table of Contents
       environment.  Types SHOULD always document whether or not they
       need such services in their security considerations.
 
-3.7.1.  Structured Suffixes
+3.8.1.  Structured Suffixes
 
-3.7.1.1.  Document Validity
+3.8.1.1.  Document Validity
 
    If a toolchain chooses to process a provided media type by using the
    selected structured suffix processing rules, it cannot presume that a
@@ -971,7 +978,7 @@ Table of Contents
    toolchain can presume that a valid "application/foo+bar" document
    will also be a valid "+bar" document.
 
-3.7.1.2.  Fragment Semantics
+3.8.1.2.  Fragment Semantics
 
    If a toolchain chooses to process a provided media type by using the
    selected structured suffix processing rules, it cannot presume that
@@ -981,7 +988,7 @@ Table of Contents
    fragment semantics for a "+bar" document will be the same as for an
    "application/foo+bar" document.
 
-3.7.1.3.  Security Characteristics
+3.8.1.3.  Security Characteristics
 
    Toolchains cannot assume that the security characteristics of
    processing based on structured suffixes will be the same for the
@@ -990,7 +997,7 @@ Table of Contents
    characteristics for a "+bar" document will be the same as for a
    "application/foo+bar" document.
 
-3.7.1.4.  Partial Processing
+3.8.1.4.  Partial Processing
 
    It is conceivable that an attacker could utilize structured suffixes
    in a way that tricks unsuspecting toolchains into skipping important
@@ -1011,13 +1018,13 @@ Table of Contents
    might negatively impact the application environment or operating
    system.
 
-3.8.  Requirements Specific to XML Media Types
+3.9.  Requirements Specific to XML Media Types
 
    There are a number of additional requirements specific to the
    registration of XML media types.  These requirements are specified in
    [RFC7303].
 
-3.9.  Encoding Requirements
+3.10.  Encoding Requirements
 
    Some transports impose restrictions on the type of data they can
    carry.  For example, Internet mail traditionally was limited to 7bit
@@ -1053,7 +1060,7 @@ Table of Contents
    Additional restrictions on 7bit and 8bit text are given in
    Section 4.1.1 of [RFC2046].
 
-3.10.  Usage and Implementation Non-Requirements
+3.11.  Usage and Implementation Non-Requirements
 
    In the asynchronous mail environment, where information on the
    capabilities of the remote mail agent is frequently not available to
@@ -1076,7 +1083,7 @@ Table of Contents
    registration.  The "Restrictions on Usage" field is provided for this
    purpose.
 
-3.11.  Publication Requirements
+3.12.  Publication Requirements
 
    Media types registered in the standards tree by the IETF itself MUST
    be published as RFCs.  RFC publication of vendor and personal media
@@ -1113,7 +1120,7 @@ Table of Contents
    Standards Action in the IETF and, hence, the publication of a RFC on
    the Standards Track.
 
-3.12.  Fragment Identifier Requirements
+3.13.  Fragment Identifier Requirements
 
    Media type registrations can specify how applications should
    interpret fragment identifiers (specified in Section 3.5 of
@@ -1125,7 +1132,7 @@ Table of Contents
    MUST follow whatever fragment identifier rules are given in the
    structured syntax suffix registration.
 
-3.13.  Additional Information
+3.14.  Additional Information
 
    Various sorts of optional information SHOULD be included in the
    specification of a media type if it is available:
@@ -1423,7 +1430,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       general guidance regarding encoding considerations for any type
       employing this syntax.  The same requirements for media type
-      encoding considerations given in Section 3.9 apply here.
+      encoding considerations given in Section 3.10 apply here.
 
    Interoperability considerations
       A full citation to a section in a specification that documents any
@@ -1442,7 +1449,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       security considerations shared by media types employing this
       structured syntax must be specified here.  The same requirements
-      for media type security considerations given in Section 3.7 apply
+      for media type security considerations given in Section 3.8 apply
       here, with the exception that the option of not assessing the
       security considerations is not available for suffix registrations.
 
@@ -1457,7 +1464,7 @@ Table of Contents
 6.  Security Considerations
 
    Security requirements for both media type and media type suffix
-   registrations are discussed in Section 3.7.
+   registrations are discussed in Section 3.8.
 
 7.  IANA Considerations
 
@@ -1685,7 +1692,7 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See Section 3.10 for additional
+   registrations in a systematic way.  See Section 3.11 for additional
    discussion.
 
 Appendix B.  Grandfathered Media Types
@@ -1703,7 +1710,7 @@ Appendix B.  Grandfathered Media Types
    registered.  (Note that this includes subtype names beginning with
    the "x-" prefix.)  If possible, such a media type SHOULD be
    reregistered with a proper faceted subtype name, possibly using a
-   deprecated alias to identify the original name (see Section 3.2.9).
+   deprecated alias to identify the original name (see Section 3.3.9).
    However, if this is not possible, the type can, subject to approval
    by both the media types reviewer and the IESG, be registered in the
    proper tree with its unfaceted name.
