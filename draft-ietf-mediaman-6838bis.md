@@ -278,7 +278,9 @@ Definitions of new top-level types are required to fulfil the following criteria
 
 #### Additional Considerations
 
-* Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining this new top-level type.
+Additional considerations for the defintion of a new top-level type include:
+
+* Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining a new top-level type.
 
 * On the other hand, the use of unregistered top-level types is highly discouraged.
 
@@ -286,11 +288,11 @@ Definitions of new top-level types are required to fulfil the following criteria
 
 * The document defining the new top-level type should include initial registrations of actual subtypes. The exception may be a top-level type similar to 'example'. This will help to show the need for the new top-level type, will allow checking the appropriateness of the definition of the new top-level type, will avoid separate work for registering an initial slate of subtypes, and will provide examples of what is considered a valid subtype for future subtype registrations.
 
-* The registration and actual use of a certain number of subtypes under the new top-level type should be expected. The existence of a single subtype should not be enough; it should be clear that new similar types may appear in the future. Otherwise, the creation of a new top-level type is most probably not justified.
+* The registration and actual use of a certain number of subtypes under the new top-level type should be expected. The existence of a single subtype should not be enough; it should be clear that new similar types may appear in the future. Otherwise, the creation of a new top-level type is likely unjustified.
 
 * The proposers of the new top-level type and the wider community should be willing to commit to emitting and consuming the new top-level type in environments that they control.
 
-* Desirability for common parameters: The fact that a group of (potential) types have (mostly) common parameters may be an indication that these belong under a common new top-level type.
+* The fact that a group of (potential) types have (mostly) common parameters may be an indication that these belong under a common new top-level type.
 
 * Top-level types can help humans with understanding and debugging. Therefore, evaluating how a new top-level type helps humans understand types may be crucial.
 
