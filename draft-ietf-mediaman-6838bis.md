@@ -130,19 +130,23 @@ A registration may be placed in the vendor tree by anyone who needs to interchan
 
 When a third party registers a type on behalf of someone else, both entities SHOULD be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
 
-Vendor-tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
+Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
 
 While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.
 
 Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
-## Personal or Vanity Tree
+## Personal Tree
 
-Registrations for media types created experimentally or as part of products that are not distributed commercially may be registered in the personal or vanity tree. The registrations are distinguished by the leading facet "prs.".
+The personal tree is intended for media types created experimentally or as part of products that are not distributed commercially. This tree is sometimes referred to as the "vanity" tree.
+
+Personal tree registrations are distinguished by the leading facet "prs.".
 
 The owner of "personal" registrations and associated specifications is the person or entity making the registration, or one to whom responsibility has been transferred as described below.
 
-While public exposure and review of media types to be registered in the personal tree are not required, using the media-types@iana.org mailing list (see {{preliminary-review}}) for review is encouraged, to improve the quality of those specifications. Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
+While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.
+
+Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
 ## Unregistered x. Tree
 
