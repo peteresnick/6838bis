@@ -150,11 +150,11 @@ Registrations in the personal tree may be submitted directly to the IANA, where 
 
 ## Unregistered x. Tree
 
-Subtype names with "x." as the first facet may be used for types intended exclusively for use in private, local environments. Types in this tree cannot be registered and are intended for use only with the active agreement of the parties exchanging them.
+Subtype names with "x." as the first facet are intended exclusively for use in private, local environments. Subtypes using this tree cannot be registered and are intended for use only with the active agreement of the parties exchanging them.
 
-However, with the simplified registration procedures described above for vendor and personal trees, it should rarely, if ever, be necessary to use unregistered types. Therefore, use of types in the "x." tree is strongly discouraged.
+The low barrier to registration in the vendor and personal trees means it should rarely, if ever, be necessary to use unregistered types. Therefore, use of types in the "x." tree is strongly discouraged.
 
-Note that types with names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly ends up with an "x-" name prefix, it MAY be registered using its current name in an alternative tree by following the procedure defined in {{grandfather}}.
+Note that types with names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" name prefix, it MAY be registered using its current name in an alternative tree by following the procedure defined in {{grandfather}}.
 
 ## Additional Registration Trees
 
