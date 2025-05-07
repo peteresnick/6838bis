@@ -212,7 +212,13 @@ The following sections describe each of the initial set of top-level types and t
 
 ### Text Media Types
 
-The "text" top-level type is intended for sending material that is principally textual in form.
+A top-level type of "text" indicates that the content is principally textual in form.
+
+Text that does not provide for or allow formatting commands, font attribute specifications, processing instructions, interpretation directives, or content markup is known as "plain text". Plain text is seen simply as a linear sequence of characters, possibly interrupted by line breaks or page breaks. Plain text MAY allow the stacking of several characters in the same position in the text. Plain text in scripts like Arabic and Hebrew may also include facilities that allow the arbitrary mixing of text segments with different writing directions.
+
+Beyond plain text, there are many formats for representing what might be known as "rich text". An interesting characteristic of many such representations is that they are to some extent readable even without the software that interprets them. It is useful to distinguish them, at the highest level, from such unreadable data as images, audio, or text represented in an unreadable form. In the absence of appropriate interpretation software, it is reasonable to present subtypes of "text" to the user, while it is not reasonable to do so with most non-textual data. Such formatted textual data can be represented using subtypes of "text".
+
+#### The Charset Parameter
 
 Many subtypes of text, notably including the subtype "text/plain", which is a generic subtype for plain text defined in {{!RFC2046}}, define a "charset" parameter. If a "charset" parameter is defined for a particular subtype of text, it MUST be used to specify a charset name defined in accordance to the procedures laid out in {{!RFC2978}}.
 
@@ -221,10 +227,6 @@ As specified in {{!RFC6657}}, a "charset" parameter SHOULD NOT be specified when
 If a "charset" parameter is specified, it SHOULD be a required parameter, eliminating the options of specifying a default value. If there is a strong reason for the parameter to be optional despite this advice, each subtype MAY specify its own default value, or alternatively, it MAY specify that there is no default value. Finally, the "UTF-8" charset {{!RFC3629}} SHOULD be selected as the default. See {{!RFC6657}} for additional information on the use of "charset" parameters in conjunction with subtypes of text.
 
 Regardless of what approach is chosen, all new text/* registrations MUST clearly specify how the charset is determined; relying on the US-ASCII default defined in {{Section 4.1.2 of !RFC2046}} is no longer permitted. If explanatory text is needed, this SHOULD be placed in the additional information section of the registration.
-
-Plain text does not provide for or allow formatting commands, font attribute specifications, processing instructions, interpretation directives, or content markup. Plain text is seen simply as a linear sequence of characters, possibly interrupted by line breaks or page breaks. Plain text MAY allow the stacking of several characters in the same position in the text. Plain text in scripts like Arabic and Hebrew may also include facilities that allow the arbitrary mixing of text segments with different writing directions.
-
-Beyond plain text, there are many formats for representing what might be known as "rich text". An interesting characteristic of many such representations is that they are to some extent readable even without the software that interprets them. It is useful to distinguish them, at the highest level, from such unreadable data as images, audio, or text represented in an unreadable form. In the absence of appropriate interpretation software, it is reasonable to present subtypes of "text" to the user, while it is not reasonable to do so with most non-textual data. Such formatted textual data can be represented using subtypes of "text".
 
 ### Image Media Types
 
