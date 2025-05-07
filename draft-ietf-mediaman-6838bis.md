@@ -166,7 +166,7 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 # Registration Requirements
 
-Media type registrations are all expected to conform to various requirements laid out in the following sections. Note that requirement specifics sometimes vary depending on the registration tree, again as detailed in the following sections.
+Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree.
 
 ## Functionality Requirement
 
