@@ -230,21 +230,21 @@ Regardless of what approach is chosen, all new text/* registrations MUST clearly
 
 ### Image Media Types
 
-A top-level type of "image" indicates that the content specifies one or more individual images. The subtype names the specific image format.
+A top-level type of "image" indicates that the content is one or more individual images. The subtype names the specific image format.
 
 ### Audio Media Types
 
-A top-level type of "audio" indicates that the content contains audio data. The subtype names the specific audio format.
+A top-level type of "audio" indicates that the content is audio data. The subtype names the specific audio format.
 
 ### Video Media Types
 
-A top-level type of "video" indicates that the content specifies a time-varying-picture image, possibly with color and coordinated sound. The term 'video' is used in its most generic sense, rather than with reference to any particular technology or format, and is not meant to preclude subtypes such as animated drawings encoded compactly.
+A top-level type of "video" indicates that the content is a time-varying-picture image, possibly with color and coordinated sound. The term 'video' is used in its most generic sense, rather than with reference to any particular technology or format, and is not meant to preclude subtypes such as animated drawings encoded compactly.
 
 Note that although in general the mixing of multiple kinds of media in a single body is discouraged {{!RFC2046}}, it is recognized that many video formats include a representation for synchronized audio and/or text, and this is explicitly permitted for subtypes of "video".
 
 ### Application Media Types
 
-A top-level types of "application" indicates that the content consists of discrete data that do not fit under any of the other type names, and particularly for data to be processed by some type of application program. This is information that must be processed by an application before it is viewable or usable by a user.
+A top-level type of "application" indicates that the content is discrete data that do not fit under any of the other type names, and particularly for data to be processed by some type of application program. This is information that must be processed by an application before it is viewable or usable by a user.
 
 Expected uses for the "application" type name include but are not limited to file transfer, spreadsheets, presentations, scheduling data, and languages for "active" (computational) material. (The last, in particular, can pose security problems that must be understood by implementors. The "application/postscript" media type registration in {{!RFC2046}} provides a good example of how to handle these issues.)
 
