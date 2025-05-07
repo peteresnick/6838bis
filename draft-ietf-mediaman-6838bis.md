@@ -254,7 +254,7 @@ The subtype of "application" will often either be the name or include part of th
 
 ### Multipart and Message Media Types
 
-Multipart and message are composite types; that is, they provide a means of encapsulating zero or more objects, each one a separate media type.
+A top-level type of "multipart" or "message" indicates that the content is a composite type; that is, they provide a means of encapsulating zero or more objects, each one a separate media type.
 
 All subtypes of multipart and message MUST conform to the syntax rules and other requirements specified in {{!RFC2046}} and amended by {{Section 3.5 of !RFC6532}}.
 
