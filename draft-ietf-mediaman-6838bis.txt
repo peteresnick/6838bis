@@ -548,19 +548,18 @@ Table of Contents
 
 3.3.7.  Additional Top-Level Types
 
-   In some cases, a new media type may not "fit" under any currently
-   defined top-level type names.  Such cases are expected to be quite
-   rare.  However, if such a case does arise, a new type name can be
-   defined to accommodate it.  Definition of a new top-level type name
-   MUST be done via a Standards Track RFC, taking into account the
-   criteria and guidelines given below; no other mechanism can be used
-   to define additional type names.
+   In some cases, a new media type may not be easily classified under
+   any currently defined top-level type names.  Such cases are expected
+   to be quite rare.  However, if such a case does arise, a new type
+   name can be defined to accommodate it.  Definition of a new top-level
+   type name MUST be done via a Standards Track RFC, taking into account
+   the criteria and guidelines given below; no other mechanism can be
+   used to define additional type names.
 
 3.3.7.1.  Required Criteria
 
-   The following is the list of required criteria for the definition of
-   a new top-level type.  Motivations for the requirements are also
-   included.
+   Definitions of new top-level types are required to fulfil the
+   following criteria:
 
    *  Every new top-level type MUST be defined in a Standards Track RFC
       (see Section 4.9 of [RFC8126]).  This will make sure there is
@@ -590,9 +589,12 @@ Table of Contents
 
 3.3.7.2.  Additional Considerations
 
+   Additional considerations for the defintion of a new top-level type
+   include:
+
    *  Existing wide use of an unregistered top-level type may be an
       indication of a need, and therefore an argument for formally
-      defining this new top-level type.
+      defining a new top-level type.
 
    *  On the other hand, the use of unregistered top-level types is
       highly discouraged.
@@ -617,15 +619,15 @@ Table of Contents
       under the new top-level type should be expected.  The existence of
       a single subtype should not be enough; it should be clear that new
       similar types may appear in the future.  Otherwise, the creation
-      of a new top-level type is most probably not justified.
+      of a new top-level type is likely unjustified.
 
    *  The proposers of the new top-level type and the wider community
       should be willing to commit to emitting and consuming the new top-
       level type in environments that they control.
 
-   *  Desirability for common parameters: The fact that a group of
-      (potential) types have (mostly) common parameters may be an
-      indication that these belong under a common new top-level type.
+   *  The fact that a group of (potential) types have (mostly) common
+      parameters may be an indication that these belong under a common
+      new top-level type.
 
    *  Top-level types can help humans with understanding and debugging.
       Therefore, evaluating how a new top-level type helps humans
