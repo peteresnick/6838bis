@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-13T02:31:03.217188+00:00",
+  "timestamp": "2025-05-08T01:05:34.509294+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -60,15 +60,15 @@
       "id": "I_kwDOMdBaOc6cEHiS",
       "title": "Incorporate -suffixes",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/3",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "The content of [-suffixes ](https://datatracker.ietf.org/doc/draft-ietf-mediaman-suffixes/) needs to be incorporated into 6838bis.\r\nThe current text is deemed to represent WG consensus, but wordsmithing is expected.\r\n",
       "createdAt": "2024-10-28T12:45:05Z",
-      "updatedAt": "2025-03-17T01:44:33Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-06T22:41:02Z",
+      "closedAt": "2025-05-06T22:41:02Z",
       "comments": [
         {
           "author": "bc-pi",
@@ -204,9 +204,17 @@
       "labels": [],
       "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
       "createdAt": "2024-11-05T23:20:32Z",
-      "updatedAt": "2024-11-05T23:20:32Z",
+      "updatedAt": "2025-05-06T23:18:14Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I suspect the community format process might subsume the grandfathering text, as well as this under 'Standards Tree':\n\n> or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community.",
+          "createdAt": "2025-05-06T23:18:13Z",
+          "updatedAt": "2025-05-06T23:18:13Z"
+        }
+      ]
     },
     {
       "number": 8,
@@ -517,6 +525,134 @@
           "updatedAt": "2025-04-11T04:43:36Z"
         }
       ]
+    },
+    {
+      "number": 23,
+      "id": "I_kwDOMdBaOc61c7Q3",
+      "title": "Community format change controller",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/23",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
+      "createdAt": "2025-05-06T23:22:32Z",
+      "updatedAt": "2025-05-07T08:59:50Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Should we require the community to name a representative or representative organization?\nI would assume that the normal case is change controller = registrant.\n",
+          "createdAt": "2025-05-07T08:59:15Z",
+          "updatedAt": "2025-05-07T08:59:49Z"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "id": "I_kwDOMdBaOc61dBjD",
+      "title": "Should coordination with previous registrar of +-suffixed types be required?",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/24",
+      "state": "OPEN",
+      "author": "bc-pi",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
+      "createdAt": "2025-05-06T23:34:54Z",
+      "updatedAt": "2025-05-07T18:06:45Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "The chairs directed the editors to incorporate the current text from -suffixes without changes to the semantics.\nWe have noted that this is a point on which there is a need for further discussion before declaring consensus.\nI didn't find the previous issue filed on the subject, so I changed the subject of this one, and will follow up.\n\n\n",
+          "createdAt": "2025-05-07T08:28:52Z",
+          "updatedAt": "2025-05-07T08:28:52Z"
+        },
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "> The chairs directed the editors to incorporate the current text from -suffixes without changes to the semantics.\n\nWas that before or after the WG meeting in Vancouver? \n\n",
+          "createdAt": "2025-05-07T18:06:43Z",
+          "updatedAt": "2025-05-07T18:06:43Z"
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "id": "I_kwDOMdBaOc61dk1n",
+      "title": "Negative criteria repetitiveness",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/25",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [
+        "editorial"
+      ],
+      "body": "Negative criteria says roughly the same thing four times:\n\n* A top-level type is not a pointer into another registration space that offers duplicate registrations for existing media types. Example: a top-level type of 'oid', leading to types of the form oid/nnnnn, where nnn is an OID (Object Identifier) designating a specific media format,\n\n* A top-level type MUST NOT be defined for the mapping of other protocol elements to media types. For example, while there may be some merit to a mapping from media types to URIs, e.g. in the context of RDF (Resource Description Framework), there is very limited merit in a reverse mapping, and even less merit in creating a top-level type for such a mapping. The same applies to other protocol elements such as file extensions or URI schemes. The recommended solution in case a mapping is needed is to choose a single type/subtype and put the additional information in an appropriately named parameter. As an example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.\n\n* Media types are not a general type system. A top-level type MUST NOT be defined if its main or only purpose is to map other type systems, e.g. in programming languages or ontologies.\n\n* A new top-level type SHOULD NOT generate aliases for existing widely used types or subtypes.\n\nThere has to be a more efficient and friendly way to convey this; using bullet points implies that they're four different things, and they're not.",
+      "createdAt": "2025-05-07T01:36:18Z",
+      "updatedAt": "2025-05-07T08:19:59Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I believe this text was prompted by four different attempted registrations that were a Bad Idea..... we may want to wordsmith this to a single \"don't ask for a top level type when it's not appropriate\" and have the list of inappropriate registrations as examples.\n\n\n",
+          "createdAt": "2025-05-07T08:19:58Z",
+          "updatedAt": "2025-05-07T08:19:58Z"
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "id": "I_kwDOMdBaOc61dlAe",
+      "title": "use of 2119 terms",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/26",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The spec uses MUST/MAY/SHOULD throughout to indicate registration requirements, not interoperability requirements.",
+      "createdAt": "2025-05-07T01:36:56Z",
+      "updatedAt": "2025-05-07T01:36:56Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 27,
+      "id": "I_kwDOMdBaOc61oLNb",
+      "title": "Incorporate 'font' top-level type",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/27",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "... from RFC 8081.",
+      "createdAt": "2025-05-07T21:26:08Z",
+      "updatedAt": "2025-05-07T21:55:24Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "svgeesus",
+          "authorAssociation": "NONE",
+          "body": "So would that contain all of RFC 8081, thus obsoleting it, or is it just a mention in a list of top level types?",
+          "createdAt": "2025-05-07T21:47:33Z",
+          "updatedAt": "2025-05-07T21:47:33Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "We can't obsolete 8081 because it contains the subtype registrations, so I suspect it would be a short section and then a reference to 8081 for details.",
+          "createdAt": "2025-05-07T21:55:23Z",
+          "updatedAt": "2025-05-07T21:55:23Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -703,24 +839,26 @@
       "id": "PR_kwDOMdBaOc6J7NIJ",
       "title": "Rough in structured suffixes",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/14",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "from draft-ietf-mediaman-suffixes-08",
       "createdAt": "2025-02-04T01:42:17Z",
-      "updatedAt": "2025-03-24T03:36:54Z",
+      "updatedAt": "2025-05-06T22:41:07Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "e2bd713adeab499df3c002ce91fec97d6226fd31",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "suffixes",
       "headRefOid": "60d80278e9ee982aebf8687d2b747a88a8c62c51",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-05-06T22:41:01Z",
+      "mergedAt": "2025-05-06T22:41:01Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "f94cff351c7592d8765b2cff9eefd1b80794ca1b"
+      },
       "comments": [
         {
           "author": "alvestrand",
