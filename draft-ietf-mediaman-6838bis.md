@@ -302,7 +302,7 @@ Additional considerations for the defintion of a new top-level type include:
 
 #### Negative Criteria
 
-This subsection lists negative criteria for top-level types, identifying criteria that are explicitly not reasons for a top-level type registration.
+Negative indicators for creation of a new top-level type include:
 
 * A top-level type is not a pointer into another registration space that offers duplicate registrations for existing media types. Example: a top-level type of 'oid', leading to types of the form oid/nnnnn, where nnn is an OID (Object Identifier) designating a specific media format,
 
@@ -312,7 +312,7 @@ This subsection lists negative criteria for top-level types, identifying criteri
 
 * A new top-level type SHOULD NOT generate aliases for existing widely used types or subtypes.
 
-* Top-level types with an "X-" prefix cannot be registered, and SHOULD NOT be used. This is in line with {{!RFC6648}}.
+* Top-level types with an "X-" prefix cannot be registered, and SHOULD NOT be used. See {{!RFC6648}}.
 
 ### Structured Syntax Name Suffixes {#suffixes}
 
