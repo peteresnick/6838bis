@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                        7 May 2025
-Expires: 8 November 2025
+Intended status: Best Current Practice                        8 May 2025
+Expires: 9 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 November 2025.
+   This Internet-Draft will expire on 9 November 2025.
 
 Copyright Notice
 
@@ -651,9 +651,7 @@ Table of Contents
 
 3.3.7.3.  Negative Criteria
 
-   This subsection lists negative criteria for top-level types,
-   identifying criteria that are explicitly not reasons for a top-level
-   type registration.
+   Negative indicators for creation of a new top-level type include:
 
    *  A top-level type is not a pointer into another registration space
       that offers duplicate registrations for existing media types.
@@ -682,7 +680,7 @@ Table of Contents
       widely used types or subtypes.
 
    *  Top-level types with an "X-" prefix cannot be registered, and
-      SHOULD NOT be used.  This is in line with [RFC6648].
+      SHOULD NOT be used.  See [RFC6648].
 
 3.3.8.  Structured Syntax Name Suffixes
 
