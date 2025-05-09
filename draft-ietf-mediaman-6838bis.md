@@ -497,7 +497,7 @@ Media types are encouraged to adopt fragment identifier schemes that are used wi
 
 ## Additional Information
 
-Various sorts of optional information SHOULD be included in the specification of a media type if it is available:
+The following optional information SHOULD be included in the specification of a media type if it is available:
 
 * Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file and thus can be used to identify entities as being of a given media type.
 
