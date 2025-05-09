@@ -396,7 +396,7 @@ Intellectual Property Rights (IPR) disclosures for registrations in the vendor a
 
 ## Interchange Recommendations
 
-Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. Problems with different versions, byte ordering, and specifics of gateway handling can and will arise.
+Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. For example, problems with different versions, byte ordering, and specifics of gateway handling can arise.
 
 Universal interoperability of media types is not required, but known interoperability issues SHOULD be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.
 
