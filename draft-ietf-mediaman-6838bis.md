@@ -447,7 +447,7 @@ Enterprising attackers might take advantage of toolchains that partially process
 
 ## Requirements Specific to XML Media Types
 
-There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in {{!RFC7303}}.
+Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
 ## Encoding Requirements {#encoding}
 
