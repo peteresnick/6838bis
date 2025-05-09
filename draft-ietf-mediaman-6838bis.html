@@ -1049,7 +1049,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </tr></thead>
 <tfoot><tr>
 <td class="left">Nottingham &amp; Resnick</td>
-<td class="center">Expires 9 November 2025</td>
+<td class="center">Expires 10 November 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1065,12 +1065,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="https://www.rfc-editor.org/rfc/rfc6838" class="eref">6838</a> (if approved)</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-05-08" class="published">8 May 2025</time>
+<time datetime="2025-05-09" class="published">9 May 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-11-09">9 November 2025</time></dd>
+<dd class="expires"><time datetime="2025-11-10">10 November 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1119,7 +1119,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 9 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 10 November 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1394,7 +1394,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-2.1-4">In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, a Media Types Reviewer (Designated Expert or a group of Designated Experts) performs the Expert Review as specified in this document. Subsequent submissions from the same source do not involve the IESG. The format MUST be described by a formal standards specification produced by the submitting standards-related organization.<a href="#section-2.1-4" class="pilcrow">¶</a></p>
 <p id="section-2.1-5">The third case is described in <a href="#community" class="auto internal xref">Section 2.2</a>.<a href="#section-2.1-5" class="pilcrow">¶</a></p>
 <p id="section-2.1-6">Media types in the standards tree MUST NOT have faceted names, unless they are grandfathered in using the process described in <a href="#grandfather" class="auto internal xref">Appendix B</a>.<a href="#section-2.1-6" class="pilcrow">¶</a></p>
-<p id="section-2.1-7">The "owner" of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.<a href="#section-2.1-7" class="pilcrow">¶</a></p>
+<p id="section-2.1-7">The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.<a href="#section-2.1-7" class="pilcrow">¶</a></p>
 <p id="section-2.1-8">Standards-tree registrations from recognized standards-related organizations are submitted directly to the IANA, where they will undergo Expert Review <span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> prior to approval. In this case, the Expert Reviewer(s) will, among other things, ensure that the required specification provides adequate documentation.<a href="#section-2.1-8" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1437,7 +1437,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-2.3" class="section-number selfRef">2.3. </a><a href="#name-vendor-tree" class="section-name selfRef">Vendor Tree</a>
         </h3>
 <p id="section-2.3-1">The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent. Note that industry consortia as well as non-commercial entities that do not qualify as recognized standards-related organizations can register media types in the vendor tree.<a href="#section-2.3-1" class="pilcrow">¶</a></p>
-<p id="section-2.3-2">A registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assert ownership of a registration done by a third party in order to correct or update it. See <a href="#change" class="auto internal xref">Section 4.5</a> for additional information.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
+<p id="section-2.3-2">A registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See <a href="#change" class="auto internal xref">Section 4.5</a> for additional information.<a href="#section-2.3-2" class="pilcrow">¶</a></p>
 <p id="section-2.3-3">When a third party registers a type on behalf of someone else, both entities SHOULD be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".<a href="#section-2.3-3" class="pilcrow">¶</a></p>
 <p id="section-2.3-4">Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).<a href="#section-2.3-4" class="pilcrow">¶</a></p>
 <p id="section-2.3-5">While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.<a href="#section-2.3-5" class="pilcrow">¶</a></p>
@@ -1451,7 +1451,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         </h3>
 <p id="section-2.4-1">The personal tree is intended for media types created experimentally or as part of products that are not distributed commercially. This tree is sometimes referred to as the "vanity" tree.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 <p id="section-2.4-2">Personal tree registrations are distinguished by the leading facet "prs.".<a href="#section-2.4-2" class="pilcrow">¶</a></p>
-<p id="section-2.4-3">The owner of "personal" registrations and associated specifications is the person or entity making the registration, or one to whom responsibility has been transferred as described below.<a href="#section-2.4-3" class="pilcrow">¶</a></p>
+<p id="section-2.4-3">The change controller of a "personal" registration is the person or entity making the registration, or one to whom responsibility has been transferred as described below.<a href="#section-2.4-3" class="pilcrow">¶</a></p>
 <p id="section-2.4-4">While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.<a href="#section-2.4-4" class="pilcrow">¶</a></p>
 <p id="section-2.4-5">Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review <span><a href="https://rfc-editor.org/rfc/rfc8126#section-4.5" class="relref">Section 4.5</a> of [<a href="#RFC8126" class="cite xref">RFC8126</a>]</span> prior to approval.<a href="#section-2.4-5" class="pilcrow">¶</a></p>
 </section>
@@ -1709,7 +1709,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <p id="section-3.3.8-5">The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.<a href="#section-3.3.8-5" class="pilcrow">¶</a></p>
 <p id="section-3.3.8-6">Media types that make use of a named structured syntax SHOULD use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.<a href="#section-3.3.8-6" class="pilcrow">¶</a></p>
 <p id="section-3.3.8-7">Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing base subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the base subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing base subtype names in the media type registry.<a href="#section-3.3.8-7" class="pilcrow">¶</a></p>
-<p id="section-3.3.8-8">Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing Change Controller for the associated base subtype name to register the new media type.<a href="#section-3.3.8-8" class="pilcrow">¶</a></p>
+<p id="section-3.3.8-8">Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated base subtype name to register the new media type.<a href="#section-3.3.8-8" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="deprecated-aliases">
@@ -1774,19 +1774,20 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-parameter-requirements">
 <a href="#section-3.5" class="section-number selfRef">3.5. </a><a href="#name-parameter-requirements" class="section-name selfRef">Parameter Requirements</a>
         </h3>
-<p id="section-3.5-1">Media types MAY elect to use one or more media type parameters, or some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes. In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
-<p id="section-3.5-2">Parameter names have the syntax as media type names and values:<a href="#section-3.5-2" class="pilcrow">¶</a></p>
-<div class="lang-abnf sourcecode" id="section-3.5-3">
+<p id="section-3.5-1">Media types MAY be defined to allow or require use of media type parameters. Additionally, some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes.<a href="#section-3.5-1" class="pilcrow">¶</a></p>
+<p id="section-3.5-2">In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.<a href="#section-3.5-2" class="pilcrow">¶</a></p>
+<p id="section-3.5-3">Parameter names have the same syntax as media type names and values:<a href="#section-3.5-3" class="pilcrow">¶</a></p>
+<div class="lang-abnf sourcecode" id="section-3.5-4">
 <pre>
     parameter-name = restricted-name
-</pre><a href="#section-3.5-3" class="pilcrow">¶</a>
+</pre><a href="#section-3.5-4" class="pilcrow">¶</a>
 </div>
-<p id="section-3.5-4">Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-3.5-4" class="pilcrow">¶</a></p>
-<p id="section-3.5-5">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
-<p id="section-3.5-6">There is no defined syntax for parameter values. Therefore, registrations MUST specify parameter value syntax. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; e.g., pure binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-3.5-6" class="pilcrow">¶</a></p>
-<p id="section-3.5-7">Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span> and HTTP <span>[<a href="#RFC9110" class="cite xref">RFC9110</a>]</span> <span>[<a href="#RFC8187" class="cite xref">RFC8187</a>]</span> allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.<a href="#section-3.5-7" class="pilcrow">¶</a></p>
-<p id="section-3.5-8">New parameters SHOULD NOT be defined as a way to introduce new functionality in types registered in the standards tree, although new parameters MAY be added to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.<a href="#section-3.5-8" class="pilcrow">¶</a></p>
-<p id="section-3.5-9">Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see <a href="#change" class="auto internal xref">Section 4.5</a>.<a href="#section-3.5-9" class="pilcrow">¶</a></p>
+<p id="section-3.5-5">Note that this syntax is somewhat more restrictive than what is allowed by the ABNF in <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> and amended by <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span>.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
+<p id="section-3.5-6">Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.<a href="#section-3.5-6" class="pilcrow">¶</a></p>
+<p id="section-3.5-7">There is no defined syntax for parameter values; therefore, it MUST be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.<a href="#section-3.5-7" class="pilcrow">¶</a></p>
+<p id="section-3.5-8">Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME <span>[<a href="#RFC2045" class="cite xref">RFC2045</a>]</span> <span>[<a href="#RFC2231" class="cite xref">RFC2231</a>]</span> and HTTP <span>[<a href="#RFC9110" class="cite xref">RFC9110</a>]</span> <span>[<a href="#RFC8187" class="cite xref">RFC8187</a>]</span> allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.<a href="#section-3.5-8" class="pilcrow">¶</a></p>
+<p id="section-3.5-9">Types already registered in the standards tree SHOULD NOT have new functionality added through the definition of new parameters subsequent to the original registration. New parameters MAY be used to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.<a href="#section-3.5-9" class="pilcrow">¶</a></p>
+<p id="section-3.5-10">Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see <a href="#change" class="auto internal xref">Section 4.5</a>.<a href="#section-3.5-10" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="canonicalization-and-format-requirements">
@@ -1795,9 +1796,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <a href="#section-3.6" class="section-number selfRef">3.6. </a><a href="#name-canonicalization-and-format" class="section-name selfRef">Canonicalization and Format Requirements</a>
         </h3>
 <p id="section-3.6-1">All registered media types MUST employ a single, canonical data format, regardless of registration tree.<a href="#section-3.6-1" class="pilcrow">¶</a></p>
-<p id="section-3.6-2">A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. This specification MUST at a minimum be referenced by, if it is not actually included in, the media type registration proposal itself.<a href="#section-3.6-2" class="pilcrow">¶</a></p>
-<p id="section-3.6-3">The specifications of format and processing particulars may or may not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.<a href="#section-3.6-3" class="pilcrow">¶</a></p>
-<p id="section-3.6-4">Some media types involve the use of patented technology. The registration of media types involving patented technology is specifically permitted. However, the restrictions set forth in BCP 79 <span>[<a href="#RFC8179" class="cite xref">RFC8179</a>]</span> and BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span> on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.<a href="#section-3.6-4" class="pilcrow">¶</a></p>
+<p id="section-3.6-2">A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification MUST be referenced by it.<a href="#section-3.6-2" class="pilcrow">¶</a></p>
+<p id="section-3.6-3">The specifications of format and processing particulars need not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.<a href="#section-3.6-3" class="pilcrow">¶</a></p>
+<p id="section-3.6-4">The registration of media types involving patented technology is permitted. However, the restrictions set forth in BCP 79 <span>[<a href="#RFC8179" class="cite xref">RFC8179</a>]</span> and BCP 78 <span>[<a href="#RFC5378" class="cite xref">RFC5378</a>]</span> on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.<a href="#section-3.6-4" class="pilcrow">¶</a></p>
 <p id="section-3.6-5">Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.<a href="#section-3.6-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1806,7 +1807,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-interchange-recommendations">
 <a href="#section-3.7" class="section-number selfRef">3.7. </a><a href="#name-interchange-recommendations" class="section-name selfRef">Interchange Recommendations</a>
         </h3>
-<p id="section-3.7-1">Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. Problems with different versions, byte ordering, and specifics of gateway handling can and will arise.<a href="#section-3.7-1" class="pilcrow">¶</a></p>
+<p id="section-3.7-1">Ideally, media types will be defined so they interoperate across as many systems and applications as possible. However, some media types will inevitably have problems interoperating across different platforms. For example, problems with different versions, byte ordering, and specifics of gateway handling can arise.<a href="#section-3.7-1" class="pilcrow">¶</a></p>
 <p id="section-3.7-2">Universal interoperability of media types is not required, but known interoperability issues SHOULD be identified whenever possible. Publication of a media type does not require an exhaustive review of interoperability, and the interoperability considerations section is subject to continuing evaluation.<a href="#section-3.7-2" class="pilcrow">¶</a></p>
 <p id="section-3.7-3">The recommendations in this subsection apply regardless of the registration tree involved.<a href="#section-3.7-3" class="pilcrow">¶</a></p>
 </section>
@@ -1816,25 +1817,26 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-security-requirements">
 <a href="#section-3.8" class="section-number selfRef">3.8. </a><a href="#name-security-requirements" class="section-name selfRef">Security Requirements</a>
         </h3>
-<p id="section-3.8-1">An analysis of security issues MUST be done for all types registered in the standards tree. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required. However, regardless of what security analysis has or has not been done, all descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".<a href="#section-3.8-1" class="pilcrow">¶</a></p>
-<p id="section-3.8-2">There is absolutely no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.<a href="#section-3.8-2" class="pilcrow">¶</a></p>
-<p id="section-3.8-3">The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in <a href="#comments" class="auto internal xref">Section 4.4</a> below.<a href="#section-3.8-3" class="pilcrow">¶</a></p>
-<p id="section-3.8-4">Some of the issues that need to be examined and described in a security analysis of a media type are:<a href="#section-3.8-4" class="pilcrow">¶</a></p>
+<p id="section-3.8-1">All registrations of types in the standards tree MUST include an analysis of security issues. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required.<a href="#section-3.8-1" class="pilcrow">¶</a></p>
+<p id="section-3.8-2">All descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".<a href="#section-3.8-2" class="pilcrow">¶</a></p>
+<p id="section-3.8-3">There is no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.<a href="#section-3.8-3" class="pilcrow">¶</a></p>
+<p id="section-3.8-4">The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in <a href="#comments" class="auto internal xref">Section 4.4</a> below.<a href="#section-3.8-4" class="pilcrow">¶</a></p>
+<p id="section-3.8-5">Some of the issues that need to be examined and described in a security analysis of a media type are:<a href="#section-3.8-5" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-3.8-5.1">
-            <p id="section-3.8-5.1.1">Complex media types may include provisions for directives that institute actions on a recipient's files or other resources. In many cases, provision is made for originators to specify arbitrary actions in an unrestricted fashion that may then have devastating effects. See the registration of the application/postscript media type in <span>[<a href="#RFC2046" class="cite xref">RFC2046</a>]</span> for an example of such directives and how they can be described in a media type registration.<a href="#section-3.8-5.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-3.8-6.1">
+            <p id="section-3.8-6.1.1">Processing of complex media types might institute actions on a recipient's files or other resources. If it is possible to specify arbitrary actions in an unrestricted fashion, it could have devastating effects. See the registration of the application/postscript media type in <span>[<a href="#RFC2046" class="cite xref">RFC2046</a>]</span> for an example of description and handling of these issues.<a href="#section-3.8-6.1.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.8-5.2">
-            <p id="section-3.8-5.2.1">Any security analysis MUST state whether or not they employ such "active content"; if they do, they MUST state what steps have been taken, or MUST be taken by applications of the media type, to protect users of the media type from harm.<a href="#section-3.8-5.2.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-3.8-6.2">
+            <p id="section-3.8-6.2.1">Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.<a href="#section-3.8-6.2.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.8-5.3">
-            <p id="section-3.8-5.3.1">Complex media types may include provisions for directives that institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.<a href="#section-3.8-5.3.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-3.8-6.3">
+            <p id="section-3.8-6.3.1">Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.<a href="#section-3.8-6.3.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.8-5.4">
-            <p id="section-3.8-5.4.1">A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.<a href="#section-3.8-5.4.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-3.8-6.4">
+            <p id="section-3.8-6.4.1">A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.<a href="#section-3.8-6.4.1" class="pilcrow">¶</a></p>
 </li>
-          <li class="normal" id="section-3.8-5.5">
-            <p id="section-3.8-5.5.1">A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types SHOULD always document whether or not they need such services in their security considerations.<a href="#section-3.8-5.5.1" class="pilcrow">¶</a></p>
+          <li class="normal" id="section-3.8-6.5">
+            <p id="section-3.8-6.5.1">A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types SHOULD always document whether or not they need such services in their security considerations.<a href="#section-3.8-6.5.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
 <div id="structured-suffixes-1">
@@ -1884,7 +1886,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-requirements-specific-to-xm">
 <a href="#section-3.9" class="section-number selfRef">3.9. </a><a href="#name-requirements-specific-to-xm" class="section-name selfRef">Requirements Specific to XML Media Types</a>
         </h3>
-<p id="section-3.9-1">There are a number of additional requirements specific to the registration of XML media types. These requirements are specified in <span>[<a href="#RFC7303" class="cite xref">RFC7303</a>]</span>.<a href="#section-3.9-1" class="pilcrow">¶</a></p>
+<p id="section-3.9-1">Additional requirements specific to the registration of XML media types are specified in <span>[<a href="#RFC7303" class="cite xref">RFC7303</a>]</span>.<a href="#section-3.9-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="encoding">
@@ -1934,10 +1936,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-publication-requirements">
 <a href="#section-3.12" class="section-number selfRef">3.12. </a><a href="#name-publication-requirements" class="section-name selfRef">Publication Requirements</a>
         </h3>
-<p id="section-3.12-1">Media types registered in the standards tree by the IETF itself MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and "publish" them as part of the media types registration tree itself.<a href="#section-3.12-1" class="pilcrow">¶</a></p>
+<p id="section-3.12-1">Media types registered in the standards tree by the IETF MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and publish them as part of the media types registration tree itself.<a href="#section-3.12-1" class="pilcrow">¶</a></p>
 <p id="section-3.12-2">As stated previously, standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.<a href="#section-3.12-2" class="pilcrow">¶</a></p>
-<p id="section-3.12-3">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate. To become an IETF standard, a protocol or data object must go through the IETF standards process. While it provides additional assurances when it is appropriate, this is too difficult and too lengthy a process for the convenient registration of media types.<a href="#section-3.12-3" class="pilcrow">¶</a></p>
-<p id="section-3.12-4">The standards tree exists for media types that do require a substantive review and approval process in a recognized standards- related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.<a href="#section-3.12-4" class="pilcrow">¶</a></p>
+<p id="section-3.12-3">Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.<a href="#section-3.12-3" class="pilcrow">¶</a></p>
+<p id="section-3.12-4">The standards tree exists for those media types that require a substantive review and approval process in a recognized standards-related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.<a href="#section-3.12-4" class="pilcrow">¶</a></p>
 <p id="section-3.12-5">As discussed above, registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.<a href="#section-3.12-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1955,7 +1957,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-additional-information">
 <a href="#section-3.14" class="section-number selfRef">3.14. </a><a href="#name-additional-information" class="section-name selfRef">Additional Information</a>
         </h3>
-<p id="section-3.14-1">Various sorts of optional information SHOULD be included in the specification of a media type if it is available:<a href="#section-3.14-1" class="pilcrow">¶</a></p>
+<p id="section-3.14-1">The following optional information SHOULD be included in the specification of a media type if it is available:<a href="#section-3.14-1" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-3.14-2.1">
             <p id="section-3.14-2.1.1">Magic number(s) (length, octet values). Magic numbers are byte sequences that are always present at a given place in the file and thus can be used to identify entities as being of a given media type.<a href="#section-3.14-2.1.1" class="pilcrow">¶</a></p>
@@ -1987,8 +1989,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-preliminary-community-revie">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-preliminary-community-revie" class="section-name selfRef">Preliminary Community Review</a>
         </h3>
-<p id="section-4.1-1">Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@iana.org mailing list for review. This mailing list has been established for the purpose of reviewing proposed media and access types. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.1-2">The intent of the public posting to this list is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.1-1">Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@iana.org mailing list for review. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.1-2">The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.<a href="#section-4.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="submit-request-to-iana">
@@ -1996,8 +1998,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-submit-request-to-iana">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-submit-request-to-iana" class="section-name selfRef">Submit Request to IANA</a>
         </h3>
-<p id="section-4.2-1">Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process. Standards-tree registrations by recognized standards- related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement. In either case, posting the registration to the media-types@iana.org list for review prior to submission is strongly encouraged.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
-<p id="section-4.2-2">Registration requests can be sent to iana@iana.org. A web form for registration requests is also available:<a href="#section-4.2-2" class="pilcrow">¶</a></p>
+<p id="section-4.2-1">Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process. Standards-tree registrations by recognized standards-related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-4.2-3.1">
             <p id="section-4.2-3.1.1">http://www.iana.org/form/media-types<a href="#section-4.2-3.1.1" class="pilcrow">¶</a></p>
@@ -2008,9 +2010,9 @@ svg :is([fill="white"], [fill^="#fff"]) {
           <h4 id="name-provisional-registrations">
 <a href="#section-4.2.1" class="section-number selfRef">4.2.1. </a><a href="#name-provisional-registrations" class="section-name selfRef">Provisional Registrations</a>
           </h4>
-<p id="section-4.2.1-1">Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign identifiers, including but not limited to media types, early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
-<p id="section-4.2.1-2">Accordingly, a provisional registration process is provided to support early assignment of media type names in the standards tree. A provisional registration MAY be submitted to IANA for standards- tree types. The only required fields in such registrations are the media type name and contact information (including the standards- related organization name).<a href="#section-4.2.1-2" class="pilcrow">¶</a></p>
-<p id="section-4.2.1-3">Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct publicly visible provisional registration list.<a href="#section-4.2.1-3" class="pilcrow">¶</a></p>
+<p id="section-4.2.1-1">Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign media types early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.<a href="#section-4.2.1-1" class="pilcrow">¶</a></p>
+<p id="section-4.2.1-2">Accordingly, provisional registrations of media type names in the standards tree MAY be submitted to IANA. The only required fields in such registrations are the media type name and contact information (including the standards-related organization name).<a href="#section-4.2.1-2" class="pilcrow">¶</a></p>
+<p id="section-4.2.1-3">Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct, publicly-visible provisional registration list.<a href="#section-4.2.1-3" class="pilcrow">¶</a></p>
 <p id="section-4.2.1-4">Provisional registrations MAY be updated or abandoned at any time. When the registration is abandoned, the media type is no longer registered in any sense; it can subsequently be registered just like any other unassigned media type name.<a href="#section-4.2.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -2021,10 +2023,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-review-and-approval">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-review-and-approval" class="section-name selfRef">Review and Approval</a>
         </h3>
-<p id="section-4.3-1">With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be passed on to the media types reviewer. The media types reviewer, who is appointed by the IETF Applications Area Director(s), will review the registration to make sure it meets the requirements set forth in this document. Registrations that do not meet these requirements will be returned to the submitter for revision.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
+<p id="section-4.3-1">With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer, who is appointed by the IETF Applications Area Director(s). The media types reviewer examines registration requests to make sure they meet the requirements set forth in this document.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 <p id="section-4.3-2">Decisions made by the media types reviewer may be appealed to the IESG using the procedure specified in <span><a href="https://rfc-editor.org/rfc/rfc2026#section-6.5.4" class="relref">Section 6.5.4</a> of [<a href="#RFC2026" class="cite xref">RFC2026</a>]</span>.<a href="#section-4.3-2" class="pilcrow">¶</a></p>
 <p id="section-4.3-3">Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.<a href="#section-4.3-3" class="pilcrow">¶</a></p>
-<p id="section-4.3-4">In the case of standards-tree registrations from other standards- related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG MUST be obtained before a standards-tree registration can proceed.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
+<p id="section-4.3-4">In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG MUST be obtained before a standards-tree registration can proceed.<a href="#section-4.3-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="comments">
@@ -2032,7 +2034,8 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-comments-on-media-type-regi">
 <a href="#section-4.4" class="section-number selfRef">4.4. </a><a href="#name-comments-on-media-type-regi" class="section-name selfRef">Comments on Media Type Registrations</a>
         </h3>
-<p id="section-4.4-1">Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the "owner" of the media type if possible. Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-1">Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the change controller of the media type if possible.<a href="#section-4.4-1" class="pilcrow">¶</a></p>
+<p id="section-4.4-2">Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.<a href="#section-4.4-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="change">
@@ -2040,11 +2043,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <h3 id="name-change-procedures">
 <a href="#section-4.5" class="section-number selfRef">4.5. </a><a href="#name-change-procedures" class="section-name selfRef">Change Procedures</a>
         </h3>
-<p id="section-4.5-1">Once a media type has been published by the IANA, the owner may request a change to its definition. The descriptions of the different registration trees above designate the "owners" of each type of registration. The same procedure that would be appropriate for the original registration request is used to process a change request.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
-<p id="section-4.5-2">Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field; such media types will be clearly marked in the lists published by the IANA.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
+<p id="section-4.5-1">Once a media type has been published by the IANA, the change controller may request a change to its definition. The same procedure that would be appropriate for the original registration request is used to process a change request.<a href="#section-4.5-1" class="pilcrow">¶</a></p>
+<p id="section-4.5-2">Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.<a href="#section-4.5-2" class="pilcrow">¶</a></p>
 <p id="section-4.5-3">Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.<a href="#section-4.5-3" class="pilcrow">¶</a></p>
-<p id="section-4.5-4">The owner of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
-<p id="section-4.5-5">The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, moved out of contact, or is otherwise unable to make changes that are important to the community.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
+<p id="section-4.5-4">The change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.<a href="#section-4.5-4" class="pilcrow">¶</a></p>
+<p id="section-4.5-5">The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.<a href="#section-4.5-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="registration-template">
@@ -2275,32 +2278,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-iana-considerations">
 <a href="#section-7" class="section-number selfRef">7. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-7-1">The purpose of this document is to define IANA registries for media types and structured syntax suffixes as well as the procedures for managing these registries. Additionally, this document requires IANA to maintain a list of standards-related organizations for which the IESG has approved media type registrations in the standards tree.<a href="#section-7-1" class="pilcrow">¶</a></p>
-<p id="section-7-2">The existing media type registry has been extended to include a section for provisional registrations. Only standards-tree registrations are allowed in the standards tree and only at the request of an organization on the IANA list of standards-related organizations. See <a href="#provisional" class="auto internal xref">Section 4.2.1</a> for additional information on provisional registrations.<a href="#section-7-2" class="pilcrow">¶</a></p>
-<p id="section-7-3">IANA has also added the following note at the top of the provisional registry:<a href="#section-7-3" class="pilcrow">¶</a></p>
-<ul class="normal ulEmpty">
-<li class="normal ulEmpty" id="section-7-4.1">
-          <p id="section-7-4.1.1">This registry, unlike some other provisional IANA registries, is only for temporary use. Entries in this registry are either finalized and moved to the main media types registry, or are abandoned and deleted. Entries in this registry are suitable for use for development and test purposes only.<a href="#section-7-4.1.1" class="pilcrow">¶</a></p>
-</li>
-      </ul>
-<p id="section-7-5">The structured syntax name suffix registry has been created as follows:<a href="#section-7-5" class="pilcrow">¶</a></p>
-<ul class="normal">
-<li class="normal" id="section-7-6.1">
-          <p id="section-7-6.1.1">The name is the "Structured Syntax Suffix" registry.<a href="#section-7-6.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-7-6.2">
-          <p id="section-7-6.2.1">The registration process is specified in <a href="#suffix-procedures" class="auto internal xref">Section 5</a>.<a href="#section-7-6.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-7-6.3">
-          <p id="section-7-6.3.1">The information required for a registry entry as well as the entry format are specified in <a href="#suffix-template" class="auto internal xref">Section 5.2</a>.<a href="#section-7-6.3.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="section-7-6.4">
-          <p id="section-7-6.4.1">The initial content of the registry is specified in <span>[<a href="#RFC6839" class="cite xref">RFC6839</a>]</span>.<a href="#section-7-6.4.1" class="pilcrow">¶</a></p>
-</li>
-      </ul>
-<p id="section-7-7">Entries in both the media type and structured suffix registries will be annotated by IANA with both the original registration date as well as the date of the most recent update to the entry. Registrations made prior to the implementation of this specification may, if necessary, be marked as such, rather than with a specific date.<a href="#section-7-7" class="pilcrow">¶</a></p>
-<p id="section-7-8">Since registration entries can be updated multiple times, IANA will also maintain the history of changes to each registration in such a way that the state of the registration at any given time can be determined.<a href="#section-7-8" class="pilcrow">¶</a></p>
-<p id="section-7-9">Finally, per this document, IANA has created a new email address, media-types@iana.org, for the media type review list, which replaces the ietf-types@iana.org address specified in RFC 4288. ietf-types@iana.org has been retained as an alias.<a href="#section-7-9" class="pilcrow">¶</a></p>
+<p id="section-7-1"><em>None Yet.</em><a href="#section-7-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="acknowledgments">
@@ -2371,10 +2349,6 @@ svg :is([fill="white"], [fill^="#fff"]) {
         <dd>
 <span class="refAuthor">Melnikov, A.</span> and <span class="refAuthor">J. Reschke</span>, <span class="refTitle">"Update to MIME regarding "charset" Parameter Handling in Textual Media Types"</span>, <span class="seriesInfo">RFC 6657</span>, <span class="seriesInfo">DOI 10.17487/RFC6657</span>, <time datetime="2012-07" class="refDate">July 2012</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6657">https://www.rfc-editor.org/rfc/rfc6657</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC6839">[RFC6839]</dt>
-        <dd>
-<span class="refAuthor">Hansen, T.</span> and <span class="refAuthor">A. Melnikov</span>, <span class="refTitle">"Additional Media Type Structured Syntax Suffixes"</span>, <span class="seriesInfo">RFC 6839</span>, <span class="seriesInfo">DOI 10.17487/RFC6839</span>, <time datetime="2013-01" class="refDate">January 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6839">https://www.rfc-editor.org/rfc/rfc6839</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC7303">[RFC7303]</dt>
         <dd>
 <span class="refAuthor">Thompson, H.</span> and <span class="refAuthor">C. Lilley</span>, <span class="refTitle">"XML Media Types"</span>, <span class="seriesInfo">RFC 7303</span>, <span class="seriesInfo">DOI 10.17487/RFC7303</span>, <time datetime="2014-07" class="refDate">July 2014</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7303">https://www.rfc-editor.org/rfc/rfc7303</a>&gt;</span>. </dd>
@@ -2431,6 +2405,10 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dt id="RFC4288">[RFC4288]</dt>
         <dd>
 <span class="refAuthor">Freed, N.</span> and <span class="refAuthor">J. Klensin</span>, <span class="refTitle">"Media Type Specifications and Registration Procedures"</span>, <span class="seriesInfo">RFC 4288</span>, <span class="seriesInfo">DOI 10.17487/RFC4288</span>, <time datetime="2005-12" class="refDate">December 2005</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4288">https://www.rfc-editor.org/rfc/rfc4288</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6839">[RFC6839]</dt>
+        <dd>
+<span class="refAuthor">Hansen, T.</span> and <span class="refAuthor">A. Melnikov</span>, <span class="refTitle">"Additional Media Type Structured Syntax Suffixes"</span>, <span class="seriesInfo">RFC 6839</span>, <span class="seriesInfo">DOI 10.17487/RFC6839</span>, <time datetime="2013-01" class="refDate">January 2013</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6839">https://www.rfc-editor.org/rfc/rfc6839</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8081">[RFC8081]</dt>
         <dd>
