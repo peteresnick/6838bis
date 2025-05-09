@@ -677,29 +677,7 @@ Security requirements for both media type and media type suffix registrations ar
 
 # IANA Considerations
 
-The purpose of this document is to define IANA registries for media types and structured syntax suffixes as well as the procedures for managing these registries. Additionally, this document requires IANA to maintain a list of standards-related organizations for which the IESG has approved media type registrations in the standards tree.
-
-The existing media type registry has been extended to include a section for provisional registrations. Only standards-tree registrations are allowed in the standards tree and only at the request of an organization on the IANA list of standards-related organizations. See {{provisional}} for additional information on provisional registrations.
-
-IANA has also added the following note at the top of the provisional registry:
-
-> This registry, unlike some other provisional IANA registries, is only for temporary use. Entries in this registry are either finalized and moved to the main media types registry, or are abandoned and deleted. Entries in this registry are suitable for use for development and test purposes only.
-
-The structured syntax name suffix registry has been created as follows:
-
-* The name is the "Structured Syntax Suffix" registry.
-
-* The registration process is specified in {{suffix-procedures}}.
-
-* The information required for a registry entry as well as the entry format are specified in {{suffix-template}}.
-
-* The initial content of the registry is specified in {{!RFC6839}}.
-
-Entries in both the media type and structured suffix registries will be annotated by IANA with both the original registration date as well as the date of the most recent update to the entry. Registrations made prior to the implementation of this specification may, if necessary, be marked as such, rather than with a specific date.
-
-Since registration entries can be updated multiple times, IANA will also maintain the history of changes to each registration in such a way that the state of the registration at any given time can be determined.
-
-Finally, per this document, IANA has created a new email address, media-types@iana.org, for the media type review list, which replaces the ietf-types@iana.org address specified in RFC 4288. ietf-types@iana.org has been retained as an alias.
+_None Yet._
 
 #  Acknowledgments
 
