@@ -404,19 +404,21 @@ The recommendations in this subsection apply regardless of the registration tree
 
 ## Security Requirements {#secreq}
 
-An analysis of security issues MUST be done for all types registered in the standards tree. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required. However, regardless of what security analysis has or has not been done, all descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".
+All registrations of types in the standards tree MUST include an analysis of security issues. A similar analysis for media types registered in the vendor or personal trees is encouraged but not required.
 
-There is absolutely no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.
+All descriptions of security issues MUST be as accurate as possible regardless of registration tree. In particular, the security considerations MUST NOT state that there are "no security issues associated with this type". Security considerations for types in the vendor or personal tree MAY say that "the security issues associated with this type have not been assessed".
+
+There is no requirement that media types registered in any tree be secure or completely free from risks. Nevertheless, all known security risks MUST be identified in the registration of a media type, again regardless of registration tree.
 
 The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in {{comments}} below.
 
 Some of the issues that need to be examined and described in a security analysis of a media type are:
 
-* Complex media types may include provisions for directives that institute actions on a recipient's files or other resources. In many cases, provision is made for originators to specify arbitrary actions in an unrestricted fashion that may then have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of such directives and how they can be described in a media type registration.
+* Processing of complex media types might institute actions on a recipient's files or other resources. If it is possible to specify arbitrary actions in an unrestricted fashion, it could have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of description and handling of these issues.
 
-* Any security analysis MUST state whether or not they employ such "active content"; if they do, they MUST state what steps have been taken, or MUST be taken by applications of the media type, to protect users of the media type from harm.
+* Any security analysis MUST state whether or not the format employs such "active content"; if it does, it MUST state what steps have been taken (or are required be taken by applications) of the media type to protect users of the media type.
 
-* Complex media types may include provisions for directives that institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.
+* Processing of complex media types might institute actions that, while not directly harmful to the recipient, may result in disclosure of information that either facilitates a subsequent attack or else violates a recipient's privacy in some way. Again, the registration of the application/ postscript media type illustrates how such directives can be handled.
 
 * A media type that employs compression may provide an opportunity for sending a small amount of data that, when received and evaluated, expands enormously to consume all of the recipient's resources. All media types SHOULD state whether or not they employ compression; if they do, they SHOULD discuss what steps need to be taken to avoid such attacks.
 
