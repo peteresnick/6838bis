@@ -362,7 +362,7 @@ The syntax and semantics for fragment identifiers are specified in the "Fragment
 
 Media types MAY elect to use one or more media type parameters, or some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes. In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.
 
-Parameter names have the syntax as media type names and values:
+Parameter names have the same syntax as media type names and values:
 
 ~~~ abnf
     parameter-name = restricted-name
