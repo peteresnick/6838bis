@@ -551,7 +551,9 @@ In the case of standards-tree registrations from other standards-related organiz
 
 ## Comments on Media Type Registrations {#comments}
 
-Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the "owner" of the media type if possible. Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.
+Comments on registered media types may be submitted by members of the community to the IANA at iana@iana.org. These comments will be reviewed by the media types reviewer and then passed on to the "owner" of the media type if possible.
+
+Submitters of comments may request that their comment be attached to the media type registration itself; if the IANA, in consultation with the media types reviewer, approves, the comment will be made accessible in conjunction with the type registration.
 
 ## Change Procedures {#change}
 
