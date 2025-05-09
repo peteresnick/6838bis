@@ -360,7 +360,9 @@ The syntax and semantics for fragment identifiers are specified in the "Fragment
 
 ## Parameter Requirements
 
-Media types MAY elect to use one or more media type parameters, or some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes. In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.
+Media types MAY be defined to allow or require use of media type parameters. Additionally, some parameters may be automatically made available to the media type by virtue of being a subtype of a content type that defines a set of parameters applicable to any of its subtypes.
+
+In either case, the names, values, and meanings of any parameters MUST be fully specified when a media type is registered in the standards tree, and SHOULD be specified as completely as possible when media types are registered in the vendor or personal trees.
 
 Parameter names have the same syntax as media type names and values:
 
@@ -372,11 +374,11 @@ Note that this syntax is somewhat more restrictive than what is allowed by the A
 
 Parameter names are case-insensitive and no meaning is attached to the order in which they appear. It is an error for a specific parameter to be specified more than once.
 
-There is no defined syntax for parameter values. Therefore, registrations MUST specify parameter value syntax. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; e.g., pure binary valued parameters, while permitted in some protocols, are best avoided.
+There is no defined syntax for parameter values; therefore, it MUST be specified upon registration. Additionally, some transports impose restrictions on parameter value syntax, so care needs be taken to limit the use of potentially problematic syntaxes; for example, binary valued parameters, while permitted in some protocols, are best avoided.
 
 Note that a protocol can impose further restrictions on parameter value syntax, depending on how it chooses to represent parameters. Both MIME {{!RFC2045}} {{?RFC2231}} and HTTP {{!RFC9110}} {{?RFC8187}} allow binary parameters as well as parameter values expressed in a specific charset, but other protocols may be less flexible.
 
-New parameters SHOULD NOT be defined as a way to introduce new functionality in types registered in the standards tree, although new parameters MAY be added to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.
+Types already registered in the standards tree SHOULD NOT have new functionality added through the definition of new parameters subsequent to the original registration. New parameters MAY be used to convey additional information that does not otherwise change existing functionality. An example of this would be a "revision" parameter to indicate a revision level of an external specification such as JPEG. Similar behavior is encouraged for media types registered in the vendor or personal trees, but is not required.
 
 Changes to parameters (including the introduction of new ones) is managed in the same manner as other changes to the media type; see {{change}}.
 
