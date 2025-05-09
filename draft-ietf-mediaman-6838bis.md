@@ -517,37 +517,37 @@ Normal IETF processes need to be followed for all IETF registrations in the stan
 
 ##  Preliminary Community Review {#preliminary-review}
 
-Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@iana.org mailing list for review. This mailing list has been established for the purpose of reviewing proposed media and access types. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.
+Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@iana.org mailing list for review. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.
 
-The intent of the public posting to this list is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.
+The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.
 
 ## Submit Request to IANA
 
-Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process. Standards-tree registrations by recognized standards- related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement. In either case, posting the registration to the media-types@iana.org list for review prior to submission is strongly encouraged.
+Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process. Standards-tree registrations by recognized standards-related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.
 
-Registration requests can be sent to iana@iana.org. A web form for registration requests is also available:
+Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:
 
 > http://www.iana.org/form/media-types
 
 ### Provisional Registrations {#provisional}
 
-Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign identifiers, including but not limited to media types, early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.
+Standardization processes often take considerable time to complete. In order to facilitate prototyping and testing, it is often helpful to assign media types early in the process. This way, identifiers used during standards development can remain unchanged once the process is complete, and implementations and documentation do not have to be updated.
 
-Accordingly, a provisional registration process is provided to support early assignment of media type names in the standards tree. A provisional registration MAY be submitted to IANA for standards- tree types. The only required fields in such registrations are the media type name and contact information (including the standards- related organization name).
+Accordingly, provisional registrations of media type names in the standards tree MAY be submitted to IANA. The only required fields in such registrations are the media type name and contact information (including the standards-related organization name).
 
-Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct publicly visible provisional registration list.
+Upon receipt of a provisional registration, IANA will check the name and contact information, then publish the registration in a distinct, publicly-visible provisional registration list.
 
 Provisional registrations MAY be updated or abandoned at any time. When the registration is abandoned, the media type is no longer registered in any sense; it can subsequently be registered just like any other unassigned media type name.
 
 ## Review and Approval
 
-With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be passed on to the media types reviewer. The media types reviewer, who is appointed by the IETF Applications Area Director(s), will review the registration to make sure it meets the requirements set forth in this document. Registrations that do not meet these requirements will be returned to the submitter for revision.
+With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer, who is appointed by the IETF Applications Area Director(s). The media types reviewer examines registration requests to make sure they meet the requirements set forth in this document.
 
 Decisions made by the media types reviewer may be appealed to the IESG using the procedure specified in {{Section 6.5.4 of ?RFC2026}}.
 
 Once a media type registration has passed review, the IANA will register the media type and make the media type registration available to the community.
 
-In the case of standards-tree registrations from other standards- related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG MUST be obtained before a standards-tree registration can proceed.
+In the case of standards-tree registrations from other standards-related organizations, IANA will also check that the submitter is in fact a recognized standards-related organization. If the submitter is not currently recognized as such, the IESG will be asked to confirm their status. Recognition from the IESG MUST be obtained before a standards-tree registration can proceed.
 
 ## Comments on Media Type Registrations {#comments}
 
