@@ -557,15 +557,15 @@ Submitters of comments may request that their comment be attached to the media t
 
 ## Change Procedures {#change}
 
-Once a media type has been published by the IANA, the owner may request a change to its definition. The descriptions of the different registration trees above designate the "owners" of each type of registration. The same procedure that would be appropriate for the original registration request is used to process a change request.
+Once a media type has been published by the IANA, the owner may request a change to its definition. The same procedure that would be appropriate for the original registration request is used to process a change request.
 
-Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field; such media types will be clearly marked in the lists published by the IANA.
+Media type registrations may not be deleted; media types that are no longer believed appropriate for use can be declared OBSOLETE by a change to their "intended use" field.
 
 Significant changes to a media type's definition should be requested only when there are serious omissions or errors in the published specification. When review is required, a change request may be denied if it renders entities that were valid under the previous definition invalid under the new definition.
 
 The owner of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.
 
-The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, moved out of contact, or is otherwise unable to make changes that are important to the community.
+The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.
 
 ## Registration Template
 
