@@ -479,13 +479,13 @@ Therefore, universal support and implementation of a media type are NOT a requir
 
 ## Publication Requirements
 
-Media types registered in the standards tree by the IETF itself MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and "publish" them as part of the media types registration tree itself.
+Media types registered in the standards tree by the IETF MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and publish them as part of the media types registration tree itself.
 
 As stated previously, standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
-Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate. To become an IETF standard, a protocol or data object must go through the IETF standards process. While it provides additional assurances when it is appropriate, this is too difficult and too lengthy a process for the convenient registration of media types.
+Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
 
-The standards tree exists for media types that do require a substantive review and approval process in a recognized standards- related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.
+The standards tree exists for those media types that require a substantive review and approval process in a recognized standards-related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.
 
 As discussed above, registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
