@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-08T01:05:34.509294+00:00",
+  "timestamp": "2025-05-11T01:09:29.412833+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -628,15 +628,15 @@
       "id": "I_kwDOMdBaOc61oLNb",
       "title": "Incorporate 'font' top-level type",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/27",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "... from RFC 8081.",
       "createdAt": "2025-05-07T21:26:08Z",
-      "updatedAt": "2025-05-07T21:55:24Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-09T08:37:21Z",
+      "closedAt": "2025-05-09T08:37:20Z",
       "comments": [
         {
           "author": "svgeesus",
@@ -651,8 +651,103 @@
           "body": "We can't obsolete 8081 because it contains the subtype registrations, so I suspect it would be a short section and then a reference to 8081 for details.",
           "createdAt": "2025-05-07T21:55:23Z",
           "updatedAt": "2025-05-07T21:55:23Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I don't think the registration procedure should attempt to be a complete listing of the registry (for obvious reasons - the registry is going to expand over time, the procedure can't reflect the future).\n\n8081 is already referenced in [RFC 9694's history section](https://www.rfc-editor.org/rfc/rfc9694.html#section-3). I don't see a good argument for treating it more specially than that. (PR #12 noted that it omitted the history section, and made a note about whether or not we should change that, but we don't have an open issue for that.)",
+          "createdAt": "2025-05-08T05:51:38Z",
+          "updatedAt": "2025-05-08T05:54:08Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Well, we could omit _all_ top-level type descriptions from this document...",
+          "createdAt": "2025-05-08T06:01:18Z",
+          "updatedAt": "2025-05-08T06:01:18Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "... and say \"these are registered by 6838-no-bis? Works for me :-)\n(unless we find that the old registrations are incomplete and need to be modified, in which case there needs to be an \"updates to existing registrations\" section ... the registration rules say that they need to be defined by a standards-track document, which is satisfied by 6838 or 6838bis as the WG wills it.)\n\n\n",
+          "createdAt": "2025-05-08T06:09:36Z",
+          "updatedAt": "2025-05-08T06:09:36Z"
+        },
+        {
+          "author": "svgeesus",
+          "authorAssociation": "NONE",
+          "body": "> 8081 is already referenced in [RFC 9694's history section](https://www.rfc-editor.org/rfc/rfc9694.html#section-3). I don't see a good argument for treating it more specially than that.\n\nI do.\n\nThe existing 8081 reference merely uses it as an _example_ on how to add a new top-level type.\n\nAs a currently-existing top-level type, though, `font/` (and `model/`) should be listed the same as the other top-level types",
+          "createdAt": "2025-05-08T21:45:10Z",
+          "updatedAt": "2025-05-08T21:47:32Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Hmm. I think we could remove the top-level type definitions _if_ there were a registry specifically for them, but there's not. Thoughts?",
+          "createdAt": "2025-05-08T22:03:19Z",
+          "updatedAt": "2025-05-08T22:03:19Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Well, https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml looks awfully like the registry created by 9694, so I guess we have one...\n",
+          "createdAt": "2025-05-09T05:49:12Z",
+          "updatedAt": "2025-05-09T05:49:12Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Aha! I didn't see that linked from the media types registry...",
+          "createdAt": "2025-05-09T05:58:14Z",
+          "updatedAt": "2025-05-09T05:58:14Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think someone would need to go through and verify that none of the text regarding these in 6838 was unique.",
+          "createdAt": "2025-05-09T07:08:35Z",
+          "updatedAt": "2025-05-09T07:08:35Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Issue #29 created. With that, I think we can close this issue as \"no action needed\" (on the assumption that -bis won't have a list of top level types with descriptions in it).\n",
+          "createdAt": "2025-05-09T08:37:20Z",
+          "updatedAt": "2025-05-09T08:37:20Z"
         }
       ]
+    },
+    {
+      "number": 28,
+      "id": "I_kwDOMdBaOc611lyU",
+      "title": "Applicability statements",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/28",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.\n\nReally?",
+      "createdAt": "2025-05-09T04:20:19Z",
+      "updatedAt": "2025-05-09T04:20:19Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 29,
+      "id": "I_kwDOMdBaOc614UYP",
+      "title": "Review and maybe delete old top level type descriptions",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/29",
+      "state": "OPEN",
+      "author": "alvestrand",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The old top level descriptions (text, application and so on) are referenced in the IANA registry at https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml as being defined in RFC 2026.\n\nTheir description is copied in the text of RFC 6838, and so far in 6838bis.\n\nIt would make for a shorter document if we could delete them and just say that 2026 is the normative reference for them, but before doing that, we need to verify that there are no changes to the description between 2026 and 6838 that we want to make normative.\n",
+      "createdAt": "2025-05-09T08:36:06Z",
+      "updatedAt": "2025-05-09T08:36:06Z",
+      "closedAt": null,
+      "comments": []
     }
   ],
   "pulls": [
