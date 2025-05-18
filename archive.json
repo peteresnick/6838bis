@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-11T01:09:29.412833+00:00",
+  "timestamp": "2025-05-18T01:10:20.628741+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -619,9 +619,17 @@
       "labels": [],
       "body": "The spec uses MUST/MAY/SHOULD throughout to indicate registration requirements, not interoperability requirements.",
       "createdAt": "2025-05-07T01:36:56Z",
-      "updatedAt": "2025-05-07T01:36:56Z",
+      "updatedAt": "2025-05-15T19:57:41Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "In procedural documents like this, it seems that \"interoperability\" is the abillity for the parties to get their job done by conforming to procedure - \"interoperability\" between registrar and registry in this case.\n\nI don't want to try to come up with an alternative terminology just because it isn't a computer protocol.",
+          "createdAt": "2025-05-15T19:57:40Z",
+          "updatedAt": "2025-05-15T19:57:40Z"
+        }
+      ]
     },
     {
       "number": 27,
@@ -729,9 +737,17 @@
       "labels": [],
       "body": "> It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.\n\nReally?",
       "createdAt": "2025-05-09T04:20:19Z",
-      "updatedAt": "2025-05-09T04:20:19Z",
+      "updatedAt": "2025-05-15T19:58:28Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Much has been expected of applicability statements, but little has been done about them....\n",
+          "createdAt": "2025-05-15T19:58:27Z",
+          "updatedAt": "2025-05-15T19:58:27Z"
+        }
+      ]
     },
     {
       "number": 29,
