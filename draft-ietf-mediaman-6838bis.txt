@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                        9 May 2025
-Expires: 10 November 2025
+Intended status: Best Current Practice                       18 May 2025
+Expires: 19 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 November 2025.
+   This Internet-Draft will expire on 19 November 2025.
 
 Copyright Notice
 
@@ -66,57 +66,60 @@ Table of Contents
 
    1.  Introduction
      1.1.  Conventions Used in This Document
-   2.  Registration Trees and Subtype Names
-     2.1.  Standards Tree
-     2.2.  Community Formats in the Standards Tree
-     2.3.  Vendor Tree
-     2.4.  Personal Tree
-     2.5.  Unregistered x.  Tree
-     2.6.  Additional Registration Trees
-   3.  Registration Requirements
-     3.1.  Functionality Requirement
-     3.2.  Naming Requirements
-     3.3.  Top-Level Type Names
-       3.3.1.  Text Media Types
-       3.3.2.  Image Media Types
-       3.3.3.  Audio Media Types
-       3.3.4.  Video Media Types
-       3.3.5.  Application Media Types
-       3.3.6.  Multipart and Message Media Types
-       3.3.7.  Additional Top-Level Types
-       3.3.8.  Structured Syntax Name Suffixes
-       3.3.9.  Deprecated Aliases
-     3.4.  Structured Suffixes
-       3.4.1.  Common Suffix Patterns
-       3.4.2.  Fragment Identifiers
-     3.5.  Parameter Requirements
-     3.6.  Canonicalization and Format Requirements
-     3.7.  Interchange Recommendations
-     3.8.  Security Requirements
-       3.8.1.  Structured Suffixes
-     3.9.  Requirements Specific to XML Media Types
-     3.10. Encoding Requirements
-     3.11. Usage and Implementation Non-Requirements
-     3.12. Publication Requirements
-     3.13. Fragment Identifier Requirements
-     3.14. Additional Information
-   4.  Media Type Registration Procedures
-     4.1.  Preliminary Community Review
-     4.2.  Submit Request to IANA
-       4.2.1.  Provisional Registrations
-     4.3.  Review and Approval
-     4.4.  Comments on Media Type Registrations
-     4.5.  Change Procedures
-     4.6.  Registration Template
-   5.  Structured Syntax Suffix Registration Procedures
-     5.1.  Change Procedures
-     5.2.  Structured Syntax Suffix Registration Template
-   6.  Security Considerations
-   7.  IANA Considerations
-   8.  Acknowledgments
-   9.  References
-     9.1.  Normative References
-     9.2.  Informative References
+   2.  Media Type Registration Requirements
+     2.1.  Functionality
+     2.2.  Publication
+       2.2.1.  Availability
+       2.2.2.  Intellectual Property
+     2.3.  Canonicalization and Interoperability
+     2.4.  Naming
+       2.4.1.  Aliases
+     2.5.  Parameters
+     2.6.  Encoding
+     2.7.  Fragment Identifiers
+     2.8.  Security
+       2.8.1.  Structured Suffixes
+     2.9.  Non-Requirements
+     2.10. Additional Information
+   3.  Top-Level Media Types
+     3.1.  Text Media Types
+       3.1.1.  The Charset Parameter
+     3.2.  Image Media Types
+     3.3.  Audio Media Types
+     3.4.  Video Media Types
+     3.5.  Application Media Types
+     3.6.  Multipart and Message Media Types
+     3.7.  Additional Top-Level Types
+       3.7.1.  Required Criteria
+       3.7.2.  Additional Considerations
+       3.7.3.  Negative Criteria
+   4.  Media Subtypes
+     4.1.  Registration Trees
+       4.1.1.  Standards Tree
+       4.1.2.  Vendor Tree
+       4.1.3.  Personal Tree
+       4.1.4.  Unregistered x.  Tree
+       4.1.5.  Additional Registration Trees
+     4.2.  Subtype Suffixs
+       4.2.1.  Common Suffix Patterns
+       4.2.2.  Fragment Identifiers and Suffixes
+   5.  Media Type Registration Procedures
+     5.1.  Preliminary Community Review
+     5.2.  Submit Request to IANA
+       5.2.1.  Provisional Registrations
+     5.3.  Review and Approval
+     5.4.  Comments on Media Type Registrations
+     5.5.  Change Procedures
+     5.6.  Registration Template
+   6.  Structured Syntax Suffix Registration Procedures
+     6.1.  Change Procedures
+     6.2.  Structured Syntax Suffix Registration Template
+   7.  Security Considerations
+   8.  IANA Considerations
+   9.  Acknowledgments
+   10. References
+     10.1.  Normative References
+     10.2.  Informative References
    Appendix A.  Historical Note
    Appendix B.  Grandfathered Media Types
    Authors' Addresses
@@ -133,8 +136,8 @@ Table of Contents
    known as parameters.
 
    This document defines the criteria and procedures to be used to
-   register media types (Section 4) as well as media type structured
-   suffixes (Section 5) in the Internet Assigned Numbers Authority
+   register media types (Section 5) as well as media type structured
+   suffixes (Section 6) in the Internet Assigned Numbers Authority
    (IANA) registry.
 
    The location of the media type registry managed by these procedures
@@ -154,211 +157,16 @@ Table of Contents
    [RFC5234] notation, including the core rules defined in Appendix B of
    that document.
 
-2.  Registration Trees and Subtype Names
-
-   In order to increase the efficiency and flexibility of the
-   registration process, different structures of subtype names can be
-   registered in distinct "trees," distinguished with faceted names.
-
-   For example, a subtype that is recommended for wide support and
-   implementation by the Internet community would be registered in the
-   Standards Tree and not have a prefix, while a subtype that is used to
-   move files associated with proprietary software would be registered
-   in the Vendor Tree, and so its name would begin with a "vnd." prefix.
-
-   Note that some previously defined media types do not conform to the
-   naming conventions described below.  See Appendix B for a discussion
-   of them.
-
-2.1.  Standards Tree
-
-   The standards tree is intended for types of general interest to the
-   Internet community.  Registrations in the standards tree MUST be
-   either:
-
-   1.  in the case of registrations associated with IETF specifications,
-       approved directly by the IESG, or
-
-   2.  registered by a recognized standards-related organization using
-       the "Specification Required" IANA registration policy Section 4.6
-       of [RFC8126] (which implies Expert Review), or
-
-   3.  approved by the Designated Expert(s) as identifying a "community
-       format", as described in Section 2.2.
-
-   The first procedure is used for registrations from IETF Consensus
-   documents, or in rare cases when registering a grandfathered (see
-   Appendix B) and/or otherwise incomplete registration is in the
-   interest of the Internet community.  The registration proposal MUST
-   be published as an RFC.  When the registration RFC is in the IETF
-   stream, it must have IETF Consensus.  Registrations published in non-
-   IETF RFC streams are also allowed, but require IESG approval.  A
-   registration can be either in a stand-alone "registration only" RFC
-   or incorporated into a more complete specification.
-
-   In the second case, the IESG makes a one-time decision on whether the
-   registration submitter represents a recognized standards-related
-   organization; after that, a Media Types Reviewer (Designated Expert
-   or a group of Designated Experts) performs the Expert Review as
-   specified in this document.  Subsequent submissions from the same
-   source do not involve the IESG.  The format MUST be described by a
-   formal standards specification produced by the submitting standards-
-   related organization.
-
-   The third case is described in Section 2.2.
-
-   Media types in the standards tree MUST NOT have faceted names, unless
-   they are grandfathered in using the process described in Appendix B.
-
-   The change controller of a media type registered in the standards
-   tree is assumed to be the standards-related organization itself.
-   Modification or alteration of the specification uses the same level
-   of processing (e.g., a registration submitted on Standards Track can
-   be revised in another Standards Track RFC, but cannot be revised in
-   an Informational RFC) required for the initial registration.
-
-   Standards-tree registrations from recognized standards-related
-   organizations are submitted directly to the IANA, where they will
-   undergo Expert Review Section 4.5 of [RFC8126] prior to approval.  In
-   this case, the Expert Reviewer(s) will, among other things, ensure
-   that the required specification provides adequate documentation.
-
-2.2.  Community Formats in the Standards Tree
-
-   Some formats are interoperable (i.e., they are supported by more than
-   one implementation), but their specifications are not published by a
-   recognized standards-related organization.  To accommodate these
-   cases, the Designated Expert(s) are empowered to approve
-   registrations in the standards tree that meet the following criteria:
-
-   *  There is a well-defined specification for the format
-
-   *  That specification is not tied to or heavily associated with one
-      implementation
-
-   *  The specification is freely available at a stable location
-
-   *  There are multiple interoperable implementations of the
-      specification, or they are likely to emerge
-
-   *  The requested name is appropriate to the use case, and not so
-      generic that it may be considered 'squatting'
-
-   *  There is no conflict with IETF work or work at other recognised
-      SDOs (present or future)
-
-   *  There is evidence of broad adoption
-
-   The Designated Expert(s) have discretion in applying these criteria;
-   in rare cases, they might judge it best to register an entry that
-   fails one or more.
-
-   Note that such registrations still go through preliminary community
-   review (Section 5.1), and decisions can be appealed (Section 5.3).
-
-2.3.  Vendor Tree
-
-   The vendor tree is intended for media types associated with publicly
-   available products.  "Vendor" and "producer" are construed very
-   broadly in this context, and are considered equivalent.  Note that
-   industry consortia as well as non-commercial entities that do not
-   qualify as recognized standards-related organizations can register
-   media types in the vendor tree.
-
-   A registration may be placed in the vendor tree by anyone who needs
-   to interchange files associated with some product or set of products.
-   However, the registration properly belongs to the vendor or
-   organization producing the software that employs the type being
-   registered, and that vendor or organization can at any time elect to
-   assume change control of a registration done by a third party in
-   order to correct or update it.  See Section 4.5 for additional
-   information.
-
-   When a third party registers a type on behalf of someone else, both
-   entities SHOULD be noted in the Change Controller field in the
-   registration.  One possible format for this would be "Foo, on behalf
-   of Bar".
-
-   Vendor tree registrations are distinguished by the leading facet
-   "vnd.".  That may be followed, at the discretion of the registrant,
-   by either a media subtype name from a well-known producer (e.g.,
-   "vnd.mudpie") or by an IANA-approved designation of the producer's
-   name that is followed by a media type or product designation (e.g.,
-   vnd.bigcompany.funnypictures).
-
-   While public exposure and review of media types to be registered in
-   the vendor tree are not required, requesting review on the media-
-   types@iana.org mailing list is encouraged, to improve the quality of
-   those specifications.
-
-   Registrations in the vendor tree may be submitted directly to the
-   IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
-   prior to approval.
-
-2.4.  Personal Tree
-
-   The personal tree is intended for media types created experimentally
-   or as part of products that are not distributed commercially.  This
-   tree is sometimes referred to as the "vanity" tree.
-
-   Personal tree registrations are distinguished by the leading facet
-   "prs.".
-
-   The change controller of a "personal" registration is the person or
-   entity making the registration, or one to whom responsibility has
-   been transferred as described below.
-
-   While public exposure and review of media types to be registered in
-   the personal tree are not required, requesting review on the media-
-   types@iana.org mailing list is encouraged, to improve the quality of
-   those specifications.
-
-   Registrations in the personal tree may be submitted directly to the
-   IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
-   prior to approval.
-
-2.5.  Unregistered x.  Tree
-
-   Subtype names with "x." as the first facet are intended exclusively
-   for use in private, local environments.  Subtypes using this tree
-   cannot be registered and are intended for use only with the active
-   agreement of the parties exchanging them.
-
-   The low barrier to registration in the vendor and personal trees
-   means it should rarely, if ever, be necessary to use unregistered
-   types.  Therefore, use of types in the "x." tree is strongly
-   discouraged.
-
-   Note that types with names beginning with "x-" are no longer
-   considered to be members of this tree (see [RFC6648]).  Also note
-   that if a generally useful and widely deployed type incorrectly uses
-   an "x-" name prefix, it MAY be registered using its current name in
-   an alternative tree by following the procedure defined in Appendix B.
-
-2.6.  Additional Registration Trees
-
-   From time to time and as required by the community, new top-level
-   registration trees may be created by IETF Standards Action.
-
-   It is explicitly assumed that these trees may be created for external
-   registration and management by well-known permanent organizations;
-   for example, scientific societies may register media types specific
-   to the sciences they cover.  In general, the quality of review of
-   specifications for one of these additional registration trees is
-   expected to be equivalent to registrations in the standards tree by a
-   recognized standards-related organization.
-
-   When the IETF performs such review, it needs to consider the greater
-   expertise of the requesting organization with respect to the subject
-   media type.
-
-3.  Registration Requirements
+2.  Media Type Registration Requirements
 
    Media type registrations are expected to conform to various
    requirements laid out in the following sections.  Note that specific
    requirements can vary depending on the registration tree.
 
-3.1.  Functionality Requirement
+   Additional requirements specific to the registration of XML media
+   types are specified in [RFC7303].
+
+2.1.  Functionality
 
    Media types MUST function as actual media formats.  Registration of
    things that are better thought of as a transfer encoding, as a
@@ -370,7 +178,93 @@ Table of Contents
    This requirement applies regardless of the registration tree
    involved.
 
-3.2.  Naming Requirements
+2.2.  Publication
+
+   Media types registered in the standards tree by the IETF MUST be
+   published as RFCs.  RFC publication of vendor and personal media type
+   registrations is allowed but not required.  In all cases, the IANA
+   will retain copies of all media type registrations and publish them
+   as part of the media types registration tree itself.
+
+   Standards-tree registrations for media types defined in documents
+   produced by other standards-related organizations MUST be described
+   by a formal standards specification produced by that organization.
+   Additionally, any copyright on the registration template MUST allow
+   the IANA to copy it into the IANA registry.
+
+   The standards tree exists for those media types that require a
+   substantive review and approval process in a recognized standards-
+   related organization.  The vendor and personal trees exist for those
+   media types that do not require such a process.  It is expected that
+   applicability statements for particular applications will be
+   published from time to time in the IETF, recommending implementation
+   of, and support for, media types that have proven particularly useful
+   in those contexts.
+
+   Other than IETF registrations in the standards tree, the registration
+   of a media type does not imply endorsement, approval, or
+   recommendation by the IANA or the IETF or even certification that the
+   specification is adequate.
+
+   Registration of a top-level type requires Standards Action in the
+   IETF and, hence, the publication of a RFC on the Standards Track.
+
+2.2.1.  Availability
+
+   A permanent and readily available public specification of the format
+   for the media type MUST exist for all types registered in the
+   standards tree.  This specification MUST provide sufficient detail so
+   that interoperability between independent implementations using the
+   media type is possible.  If not part of the media type registration
+   proposal, this specification MUST be referenced by it.
+
+   The specifications of format and processing particulars need not be
+   publicly available for media types registered in the vendor and
+   personal trees.  Such registrations are explicitly permitted to limit
+   the information in the registration to which software and version
+   produce or process such media types.  As such, references to or
+   inclusion of format specifications in registrations is encouraged but
+   not required.  Note, however, that the public availability of a
+   meaningful specification will often make the difference between
+   simply having a name reserved so that there are no conflicts with
+   other uses and having the potential for other implementations of the
+   media type and useful interoperation with them.
+
+2.2.2.  Intellectual Property
+
+   The registration of media types involving patented technology is
+   permitted.  However, the restrictions set forth in BCP 79 [RFC8179]
+   and BCP 78 [RFC5378] on the use of patented technology in IETF
+   Standards Track protocols must be respected when the specification of
+   a media type is part of a Standards Track protocol.  In addition,
+   other standards-related organizations making use of the standards
+   tree may have their own rules regarding intellectual property that
+   must be observed in their registrations.
+
+   Intellectual Property Rights (IPR) disclosures for registrations in
+   the vendor and personal trees are encouraged but not required.
+
+2.3.  Canonicalization and Interoperability
+
+   All registered media types MUST employ a single, canonical data
+   format, regardless of registration tree.
+
+   Ideally, media types will be defined so they interoperate across as
+   many systems and applications as possible.  However, some media types
+   will inevitably have problems interoperating across different
+   platforms.  For example, problems with different versions, byte
+   ordering, and specifics of gateway handling can arise.
+
+   Universal interoperability of media types is not required, but known
+   interoperability issues SHOULD be identified whenever possible.
+   Publication of a media type does not require an exhaustive review of
+   interoperability, and the interoperability considerations section is
+   subject to continuing evaluation.
+
+   The recommendations in this subsection apply regardless of the
+   registration tree involved.
+
+2.4.  Naming
 
    All registered media types MUST be assigned top-level type and
    subtype names.  The combination of these names serves to uniquely
@@ -406,7 +300,7 @@ Table of Contents
 
    Similarly, the final "+" in a subtype name introduces a structured
    syntax specifier suffix.  Structured syntax suffix requirements are
-   specified in Section 3.3.8.
+   specified in Section 4.2.
 
    While it is possible for a given media type to be assigned more than
    one name, the use of different names to identify the same media type
@@ -415,7 +309,285 @@ Table of Contents
    These requirements apply regardless of the registration tree
    involved.
 
-3.3.  Top-Level Type Names
+2.4.1.  Aliases
+
+   In some cases, a single media type may have been widely deployed
+   prior to registration under multiple names.  In such cases, a
+   preferred name MUST be chosen for the media type, and applications
+   MUST use this to be compliant with the type's registration.  However,
+   a list of deprecated aliases by which the type is known MAY be
+   supplied as additional information in order to assist applications in
+   processing the media type properly.
+
+2.5.  Parameters
+
+   Media types MAY be defined to allow or require use of media type
+   parameters.  Additionally, some parameters may be automatically made
+   available to the media type by virtue of being a subtype of a content
+   type that defines a set of parameters applicable to any of its
+   subtypes.
+
+   In either case, the names, values, and meanings of any parameters
+   MUST be fully specified when a media type is registered in the
+   standards tree, and SHOULD be specified as completely as possible
+   when media types are registered in the vendor or personal trees.
+
+   Parameter names have the same syntax as media type names and values:
+
+       parameter-name = restricted-name
+
+   Note that this syntax is somewhat more restrictive than what is
+   allowed by the ABNF in [RFC2045] and amended by [RFC2231].
+
+   Parameter names are case-insensitive and no meaning is attached to
+   the order in which they appear.  It is an error for a specific
+   parameter to be specified more than once.
+
+   There is no defined syntax for parameter values; therefore, it MUST
+   be specified upon registration.  Additionally, some transports impose
+   restrictions on parameter value syntax, so care needs be taken to
+   limit the use of potentially problematic syntaxes; for example,
+   binary valued parameters, while permitted in some protocols, are best
+   avoided.
+
+   Note that a protocol can impose further restrictions on parameter
+   value syntax, depending on how it chooses to represent parameters.
+   Both MIME [RFC2045] [RFC2231] and HTTP [RFC9110] [RFC8187] allow
+   binary parameters as well as parameter values expressed in a specific
+   charset, but other protocols may be less flexible.
+
+   Types already registered in the standards tree SHOULD NOT have new
+   functionality added through the definition of new parameters
+   subsequent to the original registration.  New parameters MAY be used
+   to convey additional information that does not otherwise change
+   existing functionality.  An example of this would be a "revision"
+   parameter to indicate a revision level of an external specification
+   such as JPEG.  Similar behavior is encouraged for media types
+   registered in the vendor or personal trees, but is not required.
+
+   Changes to parameters (including the introduction of new ones) is
+   managed in the same manner as other changes to the media type; see
+   Section 5.5.
+
+2.6.  Encoding
+
+   Some transports impose restrictions on the type of data they can
+   carry.  For example, Internet mail traditionally was limited to 7bit
+   US-ASCII text.  Encoding schemes are often used to work around such
+   transport limitations.
+
+   It is therefore useful to note what sort of data a media type can
+   consist of as part of its registration.  An "encoding considerations"
+   field is provided for this purpose.  Possible values of this field
+   are:
+
+   7bit:  The content of the media type consists solely of CRLF-
+      delimited 7bit US-ASCII text.
+
+   8bit:  The content of the media type consists solely of CRLF-
+      delimited 8bit text.
+
+   binary:  The content consists of an unrestricted sequence of octets.
+
+   framed:  The content consists of a series of frames or packets
+      without internal framing or alignment indicators.  Additional out-
+      of-band information is needed to interpret the data properly,
+      including but not necessarily limited to knowledge of the
+      boundaries between successive frames and knowledge of the
+      transport mechanism.  Note that media types of this sort cannot
+      simply be stored in a file or transported as a simple stream of
+      octets; therefore, such media types are unsuitable for use in many
+      traditional protocols.  A commonly used transport with framed
+      encoding is the Real-time Transport Protocol, RTP.  Additional
+      rules for framed encodings defined for transport using RTP are
+      given in [RFC4855].
+
+   Additional restrictions on 7bit and 8bit text are given in
+   Section 4.1.1 of [RFC2046].
+
+2.7.  Fragment Identifiers
+
+   Media type registrations can specify how applications should
+   interpret fragment identifiers (specified in Section 3.5 of
+   [RFC3986]) associated with the media type.
+
+   Media types are encouraged to adopt fragment identifier schemes that
+   are used with semantically similar media types.  In particular, media
+   types that use a named structured syntax with a registered "+suffix"
+   MUST follow whatever fragment identifier rules are given in the
+   structured syntax suffix registration.
+
+2.8.  Security
+
+   All registrations of types in the standards tree MUST include an
+   analysis of security issues.  A similar analysis for media types
+   registered in the vendor or personal trees is encouraged but not
+   required.
+
+   All descriptions of security issues MUST be as accurate as possible
+   regardless of registration tree.  In particular, the security
+   considerations MUST NOT state that there are "no security issues
+   associated with this type".  Security considerations for types in the
+   vendor or personal tree MAY say that "the security issues associated
+   with this type have not been assessed".
+
+   There is no requirement that media types registered in any tree be
+   secure or completely free from risks.  Nevertheless, all known
+   security risks MUST be identified in the registration of a media
+   type, again regardless of registration tree.
+
+   The security considerations section of all registrations is subject
+   to continuing evaluation and modification, and in particular MAY be
+   extended by use of the "comments on media types" mechanism described
+   in Section 5.4 below.
+
+   Some of the issues that need to be examined and described in a
+   security analysis of a media type are:
+
+   *  Processing of complex media types might institute actions on a
+      recipient's files or other resources.  If it is possible to
+      specify arbitrary actions in an unrestricted fashion, it could
+      have devastating effects.  See the registration of the
+      application/postscript media type in [RFC2046] for an example of
+      description and handling of these issues.
+
+   *  Any security analysis MUST state whether or not the format employs
+      such "active content"; if it does, it MUST state what steps have
+      been taken (or are required be taken by applications) of the media
+      type to protect users of the media type.
+
+   *  Processing of complex media types might institute actions that,
+      while not directly harmful to the recipient, may result in
+      disclosure of information that either facilitates a subsequent
+      attack or else violates a recipient's privacy in some way.  Again,
+      the registration of the application/ postscript media type
+      illustrates how such directives can be handled.
+
+   *  A media type that employs compression may provide an opportunity
+      for sending a small amount of data that, when received and
+      evaluated, expands enormously to consume all of the recipient's
+      resources.  All media types SHOULD state whether or not they
+      employ compression; if they do, they SHOULD discuss what steps
+      need to be taken to avoid such attacks.
+
+   *  A media type might be targeted for applications that require some
+      sort of security assurance but don't provide the necessary
+      security mechanisms themselves.  For example, a media type could
+      be defined for storage of sensitive medical information that in
+      turn requires external confidentiality and integrity protection
+      services, or which is designed for use only within a secure
+      environment.  Types SHOULD always document whether or not they
+      need such services in their security considerations.
+
+2.8.1.  Structured Suffixes
+
+2.8.1.1.  Document Validity
+
+   If a toolchain chooses to process a provided media type by using the
+   selected structured suffix processing rules, it cannot presume that a
+   document that is valid per the decoding rules associated with the
+   structured suffix will be valid for a recognized subset of the
+   structured suffix.  For example, presuming a media type of
+   "application/foo+bar", a toolchain cannot presume that a valid "+bar"
+   document will also be a valid "application/foo" document.  On the
+   other hand, presuming a media type of "application/foo+bar", a
+   toolchain can presume that a valid "application/foo+bar" document
+   will also be a valid "+bar" document.
+
+2.8.1.2.  Fragment Semantics
+
+   If a toolchain chooses to process a provided media type by using the
+   selected structured suffix processing rules, it cannot presume that
+   fragment identifier semantics will be the same across a recognized
+   subset of the structured suffix.  For example, presuming a media type
+   of "application/foo+bar", a toolchain cannot presume that the
+   fragment semantics for a "+bar" document will be the same as for an
+   "application/foo+bar" document.
+
+2.8.1.3.  Security Characteristics
+
+   Toolchains cannot assume that the security characteristics of
+   processing based on structured suffixes will be the same for the
+   entire media type.  For example, presuming a media type of
+   "application/foo+bar", a toolchain cannot presume that the security
+   characteristics for a "+bar" document will be the same as for a
+   "application/foo+bar" document.
+
+2.8.1.4.  Partial Processing
+
+   It is conceivable that an attacker could utilize structured suffixes
+   in a way that tricks unsuspecting toolchains into skipping important
+   security checks and allowing viruses to propagate.  For example, an
+   attacker might utilize an "application/vnd.ms-
+   excel.addin.macroEnabled.12+zip" structured suffix to trigger an
+   unzip process that might then directly invoke Microsoft Excel,
+   bypassing anti-virus tooling that would otherwise block a macro-
+   enabled MS Excel file containing a virus of some kind from being
+   scanned or opened.
+
+   Enterprising attackers might take advantage of toolchains that
+   partially process media types in this manner.  Toolchains that
+   process media types based purely on a structured suffix need to
+   ensure that further processing does not blindly trust the decoded
+   data, and that proper magic header or file structure checking is
+   performed, before allowing the decoded data to drive operations that
+   might negatively impact the application environment or operating
+   system.
+
+2.9.  Non-Requirements
+
+   In the asynchronous mail environment, where information on the
+   capabilities of the remote mail agent is frequently not available to
+   the sender, maximum interoperability is attained by restricting the
+   media types used to those "common" formats expected to be widely
+   implemented.  This was asserted in the past as a reason to limit the
+   number of possible media types, and resulted in a registration
+   process with a significant hurdle and delay for those registering
+   media types.
+
+   However, the need for "common" media types does not require limiting
+   the registration of new media types.  If a limited set of media types
+   is recommended for a particular application, that should be asserted
+   by a separate applicability statement specific for the application
+   and/or environment.
+
+   Therefore, universal support and implementation of a media type are
+   NOT a requirement for registration.  However, if a media type is
+   explicitly intended for limited use, this MUST be noted in its
+   registration.  The "Restrictions on Usage" field is provided for this
+   purpose.
+
+2.10.  Additional Information
+
+   The following optional information SHOULD be included in the
+   specification of a media type if it is available:
+
+   *  Magic number(s) (length, octet values).  Magic numbers are byte
+      sequences that are always present at a given place in the file and
+      thus can be used to identify entities as being of a given media
+      type.
+
+   *  File name extension(s) commonly used on one or more platforms to
+      indicate that some file contains a given media type.
+
+   *  macOS Uniform Type Identifier (a string), if it makes sense to
+      exchange media of this type through user-triggered exchange
+      mechanisms such as copy-and-paste or drag-and-drop on macOS and
+      related platforms (see [MacOSUTIs] for definitions and syntax).
+
+   *  Windows clipboard name (a string), if it makes sense to exchange
+      media of this type through user-triggered exchange mechanisms such
+      as copy-and-paste or drag-and-drop on Microsoft Windows and
+      related platforms (see [windowsClipboardNames] for definitions and
+      syntax).
+
+   In the case of a registration in the standards tree, this additional
+   information MAY be provided in the formal specification of the media
+   type format.  It is suggested that this be done by incorporating the
+   IANA media type registration form into the format specification
+   itself.
+
+3.  Top-Level Media Types
 
    The choice of top-level type MUST take into account the nature of
    media type involved.  New subtypes of top-level types MUST conform to
@@ -428,7 +600,7 @@ Table of Contents
    [RFC2046] for additional information on the restrictions MIME
    imposes.)
 
-3.3.1.  Text Media Types
+3.1.  Text Media Types
 
    A top-level type of "text" indicates that the content is principally
    textual in form.
@@ -454,7 +626,7 @@ Table of Contents
    with most non-textual data.  Such formatted textual data can be
    represented using subtypes of "text".
 
-3.3.1.1.  The Charset Parameter
+3.1.1.  The Charset Parameter
 
    Many subtypes of text, notably including the subtype "text/plain",
    which is a generic subtype for plain text defined in [RFC2046],
@@ -482,17 +654,17 @@ Table of Contents
    permitted.  If explanatory text is needed, this SHOULD be placed in
    the additional information section of the registration.
 
-3.3.2.  Image Media Types
+3.2.  Image Media Types
 
    A top-level type of "image" indicates that the content is one or more
    individual images.  The subtype names the specific image format.
 
-3.3.3.  Audio Media Types
+3.3.  Audio Media Types
 
    A top-level type of "audio" indicates that the content is audio data.
    The subtype names the specific audio format.
 
-3.3.4.  Video Media Types
+3.4.  Video Media Types
 
    A top-level type of "video" indicates that the content is a time-
    varying-picture image, possibly with color and coordinated sound.
@@ -505,7 +677,7 @@ Table of Contents
    video formats include a representation for synchronized audio and/or
    text, and this is explicitly permitted for subtypes of "video".
 
-3.3.5.  Application Media Types
+3.5.  Application Media Types
 
    A top-level type of "application" indicates that the content is
    discrete data that do not fit under any of the other type names, and
@@ -537,7 +709,7 @@ Table of Contents
    simply be used freely as a subtype of "application"; the subtype
    needs to be registered.
 
-3.3.6.  Multipart and Message Media Types
+3.6.  Multipart and Message Media Types
 
    A top-level type of "multipart" or "message" indicates that the
    content is a composite type; that is, they provide a means of
@@ -547,7 +719,7 @@ Table of Contents
    rules and other requirements specified in [RFC2046] and amended by
    Section 3.5 of [RFC6532].
 
-3.3.7.  Additional Top-Level Types
+3.7.  Additional Top-Level Types
 
    In some cases, a new media type may not be easily classified under
    any currently defined top-level type names.  Such cases are expected
@@ -557,7 +729,7 @@ Table of Contents
    the criteria and guidelines given below; no other mechanism can be
    used to define additional type names.
 
-3.3.7.1.  Required Criteria
+3.7.1.  Required Criteria
 
    Definitions of new top-level types are required to fulfil the
    following criteria:
@@ -588,7 +760,7 @@ Table of Contents
       without any subtype serves no purpose.  Please note that the
       'example' top-level describes a subtype 'example'.
 
-3.3.7.2.  Additional Considerations
+3.7.2.  Additional Considerations
 
    Additional considerations for the defintion of a new top-level type
    include:
@@ -650,7 +822,7 @@ Table of Contents
       Applications can select different icons to represent unknown types
       in different top-level types.
 
-3.3.7.3.  Negative Criteria
+3.7.3.  Negative Criteria
 
    Negative indicators for creation of a new top-level type include:
 
@@ -683,26 +855,219 @@ Table of Contents
    *  Top-level types with an "X-" prefix cannot be registered, and
       SHOULD NOT be used.  See [RFC6648].
 
-3.3.8.  Structured Syntax Name Suffixes
+4.  Media Subtypes
 
-   XML in MIME [RFC3023] defined the first such augmentation to the
-   media type definition to additionally specify the underlying
-   structure of that media type.  To quote:
+4.1.  Registration Trees
 
-      This document also standardizes a convention (using the suffix
-      '+xml') for naming media types ... when those media types
-      represent XML MIME (Multipurpose Internet Mail Extensions)
-      entities.
+   In order to increase the efficiency and flexibility of the
+   registration process, different structures of subtype names can be
+   registered in distinct "trees," distinguished with faceted names.
 
-   That is, it specified a suffix (in that case, "+xml") to be appended
-   to the base subtype name.
+   For example, a subtype that is recommended for wide support and
+   implementation by the Internet community would be registered in the
+   Standards Tree and not have a prefix, while a subtype that is used to
+   move files associated with proprietary software would be registered
+   in the Vendor Tree, and so its name would begin with a "vnd." prefix.
 
-   Since this was published, the de facto practice has arisen for using
-   this suffix convention for other well-known structuring syntaxes.  In
-   particular, media types have been registered with suffixes such as
-   "+der", "+fastinfoset", and "+json".  This specification formalizes
-   this practice and sets up a registry for structured type name
-   suffixes.
+   Note that some previously defined media types do not conform to the
+   naming conventions described below.  See Appendix B for a discussion
+   of them.
+
+4.1.1.  Standards Tree
+
+   The standards tree is intended for types of general interest to the
+   Internet community.  Registrations in the standards tree MUST be
+   either:
+
+   1.  in the case of registrations associated with IETF specifications,
+       approved directly by the IESG, or
+
+   2.  registered by a recognized standards-related organization using
+       the "Specification Required" IANA registration policy Section 4.6
+       of [RFC8126] (which implies Expert Review), or
+
+   3.  approved by the Designated Expert(s) as identifying a "community
+       format", as described in Section 4.1.1.1.
+
+   The first procedure is used for registrations from IETF Consensus
+   documents, or in rare cases when registering a grandfathered (see
+   Appendix B) and/or otherwise incomplete registration is in the
+   interest of the Internet community.  The registration proposal MUST
+   be published as an RFC.  When the registration RFC is in the IETF
+   stream, it must have IETF Consensus.  Registrations published in non-
+   IETF RFC streams are also allowed, but require IESG approval.  A
+   registration can be either in a stand-alone "registration only" RFC
+   or incorporated into a more complete specification.
+
+   In the second case, the IESG makes a one-time decision on whether the
+   registration submitter represents a recognized standards-related
+   organization; after that, a Media Types Reviewer (Designated Expert
+   or a group of Designated Experts) performs the Expert Review as
+   specified in this document.  Subsequent submissions from the same
+   source do not involve the IESG.  The format MUST be described by a
+   formal standards specification produced by the submitting standards-
+   related organization.
+
+   The third case is described in Section 4.1.1.1.
+
+   Media types in the standards tree MUST NOT have faceted names, unless
+   they are grandfathered in using the process described in Appendix B.
+
+   The change controller of a media type registered in the standards
+   tree is assumed to be the standards-related organization itself.
+   Modification or alteration of the specification uses the same level
+   of processing (e.g., a registration submitted on Standards Track can
+   be revised in another Standards Track RFC, but cannot be revised in
+   an Informational RFC) required for the initial registration.
+
+   Standards-tree registrations from recognized standards-related
+   organizations are submitted directly to the IANA, where they will
+   undergo Expert Review Section 4.5 of [RFC8126] prior to approval.  In
+   this case, the Expert Reviewer(s) will, among other things, ensure
+   that the required specification provides adequate documentation.
+
+4.1.1.1.  Community Formats in the Standards Tree
+
+   Some formats are interoperable (i.e., they are supported by more than
+   one implementation), but their specifications are not published by a
+   recognized standards-related organization.  To accommodate these
+   cases, the Designated Expert(s) are empowered to approve
+   registrations in the standards tree that meet the following criteria:
+
+   *  There is a well-defined specification for the format
+
+   *  That specification is not tied to or heavily associated with one
+      implementation
+
+   *  The specification is freely available at a stable location
+
+   *  There are multiple interoperable implementations of the
+      specification, or they are likely to emerge
+
+   *  The requested name is appropriate to the use case, and not so
+      generic that it may be considered 'squatting'
+
+   *  There is no conflict with IETF work or work at other recognised
+      SDOs (present or future)
+
+   *  There is evidence of broad adoption
+
+   The Designated Expert(s) have discretion in applying these criteria;
+   in rare cases, they might judge it best to register an entry that
+   fails one or more.
+
+   Note that such registrations still go through preliminary community
+   review (Section 5.1), and decisions can be appealed (Section 5.3).
+
+4.1.2.  Vendor Tree
+
+   The vendor tree is intended for media types associated with publicly
+   available products.  "Vendor" and "producer" are construed very
+   broadly in this context, and are considered equivalent.  Note that
+   industry consortia as well as non-commercial entities that do not
+   qualify as recognized standards-related organizations can register
+   media types in the vendor tree.
+
+   A registration may be placed in the vendor tree by anyone who needs
+   to interchange files associated with some product or set of products.
+   However, the registration properly belongs to the vendor or
+   organization producing the software that employs the type being
+   registered, and that vendor or organization can at any time elect to
+   assume change control of a registration done by a third party in
+   order to correct or update it.  See Section 5.5 for additional
+   information.
+
+   When a third party registers a type on behalf of someone else, both
+   entities SHOULD be noted in the Change Controller field in the
+   registration.  One possible format for this would be "Foo, on behalf
+   of Bar".
+
+   Vendor tree registrations are distinguished by the leading facet
+   "vnd.".  That may be followed, at the discretion of the registrant,
+   by either a media subtype name from a well-known producer (e.g.,
+   "vnd.mudpie") or by an IANA-approved designation of the producer's
+   name that is followed by a media type or product designation (e.g.,
+   vnd.bigcompany.funnypictures).
+
+   While public exposure and review of media types to be registered in
+   the vendor tree are not required, requesting review on the media-
+   types@iana.org mailing list is encouraged, to improve the quality of
+   those specifications.
+
+   Registrations in the vendor tree may be submitted directly to the
+   IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
+   prior to approval.
+
+4.1.3.  Personal Tree
+
+   The personal tree is intended for media types created experimentally
+   or as part of products that are not distributed commercially.  This
+   tree is sometimes referred to as the "vanity" tree.
+
+   Personal tree registrations are distinguished by the leading facet
+   "prs.".
+
+   The change controller of a "personal" registration is the person or
+   entity making the registration, or one to whom responsibility has
+   been transferred as described below.
+
+   While public exposure and review of media types to be registered in
+   the personal tree are not required, requesting review on the media-
+   types@iana.org mailing list is encouraged, to improve the quality of
+   those specifications.
+
+   Registrations in the personal tree may be submitted directly to the
+   IANA, where they will undergo Expert Review Section 4.5 of [RFC8126]
+   prior to approval.
+
+4.1.4.  Unregistered x.  Tree
+
+   Subtype names with "x." as the first facet are intended exclusively
+   for use in private, local environments.  Subtypes using this tree
+   cannot be registered and are intended for use only with the active
+   agreement of the parties exchanging them.
+
+   The low barrier to registration in the vendor and personal trees
+   means it should rarely, if ever, be necessary to use unregistered
+   types.  Therefore, use of types in the "x." tree is strongly
+   discouraged.
+
+   Note that types with names beginning with "x-" are no longer
+   considered to be members of this tree (see [RFC6648]).  Also note
+   that if a generally useful and widely deployed type incorrectly uses
+   an "x-" name prefix, it MAY be registered using its current name in
+   an alternative tree by following the procedure defined in Appendix B.
+
+4.1.5.  Additional Registration Trees
+
+   From time to time and as required by the community, new top-level
+   registration trees may be created by IETF Standards Action.
+
+   It is explicitly assumed that these trees may be created for external
+   registration and management by well-known permanent organizations;
+   for example, scientific societies may register media types specific
+   to the sciences they cover.  In general, the quality of review of
+   specifications for one of these additional registration trees is
+   expected to be equivalent to registrations in the standards tree by a
+   recognized standards-related organization.
+
+   When the IETF performs such review, it needs to consider the greater
+   expertise of the requesting organization with respect to the subject
+   media type.
+
+4.2.  Subtype Suffixs
+
+   [RFC6838] standardized a suffix convention for well-known structured
+   syntaxes.  In particular, media types have been registered with
+   suffixes such as "+der", "+fastinfoset", and "+json".
+
+   A structured suffix is defined as all of the characters to the right
+   of the left-most "+" sign in a media type, including the left-most
+   "+" sign itself.  The structured suffix MUST NOT contain more than
+   one "+" sign.  As an example, given the "application/foo+bar" media
+   type: "application" is the top-level type, "foo" is the base subtype
+   name, and "+bar" is the structured suffix.  A media type such as
+   "application/foo+bar+baz" is not allowed.
 
    The primary guideline for whether a structured type name suffix is
    registrable is that it be described by a readily available
@@ -734,27 +1099,7 @@ Table of Contents
    have consent from the existing change controller for the associated
    base subtype name to register the new media type.
 
-3.3.9.  Deprecated Aliases
-
-   In some cases, a single media type may have been widely deployed
-   prior to registration under multiple names.  In such cases, a
-   preferred name MUST be chosen for the media type, and applications
-   MUST use this to be compliant with the type's registration.  However,
-   a list of deprecated aliases by which the type is known MAY be
-   supplied as additional information in order to assist applications in
-   processing the media type properly.
-
-3.4.  Structured Suffixes
-
-   A structured suffix is defined as all of the characters to the right
-   of the left-most "+" sign in a media type, including the left-most
-   "+" sign itself.  The structured suffix MUST NOT contain more than
-   one "+" sign.  As an example, given the "application/foo+bar" media
-   type: "application" is the top-level type, "foo" is the base subtype
-   name, and "+bar" is the structured suffix.  A media type such as
-   "application/foo+bar+baz" is not allowed.
-
-3.4.1.  Common Suffix Patterns
+4.2.1.  Common Suffix Patterns
 
    There are a few common patterns that are utilized for media types
    that use structured suffixes.  These patterns include expressing that
@@ -775,7 +1120,7 @@ Table of Contents
    that might have on security considerations for toolchains that
    attempt to safely process all of the possibilities.
 
-3.4.2.  Fragment Identifiers
+4.2.2.  Fragment Identifiers and Suffixes
 
    The syntax and semantics for fragment identifiers are specified in
    the "Fragment Identifier Considerations" column in the IANA
@@ -798,366 +1143,7 @@ Table of Contents
        proceed as specified by the specification associated with the
        full media type.
 
-3.5.  Parameter Requirements
-
-   Media types MAY be defined to allow or require use of media type
-   parameters.  Additionally, some parameters may be automatically made
-   available to the media type by virtue of being a subtype of a content
-   type that defines a set of parameters applicable to any of its
-   subtypes.
-
-   In either case, the names, values, and meanings of any parameters
-   MUST be fully specified when a media type is registered in the
-   standards tree, and SHOULD be specified as completely as possible
-   when media types are registered in the vendor or personal trees.
-
-   Parameter names have the same syntax as media type names and values:
-
-       parameter-name = restricted-name
-
-   Note that this syntax is somewhat more restrictive than what is
-   allowed by the ABNF in [RFC2045] and amended by [RFC2231].
-
-   Parameter names are case-insensitive and no meaning is attached to
-   the order in which they appear.  It is an error for a specific
-   parameter to be specified more than once.
-
-   There is no defined syntax for parameter values; therefore, it MUST
-   be specified upon registration.  Additionally, some transports impose
-   restrictions on parameter value syntax, so care needs be taken to
-   limit the use of potentially problematic syntaxes; for example,
-   binary valued parameters, while permitted in some protocols, are best
-   avoided.
-
-   Note that a protocol can impose further restrictions on parameter
-   value syntax, depending on how it chooses to represent parameters.
-   Both MIME [RFC2045] [RFC2231] and HTTP [RFC9110] [RFC8187] allow
-   binary parameters as well as parameter values expressed in a specific
-   charset, but other protocols may be less flexible.
-
-   Types already registered in the standards tree SHOULD NOT have new
-   functionality added through the definition of new parameters
-   subsequent to the original registration.  New parameters MAY be used
-   to convey additional information that does not otherwise change
-   existing functionality.  An example of this would be a "revision"
-   parameter to indicate a revision level of an external specification
-   such as JPEG.  Similar behavior is encouraged for media types
-   registered in the vendor or personal trees, but is not required.
-
-   Changes to parameters (including the introduction of new ones) is
-   managed in the same manner as other changes to the media type; see
-   Section 4.5.
-
-3.6.  Canonicalization and Format Requirements
-
-   All registered media types MUST employ a single, canonical data
-   format, regardless of registration tree.
-
-   A permanent and readily available public specification of the format
-   for the media type MUST exist for all types registered in the
-   standards tree.  This specification MUST provide sufficient detail so
-   that interoperability between independent implementations using the
-   media type is possible.  If not part of the media type registration
-   proposal, this specification MUST be referenced by it.
-
-   The specifications of format and processing particulars need not be
-   publicly available for media types registered in the vendor and
-   personal trees.  Such registrations are explicitly permitted to limit
-   the information in the registration to which software and version
-   produce or process such media types.  As such, references to or
-   inclusion of format specifications in registrations is encouraged but
-   not required.  Note, however, that the public availability of a
-   meaningful specification will often make the difference between
-   simply having a name reserved so that there are no conflicts with
-   other uses and having the potential for other implementations of the
-   media type and useful interoperation with them.
-
-   The registration of media types involving patented technology is
-   permitted.  However, the restrictions set forth in BCP 79 [RFC8179]
-   and BCP 78 [RFC5378] on the use of patented technology in IETF
-   Standards Track protocols must be respected when the specification of
-   a media type is part of a Standards Track protocol.  In addition,
-   other standards-related organizations making use of the standards
-   tree may have their own rules regarding intellectual property that
-   must be observed in their registrations.
-
-   Intellectual Property Rights (IPR) disclosures for registrations in
-   the vendor and personal trees are encouraged but not required.
-
-3.7.  Interchange Recommendations
-
-   Ideally, media types will be defined so they interoperate across as
-   many systems and applications as possible.  However, some media types
-   will inevitably have problems interoperating across different
-   platforms.  For example, problems with different versions, byte
-   ordering, and specifics of gateway handling can arise.
-
-   Universal interoperability of media types is not required, but known
-   interoperability issues SHOULD be identified whenever possible.
-   Publication of a media type does not require an exhaustive review of
-   interoperability, and the interoperability considerations section is
-   subject to continuing evaluation.
-
-   The recommendations in this subsection apply regardless of the
-   registration tree involved.
-
-3.8.  Security Requirements
-
-   All registrations of types in the standards tree MUST include an
-   analysis of security issues.  A similar analysis for media types
-   registered in the vendor or personal trees is encouraged but not
-   required.
-
-   All descriptions of security issues MUST be as accurate as possible
-   regardless of registration tree.  In particular, the security
-   considerations MUST NOT state that there are "no security issues
-   associated with this type".  Security considerations for types in the
-   vendor or personal tree MAY say that "the security issues associated
-   with this type have not been assessed".
-
-   There is no requirement that media types registered in any tree be
-   secure or completely free from risks.  Nevertheless, all known
-   security risks MUST be identified in the registration of a media
-   type, again regardless of registration tree.
-
-   The security considerations section of all registrations is subject
-   to continuing evaluation and modification, and in particular MAY be
-   extended by use of the "comments on media types" mechanism described
-   in Section 4.4 below.
-
-   Some of the issues that need to be examined and described in a
-   security analysis of a media type are:
-
-   *  Processing of complex media types might institute actions on a
-      recipient's files or other resources.  If it is possible to
-      specify arbitrary actions in an unrestricted fashion, it could
-      have devastating effects.  See the registration of the
-      application/postscript media type in [RFC2046] for an example of
-      description and handling of these issues.
-
-   *  Any security analysis MUST state whether or not the format employs
-      such "active content"; if it does, it MUST state what steps have
-      been taken (or are required be taken by applications) of the media
-      type to protect users of the media type.
-
-   *  Processing of complex media types might institute actions that,
-      while not directly harmful to the recipient, may result in
-      disclosure of information that either facilitates a subsequent
-      attack or else violates a recipient's privacy in some way.  Again,
-      the registration of the application/ postscript media type
-      illustrates how such directives can be handled.
-
-   *  A media type that employs compression may provide an opportunity
-      for sending a small amount of data that, when received and
-      evaluated, expands enormously to consume all of the recipient's
-      resources.  All media types SHOULD state whether or not they
-      employ compression; if they do, they SHOULD discuss what steps
-      need to be taken to avoid such attacks.
-
-   *  A media type might be targeted for applications that require some
-      sort of security assurance but don't provide the necessary
-      security mechanisms themselves.  For example, a media type could
-      be defined for storage of sensitive medical information that in
-      turn requires external confidentiality and integrity protection
-      services, or which is designed for use only within a secure
-      environment.  Types SHOULD always document whether or not they
-      need such services in their security considerations.
-
-3.8.1.  Structured Suffixes
-
-3.8.1.1.  Document Validity
-
-   If a toolchain chooses to process a provided media type by using the
-   selected structured suffix processing rules, it cannot presume that a
-   document that is valid per the decoding rules associated with the
-   structured suffix will be valid for a recognized subset of the
-   structured suffix.  For example, presuming a media type of
-   "application/foo+bar", a toolchain cannot presume that a valid "+bar"
-   document will also be a valid "application/foo" document.  On the
-   other hand, presuming a media type of "application/foo+bar", a
-   toolchain can presume that a valid "application/foo+bar" document
-   will also be a valid "+bar" document.
-
-3.8.1.2.  Fragment Semantics
-
-   If a toolchain chooses to process a provided media type by using the
-   selected structured suffix processing rules, it cannot presume that
-   fragment identifier semantics will be the same across a recognized
-   subset of the structured suffix.  For example, presuming a media type
-   of "application/foo+bar", a toolchain cannot presume that the
-   fragment semantics for a "+bar" document will be the same as for an
-   "application/foo+bar" document.
-
-3.8.1.3.  Security Characteristics
-
-   Toolchains cannot assume that the security characteristics of
-   processing based on structured suffixes will be the same for the
-   entire media type.  For example, presuming a media type of
-   "application/foo+bar", a toolchain cannot presume that the security
-   characteristics for a "+bar" document will be the same as for a
-   "application/foo+bar" document.
-
-3.8.1.4.  Partial Processing
-
-   It is conceivable that an attacker could utilize structured suffixes
-   in a way that tricks unsuspecting toolchains into skipping important
-   security checks and allowing viruses to propagate.  For example, an
-   attacker might utilize an "application/vnd.ms-
-   excel.addin.macroEnabled.12+zip" structured suffix to trigger an
-   unzip process that might then directly invoke Microsoft Excel,
-   bypassing anti-virus tooling that would otherwise block a macro-
-   enabled MS Excel file containing a virus of some kind from being
-   scanned or opened.
-
-   Enterprising attackers might take advantage of toolchains that
-   partially process media types in this manner.  Toolchains that
-   process media types based purely on a structured suffix need to
-   ensure that further processing does not blindly trust the decoded
-   data, and that proper magic header or file structure checking is
-   performed, before allowing the decoded data to drive operations that
-   might negatively impact the application environment or operating
-   system.
-
-3.9.  Requirements Specific to XML Media Types
-
-   Additional requirements specific to the registration of XML media
-   types are specified in [RFC7303].
-
-3.10.  Encoding Requirements
-
-   Some transports impose restrictions on the type of data they can
-   carry.  For example, Internet mail traditionally was limited to 7bit
-   US-ASCII text.  Encoding schemes are often used to work around such
-   transport limitations.
-
-   It is therefore useful to note what sort of data a media type can
-   consist of as part of its registration.  An "encoding considerations"
-   field is provided for this purpose.  Possible values of this field
-   are:
-
-   7bit:  The content of the media type consists solely of CRLF-
-      delimited 7bit US-ASCII text.
-
-   8bit:  The content of the media type consists solely of CRLF-
-      delimited 8bit text.
-
-   binary:  The content consists of an unrestricted sequence of octets.
-
-   framed:  The content consists of a series of frames or packets
-      without internal framing or alignment indicators.  Additional out-
-      of-band information is needed to interpret the data properly,
-      including but not necessarily limited to knowledge of the
-      boundaries between successive frames and knowledge of the
-      transport mechanism.  Note that media types of this sort cannot
-      simply be stored in a file or transported as a simple stream of
-      octets; therefore, such media types are unsuitable for use in many
-      traditional protocols.  A commonly used transport with framed
-      encoding is the Real-time Transport Protocol, RTP.  Additional
-      rules for framed encodings defined for transport using RTP are
-      given in [RFC4855].
-
-   Additional restrictions on 7bit and 8bit text are given in
-   Section 4.1.1 of [RFC2046].
-
-3.11.  Usage and Implementation Non-Requirements
-
-   In the asynchronous mail environment, where information on the
-   capabilities of the remote mail agent is frequently not available to
-   the sender, maximum interoperability is attained by restricting the
-   media types used to those "common" formats expected to be widely
-   implemented.  This was asserted in the past as a reason to limit the
-   number of possible media types, and resulted in a registration
-   process with a significant hurdle and delay for those registering
-   media types.
-
-   However, the need for "common" media types does not require limiting
-   the registration of new media types.  If a limited set of media types
-   is recommended for a particular application, that should be asserted
-   by a separate applicability statement specific for the application
-   and/or environment.
-
-   Therefore, universal support and implementation of a media type are
-   NOT a requirement for registration.  However, if a media type is
-   explicitly intended for limited use, this MUST be noted in its
-   registration.  The "Restrictions on Usage" field is provided for this
-   purpose.
-
-3.12.  Publication Requirements
-
-   Media types registered in the standards tree by the IETF MUST be
-   published as RFCs.  RFC publication of vendor and personal media type
-   registrations is allowed but not required.  In all cases, the IANA
-   will retain copies of all media type registrations and publish them
-   as part of the media types registration tree itself.
-
-   As stated previously, standards-tree registrations for media types
-   defined in documents produced by other standards-related
-   organizations MUST be described by a formal standards specification
-   produced by that organization.  Additionally, any copyright on the
-   registration template MUST allow the IANA to copy it into the IANA
-   registry.
-
-   Other than IETF registrations in the standards tree, the registration
-   of a media type does not imply endorsement, approval, or
-   recommendation by the IANA or the IETF or even certification that the
-   specification is adequate.
-
-   The standards tree exists for those media types that require a
-   substantive review and approval process in a recognized standards-
-   related organization.  The vendor and personal trees exist for those
-   media types that do not require such a process.  It is expected that
-   applicability statements for particular applications will be
-   published from time to time in the IETF, recommending implementation
-   of, and support for, media types that have proven particularly useful
-   in those contexts.
-
-   As discussed above, registration of a top-level type requires
-   Standards Action in the IETF and, hence, the publication of a RFC on
-   the Standards Track.
-
-3.13.  Fragment Identifier Requirements
-
-   Media type registrations can specify how applications should
-   interpret fragment identifiers (specified in Section 3.5 of
-   [RFC3986]) associated with the media type.
-
-   Media types are encouraged to adopt fragment identifier schemes that
-   are used with semantically similar media types.  In particular, media
-   types that use a named structured syntax with a registered "+suffix"
-   MUST follow whatever fragment identifier rules are given in the
-   structured syntax suffix registration.
-
-3.14.  Additional Information
-
-   The following optional information SHOULD be included in the
-   specification of a media type if it is available:
-
-   *  Magic number(s) (length, octet values).  Magic numbers are byte
-      sequences that are always present at a given place in the file and
-      thus can be used to identify entities as being of a given media
-      type.
-
-   *  File name extension(s) commonly used on one or more platforms to
-      indicate that some file contains a given media type.
-
-   *  macOS Uniform Type Identifier (a string), if it makes sense to
-      exchange media of this type through user-triggered exchange
-      mechanisms such as copy-and-paste or drag-and-drop on macOS and
-      related platforms (see [MacOSUTIs] for definitions and syntax).
-
-   *  Windows clipboard name (a string), if it makes sense to exchange
-      media of this type through user-triggered exchange mechanisms such
-      as copy-and-paste or drag-and-drop on Microsoft Windows and
-      related platforms (see [windowsClipboardNames] for definitions and
-      syntax).
-
-   In the case of a registration in the standards tree, this additional
-   information MAY be provided in the formal specification of the media
-   type format.  It is suggested that this be done by incorporating the
-   IANA media type registration form into the format specification
-   itself.
-
-4.  Media Type Registration Procedures
+5.  Media Type Registration Procedures
 
    The media type registration procedure is not a formal standards
    process, but rather an administrative procedure intended to allow
@@ -1168,7 +1154,7 @@ Table of Contents
    necessary first step, followed by posting to the media-types@iana.org
    list as discussed below.
 
-4.1.  Preliminary Community Review
+5.1.  Preliminary Community Review
 
    Notice of a potential media type registration in the standards tree
    SHOULD be sent to the media-types@iana.org mailing list for review.
@@ -1182,7 +1168,7 @@ Table of Contents
    submitter may submit a revised registration proposal or abandon the
    registration completely and at any time.
 
-4.2.  Submit Request to IANA
+5.2.  Submit Request to IANA
 
    Media types registered in the standards tree by the IETF itself MUST
    be reviewed and approved by the IESG as part of the normal standards
@@ -1196,7 +1182,7 @@ Table of Contents
 
       http://www.iana.org/form/media-types
 
-4.2.1.  Provisional Registrations
+5.2.1.  Provisional Registrations
 
    Standardization processes often take considerable time to complete.
    In order to facilitate prototyping and testing, it is often helpful
@@ -1219,7 +1205,7 @@ Table of Contents
    registered in any sense; it can subsequently be registered just like
    any other unassigned media type name.
 
-4.3.  Review and Approval
+5.3.  Review and Approval
 
    With the exception of provisional standards-tree registrations,
    registrations submitted to the IANA will be first given to the media
@@ -1241,7 +1227,7 @@ Table of Contents
    confirm their status.  Recognition from the IESG MUST be obtained
    before a standards-tree registration can proceed.
 
-4.4.  Comments on Media Type Registrations
+5.4.  Comments on Media Type Registrations
 
    Comments on registered media types may be submitted by members of the
    community to the IANA at iana@iana.org.  These comments will be
@@ -1253,7 +1239,7 @@ Table of Contents
    the media types reviewer, approves, the comment will be made
    accessible in conjunction with the type registration.
 
-4.5.  Change Procedures
+5.5.  Change Procedures
 
    Once a media type has been published by the IANA, the change
    controller may request a change to its definition.  The same
@@ -1280,7 +1266,7 @@ Table of Contents
    or is otherwise unable to make changes that are important to the
    community.
 
-4.6.  Registration Template
+5.6.  Registration Template
 
    Type name:
 
@@ -1336,7 +1322,7 @@ Table of Contents
    Limited-use media types should also note in the applications list
    whether or not that list is exhaustive.
 
-5.  Structured Syntax Suffix Registration Procedures
+6.  Structured Syntax Suffix Registration Procedures
 
    Someone wishing to define a "+suffix" name for a structured syntax
    for use with a new media type registration SHOULD:
@@ -1346,7 +1332,7 @@ Table of Contents
        syntax.
 
    2.  If there is no entry for their suffix scheme, fill out the
-       template (specified in Section 5.2) and include that with the
+       template (specified in Section 6.2) and include that with the
        media type registration.  The template may be contained in an
        Internet Draft, alone or as part of some other protocol
        specification.  The template may also be submitted in some other
@@ -1389,14 +1375,14 @@ Table of Contents
    The initial registry content specification [RFC6839] provides
    examples of structured syntax suffix registrations.
 
-5.1.  Change Procedures
+6.1.  Change Procedures
 
    Registrations may be updated in each registry by the same mechanism
    as required for an initial registration.  In cases where the original
    definition of the scheme is contained in an IESG-approved document,
    update of the specification also requires IESG approval.
 
-5.2.  Structured Syntax Suffix Registration Template
+6.2.  Structured Syntax Suffix Registration Template
 
    This template describes the fields that must be supplied in a
    structured syntax suffix registration request:
@@ -1415,7 +1401,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       general guidance regarding encoding considerations for any type
       employing this syntax.  The same requirements for media type
-      encoding considerations given in Section 3.10 apply here.
+      encoding considerations given in Section 2.6 apply here.
 
    Interoperability considerations
       A full citation to a section in a specification that documents any
@@ -1434,7 +1420,7 @@ Table of Contents
       A full citation to a section in a specification that provides
       security considerations shared by media types employing this
       structured syntax must be specified here.  The same requirements
-      for media type security considerations given in Section 3.8 apply
+      for media type security considerations given in Section 2.8 apply
       here, with the exception that the option of not assessing the
       security considerations is not available for suffix registrations.
 
@@ -1446,16 +1432,16 @@ Table of Contents
       Person (including contact information) authorized to change this
       suffix registration.
 
-6.  Security Considerations
+7.  Security Considerations
 
    Security requirements for both media type and media type suffix
-   registrations are discussed in Section 3.8.
+   registrations are discussed in Section 2.8.
 
-7.  IANA Considerations
+8.  IANA Considerations
 
    _None Yet._
 
-8.  Acknowledgments
+9.  Acknowledgments
 
    The current authors would like to acknowledge their debt to the late
    Dr. Jon Postel, whose general model of IANA registration procedures
@@ -1469,9 +1455,9 @@ Table of Contents
    Petch, Peter Saint-Andre, and Jeni Tennison provided many helpful
    review comments and suggestions.
 
-9.  References
+10.  References
 
-9.1.  Normative References
+10.1.  Normative References
 
    [RFC2045]  Freed, N. and N. Borenstein, "Multipurpose Internet Mail
               Extensions (MIME) Part One: Format of Internet Message
@@ -1549,7 +1535,7 @@ Table of Contents
               DOI 10.17487/RFC9110, June 2022,
               <https://www.rfc-editor.org/rfc/rfc9110>.
 
-9.2.  Informative References
+10.2.  Informative References
 
    [I-D.ietf-mediaman-haptics]
               Muthusamy, Y. K. and C. Ullrich, "The 'haptics' Top-level
@@ -1583,13 +1569,14 @@ Table of Contents
               Continuations", RFC 2231, DOI 10.17487/RFC2231, November
               1997, <https://www.rfc-editor.org/rfc/rfc2231>.
 
-   [RFC3023]  Murata, M., St. Laurent, S., and D. Kohn, "XML Media
-              Types", RFC 3023, DOI 10.17487/RFC3023, January 2001,
-              <https://www.rfc-editor.org/rfc/rfc3023>.
-
    [RFC4288]  Freed, N. and J. Klensin, "Media Type Specifications and
               Registration Procedures", RFC 4288, DOI 10.17487/RFC4288,
               December 2005, <https://www.rfc-editor.org/rfc/rfc4288>.
+
+   [RFC6838]  Freed, N., Klensin, J., and T. Hansen, "Media Type
+              Specifications and Registration Procedures", BCP 13,
+              RFC 6838, DOI 10.17487/RFC6838, January 2013,
+              <https://www.rfc-editor.org/rfc/rfc6838>.
 
    [RFC6839]  Hansen, T. and A. Melnikov, "Additional Media Type
               Structured Syntax Suffixes", RFC 6839,
@@ -1629,7 +1616,7 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See Section 3.11 for additional
+   registrations in a systematic way.  See Section 2.9 for additional
    discussion.
 
 Appendix B.  Grandfathered Media Types
@@ -1647,7 +1634,7 @@ Appendix B.  Grandfathered Media Types
    registered.  (Note that this includes subtype names beginning with
    the "x-" prefix.)  If possible, such a media type SHOULD be
    reregistered with a proper faceted subtype name, possibly using a
-   deprecated alias to identify the original name (see Section 3.3.9).
+   deprecated alias to identify the original name (see Section 2.4.1).
    However, if this is not possible, the type can, subject to approval
    by both the media types reviewer and the IESG, be registered in the
    proper tree with its unfaceted name.
