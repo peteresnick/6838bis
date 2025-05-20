@@ -90,15 +90,15 @@ This requirement applies regardless of the registration tree involved.
 
 ## Publication
 
-Media types registered in the standards tree by the IETF MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and publish them as part of the media types registration tree itself.
+Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.
 
-Standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
+Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
 
-The standards tree exists for those media types that require a substantive review and approval process in a recognized standards-related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.
+Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
 Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
 
-Registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
+Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
 ### Availability
 
@@ -395,7 +395,9 @@ Note that some previously defined media types do not conform to the naming conve
 
 ### Standards Tree
 
-The standards tree is intended for types of general interest to the Internet community. Registrations in the standards tree MUST be either:
+The standards tree is intended for those media types that require a substantive review and approval process in a recognized standards-related organization. For media types that do not require such a process, see the vendor and personal trees.
+
+Registrations in the standards tree MUST be either:
 
 1. in the case of registrations associated with IETF specifications, approved directly by the IESG, or
 
