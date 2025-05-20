@@ -471,7 +471,7 @@ Note that types with names beginning with "x-" are no longer considered to be me
 
 New top-level registration trees may be created by IETF Standards Action.
 
-It is explicitly assumed that these trees may be created for external registration and management by well-known permanent organizations; for example, scientific societies may register media types specific to the sciences they cover. In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.
+It is explicitly assumed that these trees mights be created for external registration and management by well-known permanent organizations; for example, scientific societies might register media types specific to the sciences they cover. In general, the quality of review of specifications for one of these additional registration trees is expected to be equivalent to registrations in the standards tree by a recognized standards-related organization.
 
 When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.
 
