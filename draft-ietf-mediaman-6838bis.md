@@ -387,11 +387,11 @@ Negative indicators for creation of a new top-level type include:
 
 ## Registration Trees {#trees}
 
-In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in distinct "trees," distinguished with faceted names.
+To increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in "trees," distinguished with faceted name prefixes.
 
-For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the Standards Tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the Vendor Tree, and so its name would begin with a "vnd." prefix.
+For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the standards tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the vendor tree, and so its name would begin with a "vnd." prefix.
 
-Note that some previously defined media types do not conform to the naming conventions described below. See {{grandfather}} for a discussion of them.
+Note that some previously defined media types do not conform to the naming conventions described below; see {{grandfather}}.
 
 ### Standards Tree
 
