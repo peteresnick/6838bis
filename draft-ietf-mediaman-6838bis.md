@@ -100,11 +100,11 @@ Other than IETF registrations in the standards tree, the registration of a media
 
 Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
-### Availability
+### Specification Availability
 
 A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification MUST be referenced by it.
 
-The specifications of format and processing particulars need not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.
+A specification need not be publicly available for media types registered in the vendor and personal trees. Note, however, that the public availability of a specification will often make the difference between having a name reserved and having the potential for useful interoperation.
 
 ### Intellectual Property
 
