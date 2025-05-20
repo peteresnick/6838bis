@@ -100,7 +100,7 @@ Table of Contents
        4.1.3.  Personal Tree
        4.1.4.  Unregistered x.  Tree
        4.1.5.  Additional Registration Trees
-     4.2.  Subtype Suffixs
+     4.2.  Subtype Suffixes
        4.2.1.  Common Suffix Patterns
        4.2.2.  Fragment Identifiers and Suffixes
    5.  Media Type Registration Procedures
@@ -842,19 +842,18 @@ Table of Contents
 
 4.1.  Registration Trees
 
-   In order to increase the efficiency and flexibility of the
-   registration process, different structures of subtype names can be
-   registered in distinct "trees," distinguished with faceted names.
+   To increase the efficiency and flexibility of the registration
+   process, different structures of subtype names can be registered in
+   "trees," distinguished with faceted name prefixes.
 
    For example, a subtype that is recommended for wide support and
    implementation by the Internet community would be registered in the
-   Standards Tree and not have a prefix, while a subtype that is used to
+   standards tree and not have a prefix, while a subtype that is used to
    move files associated with proprietary software would be registered
-   in the Vendor Tree, and so its name would begin with a "vnd." prefix.
+   in the vendor tree, and so its name would begin with a "vnd." prefix.
 
    Note that some previously defined media types do not conform to the
-   naming conventions described below.  See Appendix B for a discussion
-   of them.
+   naming conventions described below; see Appendix B.
 
 4.1.1.  Standards Tree
 
@@ -865,8 +864,8 @@ Table of Contents
 
    Registrations in the standards tree MUST be either:
 
-   1.  in the case of registrations associated with IETF specifications,
-       approved directly by the IESG, or
+   1.  approved directly by the IESG (in the case of registrations
+       associated with IETF specifications, ), or
 
    2.  registered by a recognized standards-related organization using
        the "Specification Required" IANA registration policy Section 4.6
@@ -1026,22 +1025,22 @@ Table of Contents
 
 4.1.5.  Additional Registration Trees
 
-   From time to time and as required by the community, new top-level
-   registration trees may be created by IETF Standards Action.
+   New top-level registration trees may be created by IETF Standards
+   Action.
 
-   It is explicitly assumed that these trees may be created for external
-   registration and management by well-known permanent organizations;
-   for example, scientific societies may register media types specific
-   to the sciences they cover.  In general, the quality of review of
-   specifications for one of these additional registration trees is
-   expected to be equivalent to registrations in the standards tree by a
-   recognized standards-related organization.
+   It is explicitly assumed that these trees mights be created for
+   external registration and management by well-known permanent
+   organizations; for example, scientific societies might register media
+   types specific to the sciences they cover.  In general, the quality
+   of review of specifications for one of these additional registration
+   trees is expected to be equivalent to registrations in the standards
+   tree by a recognized standards-related organization.
 
    When the IETF performs such review, it needs to consider the greater
    expertise of the requesting organization with respect to the subject
    media type.
 
-4.2.  Subtype Suffixs
+4.2.  Subtype Suffixes
 
    [RFC6838] standardized a suffix convention for well-known structured
    syntaxes.  In particular, media types have been registered with
