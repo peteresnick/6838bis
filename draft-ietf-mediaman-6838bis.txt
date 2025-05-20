@@ -79,8 +79,8 @@ Table of Contents
      2.7.  Fragment Identifiers
      2.8.  Security
        2.8.1.  Structured Suffixes
-     2.9.  Non-Requirements
-     2.10. Additional Information
+     2.9.  Additional Information
+     2.10. Non-Requirements
    3.  Top-Level Media Types
      3.1.  Text Media Types
        3.1.1.  The Charset Parameter
@@ -361,10 +361,9 @@ Table of Contents
    US-ASCII text.  Encoding schemes are often used to work around such
    transport limitations.
 
-   It is therefore useful to note what sort of data a media type can
-   consist of as part of its registration.  An "encoding considerations"
-   field is provided for this purpose.  Possible values of this field
-   are:
+   An "encoding considerations" field is provided to note what sort of
+   data a media type can consist of as part of its registration.
+   Possible values of this field are:
 
    7bit:  The content of the media type consists solely of CRLF-
       delimited 7bit US-ASCII text.
@@ -377,11 +376,11 @@ Table of Contents
    framed:  The content consists of a series of frames or packets
       without internal framing or alignment indicators.  Additional out-
       of-band information is needed to interpret the data properly,
-      including but not necessarily limited to knowledge of the
-      boundaries between successive frames and knowledge of the
-      transport mechanism.  Note that media types of this sort cannot
-      simply be stored in a file or transported as a simple stream of
-      octets; therefore, such media types are unsuitable for use in many
+      including but not limited to knowledge of the boundaries between
+      successive frames and knowledge of the transport mechanism.  Note
+      that media types of this sort cannot be stored in a file or
+      transported as a stream of octets without further context;
+      therefore, such media types are thus unsuitable for use in many
       traditional protocols.  A commonly used transport with framed
       encoding is the Real-time Transport Protocol, RTP.  Additional
       rules for framed encodings defined for transport using RTP are
@@ -519,30 +518,7 @@ Table of Contents
    might negatively impact the application environment or operating
    system.
 
-2.9.  Non-Requirements
-
-   In the asynchronous mail environment, where information on the
-   capabilities of the remote mail agent is frequently not available to
-   the sender, maximum interoperability is attained by restricting the
-   media types used to those "common" formats expected to be widely
-   implemented.  This was asserted in the past as a reason to limit the
-   number of possible media types, and resulted in a registration
-   process with a significant hurdle and delay for those registering
-   media types.
-
-   However, the need for "common" media types does not require limiting
-   the registration of new media types.  If a limited set of media types
-   is recommended for a particular application, that should be asserted
-   by a separate applicability statement specific for the application
-   and/or environment.
-
-   Therefore, universal support and implementation of a media type are
-   NOT a requirement for registration.  However, if a media type is
-   explicitly intended for limited use, this MUST be noted in its
-   registration.  The "Restrictions on Usage" field is provided for this
-   purpose.
-
-2.10.  Additional Information
+2.9.  Additional Information
 
    The following optional information SHOULD be included in the
    specification of a media type if it is available:
@@ -569,8 +545,30 @@ Table of Contents
    In the case of a registration in the standards tree, this additional
    information MAY be provided in the formal specification of the media
    type format.  It is suggested that this be done by incorporating the
-   IANA media type registration form into the format specification
-   itself.
+   IANA media type registration form into the specification itself.
+
+2.10.  Non-Requirements
+
+   Universal support and implementation of a media type are NOT a
+   requirement for registration.
+
+   In some environments such as mail, information on the capabilities of
+   the remote mail agent is frequently not available to the sender.
+   When this is the case, maximum interoperability might be attained by
+   restricting the media types used to those "common" formats expected
+   to be widely implemented.
+
+   In the past, this reasoning was used to limit the number of possible
+   media types, and resulted in a registration process with a
+   significant hurdle and delay for those registering media types.
+   However, the need for "common" media types does not require limiting
+   the registration of new media types.  If a limited set of media types
+   is recommended for a particular application, that should be asserted
+   by a separate applicability statement specific for that environment.
+
+   If a media type is explicitly intended for limited use, this MUST be
+   noted in its registration.  The "Restrictions on Usage" field is
+   provided for this purpose.
 
 3.  Top-Level Media Types
 
@@ -1604,7 +1602,7 @@ Appendix A.  Historical Note
    It may be desirable to restrict the use of media types to specific
    environments or to prohibit their use in other environments.  This
    specification incorporates such restrictions into media type
-   registrations in a systematic way.  See Section 2.9 for additional
+   registrations in a systematic way.  See Section 2.10 for additional
    discussion.
 
 Appendix B.  Grandfathered Media Types
