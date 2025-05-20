@@ -475,7 +475,7 @@ It is explicitly assumed that these trees mights be created for external registr
 
 When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.
 
-## Subtype Suffixs {#suffixes}
+## Subtype Suffixes {#suffixes}
 
 {{?RFC6838}} standardized a suffix convention for well-known structured syntaxes. In particular, media types have been registered with suffixes such as "+der", "+fastinfoset", and "+json".
 
