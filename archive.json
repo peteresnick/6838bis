@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-18T01:10:20.628741+00:00",
+  "timestamp": "2025-05-20T01:06:52.084987+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -619,7 +619,7 @@
       "labels": [],
       "body": "The spec uses MUST/MAY/SHOULD throughout to indicate registration requirements, not interoperability requirements.",
       "createdAt": "2025-05-07T01:36:56Z",
-      "updatedAt": "2025-05-15T19:57:41Z",
+      "updatedAt": "2025-05-18T22:10:15Z",
       "closedAt": null,
       "comments": [
         {
@@ -628,6 +628,27 @@
           "body": "In procedural documents like this, it seems that \"interoperability\" is the abillity for the parties to get their job done by conforming to procedure - \"interoperability\" between registrar and registry in this case.\n\nI don't want to try to come up with an alternative terminology just because it isn't a computer protocol.",
           "createdAt": "2025-05-15T19:57:40Z",
           "updatedAt": "2025-05-15T19:57:40Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "That's not my understanding of current IETF usage. We should clarify with the IESG.",
+          "createdAt": "2025-05-18T06:29:18Z",
+          "updatedAt": "2025-05-18T06:29:18Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "It is consistent with 2119, which uses MUST to refer to its own requirements. What later guidance has been issued?",
+          "createdAt": "2025-05-18T17:04:10Z",
+          "updatedAt": "2025-05-18T17:04:10Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Timely:\n  https://datatracker.ietf.org/doc/statement-iesg-statement-on-clarifying-the-use-of-bcp-14-key-words/\n\nI read that as discouraging such use, but I can see an argument that it doesn't explicitly address this case.",
+          "createdAt": "2025-05-18T22:10:14Z",
+          "updatedAt": "2025-05-18T22:10:14Z"
         }
       ]
     },
@@ -730,15 +751,15 @@
       "id": "I_kwDOMdBaOc611lyU",
       "title": "Applicability statements",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/28",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "> It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.\n\nReally?",
       "createdAt": "2025-05-09T04:20:19Z",
-      "updatedAt": "2025-05-15T19:58:28Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-20T00:35:00Z",
+      "closedAt": "2025-05-20T00:35:00Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -746,6 +767,13 @@
           "body": "Much has been expected of applicability statements, but little has been done about them....\n",
           "createdAt": "2025-05-15T19:58:27Z",
           "updatedAt": "2025-05-15T19:58:27Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'm leaning towards just removing this.",
+          "createdAt": "2025-05-18T22:30:46Z",
+          "updatedAt": "2025-05-18T22:30:46Z"
         }
       ]
     },
@@ -761,7 +789,47 @@
       "labels": [],
       "body": "The old top level descriptions (text, application and so on) are referenced in the IANA registry at https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml as being defined in RFC 2026.\n\nTheir description is copied in the text of RFC 6838, and so far in 6838bis.\n\nIt would make for a shorter document if we could delete them and just say that 2026 is the normative reference for them, but before doing that, we need to verify that there are no changes to the description between 2026 and 6838 that we want to make normative.\n",
       "createdAt": "2025-05-09T08:36:06Z",
-      "updatedAt": "2025-05-09T08:36:06Z",
+      "updatedAt": "2025-05-18T05:47:10Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I had a fairly quick look through them all and am comfortable removing this text, which is largely duplicative.\n\nHowever, we should make it more discoverable, by:\n- Linking to the top-level types registry both in the draft and in the subtypes registry\n- Specifying section numbers in the top-level types registry",
+          "createdAt": "2025-05-18T05:47:09Z",
+          "updatedAt": "2025-05-18T05:47:09Z"
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "id": "I_kwDOMdBaOc63TbNd",
+      "title": "Standards tree duplicates requirements and text",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/31",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "The 'standards tree' section outlines requirements about publication and also specifies process for handling these registrations. Both of these are covered in other sections.\n\nShould we:\n\n1.  move all standards-tree requirements under the standards tree section (possibly removing duplicative text and requirements elsewhere), or\n2. move these things out of the standards tree section into the requirements and process sections (possibly with appropriate references)?\n\nI'm leaning towards (2).",
+      "createdAt": "2025-05-20T00:58:35Z",
+      "updatedAt": "2025-05-20T00:58:35Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 32,
+      "id": "I_kwDOMdBaOc63TbtH",
+      "title": "Vendor tree for community formats",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/32",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "> Note that industry consortia as well as non-commercial entities that do not qualify as recognized standards-related organizations can register media types in the vendor tree.\n\nCan this be removed now that we have the community formats process?",
+      "createdAt": "2025-05-20T01:00:04Z",
+      "updatedAt": "2025-05-20T01:00:04Z",
       "closedAt": null,
       "comments": []
     }
@@ -1265,6 +1333,34 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 30,
+      "id": "PR_kwDOMdBaOc6WmlfO",
+      "title": "Draft reorg",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/30",
+      "state": "MERGED",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-18T06:46:26Z",
+      "updatedAt": "2025-05-18T22:35:52Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "50e14115962cda66dc8e5a5a7cf1b1fa3cbd88ad",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "reorg",
+      "headRefOid": "afa4dd9100c645ae096d2e33021956dcd31621af",
+      "closedAt": "2025-05-18T22:35:51Z",
+      "mergedAt": "2025-05-18T22:35:51Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "385a8c323c44c9a350420fc6ab67448042dd32b3"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
