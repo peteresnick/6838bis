@@ -94,8 +94,6 @@ Media types registered in the standards tree by the IETF MUST be published as RF
 
 Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
 
-Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
-
 Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
 
 Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
@@ -111,6 +109,8 @@ A specification need not be publicly available for media types registered in the
 The registration of media types involving patented technology is permitted. However, the restrictions set forth in BCP 79 {{!RFC8179}} and BCP 78 {{!RFC5378}} on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.
 
 Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.
+
+Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
 ## Canonicalization and Interoperability
 
