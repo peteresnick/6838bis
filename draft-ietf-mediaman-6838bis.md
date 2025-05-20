@@ -78,7 +78,7 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 # Media Type Registration Requirements
 
-Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree.
+Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
 Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
@@ -385,7 +385,7 @@ Negative indicators for creation of a new top-level type include:
 
 # Media Subtypes {#subtypes}
 
-## Registration Trees
+## Registration Trees {#trees}
 
 In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in distinct "trees," distinguished with faceted names.
 
