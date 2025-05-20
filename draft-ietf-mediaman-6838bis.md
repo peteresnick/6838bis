@@ -78,7 +78,7 @@ This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234
 
 # Media Type Registration Requirements
 
-Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree.
+Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
 Additional requirements specific to the registration of XML media types are specified in {{!RFC7303}}.
 
@@ -90,27 +90,27 @@ This requirement applies regardless of the registration tree involved.
 
 ## Publication
 
-Media types registered in the standards tree by the IETF MUST be published as RFCs. RFC publication of vendor and personal media type registrations is allowed but not required. In all cases, the IANA will retain copies of all media type registrations and publish them as part of the media types registration tree itself.
+Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.
 
-Standards-tree registrations for media types defined in documents produced by other standards-related organizations MUST be described by a formal standards specification produced by that organization. Additionally, any copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
-
-The standards tree exists for those media types that require a substantive review and approval process in a recognized standards-related organization. The vendor and personal trees exist for those media types that do not require such a process. It is expected that applicability statements for particular applications will be published from time to time in the IETF, recommending implementation of, and support for, media types that have proven particularly useful in those contexts.
+Standards-tree registrations for media types defined by other standards-related organizations MUST be described by a formal specification produced by that organization.
 
 Other than IETF registrations in the standards tree, the registration of a media type does not imply endorsement, approval, or recommendation by the IANA or the IETF or even certification that the specification is adequate.
 
-Registration of a top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
+Registration of a new top-level type requires Standards Action in the IETF and, hence, the publication of a RFC on the Standards Track.
 
-### Availability
+### Specification Availability
 
 A permanent and readily available public specification of the format for the media type MUST exist for all types registered in the standards tree. This specification MUST provide sufficient detail so that interoperability between independent implementations using the media type is possible. If not part of the media type registration proposal, this specification MUST be referenced by it.
 
-The specifications of format and processing particulars need not be publicly available for media types registered in the vendor and personal trees. Such registrations are explicitly permitted to limit the information in the registration to which software and version produce or process such media types. As such, references to or inclusion of format specifications in registrations is encouraged but not required. Note, however, that the public availability of a meaningful specification will often make the difference between simply having a name reserved so that there are no conflicts with other uses and having the potential for other implementations of the media type and useful interoperation with them.
+A specification need not be publicly available for media types registered in the vendor and personal trees. Note, however, that the public availability of a specification will often make the difference between having a name reserved and having the potential for useful interoperation.
 
 ### Intellectual Property
 
 The registration of media types involving patented technology is permitted. However, the restrictions set forth in BCP 79 {{!RFC8179}} and BCP 78 {{!RFC5378}} on the use of patented technology in IETF Standards Track protocols must be respected when the specification of a media type is part of a Standards Track protocol. In addition, other standards-related organizations making use of the standards tree may have their own rules regarding intellectual property that must be observed in their registrations.
 
 Intellectual Property Rights (IPR) disclosures for registrations in the vendor and personal trees are encouraged but not required.
+
+Copyright on the registration template MUST allow the IANA to copy it into the IANA registry.
 
 ## Canonicalization and Interoperability
 
@@ -385,7 +385,7 @@ Negative indicators for creation of a new top-level type include:
 
 # Media Subtypes {#subtypes}
 
-## Registration Trees
+## Registration Trees {#trees}
 
 In order to increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in distinct "trees," distinguished with faceted names.
 
@@ -395,7 +395,9 @@ Note that some previously defined media types do not conform to the naming conve
 
 ### Standards Tree
 
-The standards tree is intended for types of general interest to the Internet community. Registrations in the standards tree MUST be either:
+The standards tree is intended for those media types that require a substantive review and approval process in a recognized standards-related organization. For media types that do not require such a process, see the vendor and personal trees.
+
+Registrations in the standards tree MUST be either:
 
 1. in the case of registrations associated with IETF specifications, approved directly by the IESG, or
 
