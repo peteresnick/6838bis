@@ -248,14 +248,6 @@ It is conceivable that an attacker could utilize structured suffixes in a way th
 
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
 
-## Non-Requirements {#non-requirements}
-
-In the asynchronous mail environment, where information on the capabilities of the remote mail agent is frequently not available to the sender, maximum interoperability is attained by restricting the media types used to those "common" formats expected to be widely implemented. This was asserted in the past as a reason to limit the number of possible media types, and resulted in a registration process with a significant hurdle and delay for those registering media types.
-
-However, the need for "common" media types does not require limiting the registration of new media types. If a limited set of media types is recommended for a particular application, that should be asserted by a separate applicability statement specific for the application and/or environment.
-
-Therefore, universal support and implementation of a media type are NOT a requirement for registration. However, if a media type is explicitly intended for limited use, this MUST be noted in its registration. The "Restrictions on Usage" field is provided for this purpose.
-
 ## Additional Information
 
 The following optional information SHOULD be included in the specification of a media type if it is available:
@@ -270,7 +262,13 @@ The following optional information SHOULD be included in the specification of a 
 
 In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.
 
+## Non-Requirements {#non-requirements}
 
+In the asynchronous mail environment, where information on the capabilities of the remote mail agent is frequently not available to the sender, maximum interoperability is attained by restricting the media types used to those "common" formats expected to be widely implemented. This was asserted in the past as a reason to limit the number of possible media types, and resulted in a registration process with a significant hurdle and delay for those registering media types.
+
+However, the need for "common" media types does not require limiting the registration of new media types. If a limited set of media types is recommended for a particular application, that should be asserted by a separate applicability statement specific for the application and/or environment.
+
+Therefore, universal support and implementation of a media type are NOT a requirement for registration. However, if a media type is explicitly intended for limited use, this MUST be noted in its registration. The "Restrictions on Usage" field is provided for this purpose.
 
 
 # Top-Level Media Types {#top-level}
