@@ -184,7 +184,7 @@ Changes to parameters (including the introduction of new ones) is managed in the
 
 Some transports impose restrictions on the type of data they can carry. For example, Internet mail traditionally was limited to 7bit US-ASCII text. Encoding schemes are often used to work around such transport limitations.
 
-It is therefore useful to note what sort of data a media type can consist of as part of its registration. An "encoding considerations" field is provided for this purpose. Possible values of this field are:
+An "encoding considerations" field is provided to note what sort of data a media type can consist of as part of its registration. Possible values of this field are:
 
 7bit:
 : The content of the media type consists solely of CRLF- delimited 7bit US-ASCII text.
@@ -196,7 +196,7 @@ binary:
 : The content consists of an unrestricted sequence of octets.
 
 framed:
-: The content consists of a series of frames or packets without internal framing or alignment indicators. Additional out- of-band information is needed to interpret the data properly, including but not necessarily limited to knowledge of the boundaries between successive frames and knowledge of the transport mechanism. Note that media types of this sort cannot simply be stored in a file or transported as a simple stream of octets; therefore, such media types are unsuitable for use in many traditional protocols. A commonly used transport with framed encoding is the Real-time Transport Protocol, RTP. Additional rules for framed encodings defined for transport using RTP are given in {{!RFC4855}}.
+: The content consists of a series of frames or packets without internal framing or alignment indicators. Additional out-of-band information is needed to interpret the data properly, including but not limited to knowledge of the boundaries between successive frames and knowledge of the transport mechanism. Note that media types of this sort cannot be stored in a file or transported as a stream of octets without further context; therefore, such media types are thus unsuitable for use in many traditional protocols. A commonly used transport with framed encoding is the Real-time Transport Protocol, RTP. Additional rules for framed encodings defined for transport using RTP are given in {{!RFC4855}}.
 
 Additional restrictions on 7bit and 8bit text are given in {{Section 4.1.1 of !RFC2046}}.
 
