@@ -260,7 +260,7 @@ The following optional information SHOULD be included in the specification of a 
 
 * Windows clipboard name (a string), if it makes sense to exchange media of this type through user-triggered exchange mechanisms such as copy-and-paste or drag-and-drop on Microsoft Windows and related platforms (see {{windowsClipboardNames}} for definitions and syntax).
 
-In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the format specification itself.
+In the case of a registration in the standards tree, this additional information MAY be provided in the formal specification of the media type format. It is suggested that this be done by incorporating the IANA media type registration form into the specification itself.
 
 ## Non-Requirements {#non-requirements}
 
