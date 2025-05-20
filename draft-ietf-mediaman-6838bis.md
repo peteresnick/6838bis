@@ -399,7 +399,7 @@ The standards tree is intended for those media types that require a substantive 
 
 Registrations in the standards tree MUST be either:
 
-1. in the case of registrations associated with IETF specifications, approved directly by the IESG, or
+1. approved directly by the IESG (in the case of registrations associated with IETF specifications, ), or
 
 2. registered by a recognized standards-related organization using the "Specification Required" IANA registration policy {{Section 4.6 of !RFC8126}} (which implies Expert Review), or
 
