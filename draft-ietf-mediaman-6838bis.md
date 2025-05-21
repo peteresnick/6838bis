@@ -216,7 +216,7 @@ There is no requirement that media types registered in any tree be secure or com
 
 The security considerations section of all registrations is subject to continuing evaluation and modification, and in particular MAY be extended by use of the "comments on media types" mechanism described in {{comments}} below.
 
-Some of the issues that need to be examined and described in a security analysis of a media type are:
+Issues that need to be described in a security analysis of a media type include:
 
 * Processing of complex media types might institute actions on a recipient's files or other resources. If it is possible to specify arbitrary actions in an unrestricted fashion, it could have devastating effects. See the registration of the application/postscript media type in {{!RFC2046}} for an example of description and handling of these issues.
 
