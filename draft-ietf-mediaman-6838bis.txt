@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                       20 May 2025
-Expires: 21 November 2025
+Intended status: Best Current Practice                       21 May 2025
+Expires: 22 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 November 2025.
+   This Internet-Draft will expire on 22 November 2025.
 
 Copyright Notice
 
@@ -976,7 +976,7 @@ Table of Contents
 
    While public exposure and review of media types to be registered in
    the vendor tree are not required, requesting review on the media-
-   types@iana.org mailing list is encouraged, to improve the quality of
+   types@ietf.org mailing list is encouraged, to improve the quality of
    those specifications.
 
    Registrations in the vendor tree may be submitted directly to the
@@ -998,7 +998,7 @@ Table of Contents
 
    While public exposure and review of media types to be registered in
    the personal tree are not required, requesting review on the media-
-   types@iana.org mailing list is encouraged, to improve the quality of
+   types@ietf.org mailing list is encouraged, to improve the quality of
    those specifications.
 
    Registrations in the personal tree may be submitted directly to the
@@ -1136,13 +1136,13 @@ Table of Contents
 
    Normal IETF processes need to be followed for all IETF registrations
    in the standards tree.  The posting of an Internet Draft is a
-   necessary first step, followed by posting to the media-types@iana.org
+   necessary first step, followed by posting to the media-types@ietf.org
    list as discussed below.
 
 5.1.  Preliminary Community Review
 
    Notice of a potential media type registration in the standards tree
-   SHOULD be sent to the media-types@iana.org mailing list for review.
+   SHOULD be sent to the media-types@ietf.org mailing list for review.
    Registrations in other trees MAY be sent to the list for review as
    well; doing so is entirely OPTIONAL, but is strongly encouraged.
 
@@ -1327,7 +1327,7 @@ Table of Contents
 
    3.  Send a copy of the template or a pointer to the containing
        document (with specific reference to the section with the
-       template) to the mailing list media-types@iana.org, requesting
+       template) to the mailing list media-types@ietf.org, requesting
        review.  This may be combined with a request to review the media
        type registration.  Allow a reasonable time for discussion and
        comments.
