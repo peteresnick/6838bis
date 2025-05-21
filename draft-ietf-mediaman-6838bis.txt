@@ -425,8 +425,8 @@ Table of Contents
    extended by use of the "comments on media types" mechanism described
    in Section 5.4 below.
 
-   Some of the issues that need to be examined and described in a
-   security analysis of a media type are:
+   Issues that need to be described in a security analysis of a media
+   type include:
 
    *  Processing of complex media types might institute actions on a
       recipient's files or other resources.  If it is possible to
@@ -1127,10 +1127,12 @@ Table of Contents
 
    Media types registered in the standards tree by the IETF itself MUST
    be reviewed and approved by the IESG as part of the normal standards
-   process.  Standards-tree registrations by recognized standards-
-   related organizations as well as registrations in the vendor and
-   personal trees are submitted directly to the IANA, unless other
-   arrangements were made as part of a liaison agreement.
+   process.
+
+   Standards-tree registrations by recognized standards-related
+   organizations as well as registrations in the vendor and personal
+   trees are submitted directly to the IANA, unless other arrangements
+   were made as part of a liaison agreement.
 
    Registration requests can be sent to iana@iana.org.  A web form for
    registration requests is also available at:
@@ -1590,6 +1592,7 @@ Appendix B.  Grandfathered Media Types
    the "x-" prefix.)  If possible, such a media type SHOULD be
    reregistered with a proper faceted subtype name, possibly using a
    deprecated alias to identify the original name (see Section 2.4.1).
+
    However, if this is not possible, the type can, subject to approval
    by both the media types reviewer and the IESG, be registered in the
    proper tree with its unfaceted name.
