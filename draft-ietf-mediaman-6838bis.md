@@ -423,7 +423,7 @@ Some formats are interoperable (i.e., they are supported by more than one implem
 
 The Designated Expert(s) have discretion in applying these criteria; in rare cases, they might judge it best to register an entry that fails one or more.
 
-Note that such registrations still go through preliminary community review (Section 5.1), and decisions can be appealed (Section 5.3).
+Note that such registrations still go through preliminary community review ({{preliminary-review}}), and decisions can be appealed ({{review}}).
 
 ### Vendor Tree
 
