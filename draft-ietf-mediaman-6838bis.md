@@ -88,7 +88,7 @@ Media types MUST function as actual media formats. Registration of things that a
 
 This requirement applies regardless of the registration tree involved.
 
-## Publication
+## Publication {#publication}
 
 Media types registered in the standards tree by the IETF MUST be published as RFCs. Media types registered in the vendor and personal trees can be published as RFCs, but this is not required.
 
@@ -399,17 +399,15 @@ Registrations in the standards tree MUST be either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents, or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community. The registration proposal MUST be published as an RFC. When the registration RFC is in the IETF stream, it must have IETF Consensus. Registrations published in non-IETF RFC streams are also allowed, but require IESG approval. A registration can be either in a stand-alone "registration only" RFC or incorporated into a more complete specification.
+The first procedure is used for registrations from IETF Consensus documents, or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community. See {{publication}} for publication requirements.
 
-In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, a Media Types Reviewer (Designated Expert or a group of Designated Experts) performs the Expert Review as specified in this document. Subsequent submissions from the same source do not involve the IESG. The format MUST be described by a formal standards specification produced by the submitting standards-related organization.
+In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format MUST be described by a formal specification produced by the submitting standards-related organization.
 
 The third case is described in {{community}}.
 
 Media types in the standards tree MUST NOT have faceted names, unless they are grandfathered in using the process described in {{grandfather}}.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
-
-Standards-tree registrations from recognized standards-related organizations are submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval. In this case, the Expert Reviewer(s) will, among other things, ensure that the required specification provides adequate documentation.
 
 #### Community Formats in the Standards Tree {#community}
 
@@ -532,7 +530,7 @@ Upon receipt of a provisional registration, IANA will check the name and contact
 
 Provisional registrations MAY be updated or abandoned at any time. When the registration is abandoned, the media type is no longer registered in any sense; it can subsequently be registered just like any other unassigned media type name.
 
-## Review and Approval
+## Review and Approval {#review}
 
 With the exception of provisional standards-tree registrations, registrations submitted to the IANA will be first given to the media types reviewer, who is appointed by the IETF Applications Area Director(s). The media types reviewer examines registration requests to make sure they meet the requirements set forth in this document.
 
