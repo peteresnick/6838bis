@@ -862,21 +862,15 @@ Table of Contents
    The first procedure is used for registrations from IETF Consensus
    documents, or in rare cases when registering a grandfathered (see
    Appendix B) and/or otherwise incomplete registration is in the
-   interest of the Internet community.  The registration proposal MUST
-   be published as an RFC.  When the registration RFC is in the IETF
-   stream, it must have IETF Consensus.  Registrations published in non-
-   IETF RFC streams are also allowed, but require IESG approval.  A
-   registration can be either in a stand-alone "registration only" RFC
-   or incorporated into a more complete specification.
+   interest of the Internet community.  See Section 2.2 for publication
+   requirements.
 
    In the second case, the IESG makes a one-time decision on whether the
    registration submitter represents a recognized standards-related
-   organization; after that, a Media Types Reviewer (Designated Expert
-   or a group of Designated Experts) performs the Expert Review as
-   specified in this document.  Subsequent submissions from the same
-   source do not involve the IESG.  The format MUST be described by a
-   formal standards specification produced by the submitting standards-
-   related organization.
+   organization; after that, registration requests are performed as
+   specified in Section 5.3.  The format MUST be described by a formal
+   specification produced by the submitting standards-related
+   organization.
 
    The third case is described in Section 4.1.1.1.
 
@@ -889,12 +883,6 @@ Table of Contents
    of processing (e.g., a registration submitted on Standards Track can
    be revised in another Standards Track RFC, but cannot be revised in
    an Informational RFC) required for the initial registration.
-
-   Standards-tree registrations from recognized standards-related
-   organizations are submitted directly to the IANA, where they will
-   undergo Expert Review Section 4.5 of [RFC8126] prior to approval.  In
-   this case, the Expert Reviewer(s) will, among other things, ensure
-   that the required specification provides adequate documentation.
 
 4.1.1.1.  Community Formats in the Standards Tree
 
@@ -933,10 +921,7 @@ Table of Contents
 
    The vendor tree is intended for media types associated with publicly
    available products.  "Vendor" and "producer" are construed very
-   broadly in this context, and are considered equivalent.  Note that
-   industry consortia as well as non-commercial entities that do not
-   qualify as recognized standards-related organizations can register
-   media types in the vendor tree.
+   broadly in this context, and are considered equivalent.
 
    A registration may be placed in the vendor tree by anyone who needs
    to interchange files associated with some product or set of products.
