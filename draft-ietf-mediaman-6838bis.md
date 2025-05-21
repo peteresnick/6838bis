@@ -686,17 +686,10 @@ It may be desirable to restrict the use of media types to specific environments 
 
 # Grandfathered Media Types {#grandfather}
 
-A number of media types with unfaceted subtype names, registered prior to 1996, would, if
-registered under the guidelines in this document, be given a faceted name and placed into either
-the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is
-encouraged but not required. Ownership and change control principles outlined in this document
-apply to those types as if they had been registered in the trees described above.
+A number of media types with unfaceted subtype names, registered prior to 1996, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in the trees described above.
 
-From time to time there may also be cases where a media type with an unfaceted subtype name has
-been widely deployed without being registered. (Note that this includes subtype names beginning
-with the "x-" prefix.) If possible, such a media type SHOULD be reregistered with a proper faceted
-subtype name, possibly using a deprecated alias to identify the original name (see {{deprecated-aliases}}).
-However, if this is not possible, the type can, subject to approval by both the media types
-reviewer and the IESG, be registered in the proper tree with its unfaceted name.
+From time to time there may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. (Note that this includes subtype names beginning with the "x-" prefix.) If possible, such a media type SHOULD be reregistered with a proper faceted subtype name, possibly using a deprecated alias to identify the original name (see {{deprecated-aliases}}).
+
+However, if this is not possible, the type can, subject to approval by both the media types reviewer and the IESG, be registered in the proper tree with its unfaceted name.
 
 
