@@ -514,7 +514,9 @@ The purpose of this notification is to solicit comments and feedback on the choi
 
 ## Submit Request to IANA
 
-Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process. Standards-tree registrations by recognized standards-related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.
+Media types registered in the standards tree by the IETF itself MUST be reviewed and approved by the IESG as part of the normal standards process.
+
+Standards-tree registrations by recognized standards-related organizations as well as registrations in the vendor and personal trees are submitted directly to the IANA, unless other arrangements were made as part of a liaison agreement.
 
 Registration requests can be sent to iana@iana.org. A web form for registration requests is also available at:
 
