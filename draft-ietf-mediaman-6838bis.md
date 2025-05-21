@@ -429,7 +429,7 @@ Note that such registrations still go through preliminary community review (Sect
 
 ### Vendor Tree
 
-The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent. Note that industry consortia as well as non-commercial entities that do not qualify as recognized standards-related organizations can register media types in the vendor tree.
+The vendor tree is intended for media types associated with publicly available products. "Vendor" and "producer" are construed very broadly in this context, and are considered equivalent.
 
 A registration may be placed in the vendor tree by anyone who needs to interchange files associated with some product or set of products. However, the registration properly belongs to the vendor or organization producing the software that employs the type being registered, and that vendor or organization can at any time elect to assume change control of a registration done by a third party in order to correct or update it. See {{change}} for additional information.
 
