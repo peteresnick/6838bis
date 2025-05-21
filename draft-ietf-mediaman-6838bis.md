@@ -443,7 +443,7 @@ When a third party registers a type on behalf of someone else, both entities SHO
 
 Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
 
-While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.
+While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
 Registrations in the vendor tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
@@ -455,7 +455,7 @@ Personal tree registrations are distinguished by the leading facet "prs.".
 
 The change controller of a "personal" registration is the person or entity making the registration, or one to whom responsibility has been transferred as described below.
 
-While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@iana.org mailing list is encouraged, to improve the quality of those specifications.
+While public exposure and review of media types to be registered in the personal tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
 Registrations in the personal tree may be submitted directly to the IANA, where they will undergo Expert Review {{Section 4.5 of !RFC8126}} prior to approval.
 
@@ -512,11 +512,11 @@ The syntax and semantics for fragment identifiers are specified in the "Fragment
 
 The media type registration procedure is not a formal standards process, but rather an administrative procedure intended to allow community comment and sanity checking without excessive time delay.
 
-Normal IETF processes need to be followed for all IETF registrations in the standards tree. The posting of an Internet Draft is a necessary first step, followed by posting to the media-types@iana.org list as discussed below.
+Normal IETF processes need to be followed for all IETF registrations in the standards tree. The posting of an Internet Draft is a necessary first step, followed by posting to the media-types@ietf.org list as discussed below.
 
 ##  Preliminary Community Review {#preliminary-review}
 
-Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@iana.org mailing list for review. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.
+Notice of a potential media type registration in the standards tree SHOULD be sent to the media-types@ietf.org mailing list for review. Registrations in other trees MAY be sent to the list for review as well; doing so is entirely OPTIONAL, but is strongly encouraged.
 
 The purpose of this notification is to solicit comments and feedback on the choice of type/subtype name, the unambiguity of the references with respect to versions and external profiling information, and a review of any interoperability or security considerations. The submitter may submit a revised registration proposal or abandon the registration completely and at any time.
 
@@ -614,7 +614,7 @@ Someone wishing to define a "+suffix" name for a structured syntax for use with 
 
 2. If there is no entry for their suffix scheme, fill out the template (specified in {{suffix-template}}) and include that with the media type registration. The template may be contained in an Internet Draft, alone or as part of some other protocol specification. The template may also be submitted in some other form (as part of another document or as a stand-alone document), but the contents will be treated as an "IETF Contribution" under the guidelines of BCP 78 {{!RFC5378}}.
 
-3. Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@iana.org, requesting review. This may be combined with a request to review the media type registration. Allow a reasonable time for discussion and comments.
+3. Send a copy of the template or a pointer to the containing document (with specific reference to the section with the template) to the mailing list media-types@ietf.org, requesting review. This may be combined with a request to review the media type registration. Allow a reasonable time for discussion and comments.
 
 4. Respond to review comments and make revisions to the proposed registration as needed to bring it into line with the guidelines given in this document.
 
