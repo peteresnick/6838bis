@@ -347,7 +347,7 @@ Definitions of new top-level types are required to fulfil the following criteria
 
 ### Additional Considerations
 
-Additional considerations for the defintion of a new top-level type include:
+Additional considerations for the definition of a new top-level type include:
 
 * Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining a new top-level type.
 
