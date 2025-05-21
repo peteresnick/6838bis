@@ -349,9 +349,7 @@ Definitions of new top-level types are required to fulfil the following criteria
 
 Additional considerations for the definition of a new top-level type include:
 
-* Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining a new top-level type.
-
-* On the other hand, the use of unregistered top-level types is highly discouraged.
+* Existing wide use of an unregistered top-level type may be an indication of a need, and therefore an argument for formally defining a new top-level type. On the other hand, the use of unregistered top-level types is highly discouraged.
 
 * Use of an IETF Working Group to define a new top-level type is not needed, but may be advisable in some cases. There are examples of new top-level type definitions without a Working Group ({{?RFC2077}}), with a short, dedicated WG ({{?RFC8081}}), and with a Working Group that included other related work ({{?I-D.ietf-mediaman-haptics}}).
 
@@ -373,11 +371,7 @@ Additional considerations for the definition of a new top-level type include:
 
 Negative indicators for creation of a new top-level type include:
 
-* A top-level type is not a pointer into another registration space that offers duplicate registrations for existing media types. Example: a top-level type of 'oid', leading to types of the form oid/nnnnn, where nnn is an OID (Object Identifier) designating a specific media format,
-
-* A top-level type MUST NOT be defined for the mapping of other protocol elements to media types. For example, while there may be some merit to a mapping from media types to URIs, e.g. in the context of RDF (Resource Description Framework), there is very limited merit in a reverse mapping, and even less merit in creating a top-level type for such a mapping. The same applies to other protocol elements such as file extensions or URI schemes. The recommended solution in case a mapping is needed is to choose a single type/subtype and put the additional information in an appropriately named parameter. As an example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.
-
-* Media types are not a general type system. A top-level type MUST NOT be defined if its main or only purpose is to map other type systems, e.g. in programming languages or ontologies.
+* Media types are not a general type system. A top-level type MUST NOT be defined if its main or only purpose is to map other type systems, protocol elements, or registration spaces. Examples of such discouraged uses include mapping media types to programming language primitives, ontologies, object identifiers, URIs and URI schemes, and file extensions. That said, media types MAY use parameters to carry such information. For example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.
 
 * A new top-level type SHOULD NOT generate aliases for existing widely used types or subtypes.
 
