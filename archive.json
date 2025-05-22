@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-20T01:06:52.084987+00:00",
+  "timestamp": "2025-05-22T01:05:54.917285+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -259,7 +259,7 @@
       "labels": [],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-04-01T11:54:28Z",
+      "updatedAt": "2025-05-21T06:32:54Z",
       "closedAt": null,
       "comments": [
         {
@@ -331,6 +331,55 @@
           "body": "This (update procedure) seems to be a more generic question, pertaining to section 6.1 \"change procedures\". I filed #21 to track that question.\n",
           "createdAt": "2025-04-01T11:54:26Z",
           "updatedAt": "2025-04-01T11:54:26Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I'm not convinced that a fallback pointer will be any more reliable, and it adds complexity to the procedure and the registry. Also, all existing entries won't have a fallback, limiting the utility of this approach for some time and necessitating a fallback procedure for the absence of a fallback. \n\nI'd suggest that either: \n\n1. The expert be given explicit power to chase up unresponsive contacts and update using reasonable measures, with a fallback to the IESG if there's a dispute of their decision.\n2. We close this issue without action; it's working well enough.",
+          "createdAt": "2025-05-21T04:41:02Z",
+          "updatedAt": "2025-05-21T04:41:02Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Note also that the change section already has:\n\n> The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.",
+          "createdAt": "2025-05-21T04:55:21Z",
+          "updatedAt": "2025-05-21T04:55:21Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Regarding the _original_ issue here, the standards tree section already says:\n\n> The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWe could refine that with something like:\n\n> In the case of IETF standards, the change controller is normally the IESG.",
+          "createdAt": "2025-05-21T04:58:34Z",
+          "updatedAt": "2025-05-21T04:58:34Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I am missing the transparency of the operation when the IESG or the experts change reassign. It is probably in some by-laws of the IESG but including that at least the conclusion of a reassignment is visible on the ietf-types mailing-list would help trust, I think. One could adapt the current sentence for this, I think.",
+          "createdAt": "2025-05-21T06:23:36Z",
+          "updatedAt": "2025-05-21T06:23:36Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Experts are listed in the registry, e.g., https://www.iana.org/assignments/media-types/media-types.xhtml\n\nIf we want to have norms/rules for when/how they're announced, I think that should be done in IANABIS, not as a one-off here.",
+          "createdAt": "2025-05-21T06:26:25Z",
+          "updatedAt": "2025-05-21T06:26:25Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I am not making in question the list of experts. I proposing adjust the sentence so that a reassignment of responsibility for a media-type is an action that is transparently relayed to some public place such as the mailing-list.",
+          "createdAt": "2025-05-21T06:31:49Z",
+          "updatedAt": "2025-05-21T06:31:49Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I understand. I stand by my comment.",
+          "createdAt": "2025-05-21T06:32:52Z",
+          "updatedAt": "2025-05-21T06:32:52Z"
         }
       ]
     },
@@ -346,7 +395,7 @@
       "labels": [],
       "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
       "createdAt": "2024-11-20T11:12:17Z",
-      "updatedAt": "2025-03-18T11:02:30Z",
+      "updatedAt": "2025-05-21T04:45:06Z",
       "closedAt": null,
       "comments": [
         {
@@ -362,6 +411,13 @@
           "body": "This may be an IANABIS problem.\n",
           "createdAt": "2025-03-18T11:02:29Z",
           "updatedAt": "2025-03-18T11:02:29Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Given that we haven't had any appeals yet and this appears to be workable at least on the face of it, close with no action?",
+          "createdAt": "2025-05-21T04:45:05Z",
+          "updatedAt": "2025-05-21T04:45:05Z"
         }
       ]
     },
@@ -395,24 +451,32 @@
       "labels": [],
       "body": "              You might consider adding some override here, incase the existing change controller is not responsive.\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r1941375260_\r\n            ",
       "createdAt": "2025-02-04T23:01:57Z",
-      "updatedAt": "2025-02-04T23:01:57Z",
+      "updatedAt": "2025-05-21T04:45:38Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Is this #9?",
+          "createdAt": "2025-05-21T04:45:37Z",
+          "updatedAt": "2025-05-21T04:45:37Z"
+        }
+      ]
     },
     {
       "number": 16,
       "id": "I_kwDOMdBaOc6oxMJd",
       "title": "If the intention is to discourage oid/nnnnn, this text could be clearer.",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/16",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "              If the intention is to discourage oid/nnnnn, this text could be clearer.\r\n\r\nFor example: Do not attempt to register top levels wheihc are pointers ....\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/12#discussion_r1941490850_\r\n            ",
       "createdAt": "2025-02-04T23:02:33Z",
-      "updatedAt": "2025-03-17T01:40:20Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-21T04:12:59Z",
+      "closedAt": "2025-05-21T04:12:59Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -420,6 +484,13 @@
           "body": "The \"negative criteria\" section was added after a discussion on the list where someone suggested a top-level type that would register by implication some huge number of other entities (I think it was, among other things, going to have a separate media type for integers).\n\nWe concluded that such a thing would be a Bad Idea, and tried to find some way of incorporating that into the RFC. The \"negative criteria\" were the result.\n\nWe could reformulate it in such a way that either the intro says \"the registration process SHOULD/MUST reject attempts to register top level types that satisfies the following criteria\", or that each criterion starts off with \"You SHOULD NOT attempt to register .....\"\n\nI think choosing between these forms is editor's privillege.\n",
           "createdAt": "2025-03-17T01:40:19Z",
           "updatedAt": "2025-03-17T01:40:19Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See also #25.",
+          "createdAt": "2025-05-21T04:05:54Z",
+          "updatedAt": "2025-05-21T04:05:54Z"
         }
       ]
     },
@@ -435,9 +506,24 @@
       "labels": [],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-03-06T13:39:56Z",
+      "updatedAt": "2025-05-21T07:04:50Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It's not scalable to add application-specific fields to the registry. Reasonable alternatives include:\n\n1. using the 'general comments' field\n2. creating a separate registry",
+          "createdAt": "2025-05-21T04:30:35Z",
+          "updatedAt": "2025-05-21T04:30:35Z"
+        },
+        {
+          "author": "gloinul",
+          "authorAssociation": "NONE",
+          "body": "@mnot if this was a new usage I would fully agree with what you write. The issue is that the Media Types registry contains more than a hundred media types that are RTP payload formats and this is about handling an existing legacy in an efficient way. \n\nRegarding 2) that have been tried and it fails for the reason that the media types registry is the name space. The seperate registry was never the key one and it was repetealy missed to add the name into this secondary registry. Thus, having a separate registry was tried for a long time and it failed. This is not the first time I wished that the community had come to the conclusion more than 20 years ago that RTP payload types should have its own registry and name space for identifying them, rather than using the media types registry. \n\nRegarding 1) we it would be good to have something that is actually very explicitly, and possible to select on when extracting entries form the registry. Because we have seen IETF external bodies attempting to reference a table of RTP payload formats. And as I noted above this is a significant amount of the registry entries. ",
+          "createdAt": "2025-05-21T07:04:49Z",
+          "updatedAt": "2025-05-21T07:04:49Z"
+        }
+      ]
     },
     {
       "number": 19,
@@ -475,9 +561,17 @@
       "labels": [],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-03-18T11:25:08Z",
+      "updatedAt": "2025-05-21T04:50:02Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "What should be said?",
+          "createdAt": "2025-05-21T04:50:01Z",
+          "updatedAt": "2025-05-21T04:50:01Z"
+        }
+      ]
     },
     {
       "number": 21,
@@ -491,24 +585,39 @@
       "labels": [],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-04-01T11:53:52Z",
+      "updatedAt": "2025-05-21T17:30:36Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Who can make changes (presumably \"change controller\")\n\nText already says: \"Once a media type has been published by the IANA, the change controller may request a change to its definition.\"\n\n> How one can make changes if change controller is unavailable or unresponsive\n\nThis seems to be discussed in #9 (although arguably off-topic)\n\n> When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nCurrently, we put guardrails on what a change can request (e.g., no deletion) and require expert review for changes to assure sanity. Is that adequate?\n\n",
+          "createdAt": "2025-05-21T04:56:30Z",
+          "updatedAt": "2025-05-21T04:56:30Z"
+        },
+        {
+          "author": "7439henry",
+          "authorAssociation": "NONE",
+          "body": "Open discussion : Update The 'haptics' Top-Level Media Type(RFC9695) \n\nThe RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.\n",
+          "createdAt": "2025-05-21T17:30:14Z",
+          "updatedAt": "2025-05-21T17:30:14Z"
+        }
+      ]
     },
     {
       "number": 22,
       "id": "I_kwDOMdBaOc6xforO",
       "title": "change media-types@iana.org to media-types@ietf.org",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/22",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "anewton1998",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "6838 lists media-types@iana.org as the email to send registrations. However, this is just a forwarder to media-types@ietf.org. I suggest skipping the forwarder and changing the email address in 6838bis to media-types@ietf.org.\n\nAlso, it might be helpful to have an informative reference to the [list archive](https://mailarchive.ietf.org/arch/browse/media-types/).",
       "createdAt": "2025-04-07T19:56:37Z",
-      "updatedAt": "2025-04-11T04:43:37Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-21T04:02:47Z",
+      "closedAt": "2025-05-21T04:02:47Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -586,7 +695,7 @@
       "id": "I_kwDOMdBaOc61dk1n",
       "title": "Negative criteria repetitiveness",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/25",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
@@ -595,8 +704,8 @@
       ],
       "body": "Negative criteria says roughly the same thing four times:\n\n* A top-level type is not a pointer into another registration space that offers duplicate registrations for existing media types. Example: a top-level type of 'oid', leading to types of the form oid/nnnnn, where nnn is an OID (Object Identifier) designating a specific media format,\n\n* A top-level type MUST NOT be defined for the mapping of other protocol elements to media types. For example, while there may be some merit to a mapping from media types to URIs, e.g. in the context of RDF (Resource Description Framework), there is very limited merit in a reverse mapping, and even less merit in creating a top-level type for such a mapping. The same applies to other protocol elements such as file extensions or URI schemes. The recommended solution in case a mapping is needed is to choose a single type/subtype and put the additional information in an appropriately named parameter. As an example, information on a file extension '.dcat' can be encoded as 'application/octet-string; filename=foo.dcat'.\n\n* Media types are not a general type system. A top-level type MUST NOT be defined if its main or only purpose is to map other type systems, e.g. in programming languages or ontologies.\n\n* A new top-level type SHOULD NOT generate aliases for existing widely used types or subtypes.\n\nThere has to be a more efficient and friendly way to convey this; using bullet points implies that they're four different things, and they're not.",
       "createdAt": "2025-05-07T01:36:18Z",
-      "updatedAt": "2025-05-07T08:19:59Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-21T04:12:59Z",
+      "closedAt": "2025-05-21T04:12:59Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -806,15 +915,15 @@
       "id": "I_kwDOMdBaOc63TbNd",
       "title": "Standards tree duplicates requirements and text",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/31",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "The 'standards tree' section outlines requirements about publication and also specifies process for handling these registrations. Both of these are covered in other sections.\n\nShould we:\n\n1.  move all standards-tree requirements under the standards tree section (possibly removing duplicative text and requirements elsewhere), or\n2. move these things out of the standards tree section into the requirements and process sections (possibly with appropriate references)?\n\nI'm leaning towards (2).",
       "createdAt": "2025-05-20T00:58:35Z",
-      "updatedAt": "2025-05-20T00:58:35Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-21T04:20:32Z",
+      "closedAt": "2025-05-21T04:20:32Z",
       "comments": []
     },
     {
@@ -822,14 +931,30 @@
       "id": "I_kwDOMdBaOc63TbtH",
       "title": "Vendor tree for community formats",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/32",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "> Note that industry consortia as well as non-commercial entities that do not qualify as recognized standards-related organizations can register media types in the vendor tree.\n\nCan this be removed now that we have the community formats process?",
       "createdAt": "2025-05-20T01:00:04Z",
-      "updatedAt": "2025-05-20T01:00:04Z",
+      "updatedAt": "2025-05-21T04:20:31Z",
+      "closedAt": "2025-05-21T04:20:31Z",
+      "comments": []
+    },
+    {
+      "number": 33,
+      "id": "I_kwDOMdBaOc63g5oX",
+      "title": "Community formats and grandfathering",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/33",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Does the community format process remove the need for the grandfathering text?",
+      "createdAt": "2025-05-21T04:26:04Z",
+      "updatedAt": "2025-05-21T04:26:04Z",
       "closedAt": null,
       "comments": []
     }
@@ -1359,6 +1484,32 @@
       "mergeCommit": {
         "oid": "385a8c323c44c9a350420fc6ab67448042dd32b3"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 34,
+      "id": "PR_kwDOMdBaOc6XJB_o",
+      "title": "Remove some extraneous 2119 terms",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/34",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "For #26",
+      "createdAt": "2025-05-22T00:34:37Z",
+      "updatedAt": "2025-05-22T00:34:37Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "4eb1f667159a322027c3639c55a44da65064572a",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/26",
+      "headRefOid": "1f7533d9255a7287d0a60cff80fc0c14d6b39e74",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
