@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                       21 May 2025
-Expires: 22 November 2025
+Intended status: Best Current Practice                       23 May 2025
+Expires: 24 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 November 2025.
+   This Internet-Draft will expire on 24 November 2025.
 
 Copyright Notice
 
@@ -998,7 +998,7 @@ Table of Contents
    New top-level registration trees may be created by IETF Standards
    Action.
 
-   It is explicitly assumed that these trees mights be created for
+   It is explicitly assumed that these trees might be created for
    external registration and management by well-known permanent
    organizations; for example, scientific societies might register media
    types specific to the sciences they cover.  In general, the quality
