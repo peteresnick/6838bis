@@ -4,9 +4,9 @@
 
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
-Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                       23 May 2025
-Expires: 24 November 2025
+Obsoletes: [6838, 9694] (if approved)                         P. Resnick
+Intended status: Best Current Practice                       24 May 2025
+Expires: 25 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 November 2025.
+   This Internet-Draft will expire on 25 November 2025.
 
 Copyright Notice
 
