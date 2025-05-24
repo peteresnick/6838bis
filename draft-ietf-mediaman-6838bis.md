@@ -4,7 +4,7 @@ abbrev: Media Type Registration
 docname: draft-ietf-mediaman-6838bis-latest
 date:
 category: bcp
-obsoletes: 6838
+obsoletes: [6838, 9694]
 
 ipr: trust200902
 keyword: Internet-Draft
