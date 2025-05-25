@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-22T01:05:54.917285+00:00",
+  "timestamp": "2025-05-25T01:12:12.647253+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -506,7 +506,7 @@
       "labels": [],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-05-21T07:04:50Z",
+      "updatedAt": "2025-05-23T00:29:58Z",
       "closedAt": null,
       "comments": [
         {
@@ -522,6 +522,13 @@
           "body": "@mnot if this was a new usage I would fully agree with what you write. The issue is that the Media Types registry contains more than a hundred media types that are RTP payload formats and this is about handling an existing legacy in an efficient way. \n\nRegarding 2) that have been tried and it fails for the reason that the media types registry is the name space. The seperate registry was never the key one and it was repetealy missed to add the name into this secondary registry. Thus, having a separate registry was tried for a long time and it failed. This is not the first time I wished that the community had come to the conclusion more than 20 years ago that RTP payload types should have its own registry and name space for identifying them, rather than using the media types registry. \n\nRegarding 1) we it would be good to have something that is actually very explicitly, and possible to select on when extracting entries form the registry. Because we have seen IETF external bodies attempting to reference a table of RTP payload formats. And as I noted above this is a significant amount of the registry entries. ",
           "createdAt": "2025-05-21T07:04:49Z",
           "updatedAt": "2025-05-21T07:04:49Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Perhaps that should have been explicitly agreed to before closing the other registry.\n\nCurrently, there is _no_ other information that's limited to a specific subset of media types in the registry or in the registration template. Requiring that any new information captured be potentially applicable to all media types is a very reasonable and defensible position to take, with considerable precedence in the IETF. The fact that a particular community has got itself into an inconvenient position doesn't seem like a good reason to violate that principle.\n\n\n\n",
+          "createdAt": "2025-05-23T00:29:57Z",
+          "updatedAt": "2025-05-23T00:29:57Z"
         }
       ]
     },
@@ -1499,13 +1506,13 @@
       "labels": [],
       "body": "For #26",
       "createdAt": "2025-05-22T00:34:37Z",
-      "updatedAt": "2025-05-22T00:34:37Z",
+      "updatedAt": "2025-05-23T00:13:53Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "4eb1f667159a322027c3639c55a44da65064572a",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/26",
-      "headRefOid": "1f7533d9255a7287d0a60cff80fc0c14d6b39e74",
+      "headRefOid": "0a6b9ec12e39545c6b7a0b919b8d24187e6214a1",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
