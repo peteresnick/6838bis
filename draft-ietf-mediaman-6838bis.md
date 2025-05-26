@@ -405,7 +405,7 @@ In the second case, the IESG makes a one-time decision on whether the registrati
 
 The third case is described in {{community}}.
 
-Media types in the standards tree do have faceted names, unless they are grandfathered in using the process described in {{grandfather}}.
+Media types in the standards tree do not have faceted names, unless they are grandfathered in using the process described in {{grandfather}}.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
