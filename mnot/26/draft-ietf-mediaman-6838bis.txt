@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: 6838 (if approved)                                 P. Resnick
-Intended status: Best Current Practice                       23 May 2025
-Expires: 24 November 2025
+Intended status: Best Current Practice                       26 May 2025
+Expires: 27 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 24 November 2025.
+   This Internet-Draft will expire on 27 November 2025.
 
 Copyright Notice
 
@@ -868,8 +868,8 @@ Table of Contents
 
    The third case is described in Section 4.1.1.1.
 
-   Media types in the standards tree do have faceted names, unless they
-   are grandfathered in using the process described in Appendix B.
+   Media types in the standards tree do not have faceted names, unless
+   they are grandfathered in using the process described in Appendix B.
 
    The change controller of a media type registered in the standards
    tree is assumed to be the standards-related organization itself.
