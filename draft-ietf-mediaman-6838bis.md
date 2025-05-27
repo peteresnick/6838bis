@@ -401,7 +401,7 @@ Registrations in the standards tree MUST be either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents, or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community. See {{publication}} for publication requirements.
+The first procedure is used for registrations from IETF Consensus documents. See {{publication}} for publication requirements.
 
 In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format MUST be described by a formal specification produced by the submitting standards-related organization.
 
