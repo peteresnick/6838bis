@@ -452,7 +452,7 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 ## Structured Syntax Suffixes {#suffixes}
 
-Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a suffix convention.
+Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a "+suffix" convention.
 
 A structured syntax suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured syntax suffix MUST NOT contain more than one "+" sign.
 
