@@ -456,15 +456,15 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign.
 
-For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the base subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.
+For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.
 
 The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
 Media types that make use of a named structured syntax SHOULD use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.
 
-Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing base subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the base subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing base subtype names in the media type registry.
+Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing subtype names in the media type registry.
 
-Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated base subtype name to register the new media type.
+Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated subtype name to register the new media type.
 
 ### Common Suffix Patterns
 
