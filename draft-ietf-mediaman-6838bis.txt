@@ -5,8 +5,8 @@
 Network Working Group                                      M. Nottingham
 Internet-Draft                                                Cloudflare
 Obsoletes: [6838, 9694] (if approved)                         P. Resnick
-Intended status: Best Current Practice                       24 May 2025
-Expires: 25 November 2025
+Intended status: Best Current Practice                       27 May 2025
+Expires: 28 November 2025
 
 
          Media Type Specifications and Registration Procedures
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 25 November 2025.
+   This Internet-Draft will expire on 28 November 2025.
 
 Copyright Notice
 
@@ -126,24 +126,27 @@ Table of Contents
 
 1.  Introduction
 
-   Internet application protocols are capable of carrying arbitrary
-   labeled content, including but not limited to HTTP [RFC9110] and MIME
-   [RFC2045].
+   Internet application protocols (including but not limited to HTTP
+   [RFC9110] and MIME [RFC2045]) are capable of carrying arbitrary
+   labeled content.
 
-   Such labels are known as media types.  A media type consists of a
-   top-level type and a subtype, which is further structured into trees.
-   Optionally, a media type can be defined to allow companion data,
-   known as parameters.
+   Those labels are known as media types.  A media type consists of a
+   top-level type (Section 3) and a subtype (Section 4), which is
+   further structured into a tree (identified by a prefix).  A subtype
+   can also be associated with a structured syntax (identified by
+   suffix).  Optionally, a media type can be defined to allow companion
+   data, known as parameters.
 
-   This document defines the criteria and procedures to be used to
-   register media types (Section 5) as well as media type structured
-   suffixes (Section 6) in the Internet Assigned Numbers Authority
-   (IANA) registry.
-
-   The location of the media type registry managed by these procedures
-   is:
+   Section 2 defines the criteria for registering media types.
+   Section 5 outlines the procedures used to do so.  The location of the
+   media type registry is:
 
       http://www.iana.org/assignments/media-types/
+
+   Section 6 outlines the procedures for managing the registry for
+   structured suffixes.  It is located at:
+
+      https://www.iana.org/assignments/media-type-structured-suffix/
 
 1.1.  Conventions Used in This Document
 
