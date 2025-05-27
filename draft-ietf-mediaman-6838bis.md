@@ -68,7 +68,7 @@ Those labels are known as media types. A media type consists of a top-level type
 
 > http://www.iana.org/assignments/media-types/
 
-{{suffix-procedures}} outlines the procedures for managing the registry for structured suffixes. It is located at:
+{{suffix-procedures}} outlines the procedures for managing the registry for structured syntax suffixes. It is located at:
 
 > https://www.iana.org/assignments/media-type-structured-suffix/
 
@@ -450,25 +450,25 @@ It is explicitly assumed that these trees might be created for external registra
 
 When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.
 
-## Subtype Suffixes {#suffixes}
+## Structured Syntax Suffixes {#suffixes}
 
 Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a suffix convention.
 
-A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign.
+A structured syntax suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured syntax suffix MUST NOT contain more than one "+" sign.
 
-For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not registrable.
+For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable.
 
-The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
+The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
-Media types that make use of a named structured syntax SHOULD use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.
+Media types that make use of a structured syntax SHOULD use the appropriate registered suffix for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes SHOULD NOT be used, given the possibility of conflicts with future suffix definitions.
 
-Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing subtype names in the media type registry.
+Media types that make use of a structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing subtype names in the media type registry.
 
 Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated subtype name to register the new media type.
 
 ### Common Suffix Patterns
 
-There are a few common patterns that are utilized for media types that use structured suffixes. These patterns include expressing that the data associated with a media type:
+There are a few common patterns that are utilized for media types that use structured syntax suffixes. These patterns include expressing that the data associated with a media type:
 
 * Utilizes a structured data format such as "+xml", "+json", "+yaml", or "+cbor".
 * Is compressed using a binary compression format such as "+zip" or "+gzip".
@@ -484,25 +484,25 @@ The syntax and semantics for fragment identifiers are specified in the "Fragment
 2. For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.
 3. For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.
 
-### Security Considerations for Suffix Processing
+### Security Considerations for Structured Syntax Suffix Processing
 
 #### Document Validity
 
-If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured suffix will be valid for a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.
+If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured syntax suffix will be valid for a recognized subset of the structured syntax suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.
 
 #### Fragment Semantics
 
-If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.
+If a toolchain chooses to process a provided media type by using the selected structured syntax suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured syntax suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.
 
 #### Security Characteristics
 
-Toolchains cannot assume that the security characteristics of processing based on structured suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
+Toolchains cannot assume that the security characteristics of processing based on structured syntax  suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
 
 #### Partial Processing
 
-It is conceivable that an attacker could utilize structured suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.
+It is conceivable that an attacker could utilize structured syntax suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured syntax suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.
 
-Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
+Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured syntax suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
 
 
 
