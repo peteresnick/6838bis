@@ -482,11 +482,6 @@ The syntax and semantics for fragment identifiers are specified in the "Fragment
 2. For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.
 3. For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.
 
-### Additional Structured Syntax Suffixes
-
-The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
-
-
 ### Security Considerations for Structured Syntax Suffix Processing
 
 Processors that utilise the information in structured syntax suffixes encounter the following security considerations.
@@ -504,6 +499,10 @@ Likewise, the security characteristics that a processor needs to consider may ch
 An attacker might append structured syntax suffixes in order to trick processors into skipping security checks. For example, an attacker might use an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured syntax suffix to trigger an unzip process into invoking Microsoft Excel, bypassing anti-virus scanners that would normally block the file from being opened.
 
 Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
+
+### Additional Structured Syntax Suffixes
+
+The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
 #  Media Type Registration Procedures {#procedures}
 
