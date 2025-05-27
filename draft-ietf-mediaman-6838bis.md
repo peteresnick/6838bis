@@ -630,7 +630,10 @@ Security requirements for both media type and media type suffix registrations ar
 
 # IANA Considerations
 
-_None Yet._
+## Top-Level Types Registry
+
+In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
+
 
 #  Acknowledgments
 
