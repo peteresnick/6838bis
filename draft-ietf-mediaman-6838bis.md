@@ -464,13 +464,13 @@ Media types that make use of a structured syntax, or similar separator such as a
 
 Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated subtype name to register the new media type.
 
-### Common Suffix Patterns
+### Use Cases for Structured Syntax Suffixes
 
-There are a few common patterns that are utilized for media types that use structured syntax suffixes. These patterns include expressing that the data associated with a media type:
+Common use cases for media types that employ structured syntax suffixes include:
 
-* Utilizes a structured data format such as "+xml", "+json", "+yaml", or "+cbor".
-* Is compressed using a binary compression format such as "+zip" or "+gzip".
-* Is encoded in a digitally signature format such as "+jwt" or "+cose".
+* Identifying use of a structured data format; for example "+xml", "+json", "+yaml", and "+cbor"
+* Flagging compression with a format such as "+zip" or "+gzip"
+* Flagging encoding in a digital signature format such as "+jwt" or "+cose"
 
 While it is conceivable that suffixes such as "+xml+zip" are possible, such usage is NOT RECOMMENDED due to the large number of combinatorial possibilities that could occur and the negative impact that might have on security considerations for toolchains that attempt to safely process all of the possibilities.
 
