@@ -472,7 +472,7 @@ Common use cases for media types that employ structured syntax suffixes include:
 * Flagging compression with a format such as "+zip" or "+gzip"
 * Flagging encoding in a digital signature format such as "+jwt" or "+cose"
 
-While it is conceivable that suffixes such as "+xml+zip" are possible, such usage is NOT RECOMMENDED due to the large number of combinatorial possibilities that could occur and the negative impact that might have on security considerations for toolchains that attempt to safely process all of the possibilities.
+While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
 
 ### Fragment Identifiers and Suffixes
 
