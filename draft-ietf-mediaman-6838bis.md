@@ -277,10 +277,15 @@ If a media type is explicitly intended for limited use, this MUST be noted in it
 
 # Top-Level Media Types {#top-level}
 
-The choice of top-level type MUST take into account the nature of media type involved. New subtypes of top-level types MUST conform to the restrictions of the top-level type, if any.
+Media types are organised into general categories using the top-level type. The choice of top-level type MUST take into account the nature of media type involved.
 
-The following sections describe each of the initial set of top-level types and their associated restrictions. Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport. (See {{!RFC2046}} for additional information on the restrictions MIME imposes.)
+The list of top-level types is maintained in the IANA Top-Level Media Types registry at:
 
+> https://www.iana.org/assignments/top-level-media-types/
+
+Top-level types can place various restrictions on the media types that use them. New media types MUST conform to the restrictions (if any) of their top-level type.
+
+Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport (See {{!RFC2046}} for additional information on the restrictions MIME imposes).
 
 ## Additional Top-Level Types
 
