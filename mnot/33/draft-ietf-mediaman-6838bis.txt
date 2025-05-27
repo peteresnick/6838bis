@@ -863,10 +863,7 @@ Table of Contents
        format", as described in Section 4.1.1.1.
 
    The first procedure is used for registrations from IETF Consensus
-   documents, or in rare cases when registering a grandfathered (see
-   Appendix B) and/or otherwise incomplete registration is in the
-   interest of the Internet community.  See Section 2.2 for publication
-   requirements.
+   documents.  See Section 2.2 for publication requirements.
 
    In the second case, the IESG makes a one-time decision on whether the
    registration submitter represents a recognized standards-related
