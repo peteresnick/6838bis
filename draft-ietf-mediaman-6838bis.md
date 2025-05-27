@@ -60,15 +60,17 @@ This document defines procedures for the specification and registration of media
 
 # Introduction
 
-Internet application protocols are capable of carrying arbitrary labeled content, including but not limited to HTTP {{?RFC9110}} and MIME {{!RFC2045}}.
+Internet application protocols (including but not limited to HTTP {{?RFC9110}} and MIME {{!RFC2045}}) are capable of carrying arbitrary labeled content.
 
-Such labels are known as media types. A media type consists of a top-level type and a subtype, which is further structured into trees. Optionally, a media type can be defined to allow companion data, known as parameters.
+Those labels are known as media types. A media type consists of a top-level type ({{top-level}}) and a subtype ({{subtypes}}), which is further structured into a tree (identified by a prefix). A subtype can also be associated with a structured syntax (identified by suffix). Optionally, a media type can be defined to allow companion data, known as parameters.
 
-This document defines the criteria and procedures to be used to register media types ({{procedures}}) as well as media type structured suffixes ({{suffix-procedures}}) in the Internet Assigned Numbers Authority (IANA) registry.
-
-The location of the media type registry managed by these procedures is:
+{{requirements}} defines the criteria for registering media types. {{procedures}} outlines the procedures used to do so. The location of the media type registry is:
 
 > http://www.iana.org/assignments/media-types/
+
+{{suffix-procedures}} outlines the procedures for managing the registry for structured suffixes. It is located at:
+
+> https://www.iana.org/assignments/media-type-structured-suffix/
 
 ## Conventions Used in This Document
 
@@ -76,7 +78,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 This specification makes use of the Augmented Backus-Naur Form (ABNF) {{!RFC5234}} notation, including the core rules defined in Appendix B of that document.
 
-# Media Type Registration Requirements
+# Media Type Registration Requirements {#requirements}
 
 Media type registrations are expected to conform to various requirements laid out in the following sections. Note that specific requirements can vary depending on the registration tree ({{trees}}).
 
