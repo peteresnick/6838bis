@@ -144,7 +144,7 @@ Type and subtype names MUST conform to the following ABNF:
                                ; specify a structured syntax suffix
 ~~~
 
-Note that this syntax is somewhat more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
+Note that this syntax is somewhat more restrictive than what is allowed by {{Section 5.1 of !RFC2045}} or {{Section 4.2 of ?RFC4288}}. Also note that while this syntax allows type and subtype names of up to 127 characters, implementation limits may make such long names problematic. For this reason, 'type-name' and 'subtype-name' SHOULD be limited to 64 characters.
 
 Although this syntax treats "." as equivalent to any other character, characters before any initial "." always specify the registration facet. Note that this means that facet-less standards tree registrations cannot use periods in the subtype name.
 
@@ -156,7 +156,7 @@ These requirements apply regardless of the registration tree involved.
 
 ### Aliases {#deprecated-aliases}
 
-In some cases, a single media type may have been widely deployed prior to registration under multiple names. In such cases, a preferred name MUST be chosen for the media type, and applications MUST use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known MAY be supplied as additional information in order to assist applications in processing the media type properly.
+In some cases, a single media type may have been widely deployed using multiple names prior to registration. In such cases, a preferred name MUST be chosen for the media type, and applications MUST use this to be compliant with the type's registration. However, a list of deprecated aliases by which the type is known MAY be supplied as additional information in order to assist applications in processing the media type properly.
 
 ## Parameters
 
@@ -206,7 +206,7 @@ Additional restrictions on 7bit and 8bit text are given in {{Section 4.1.1 of !R
 
 Media type registrations can specify how applications should interpret fragment identifiers (specified in {{Section 3.5 of !RFC3986}}) associated with the media type.
 
-Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types. In particular, media types that use a named structured syntax with a registered "+suffix" MUST follow whatever fragment identifier rules are given in the structured syntax suffix registration.
+Media types are encouraged to adopt fragment identifier schemes that are used with semantically similar media types. In particular, media types that use a structured syntax with a registered "+suffix" MUST follow whatever fragment identifier rules are given in the structured syntax suffix registration.
 
 ## Security {#secreq}
 
@@ -331,7 +331,7 @@ All subtypes of multipart and message MUST conform to the syntax rules and other
 
 ## Additional Top-Level Types
 
-In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new type name can be defined to accommodate it. Definition of a new top-level type name MUST be done via a Standards Track RFC, taking into account the criteria and guidelines given below; no other mechanism can be used to define additional type names.
+In some cases, a new media type may not be easily classified under any currently defined top-level type names. Such cases are expected to be quite rare. However, if such a case does arise, a new top-level type can be defined to accommodate it. Definition of a new top-level type name MUST be done via a Standards Track RFC, taking into account the criteria and guidelines given below; no other mechanism can be used to define additional top-level types.
 
 ### Required Criteria
 
@@ -383,9 +383,9 @@ Negative indicators for creation of a new top-level type include:
 
 ## Registration Trees {#trees}
 
-To increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in "trees," distinguished with faceted name prefixes.
+To increase the efficiency and flexibility of the registration process, different structures of subtype names can be registered in "trees," distinguished with faceted prefixes.
 
-For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the standards tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the vendor tree, and so its name would begin with a "vnd." prefix.
+For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the standards tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the vendor tree, and so its subtype name would begin with a "vnd." prefix.
 
 Note that some previously defined media types do not conform to the naming conventions described below; see {{grandfather}}.
 
@@ -407,7 +407,7 @@ In the second case, the IESG makes a one-time decision on whether the registrati
 
 The third case is described in {{community}}.
 
-Media types in the standards tree MUST NOT have faceted names, unless they are grandfathered in using the process described in {{grandfather}}.
+Media types in the standards tree MUST NOT have faceted subtype names, unless they are grandfathered in using the process described in {{grandfather}}.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
@@ -419,7 +419,7 @@ Some formats are interoperable (i.e., they are supported by more than one implem
 - That specification is not tied to or heavily associated with one implementation
 - The specification is freely available at a stable location
 - There are multiple interoperable implementations of the specification, or they are likely to emerge
-- The requested name is appropriate to the use case, and not so generic that it may be considered 'squatting'
+- The requested media type name is appropriate to the use case, and not so generic that it may be considered 'squatting'
 - There is no conflict with IETF work or work at other recognised SDOs (present or future)
 - There is evidence of broad adoption
 
@@ -435,7 +435,7 @@ A registration may be placed in the vendor tree by anyone who needs to interchan
 
 When a third party registers a type on behalf of someone else, both entities SHOULD be noted in the Change Controller field in the registration. One possible format for this would be "Foo, on behalf of Bar".
 
-Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a media subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
+Vendor tree registrations are distinguished by the leading facet "vnd.". That may be followed, at the discretion of the registrant, by either a subtype name from a well-known producer (e.g., "vnd.mudpie") or by an IANA-approved designation of the producer's name that is followed by a media type or product designation (e.g., vnd.bigcompany.funnypictures).
 
 While public exposure and review of media types to be registered in the vendor tree are not required, requesting review on the media-types@ietf.org mailing list is encouraged, to improve the quality of those specifications.
 
@@ -459,7 +459,7 @@ Subtype names with "x." as the first facet are intended exclusively for use in p
 
 The low barrier to registration in the vendor and personal trees means it should rarely, if ever, be necessary to use unregistered types. Therefore, use of types in the "x." tree is strongly discouraged.
 
-Note that types with names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" name prefix, it MAY be registered using its current name in an alternative tree by following the procedure defined in {{grandfather}}.
+Note that types with subtype names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" subtype name prefix, it MAY be registered in an alternative tree by following the procedure defined in {{grandfather}}.
 
 ### Additional Registration Trees
 
