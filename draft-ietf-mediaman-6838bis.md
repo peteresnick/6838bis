@@ -456,7 +456,7 @@ When the IETF performs such review, it needs to consider the greater expertise o
 
 A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign.
 
-For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.
+For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not registrable.
 
 The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
