@@ -474,13 +474,14 @@ Common use cases for media types that employ structured syntax suffixes include:
 
 While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
 
-### Fragment Identifiers and Suffixes {#suffix-frag}
+### Fragment Identifiers and Structured Syntax Suffixes {#suffix-frag}
 
-The syntax and semantics for fragment identifiers are specified in the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry. In general, when processing fragment identifiers associated with a structured syntax suffix, the following rules SHOULD be followed:
+Structured syntax suffixes are able to specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
 
-1. For cases defined for the structured syntax suffix, where the fragment identifier does resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry.
-2. For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.
-3. For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.
+Individual subtypes can specify additional handling. To ensure consistent processing, precedence is determined by the following rules (first match winning):
+
+1. When the structured syntax suffix defines fragment identifier handling and it successfully resolves the fragment identifier, that determines fragment identifier handling;
+2. Otherwise, the specific media type determines fragment identifier handling.
 
 ### Security Considerations for Structured Syntax Suffix Processing
 
