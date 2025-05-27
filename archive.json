@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-25T01:12:12.647253+00:00",
+  "timestamp": "2025-05-27T01:05:24.203950+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -1506,13 +1506,13 @@
       "labels": [],
       "body": "For #26",
       "createdAt": "2025-05-22T00:34:37Z",
-      "updatedAt": "2025-05-23T00:13:53Z",
+      "updatedAt": "2025-05-26T07:03:26Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "4eb1f667159a322027c3639c55a44da65064572a",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/26",
-      "headRefOid": "0a6b9ec12e39545c6b7a0b919b8d24187e6214a1",
+      "headRefOid": "ef59b43ca41fd8a663f39bf4caef4c7eaaa96359",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
