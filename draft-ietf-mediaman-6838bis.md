@@ -474,7 +474,7 @@ Common use cases for media types that employ structured syntax suffixes include:
 
 While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
 
-### Fragment Identifiers and Suffixes
+### Fragment Identifiers and Suffixes {#suffix-frag}
 
 The syntax and semantics for fragment identifiers are specified in the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry. In general, when processing fragment identifiers associated with a structured syntax suffix, the following rules SHOULD be followed:
 
@@ -489,25 +489,21 @@ The primary guideline for whether a structured syntax suffix is registrable is t
 
 ### Security Considerations for Structured Syntax Suffix Processing
 
-#### Document Validity
+Processors that utilise the information in structured syntax suffixes encounter the following security considerations.
 
-If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured syntax suffix will be valid for a recognized subset of the structured syntax suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.
+#### Relationships Between Types
 
-#### Fragment Semantics
+The relationship between a media type that employs a structured syntax suffix and the type (if any) that results from removing that suffix cannot be known merely by examining the types. For example, content marked "application/foo+bar" may or may not be processable or valid as "application/foo" content. It may be possible to derive one from the other, but that is specific to the structured syntax suffix and/or media type itself.
 
-If a toolchain chooses to process a provided media type by using the selected structured syntax suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured syntax suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.
+This uncertainty extends to fragment identifier processing: per the rules in {{suffix-frag}}, a fragment identifier that might be valid for an "application/foo+bar" document might not be applicable to another "+bar" document, because media-type specific fragment identifier resolution might be used.
 
-#### Security Characteristics
-
-Toolchains cannot assume that the security characteristics of processing based on structured syntax  suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
+Likewise, the security characteristics that a processor needs to consider may change depending upon whether it is solely processing the structured syntax suffix or the entire media type. For example, a processor cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
 
 #### Partial Processing
 
-It is conceivable that an attacker could utilize structured syntax suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured syntax suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.
+An attacker might append structured syntax suffixes in order to trick processors into skipping security checks. For example, an attacker might use an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured syntax suffix to trigger an unzip process into invoking Microsoft Excel, bypassing anti-virus scanners that would normally block the file from being opened.
 
-Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured syntax suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
-
-
+Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
 
 #  Media Type Registration Procedures {#procedures}
 
