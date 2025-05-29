@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-27T01:05:24.203950+00:00",
+  "timestamp": "2025-05-29T01:06:31.572283+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -204,7 +204,7 @@
       "labels": [],
       "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
       "createdAt": "2024-11-05T23:20:32Z",
-      "updatedAt": "2025-05-06T23:18:14Z",
+      "updatedAt": "2025-05-28T22:54:40Z",
       "closedAt": null,
       "comments": [
         {
@@ -213,6 +213,41 @@
           "body": "I suspect the community format process might subsume the grandfathering text, as well as this under 'Standards Tree':\n\n> or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community.",
           "createdAt": "2025-05-06T23:18:13Z",
           "updatedAt": "2025-05-06T23:18:13Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "See also #33.",
+          "createdAt": "2025-05-27T03:21:24Z",
+          "updatedAt": "2025-05-27T03:21:24Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "Am I correct in presuming this is the text under 4.1.1.1? Unfortunately, even beyond the list of media-types I mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6, I have been uncovering more registrations that are not proper templates, but say, email dumps. \n\nIdeally, I feel the text (not necessarily in that section but somewhere in the document) of broader scope might be needed to allow for all missing/incorrect registrations, as and when discovered, to be fixed (unless you plan to subsume all such cases under \"community formats\"), which a more general grandfathering text could have served.",
+          "createdAt": "2025-05-27T14:17:26Z",
+          "updatedAt": "2025-05-27T14:17:26Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "So I don't think this is really about grandfathering; it's about how to maintain the registry contents.\n\nOne option would be to enable the designated expert(s) to act as custodians of the registry and make improvements along the lines you're suggesting, with appropriate transparency and community consultation. That seems to have worked well in other registries, and also seems to be the model IANA is using (based upon the e-mails you linked in that other issue).\n\nSome spec text about the expert role spelling this out would help.\n\nThe other option would be to require an RFC to update these entries. That's heavier weight, but might be required in some cases where the expert didn't feel that they had the authority to make a change.",
+          "createdAt": "2025-05-28T00:46:42Z",
+          "updatedAt": "2025-05-28T00:46:42Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "I recognize the scope creep since I opened the original issue. Having an opinion about the options you present goes well beyond my pay grade. But if you do go the \"heavy weight\" route (and I realize this screams scope creep), I have two unrelated request:\n1. Consider tracking the history of entries, not every change, but where a spec has been updated or obsoleted. This came up with my conversations with Amanda in Bangkok.\n2. Consider mandating a structured format, say YAML, that at a first instance can be machine checked. I gather that Roy Fielding (from his old blog) has been upset about this for the longest time.\n\n",
+          "createdAt": "2025-05-28T15:02:04Z",
+          "updatedAt": "2025-05-28T15:02:04Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "For your (1), I think that's a matter of IANA-wide tooling/policy, not something that we want to do per-registry.\n\nFor your (2), I suspect that's too high a bar -- the purpose of the registry is to assure that it reflects reality, and anything that is a barrier to entry hurts that.",
+          "createdAt": "2025-05-28T22:54:39Z",
+          "updatedAt": "2025-05-28T22:54:39Z"
         }
       ]
     },
@@ -221,15 +256,15 @@
       "id": "I_kwDOMdBaOc6d-tmE",
       "title": "higher bar for IETF registrations than for external ones? ",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/8",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bc-pi",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "please see the thread https://mailarchive.ietf.org/arch/msg/media-types/Wlx2B1k_du8Ths2ojxL4jh7V7JM/ ",
       "createdAt": "2024-11-11T21:37:49Z",
-      "updatedAt": "2025-03-18T10:40:37Z",
-      "closedAt": null,
+      "updatedAt": "2025-05-27T03:00:38Z",
+      "closedAt": "2025-05-27T03:00:37Z",
       "comments": [
         {
           "author": "alvestrand",
@@ -244,6 +279,13 @@
           "body": "Decision in Bangkok: Yes, this is the current rule.\nNew issue: Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\nNew issue: Should we talk about what we expect from other standards organizations in maturity before they (allocate/register) names?\n\n",
           "createdAt": "2025-03-18T10:40:36Z",
           "updatedAt": "2025-03-18T10:40:36Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Closing, as we now have other issues.",
+          "createdAt": "2025-05-27T03:00:37Z",
+          "updatedAt": "2025-05-27T03:00:37Z"
         }
       ]
     },
@@ -451,7 +493,7 @@
       "labels": [],
       "body": "              You might consider adding some override here, incase the existing change controller is not responsive.\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r1941375260_\r\n            ",
       "createdAt": "2025-02-04T23:01:57Z",
-      "updatedAt": "2025-05-21T04:45:38Z",
+      "updatedAt": "2025-05-27T03:02:59Z",
       "closedAt": null,
       "comments": [
         {
@@ -460,6 +502,13 @@
           "body": "Is this #9?",
           "createdAt": "2025-05-21T04:45:37Z",
           "updatedAt": "2025-05-21T04:45:37Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Based on the side discussion in #9, my inclination is to close this with no action -- we already have procedures to recover from uncontactable folks, and collecting more information is likely to just increase the amount of bad information we have...",
+          "createdAt": "2025-05-27T03:02:58Z",
+          "updatedAt": "2025-05-27T03:02:58Z"
         }
       ]
     },
@@ -592,7 +641,7 @@
       "labels": [],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-05-21T17:30:36Z",
+      "updatedAt": "2025-05-27T20:15:55Z",
       "closedAt": null,
       "comments": [
         {
@@ -603,11 +652,11 @@
           "updatedAt": "2025-05-21T04:56:30Z"
         },
         {
-          "author": "7439henry",
-          "authorAssociation": "NONE",
-          "body": "Open discussion : Update The 'haptics' Top-Level Media Type(RFC9695) \n\nThe RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.\n",
-          "createdAt": "2025-05-21T17:30:14Z",
-          "updatedAt": "2025-05-21T17:30:14Z"
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I think this can be closed with no action, unless someone has a specific suggestion.",
+          "createdAt": "2025-05-27T03:05:22Z",
+          "updatedAt": "2025-05-27T03:05:22Z"
         }
       ]
     },
@@ -905,7 +954,7 @@
       "labels": [],
       "body": "The old top level descriptions (text, application and so on) are referenced in the IANA registry at https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml as being defined in RFC 2026.\n\nTheir description is copied in the text of RFC 6838, and so far in 6838bis.\n\nIt would make for a shorter document if we could delete them and just say that 2026 is the normative reference for them, but before doing that, we need to verify that there are no changes to the description between 2026 and 6838 that we want to make normative.\n",
       "createdAt": "2025-05-09T08:36:06Z",
-      "updatedAt": "2025-05-18T05:47:10Z",
+      "updatedAt": "2025-05-27T02:53:10Z",
       "closedAt": null,
       "comments": [
         {
@@ -914,6 +963,13 @@
           "body": "I had a fairly quick look through them all and am comfortable removing this text, which is largely duplicative.\n\nHowever, we should make it more discoverable, by:\n- Linking to the top-level types registry both in the draft and in the subtypes registry\n- Specifying section numbers in the top-level types registry",
           "createdAt": "2025-05-18T05:47:09Z",
           "updatedAt": "2025-05-18T05:47:09Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "PTAL at #36.",
+          "createdAt": "2025-05-27T02:53:08Z",
+          "updatedAt": "2025-05-27T02:53:08Z"
         }
       ]
     },
@@ -962,6 +1018,38 @@
       "body": "Does the community format process remove the need for the grandfathering text?",
       "createdAt": "2025-05-21T04:26:04Z",
       "updatedAt": "2025-05-21T04:26:04Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 38,
+      "id": "I_kwDOMdBaOc64Upcv",
+      "title": "Early Allocation",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/38",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
+      "createdAt": "2025-05-27T02:59:57Z",
+      "updatedAt": "2025-05-27T02:59:57Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 40,
+      "id": "I_kwDOMdBaOc64e0VM",
+      "title": "Update The 'haptics' Top-Level Media Type(RFC9695)",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/40",
+      "state": "OPEN",
+      "author": "7439henry",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "\n\nThe RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.",
+      "createdAt": "2025-05-27T20:15:29Z",
+      "updatedAt": "2025-05-27T20:15:29Z",
       "closedAt": null,
       "comments": []
     }
@@ -1506,13 +1594,144 @@
       "labels": [],
       "body": "For #26",
       "createdAt": "2025-05-22T00:34:37Z",
-      "updatedAt": "2025-05-26T07:03:26Z",
+      "updatedAt": "2025-05-27T03:37:59Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
-      "baseRefOid": "4eb1f667159a322027c3639c55a44da65064572a",
+      "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/26",
-      "headRefOid": "ef59b43ca41fd8a663f39bf4caef4c7eaaa96359",
+      "headRefOid": "3603d24b9a6590f86a525b4cd74324317eea9853",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 35,
+      "id": "PR_kwDOMdBaOc6Xs21T",
+      "title": "Mnot/structured suffix",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/35",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-05-27T02:39:25Z",
+      "updatedAt": "2025-05-27T22:31:51Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/structured-suffix",
+      "headRefOid": "e518a819310511c78d9059e78b0b26997923f8b5",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMdBaOc6rHeMV",
+          "commit": {
+            "abbreviatedOid": "e518a81"
+          },
+          "author": "OR13",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-27T12:26:43Z",
+          "updatedAt": "2025-05-27T12:26:43Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDOMdBaOc6rPM7H",
+          "commit": {
+            "abbreviatedOid": "e518a81"
+          },
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-05-27T22:31:51Z",
+          "updatedAt": "2025-05-27T22:31:51Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "id": "PR_kwDOMdBaOc6Xs6Yo",
+      "title": "Remove top-level type definitions",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/36",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #29.",
+      "createdAt": "2025-05-27T02:52:53Z",
+      "updatedAt": "2025-05-27T03:38:54Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/29",
+      "headRefOid": "5bd71880a16590c1a16d0ff3b794f1d3db503684",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 37,
+      "id": "PR_kwDOMdBaOc6Xs8gh",
+      "title": "IETF standards' controller is the IESG.",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/37",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #9.",
+      "createdAt": "2025-05-27T02:58:54Z",
+      "updatedAt": "2025-05-27T03:39:07Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/9",
+      "headRefOid": "60a7b58328d681e893fdd579d005c95d8a941aa1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 39,
+      "id": "PR_kwDOMdBaOc6XtCNJ",
+      "title": "Adjust grandfathering to account for community process",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/39",
+      "state": "OPEN",
+      "author": "mnot",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #33.",
+      "createdAt": "2025-05-27T03:19:58Z",
+      "updatedAt": "2025-05-27T03:39:20Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
+      "headRepository": "ietf-wg-mediaman/6838bis",
+      "headRefName": "mnot/33",
+      "headRefOid": "e6dee9f5d2eca7e808784cdac409e07695f3dba6",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
