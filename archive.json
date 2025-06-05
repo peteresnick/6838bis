@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-05-29T01:06:31.572283+00:00",
+  "timestamp": "2025-06-05T01:06:26.369922+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -555,7 +555,7 @@
       "labels": [],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-05-23T00:29:58Z",
+      "updatedAt": "2025-06-04T23:20:37Z",
       "closedAt": null,
       "comments": [
         {
@@ -578,6 +578,20 @@
           "body": "Perhaps that should have been explicitly agreed to before closing the other registry.\n\nCurrently, there is _no_ other information that's limited to a specific subset of media types in the registry or in the registration template. Requiring that any new information captured be potentially applicable to all media types is a very reasonable and defensible position to take, with considerable precedence in the IETF. The fact that a particular community has got itself into an inconvenient position doesn't seem like a good reason to violate that principle.\n\n\n\n",
           "createdAt": "2025-05-23T00:29:57Z",
           "updatedAt": "2025-05-23T00:29:57Z"
+        },
+        {
+          "author": "gloinul",
+          "authorAssociation": "NONE",
+          "body": "At IETF 122 we did discuss these issues in Mediaman meeting, and a question that came up is if there are other than RTP payload formats that uses Encoding: framed if that can be relied on as the primary indicator of RTP payload formats. \n\nI do wonder from usage of the Media Types registry if the RTP payload formats being there and not being clearly marked actually make the registry harder to use. I think a lot depends on what perspective one has when one comes to the registry itself. Application media type has a lot of file format, the RTP payload formats are few in that category, but if you look at video the majority of standards tree types are RTP payload formats, there are a couple of media bucket file formats. So if one go there and look for what is available to store video one would have to sift through to find the relevant. But, if one assume that one primarily goes to the registry to look up the reference for a seen media type then what is in the registry is all that is needed.\n\n@alvestrand what do you say as you where closer to the usages that wanted to know what RTP Payload formats that exists?\n\n",
+          "createdAt": "2025-06-04T07:12:56Z",
+          "updatedAt": "2025-06-04T07:12:56Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "To my mind, the \"is RTP\" information is not application specific, it's RTP specific. RTP formats is a field of use, not an application.\n\nBut - RTP doesn't really fit well with the other \"encoding\" descriptions like \"binary\", \"8bit\" or \"7bit\" since these presume the idea of a byte stream representation (aka \"file\").\n\nSo using \"encoding: frames\" (and making certain to specify that the \"encoding\" field is multivalued, and that the description of the possible values of the \"encoding\" field is right) seems like a good way to accomplish the purpose without bending things too much.\n\n",
+          "createdAt": "2025-06-04T23:20:37Z",
+          "updatedAt": "2025-06-04T23:20:37Z"
         }
       ]
     },
@@ -1033,9 +1047,17 @@
       "labels": [],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-05-27T02:59:57Z",
+      "updatedAt": "2025-06-04T17:36:11Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "So, an early allocation procedure would enable specifications under development to set a placeholder for media types they intend to register once the specifications are finished?",
+          "createdAt": "2025-06-04T17:36:10Z",
+          "updatedAt": "2025-06-04T17:36:10Z"
+        }
+      ]
     },
     {
       "number": 40,
