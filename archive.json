@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-05T01:06:26.369922+00:00",
+  "timestamp": "2025-06-08T01:13:35.598237+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -12,6 +12,16 @@
       "name": "Ready for PR",
       "description": "",
       "color": "02CE60"
+    },
+    {
+      "name": "Ready to close",
+      "description": "",
+      "color": "5319e7"
+    },
+    {
+      "name": "Needs review",
+      "description": "",
+      "color": "7A6C39"
     }
   ],
   "issues": [
@@ -201,10 +211,12 @@
       "author": "CxRes",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "I find that the text in paragraph 2 of Appendix A is only targeting unfaceted subtypes that should be registered as faceted. There are unregistered or improperly registered unfaceted subtypes that might need to re-registered as unfaceted. Such as media-types mentioned in https://github.com/ietf-wg-mediaman/procedures/issues/6.\r\n\r\nThis text should therefore RECOMMEND that in all cases where the media-types are unregistered, missing a registration template or have unstructured templates, they should be re-registered if possible.",
       "createdAt": "2024-11-05T23:20:32Z",
-      "updatedAt": "2025-05-28T22:54:40Z",
+      "updatedAt": "2025-06-06T20:08:52Z",
       "closedAt": null,
       "comments": [
         {
@@ -298,10 +310,12 @@
       "author": "rohanmahy",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Needs review"
+      ],
       "body": "Some IETF specs (ex: [RC9594](https://www.rfc-editor.org/rfc/rfc9594.html) use an IETF WG name and mailing list for the Person and Email, but most do not (I saw one that referred IANA to the Editor's Addresses). I would like this document to either tell WGs explicitly \"DO THAT\" or \"DON'T DO THAT\" please.\r\n\r\nWGs come and go and hopefully live shorter lives than people, but IETF mailing lists can last a pretty long time.",
       "createdAt": "2024-11-18T20:43:54Z",
-      "updatedAt": "2025-05-21T06:32:54Z",
+      "updatedAt": "2025-06-06T20:08:22Z",
       "closedAt": null,
       "comments": [
         {
@@ -434,10 +448,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "From Murray Kucherawy (mailing list Nov 8):\r\n\r\nRFC 6838 Section 5.3 creates an appeal process by referencing RFC 2026 Section 6.5.4 and saying that appeals go to the IESG.  That specific part of RFC 2026 suggest the appeal process being established appears to me to boil down to:\r\n\r\n* the appeal goes to the IESG, and there's no escalation available past that\r\n* the appeal must provide adequate detail\r\n* the appeal must be filed within two months of the DE's decision\r\n* the IESG has discretion to process the appeal however it wants\r\n* the IESG has to complete its review and deliver its decision in a reasonable amount of time\r\n\r\n...or at least that's how I read it.  Maybe I'm being too pedantic but I also note that RFC 2026 Section 6.5.4 is subordinate to Section 6.5, which says that it (and its subsections) apply to decisions that are made as part of the standards process using consensus development, and decisions of a DE do not meet that definition.  It doesn't look to me like 6.5.4 was meant to be referenced or incorporated in this way.\r\n\r\nI suggest this is something the WG should review and decide whether it wants to keep this as-is or perhaps say something more explicit and crisp.\r\n\r\n",
       "createdAt": "2024-11-20T11:12:17Z",
-      "updatedAt": "2025-05-21T04:45:06Z",
+      "updatedAt": "2025-06-06T20:07:46Z",
       "closedAt": null,
       "comments": [
         {
@@ -490,10 +506,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "              You might consider adding some override here, incase the existing change controller is not responsive.\r\n\r\n_Originally posted by @OR13 in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r1941375260_\r\n            ",
       "createdAt": "2025-02-04T23:01:57Z",
-      "updatedAt": "2025-05-27T03:02:59Z",
+      "updatedAt": "2025-06-06T20:04:12Z",
       "closedAt": null,
       "comments": [
         {
@@ -652,10 +670,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-05-27T20:15:55Z",
+      "updatedAt": "2025-06-06T20:07:05Z",
       "closedAt": null,
       "comments": [
         {
@@ -795,10 +815,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Needs review"
+      ],
       "body": "The spec uses MUST/MAY/SHOULD throughout to indicate registration requirements, not interoperability requirements.",
       "createdAt": "2025-05-07T01:36:56Z",
-      "updatedAt": "2025-05-18T22:10:15Z",
+      "updatedAt": "2025-06-06T20:05:12Z",
       "closedAt": null,
       "comments": [
         {
@@ -965,10 +987,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Needs review"
+      ],
       "body": "The old top level descriptions (text, application and so on) are referenced in the IANA registry at https://www.iana.org/assignments/top-level-media-types/top-level-media-types.xhtml as being defined in RFC 2026.\n\nTheir description is copied in the text of RFC 6838, and so far in 6838bis.\n\nIt would make for a shorter document if we could delete them and just say that 2026 is the normative reference for them, but before doing that, we need to verify that there are no changes to the description between 2026 and 6838 that we want to make normative.\n",
       "createdAt": "2025-05-09T08:36:06Z",
-      "updatedAt": "2025-05-27T02:53:10Z",
+      "updatedAt": "2025-06-06T20:05:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -1028,10 +1052,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Needs review"
+      ],
       "body": "Does the community format process remove the need for the grandfathering text?",
       "createdAt": "2025-05-21T04:26:04Z",
-      "updatedAt": "2025-05-21T04:26:04Z",
+      "updatedAt": "2025-06-06T20:05:41Z",
       "closedAt": null,
       "comments": []
     },
@@ -1044,10 +1070,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-06-04T17:36:11Z",
+      "updatedAt": "2025-06-06T20:06:24Z",
       "closedAt": null,
       "comments": [
         {
@@ -1056,6 +1084,27 @@
           "body": "So, an early allocation procedure would enable specifications under development to set a placeholder for media types they intend to register once the specifications are finished?",
           "createdAt": "2025-06-04T17:36:10Z",
           "updatedAt": "2025-06-04T17:36:10Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Seems that we had one. https://datatracker.ietf.org/doc/html/rfc6838#section-5.2.1\nWas it ever used? Do we need to change it?\n",
+          "createdAt": "2025-06-05T08:17:27Z",
+          "updatedAt": "2025-06-05T08:17:27Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "Oh yeah, I remember reading that once.\nThe existing text works for me, though I don't know if it has ever been used.",
+          "createdAt": "2025-06-06T15:57:59Z",
+          "updatedAt": "2025-06-06T15:57:59Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It seems like this can be closed with no action, then.",
+          "createdAt": "2025-06-06T20:06:23Z",
+          "updatedAt": "2025-06-06T20:06:23Z"
         }
       ]
     },
@@ -1068,12 +1117,36 @@
       "author": "7439henry",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Ready to close"
+      ],
       "body": "\n\nThe RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.",
       "createdAt": "2025-05-27T20:15:29Z",
-      "updatedAt": "2025-05-27T20:15:29Z",
+      "updatedAt": "2025-06-07T22:25:31Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This doesn't seem like it's actionable for this group.",
+          "createdAt": "2025-06-06T20:09:38Z",
+          "updatedAt": "2025-06-06T20:10:09Z"
+        },
+        {
+          "author": "7439henry",
+          "authorAssociation": "NONE",
+          "body": "Could you elaborate on this?\n\nI had a discussion with Harald, and he mentioned that we can discuss this at the next IETF meeting. The WGLC in AVTCORE is almost complete, and we are currently waiting for input from the Mediaman group. You can find the details below.\n\n\n\n\nI expect the agenda for Madrid to be working through the issues list on 6838bis.\nYou might want to formulate your input as a comment on https://github.com/ietf-wg-mediaman/6838bis/issues/21\nHarald\n\n**On 5/14/25 08:45, Marius Kleidl wrote:\nHello Harald,\n\nthank you, that all makes sense. Would you be able to reserve a short slot for this topic for the next mediaman session at IETF 123?\n\nBest regards\nMarius**\n\nOn Tue, May 13, 2025 at 11:42\u202fAM Harald Alvestrand <[harald@alvestrand.no](mailto:harald@alvestrand.no)> wrote:\nIt would seem natural to have this as a subdiscussion point under the \nheading of \"update procedures\". It seems to me that the actual \nparameters and so on are an AVTCORE topic, but the process for updating \na registration from RFC 9695 should be a MEDIAMAN topic.\n\nMakes sense?\n\nHarald\n\n**On 5/13/25 09:27, Marius Kleidl wrote:\n> Dear Harald, dear A.J.,\n> \n> RFC 9695 is a product of the mediaman WG and introduced the haptics top- \n> level media type alongside side three subtypes, including haptics/hmpg. \n> In the avtcore WG, we have a draft that specifies additional, optional \n> parameters for the haptics/hmpg subtype. In our opinion, it makes sense \n> to mark this draft as an update to RFC 9695, but would like to get your \n> perspective as mediaman chairs on this as well. Does that update seem \n> good to you? Should that draft be discussed/presented at the next IETF \n> meeting?\n> \n> Any input is welcome!\n> \n> Best regards,\n> Marius Kleidl\n> AVTCORE Co-Chair\n> \n> On Fri, Apr 25, 2025 at 9:08\u202fPM Hyunsik Yang \n> <Hyunsik.Yang=[40InterDigital.com@dmarc.ietf.org](mailto:40InterDigital.com@dmarc.ietf.org) \n> <mailto:[40InterDigital.com@dmarc.ietf.org](mailto:40InterDigital.com@dmarc.ietf.org)>> wrote:\n>** \n>     Dear Mediaman WG experts,____\n> \n>     __ __\n> \n>     As a co-author of the \"RTP Payload for Haptics\" draft in the AVTCORE\n>     Working Group, I would like to share with you our plan to update the\n>     ' haptics/hmpg' subtype registration made in RFC 9695, to add\n>     optional parameters. As you may know, the original registration in\n>     RFC 9695 did not include any required or optional parameters. ____\n> \n>     __ __\n> \n>     Therefore, we think that \u201cRTP Payload for Haptics\u201d should be marked\n>     as an update to RFC9695.____\n> \n>     __ __\n> \n>     Here is the link to the draft: https://datatracker.ietf.org/doc/\n>     html/draft-ietf-avtcore-rtp-haptics <https://datatracker.ietf.org/\n>     doc/html/draft-ietf-avtcore-rtp-haptics>____\n> \n>     At this stage, this draft is in WGLC. Before we move forward, we\n>     would like to ask the members of MEDIAMAN if updating RFC9695 is the\n>     right thing to do, and if there are any concerns regarding the\n>     update of the 'hmpg' subtype.____\n> \n>     Thank you very much for your time and consideration.____\n> \n>     __ __\n> \n>     Best regards,____\n> \n> \n>     Hyunsik Yang, on behalf of the co-authors.____\n> \n>     __ __\n>\n\n",
+          "createdAt": "2025-06-06T20:39:11Z",
+          "updatedAt": "2025-06-06T20:39:11Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It may well be that it's good to discuss it with the WG, but it isn't an issue against this specification, as far as I can see. Harald noted that it might serve as input to discussion in #21, but not that it's a distinct issue.",
+          "createdAt": "2025-06-07T22:25:31Z",
+          "updatedAt": "2025-06-07T22:25:31Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -1635,24 +1708,26 @@
       "id": "PR_kwDOMdBaOc6Xs21T",
       "title": "Mnot/structured suffix",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/35",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-05-27T02:39:25Z",
-      "updatedAt": "2025-05-27T22:31:51Z",
+      "updatedAt": "2025-06-06T19:58:47Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
       "headRepository": "ietf-wg-mediaman/6838bis",
       "headRefName": "mnot/structured-suffix",
       "headRefOid": "e518a819310511c78d9059e78b0b26997923f8b5",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-06-06T19:58:46Z",
+      "mergedAt": "2025-06-06T19:58:46Z",
+      "mergedBy": "mnot",
+      "mergeCommit": {
+        "oid": "f009c54ea568b55b4a58b89f33bbacf120d20338"
+      },
       "comments": [],
       "reviews": [
         {
