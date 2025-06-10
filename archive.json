@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-08T01:13:35.598237+00:00",
+  "timestamp": "2025-06-10T01:08:37.723286+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -675,7 +675,7 @@
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-06-06T20:07:05Z",
+      "updatedAt": "2025-06-09T13:29:15Z",
       "closedAt": null,
       "comments": [
         {
@@ -691,6 +691,13 @@
           "body": "I think this can be closed with no action, unless someone has a specific suggestion.",
           "createdAt": "2025-05-27T03:05:22Z",
           "updatedAt": "2025-05-27T03:05:22Z"
+        },
+        {
+          "author": "7439henry",
+          "authorAssociation": "NONE",
+          "body": "The RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.",
+          "createdAt": "2025-06-09T13:29:14Z",
+          "updatedAt": "2025-06-09T13:29:14Z"
         }
       ]
     },
@@ -1113,7 +1120,7 @@
       "id": "I_kwDOMdBaOc64e0VM",
       "title": "Update The 'haptics' Top-Level Media Type(RFC9695)",
       "url": "https://github.com/ietf-wg-mediaman/6838bis/issues/40",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "7439henry",
       "authorAssociation": "NONE",
       "assignees": [],
@@ -1122,8 +1129,8 @@
       ],
       "body": "\n\nThe RTP Payload Format for Haptics currently under development in AVTCORE is updating the Haptic media type defined in RFC 9695. We need an update since this document introduces optional parameters to enable extended functionality while maintaining backward compatibility. Before moving on to the next step (AD and IESG), we want to ensure that the current draft does not have any issues with the HMPG update.",
       "createdAt": "2025-05-27T20:15:29Z",
-      "updatedAt": "2025-06-07T22:25:31Z",
-      "closedAt": null,
+      "updatedAt": "2025-06-09T21:26:51Z",
+      "closedAt": "2025-06-09T21:26:51Z",
       "comments": [
         {
           "author": "mnot",
@@ -1145,6 +1152,13 @@
           "body": "It may well be that it's good to discuss it with the WG, but it isn't an issue against this specification, as far as I can see. Harald noted that it might serve as input to discussion in #21, but not that it's a distinct issue.",
           "createdAt": "2025-06-07T22:25:31Z",
           "updatedAt": "2025-06-07T22:25:31Z"
+        },
+        {
+          "author": "7439henry",
+          "authorAssociation": "NONE",
+          "body": "I see your point. I will update this issue in section #21 .\nWhile the WGLC process in AVTCORE has been completed, we are currently awaiting resolution of media type update issue before proceeding to the next stage.\nthanks.",
+          "createdAt": "2025-06-09T13:18:37Z",
+          "updatedAt": "2025-06-09T13:18:37Z"
         }
       ]
     }
@@ -1770,7 +1784,7 @@
       "labels": [],
       "body": "Fixes #29.",
       "createdAt": "2025-05-27T02:52:53Z",
-      "updatedAt": "2025-05-27T03:38:54Z",
+      "updatedAt": "2025-06-08T05:02:22Z",
       "baseRepository": "ietf-wg-mediaman/6838bis",
       "baseRefName": "main",
       "baseRefOid": "cc03f4653d2c5afa7f1086a9229b72f83c989f3c",
