@@ -68,7 +68,7 @@ Those labels are known as media types. A media type consists of a top-level type
 
 > http://www.iana.org/assignments/media-types/
 
-{{suffix-procedures}} outlines the procedures for managing the registry for structured suffixes. It is located at:
+{{suffix-procedures}} outlines the procedures for managing the registry for structured syntax suffixes. It is located at:
 
 > https://www.iana.org/assignments/media-type-structured-suffix/
 
@@ -230,25 +230,6 @@ Issues that need to be described in a security analysis of a media type include:
 
 * A media type might be targeted for applications that require some sort of security assurance but don't provide the necessary security mechanisms themselves. For example, a media type could be defined for storage of sensitive medical information that in turn requires external confidentiality and integrity protection services, or which is designed for use only within a secure environment. Types should always document whether or not they need such services in their security considerations.
 
-### Structured Suffixes
-
-#### Document Validity
-
-If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that a document that is valid per the decoding rules associated with the structured suffix will be valid for a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that a valid "+bar" document will also be a valid "application/foo" document. On the other hand, presuming a media type of "application/foo+bar", a toolchain can presume that a valid "application/foo+bar" document will also be a valid "+bar" document.
-
-#### Fragment Semantics
-
-If a toolchain chooses to process a provided media type by using the selected structured suffix processing rules, it cannot presume that fragment identifier semantics will be the same across a recognized subset of the structured suffix. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the fragment semantics for a "+bar" document will be the same as for an "application/foo+bar" document.
-
-#### Security Characteristics
-
-Toolchains cannot assume that the security characteristics of processing based on structured suffixes will be the same for the entire media type. For example, presuming a media type of "application/foo+bar", a toolchain cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
-
-#### Partial Processing
-
-It is conceivable that an attacker could utilize structured suffixes in a way that tricks unsuspecting toolchains into skipping important security checks and allowing viruses to propagate. For example, an attacker might utilize an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured suffix to trigger an unzip process that might then directly invoke Microsoft Excel, bypassing anti-virus tooling that would otherwise block a macro-enabled MS Excel file containing a virus of some kind from being scanned or opened.
-
-Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Toolchains that process media types based purely on a structured suffix need to ensure that further processing does not blindly trust the decoded data, and that proper magic header or file structure checking is performed, before allowing the decoded data to drive operations that might negatively impact the application environment or operating system.
 
 ## Additional Information
 
@@ -277,57 +258,11 @@ A media type intended for limited use should note this in its registration. The 
 
 # Top-Level Media Types {#top-level}
 
-The choice of top-level type needs to take into account the nature of media type involved. New subtypes of top-level types need to conform to the restrictions of the top-level type, if any.
+The list of top-level types is maintained in the IANA Top-Level Media Types registry at:
 
-The following sections describe each of the initial set of top-level types and their associated restrictions. Additionally, various protocols, including but not limited to HTTP and MIME, can impose additional restrictions on the media types they can transport. (See {{!RFC2046}} for additional information on the restrictions MIME imposes.)
+> https://www.iana.org/assignments/top-level-media-types/
 
-## Text Media Types
-
-A top-level type of "text" indicates that the content is principally textual in form.
-
-Text that does not provide for or allow formatting commands, font attribute specifications, processing instructions, interpretation directives, or content markup is known as "plain text". Plain text is seen simply as a linear sequence of characters, possibly interrupted by line breaks or page breaks. Plain text can allow the stacking of several characters in the same position in the text. Plain text in scripts like Arabic and Hebrew may also include facilities that allow the arbitrary mixing of text segments with different writing directions.
-
-Beyond plain text, there are many formats for representing what might be known as "rich text". An interesting characteristic of many such representations is that they are to some extent readable even without the software that interprets them. It is useful to distinguish them, at the highest level, from such unreadable data as images, audio, or text represented in an unreadable form. In the absence of appropriate interpretation software, it is reasonable to present subtypes of "text" to the user, while it is not reasonable to do so with most non-textual data. Such formatted textual data can be represented using subtypes of "text".
-
-### The Charset Parameter
-
-Many subtypes of text, notably including the subtype "text/plain", which is a generic subtype for plain text defined in {{!RFC2046}}, define a "charset" parameter. If a "charset" parameter is defined for a particular subtype of text, it MUST be used to specify a charset name defined in accordance to the procedures laid out in {{!RFC2978}}.
-
-As specified in {{!RFC6657}}, a "charset" parameter should not be specified when charset information is transported inside the payload (e.g., as in "text/xml").
-
-If a "charset" parameter is specified, it should be a required parameter, eliminating the options of specifying a default value. If there is a strong reason for the parameter to be optional despite this advice, each subtype can specify its own default value, or alternatively, it can specify that there is no default value. Finally, the "UTF-8" charset {{!RFC3629}} should be selected as the default. See {{!RFC6657}} for additional information on the use of "charset" parameters in conjunction with subtypes of text.
-
-Regardless of what approach is chosen, all new text/* registrations MUST clearly specify how the charset is determined; relying on the US-ASCII default defined in {{Section 4.1.2 of !RFC2046}} is no longer permitted. If explanatory text is needed, this should be placed in the additional information section of the registration.
-
-## Image Media Types
-
-A top-level type of "image" indicates that the content is one or more individual images. The subtype names the specific image format.
-
-## Audio Media Types
-
-A top-level type of "audio" indicates that the content is audio data. The subtype names the specific audio format.
-
-## Video Media Types
-
-A top-level type of "video" indicates that the content is a time-varying-picture image, possibly with color and coordinated sound. The term 'video' is used in its most generic sense, rather than with reference to any particular technology or format, and is not meant to preclude subtypes such as animated drawings encoded compactly.
-
-Note that although in general the mixing of multiple kinds of media in a single body is discouraged {{!RFC2046}}, it is recognized that many video formats include a representation for synchronized audio and/or text, and this is explicitly permitted for subtypes of "video".
-
-## Application Media Types
-
-A top-level type of "application" indicates that the content is discrete data that do not fit under any of the other type names, and particularly for data to be processed by some type of application program. This is information that must be processed by an application before it is viewable or usable by a user.
-
-Expected uses for the "application" type name include but are not limited to file transfer, spreadsheets, presentations, scheduling data, and languages for "active" (computational) material. (The last, in particular, can pose security problems that must be understood by implementors. The "application/postscript" media type registration in {{!RFC2046}} provides a good example of how to handle these issues.)
-
-For example, a meeting scheduler might define a standard representation for information about proposed meeting dates. An intelligent user agent would use this information to conduct a dialog with the user, and might then send additional material based on that dialog. More generally, there have been several "active" languages developed in which programs in a suitably specialized language are transported to a remote location and automatically run in the recipient's environment. Such applications may be defined as subtypes of the "application" top-level type.
-
-The subtype of "application" will often either be the name or include part of the name of the application for which the data are intended. This does not mean, however, that any application program name may simply be used freely as a subtype of "application"; the subtype needs to be registered.
-
-## Multipart and Message Media Types
-
-A top-level type of "multipart" or "message" indicates that the content is a composite type; that is, they provide a means of encapsulating zero or more objects, each one a separate media type.
-
-All subtypes of multipart and message need to conform to the syntax rules and other requirements specified in {{!RFC2046}} and amended by {{Section 3.5 of !RFC6532}}.
+Top-level types can place various restrictions on the media types that use them. New media types MUST conform to the restrictions (if any) of their top-level type.
 
 ## Additional Top-Level Types
 
@@ -401,7 +336,7 @@ Registrations in the standards tree are either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents, or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community. See {{publication}} for publication requirements.
+The first procedure is used for registrations from IETF Consensus documents. See {{publication}} for publication requirements.
 
 In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format is required to be described by a formal specification produced by the submitting standards-related organization.
 
@@ -409,7 +344,9 @@ The third case is described in {{community}}.
 
 Media types in the standards tree do not have faceted subtype names, unless they are grandfathered in using the process described in {{grandfather}}.
 
-The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
+The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards, the change controller is normally the IESG.
+
+Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
 #### Community Formats in the Standards Tree {#community}
 
@@ -469,38 +406,60 @@ It is explicitly assumed that these trees might be created for external registra
 
 When the IETF performs such review, it needs to consider the greater expertise of the requesting organization with respect to the subject media type.
 
-## Subtype Suffixes {#suffixes}
+## Structured Syntax Suffixes {#suffixes}
 
-{{?RFC6838}} standardized a suffix convention for well-known structured syntaxes. In particular, media types have been registered with suffixes such as "+der", "+fastinfoset", and "+json".
+Media types can be identified as using a well-known structured syntax (for example, XML or JSON) using use a "+suffix" convention.
 
-A structured suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured suffix MUST NOT contain more than one "+" sign. As an example, given the "application/foo+bar" media type: "application" is the top-level type, "foo" is the base subtype name, and "+bar" is the structured suffix. A media type such as "application/foo+bar+baz" is not allowed.
+A structured syntax suffix is defined as all of the characters to the right of the left-most "+" sign in a media type, including the left-most "+" sign itself. The structured syntax suffix MUST NOT contain more than one "+" sign.
 
-The primary guideline for whether a structured type name suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
+For example, in the "application/foo+bar" media type "application" is the top-level type, "foo" is the subtype name, and "+bar" is the structured syntax suffix. A media type such as "application/foo+bar+baz" is not registrable.
 
-Media types that make use of a named structured syntax should use the appropriate registered "+suffix" for that structured syntax when they are registered. By the same token, media types MUST NOT be given names incorporating suffixes for structured syntaxes they do not actually employ. "+suffix" constructs for as-yet unregistered structured syntaxes should not be used, given the possibility of conflicts with future suffix definitions.
+Structured syntax suffixes are required to be registered before use by a media type registration; see {{suffix-procedures}}. Media types that make use of a structured syntax SHOULD use the appropriate suffix, and MUST NOT use suffixes for structured syntaxes that they do not actually employ.
 
-Media types that make use of a named structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing base subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the base subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing base subtype names in the media type registry.
+Media types that make use of a structured syntax, or similar separator such as a dash "-", MUST ensure that the registration is semantically aligned, from a data model perspective, with existing subtype names in the media type registry. For example, for the media types "application/foo+bar" and "application/foo+baz", the expectation is that the semantics suggested by the subtype name "application/foo" are the same between both media types. The Designated Expert MUST reject a registration if they believe the semantics for a media type registration does not align with existing subtype names in the media type registry.
 
-Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated base subtype name to register the new media type.
+Registrants MUST prove to the Designated Expert, such as through an email to a public mailing list or issue tracker comment, that they have consent from the existing change controller for the associated subtype name to register the new media type.
 
-### Common Suffix Patterns
+### Use Cases for Structured Syntax Suffixes
 
-There are a few common patterns that are utilized for media types that use structured suffixes. These patterns include expressing that the data associated with a media type:
+Common use cases for media types that employ structured syntax suffixes include:
 
-* Utilizes a structured data format such as "+xml", "+json", "+yaml", or "+cbor".
-* Is compressed using a binary compression format such as "+zip" or "+gzip".
-* Is encoded in a digitally signature format such as "+jwt" or "+cose".
+* Identifying use of a structured data format; for example "+xml", "+json", "+yaml", and "+cbor"
+* Flagging compression with a format such as "+zip" or "+gzip"
+* Flagging encoding in a digital signature format such as "+jwt" or "+cose"
 
-While it is conceivable that suffixes such as "+xml+zip" are possible, such usage is discouraged due to the large number of combinatorial possibilities that could occur and the negative impact that might have on security considerations for toolchains that attempt to safely process all of the possibilities.
+While it might be desirable to indicate multiple use cases simultaneously using a compound suffix (e.g., "+xml+zip"), experience shows that suffixes are a poor basis for this; the combinations of suffixes quickly multiply, and there is not a well-specified processing model that can handle them safely. Therefore, multiple suffixes are disallowed from use.
 
-### Fragment Identifiers and Suffixes
+### Fragment Identifiers and Structured Syntax Suffixes {#suffix-frag}
 
-The syntax and semantics for fragment identifiers are specified in the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry. In general, when processing fragment identifiers associated with a structured syntax suffix, the following rules should be followed:
+Structured syntax suffixes are able to specify fragment identifier handling for all subtypes that utilise them, as indicated in the "Fragment Identifier Considerations" column of the Structured Syntax Suffixes registry.
 
-1. For cases defined for the structured syntax suffix, where the fragment identifier does resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the "Fragment Identifier Considerations" column in the IANA Structured Syntax Suffixes registry.
-2. For cases defined for the structured syntax suffix, where the fragment identifier does not resolve per the structured syntax suffix rules, then proceed as specified by the specification associated with the full media type.
-3. For cases not defined for the structured syntax suffix, then proceed as specified by the specification associated with the full media type.
+Individual subtypes can specify additional handling. To ensure consistent processing, precedence is determined by the following rules (first match winning):
 
+1. When the structured syntax suffix defines fragment identifier handling and it successfully resolves the fragment identifier, that determines fragment identifier handling;
+2. Otherwise, the specific media type determines fragment identifier handling.
+
+### Security Considerations for Structured Syntax Suffix Processing
+
+Processors that utilise the information in structured syntax suffixes encounter the following security considerations.
+
+#### Relationships Between Types
+
+The relationship between a media type that employs a structured syntax suffix and the type (if any) that results from removing that suffix cannot be known merely by examining the types. For example, content marked "application/foo+bar" may or may not be processable or valid as "application/foo" content. It may be possible to derive one from the other, but that is specific to the structured syntax suffix and/or media type itself.
+
+This uncertainty extends to fragment identifier processing: per the rules in {{suffix-frag}}, a fragment identifier that might be valid for an "application/foo+bar" document might not be applicable to another "+bar" document, because media-type specific fragment identifier resolution might be used.
+
+Likewise, the security characteristics that a processor needs to consider may change depending upon whether it is solely processing the structured syntax suffix or the entire media type. For example, a processor cannot presume that the security characteristics for a "+bar" document will be the same as for a "application/foo+bar" document.
+
+#### Partial Processing
+
+An attacker might append structured syntax suffixes in order to trick processors into skipping security checks. For example, an attacker might use an "application/vnd.ms-excel.addin.macroEnabled.12+zip" structured syntax suffix to trigger an unzip process into invoking Microsoft Excel, bypassing anti-virus scanners that would normally block the file from being opened.
+
+Enterprising attackers might take advantage of toolchains that partially process media types in this manner. Processing of media types based only on the presence of a structured syntax suffix needs to ensure that further processing does not blindly trust the decoded data. For example,  proper magic header or file structure checking could mitigate this attack.
+
+### Additional Structured Syntax Suffixes
+
+The primary guideline for whether a structured syntax suffix is registrable is that it be described by a readily available description, preferably within a document published by an established standards-related organization, and for which there's a reference that can be used in a Normative References section of an RFC.
 
 #  Media Type Registration Procedures {#procedures}
 
@@ -672,7 +631,10 @@ Security requirements for both media type and media type suffix registrations ar
 
 # IANA Considerations
 
-_None Yet._
+## Top-Level Types Registry
+
+In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
+
 
 #  Acknowledgments
 
@@ -692,8 +654,6 @@ It may be desirable to restrict the use of media types to specific environments 
 
 Some media types registered prior to 1996 with unfaceted subtype names, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in those trees.
 
-There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. (Note that this includes subtype names beginning with the "x-" prefix.) If possible, such a media type should be reregistered with a proper faceted subtype name, possibly using a deprecated alias to identify the original name (see {{deprecated-aliases}}).
-
-However, if this is not possible, the type can, subject to approval by both the media types reviewer and the IESG, be registered in the proper tree with its unfaceted name.
+There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. In these cases, the community format registration process ({{community}}) ought be considered.
 
 
