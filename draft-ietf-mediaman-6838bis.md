@@ -348,7 +348,9 @@ The third case is described in {{community}}.
 
 Media types in the standards tree MUST NOT have faceted subtype names, unless they are grandfathered in using the process described in {{grandfather}}.
 
-The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
+The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards, the change controller is normally the IESG.
+
+Modification or alteration of the specification uses the same level of processing (e.g., a registration submitted on Standards Track can be revised in another Standards Track RFC, but cannot be revised in an Informational RFC) required for the initial registration.
 
 #### Community Formats in the Standards Tree {#community}
 
