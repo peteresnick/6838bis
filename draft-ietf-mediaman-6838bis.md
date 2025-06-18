@@ -258,57 +258,15 @@ If a media type is explicitly intended for limited use, this MUST be noted in it
 
 # Top-Level Media Types {#top-level}
 
-The choice of top-level type MUST take into account the nature of media type involved. New subtypes of top-level types MUST conform to the restrictions of the top-level type, if any.
+Media types are organised into general categories using the top-level type. The choice of top-level type MUST take into account the nature of media type involved.
 
-The following sections describe each of the initial set of top-level types and their associated restrictions. Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport. (See {{!RFC2046}} for additional information on the restrictions MIME imposes.)
+The list of top-level types is maintained in the IANA Top-Level Media Types registry at:
 
-## Text Media Types
+> https://www.iana.org/assignments/top-level-media-types/
 
-A top-level type of "text" indicates that the content is principally textual in form.
+Top-level types can place various restrictions on the media types that use them. New media types MUST conform to the restrictions (if any) of their top-level type.
 
-Text that does not provide for or allow formatting commands, font attribute specifications, processing instructions, interpretation directives, or content markup is known as "plain text". Plain text is seen simply as a linear sequence of characters, possibly interrupted by line breaks or page breaks. Plain text MAY allow the stacking of several characters in the same position in the text. Plain text in scripts like Arabic and Hebrew may also include facilities that allow the arbitrary mixing of text segments with different writing directions.
-
-Beyond plain text, there are many formats for representing what might be known as "rich text". An interesting characteristic of many such representations is that they are to some extent readable even without the software that interprets them. It is useful to distinguish them, at the highest level, from such unreadable data as images, audio, or text represented in an unreadable form. In the absence of appropriate interpretation software, it is reasonable to present subtypes of "text" to the user, while it is not reasonable to do so with most non-textual data. Such formatted textual data can be represented using subtypes of "text".
-
-### The Charset Parameter
-
-Many subtypes of text, notably including the subtype "text/plain", which is a generic subtype for plain text defined in {{!RFC2046}}, define a "charset" parameter. If a "charset" parameter is defined for a particular subtype of text, it MUST be used to specify a charset name defined in accordance to the procedures laid out in {{!RFC2978}}.
-
-As specified in {{!RFC6657}}, a "charset" parameter SHOULD NOT be specified when charset information is transported inside the payload (e.g., as in "text/xml").
-
-If a "charset" parameter is specified, it SHOULD be a required parameter, eliminating the options of specifying a default value. If there is a strong reason for the parameter to be optional despite this advice, each subtype MAY specify its own default value, or alternatively, it MAY specify that there is no default value. Finally, the "UTF-8" charset {{!RFC3629}} SHOULD be selected as the default. See {{!RFC6657}} for additional information on the use of "charset" parameters in conjunction with subtypes of text.
-
-Regardless of what approach is chosen, all new text/* registrations MUST clearly specify how the charset is determined; relying on the US-ASCII default defined in {{Section 4.1.2 of !RFC2046}} is no longer permitted. If explanatory text is needed, this SHOULD be placed in the additional information section of the registration.
-
-## Image Media Types
-
-A top-level type of "image" indicates that the content is one or more individual images. The subtype names the specific image format.
-
-## Audio Media Types
-
-A top-level type of "audio" indicates that the content is audio data. The subtype names the specific audio format.
-
-## Video Media Types
-
-A top-level type of "video" indicates that the content is a time-varying-picture image, possibly with color and coordinated sound. The term 'video' is used in its most generic sense, rather than with reference to any particular technology or format, and is not meant to preclude subtypes such as animated drawings encoded compactly.
-
-Note that although in general the mixing of multiple kinds of media in a single body is discouraged {{!RFC2046}}, it is recognized that many video formats include a representation for synchronized audio and/or text, and this is explicitly permitted for subtypes of "video".
-
-## Application Media Types
-
-A top-level type of "application" indicates that the content is discrete data that do not fit under any of the other type names, and particularly for data to be processed by some type of application program. This is information that must be processed by an application before it is viewable or usable by a user.
-
-Expected uses for the "application" type name include but are not limited to file transfer, spreadsheets, presentations, scheduling data, and languages for "active" (computational) material. (The last, in particular, can pose security problems that must be understood by implementors. The "application/postscript" media type registration in {{!RFC2046}} provides a good example of how to handle these issues.)
-
-For example, a meeting scheduler might define a standard representation for information about proposed meeting dates. An intelligent user agent would use this information to conduct a dialog with the user, and might then send additional material based on that dialog. More generally, there have been several "active" languages developed in which programs in a suitably specialized language are transported to a remote location and automatically run in the recipient's environment. Such applications may be defined as subtypes of the "application" top-level type.
-
-The subtype of "application" will often either be the name or include part of the name of the application for which the data are intended. This does not mean, however, that any application program name may simply be used freely as a subtype of "application"; the subtype needs to be registered.
-
-## Multipart and Message Media Types
-
-A top-level type of "multipart" or "message" indicates that the content is a composite type; that is, they provide a means of encapsulating zero or more objects, each one a separate media type.
-
-All subtypes of multipart and message MUST conform to the syntax rules and other requirements specified in {{!RFC2046}} and amended by {{Section 3.5 of !RFC6532}}.
+Additionally, various protocols, including but not limited to HTTP and MIME, MAY impose additional restrictions on the media types they can transport (See {{!RFC2046}} for additional information on the restrictions MIME imposes).
 
 ## Additional Top-Level Types
 
@@ -675,7 +633,10 @@ Security requirements for both media type and media type suffix registrations ar
 
 # IANA Considerations
 
-_None Yet._
+## Top-Level Types Registry
+
+In the Top-Level Media Types registry, IANA should link the reference field for each top-level type to the specific subsection in question, rather than just the relevant RFC.
+
 
 #  Acknowledgments
 
