@@ -340,7 +340,7 @@ Registrations in the standards tree MUST be either:
 
 3. approved by the Designated Expert(s) as identifying a "community format", as described in {{community}}.
 
-The first procedure is used for registrations from IETF Consensus documents, or in rare cases when registering a grandfathered (see {{grandfather}}) and/or otherwise incomplete registration is in the interest of the Internet community. See {{publication}} for publication requirements.
+The first procedure is used for registrations from IETF Consensus documents. See {{publication}} for publication requirements.
 
 In the second case, the IESG makes a one-time decision on whether the registration submitter represents a recognized standards-related organization; after that, registration requests are performed as specified in {{review}}. The format MUST be described by a formal specification produced by the submitting standards-related organization.
 
@@ -658,8 +658,6 @@ It may be desirable to restrict the use of media types to specific environments 
 
 Some media types registered prior to 1996 with unfaceted subtype names, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in those trees.
 
-There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. (Note that this includes subtype names beginning with the "x-" prefix.) If possible, such a media type SHOULD be reregistered with a proper faceted subtype name, possibly using a deprecated alias to identify the original name (see {{deprecated-aliases}}).
-
-However, if this is not possible, the type can, subject to approval by both the media types reviewer and the IESG, be registered in the proper tree with its unfaceted name.
+There may also be cases where a media type with an unfaceted subtype name has been widely deployed without being registered. In these cases, the community format registration process ({{community}}) ought be considered.
 
 
