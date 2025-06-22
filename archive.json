@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-19T01:07:57.467426+00:00",
+  "timestamp": "2025-06-22T01:14:20.167670+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -22,6 +22,11 @@
       "name": "Needs review",
       "description": "",
       "color": "7A6C39"
+    },
+    {
+      "name": "Blocking Last Call",
+      "description": "Needs to be resolved before WG Last Call",
+      "color": "eb4208"
     }
   ],
   "issues": [
@@ -570,10 +575,12 @@
       "author": "gloinul",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Blocking Last Call"
+      ],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-06-04T23:20:37Z",
+      "updatedAt": "2025-06-20T14:27:16Z",
       "closedAt": null,
       "comments": [
         {
@@ -646,10 +653,12 @@
       "author": "alvestrand",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Blocking Last Call"
+      ],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-05-21T04:50:02Z",
+      "updatedAt": "2025-06-20T14:23:25Z",
       "closedAt": null,
       "comments": [
         {
@@ -658,6 +667,13 @@
           "body": "What should be said?",
           "createdAt": "2025-05-21T04:50:01Z",
           "updatedAt": "2025-05-21T04:50:01Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "We should ask other SDOs to say at which step they make registrations.\nFor IETF, it's \"at IESG approval\".\nFor W3C, it might be CR - or PR - or something else.\nFor 3GPP, I don't even know the names of the stages.\n\nUnclear to me what \"ask to say\" means in this context.",
+          "createdAt": "2025-06-20T14:22:49Z",
+          "updatedAt": "2025-06-20T14:23:19Z"
         }
       ]
     },
@@ -748,10 +764,12 @@
       "author": "mnot",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Blocking Last Call"
+      ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-05-07T08:59:50Z",
+      "updatedAt": "2025-06-20T14:17:43Z",
       "closedAt": null,
       "comments": [
         {
@@ -772,10 +790,12 @@
       "author": "bc-pi",
       "authorAssociation": "NONE",
       "assignees": [],
-      "labels": [],
+      "labels": [
+        "Blocking Last Call"
+      ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-05-07T18:06:45Z",
+      "updatedAt": "2025-06-20T14:17:15Z",
       "closedAt": null,
       "comments": [
         {
