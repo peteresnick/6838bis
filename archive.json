@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-22T01:14:20.167670+00:00",
+  "timestamp": "2025-06-24T01:08:25.692754+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -769,7 +769,7 @@
       ],
       "body": "Standards tree says:\n\n> The \"owner\" of a media type registered in the standards tree is assumed to be the standards-related organization itself.\n\nWhat should it be for community formats?",
       "createdAt": "2025-05-06T23:22:32Z",
-      "updatedAt": "2025-06-20T14:17:43Z",
+      "updatedAt": "2025-06-22T08:18:01Z",
       "closedAt": null,
       "comments": [
         {
@@ -778,6 +778,20 @@
           "body": "Should we require the community to name a representative or representative organization?\nI would assume that the normal case is change controller = registrant.\n",
           "createdAt": "2025-05-07T08:59:15Z",
           "updatedAt": "2025-05-07T08:59:49Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "That's sometimes difficult to pin down -- these communities are often amorphous.  How about something like:\n\n> The \"owner\" of a media type registered using the community formats process can be an external organisation representing the relevant community. When one cannot be identified or contacted, the IESG should be listed as the owner of the registration.",
+          "createdAt": "2025-06-22T06:13:00Z",
+          "updatedAt": "2025-06-22T06:13:00Z"
+        },
+        {
+          "author": "polx",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "As I remarked in another issue, having in this document more information about the way the IESG acts when it is a change-controller would be useful for people reading the document. Of course, it is possible to read about the IESG in other places but having one generic sentence here attracts confidence, I believe.\n\nI would like to suggest, in the sentence above of @mnot , something like \"the IESG should be listed as the owner of the registration which acts on it in a publicly visible forum\".\nWDYT?",
+          "createdAt": "2025-06-22T08:18:01Z",
+          "updatedAt": "2025-06-22T08:18:01Z"
         }
       ]
     },
@@ -795,7 +809,7 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-06-20T14:17:15Z",
+      "updatedAt": "2025-06-22T06:09:18Z",
       "closedAt": null,
       "comments": [
         {
@@ -811,6 +825,13 @@
           "body": "> The chairs directed the editors to incorporate the current text from -suffixes without changes to the semantics.\n\nWas that before or after the WG meeting in Vancouver? \n\n",
           "createdAt": "2025-05-07T18:06:43Z",
           "updatedAt": "2025-05-07T18:06:43Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Personally -- I don't object to having informative text about this in the spec -- i.e., setting the expectation that if you define a media type with a suffix, it shouldn't conflict with the 'base' type. However, using normative language and especially requiring that the DE reject such registrations is going too far. Give them the discretion to handle things appropriately. E.g.,\n\n> A registration request for a media type that uses a suffix is expected to be coordinated with the change controller for any already registered media type with the same type and subtype names without the suffix -- in particular regarding semantics and data model. \n",
+          "createdAt": "2025-06-22T06:09:18Z",
+          "updatedAt": "2025-06-22T06:09:18Z"
         }
       ]
     },
