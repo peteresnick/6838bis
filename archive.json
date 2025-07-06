@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-06-24T01:08:25.692754+00:00",
+  "timestamp": "2025-07-06T01:14:51.090287+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -580,7 +580,7 @@
       ],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-06-20T14:27:16Z",
+      "updatedAt": "2025-07-05T05:35:29Z",
       "closedAt": null,
       "comments": [
         {
@@ -617,6 +617,13 @@
           "body": "To my mind, the \"is RTP\" information is not application specific, it's RTP specific. RTP formats is a field of use, not an application.\n\nBut - RTP doesn't really fit well with the other \"encoding\" descriptions like \"binary\", \"8bit\" or \"7bit\" since these presume the idea of a byte stream representation (aka \"file\").\n\nSo using \"encoding: frames\" (and making certain to specify that the \"encoding\" field is multivalued, and that the description of the possible values of the \"encoding\" field is right) seems like a good way to accomplish the purpose without bending things too much.\n\n",
           "createdAt": "2025-06-04T23:20:37Z",
           "updatedAt": "2025-06-04T23:20:37Z"
+        },
+        {
+          "author": "ronieven",
+          "authorAssociation": "NONE",
+          "body": "If you look at the registrations of video subtypes like h261 , h263, h263-1998, h264 you will see that the encoding field text is not consistence and restriction on usage is also used to indicate rtp support. H264 encoding, for example, just say rtp without even mentioning framed or binary. \nI also agree with Magnus that the problem with having two registration lists was the cause for failure making consistency between the two difficult to maintain and rfc9751 was the corr3ct decision. So some way to indicate clearly which subtypes are rtp is important",
+          "createdAt": "2025-07-05T05:35:29Z",
+          "updatedAt": "2025-07-05T05:35:29Z"
         }
       ]
     },
@@ -687,11 +694,11 @@
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [
-        "Ready to close"
+        "Blocking Last Call"
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-06-16T15:51:23Z",
+      "updatedAt": "2025-07-05T10:27:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -721,6 +728,20 @@
           "body": "As I understand what's been on the lists, the updates are to the subtypes defined in RFC 9695, not to the top-level type, and have listed SC29/WG7 as their change controller. I think updating of subtypes is described well enough in the current draft.\n",
           "createdAt": "2025-06-16T15:51:23Z",
           "updatedAt": "2025-06-16T15:51:23Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "I think we still have a somewhat underdocumented procedure for changing the change controller. The rest of the change procedures seem OK.\n\nMoving to \"LC blocking\".\n",
+          "createdAt": "2025-07-04T20:27:08Z",
+          "updatedAt": "2025-07-04T20:27:08Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "As noted in #9, we currently have:\n\n> The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.\n\nWhat kind of procedures are you envisioning? I suspect the circumstances are going to be diverse enough (in the nature of the party who was the change controller, the affected communities, and the nature of the cessation of contact) that a one-size-fits-all is going to be difficult.",
+          "createdAt": "2025-07-05T10:27:38Z",
+          "updatedAt": "2025-07-05T10:27:38Z"
         }
       ]
     },
