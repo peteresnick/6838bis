@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-06T01:14:51.090287+00:00",
+  "timestamp": "2025-07-08T01:09:17.095468+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -580,7 +580,7 @@
       ],
       "body": "With the approval and imminent publication of https://datatracker.ietf.org/doc/draft-ietf-avtcore-rtp-payload-registry/ there no longer separate registry for which media types are RTP payload formats. Although if going through the media types registrations themselves one can determine if they represent RTP payload formats. Please note that some are both file formats and RTP payload formats. Thus, I would request that when updating the media type procedures and registry one should consider some clarifications to help identify media types that have RTP payload formats.\n\n1. I would suggest that one add a column in the media types registry for each entry to indicate those that have RTP payload formats. \n2. Secondly there is the question if one like to convert the implicit indicator in the encoding information, that some but not all framed encodings are RTP, and rather have an explicit field in the registration template to say: Media Type has an RTP payload format. ",
       "createdAt": "2025-03-06T13:39:56Z",
-      "updatedAt": "2025-07-05T05:35:29Z",
+      "updatedAt": "2025-07-07T11:52:38Z",
       "closedAt": null,
       "comments": [
         {
@@ -624,6 +624,13 @@
           "body": "If you look at the registrations of video subtypes like h261 , h263, h263-1998, h264 you will see that the encoding field text is not consistence and restriction on usage is also used to indicate rtp support. H264 encoding, for example, just say rtp without even mentioning framed or binary. \nI also agree with Magnus that the problem with having two registration lists was the cause for failure making consistency between the two difficult to maintain and rfc9751 was the corr3ct decision. So some way to indicate clearly which subtypes are rtp is important",
           "createdAt": "2025-07-05T05:35:29Z",
           "updatedAt": "2025-07-05T05:35:29Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "On reading the text of -05, it seems to me that the description of the \"framed\" encoding type is adequate for the RTP formats, and can be easily extracted from the registration templates.\nLet's take that as a proposed resolution for the text - and leave the issue of updating those as a maintenance issue.\n",
+          "createdAt": "2025-07-07T11:52:38Z",
+          "updatedAt": "2025-07-07T11:52:38Z"
         }
       ]
     },
@@ -698,7 +705,7 @@
       ],
       "body": "Section 6.1 \"Change procedures\" is pretty short.\nIn particular, it doesn't say much about:\n- Who can make changes (presumably \"change controller\")\n- How one can make changes if change controller is unavailable or unresponsive\n- When a change controller is supposed to make changes (for instance \"if a listed contact point changes\"?)\n\nMore text may be needed.\n",
       "createdAt": "2025-04-01T11:53:52Z",
-      "updatedAt": "2025-07-05T10:27:38Z",
+      "updatedAt": "2025-07-07T16:35:58Z",
       "closedAt": null,
       "comments": [
         {
@@ -742,6 +749,20 @@
           "body": "As noted in #9, we currently have:\n\n> The IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.\n\nWhat kind of procedures are you envisioning? I suspect the circumstances are going to be diverse enough (in the nature of the party who was the change controller, the affected communities, and the nature of the cessation of contact) that a one-size-fits-all is going to be difficult.",
           "createdAt": "2025-07-05T10:27:38Z",
           "updatedAt": "2025-07-05T10:27:38Z"
+        },
+        {
+          "author": "alvestrand",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Might as well suggest specific text..... the most important points are:\n1) Nothing happens if nobody wants to change anything (no busy-work)\n2) The IESG acts on the DE's recommendation, not on the request directly (no DoS attacks on the IESG)\n\n5.5 Old text:\n\"\nThe change controller of a media type may pass responsibility to another person or agency by informing the IANA; this can be done without discussion or review.\n\nThe IESG may reassign responsibility for a media type. The most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.\"\n\nNew text:\n\n\"The change controller is responsible for sending the request to update the media type. Requests that are not authorized by the change controller will be rejected by the Designated Expert, except as described below.\n\nIf, in the opinion of the submitter, the change controller is uncontactable or unresponsive, a submitter can include a change of change controller in the updated registration template. In this case, the Designated Expert, after finding the change request otherwise reasonable and making reasonable effort to contact the old change controller, will recommend to the IESG that the change controller be changed; the IESG will make the final decision.\n\nThe most common case of this will be to enable changes to be made to types where the author of the registration has died, fallen out of contact, or is otherwise unable to make changes that are important to the community.\"\n\n",
+          "createdAt": "2025-07-07T11:48:03Z",
+          "updatedAt": "2025-07-07T11:48:03Z"
+        },
+        {
+          "author": "mnot",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I like this direction, but would prefer a slightly different angle:\n\n\nWhen a change to a media type registration is requested, the Designated Expert will assure that the change controller approves the change. If the Designated Expert finds that the change controller is unresponsive or uncontactable for a reasonable period of time (no less than four weeks), and reasonable efforts have been made to contact them, they may recommend to the IESG that the change controller be updated. The IESG makes the final decision regarding updates to change controllers.\n\n\nHere, we don't depend on someone in the community noticing and invoking the process, but they can still suggest this to the DE.",
+          "createdAt": "2025-07-07T16:35:58Z",
+          "updatedAt": "2025-07-07T16:35:58Z"
         }
       ]
     },
