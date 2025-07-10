@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-08T01:09:17.095468+00:00",
+  "timestamp": "2025-07-10T01:09:59.169203+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -672,7 +672,7 @@
       ],
       "body": "The procedures for IANA to check IETF work on updating specs is working reasonably well.\nThere are no corresponding procedures for other SDOs. They should be advised that they need to have one.\n",
       "createdAt": "2025-03-18T11:25:08Z",
-      "updatedAt": "2025-06-20T14:23:25Z",
+      "updatedAt": "2025-07-08T06:32:26Z",
       "closedAt": null,
       "comments": [
         {
@@ -688,6 +688,13 @@
           "body": "We should ask other SDOs to say at which step they make registrations.\nFor IETF, it's \"at IESG approval\".\nFor W3C, it might be CR - or PR - or something else.\nFor 3GPP, I don't even know the names of the stages.\n\nUnclear to me what \"ask to say\" means in this context.",
           "createdAt": "2025-06-20T14:22:49Z",
           "updatedAt": "2025-06-20T14:23:19Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "IMHO other SDOs should be asked to submit at what stage they make registrations requests to the DEs through IANA. DEs should be able to take a call if this is appropriate (e.g. the SDO is not rushing to register) and if not bring they might bring it up in issues or at a meeting.",
+          "createdAt": "2025-07-08T06:32:26Z",
+          "updatedAt": "2025-07-08T06:32:26Z"
         }
       ]
     },
@@ -851,7 +858,7 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-06-22T06:09:18Z",
+      "updatedAt": "2025-07-08T18:57:16Z",
       "closedAt": null,
       "comments": [
         {
@@ -874,6 +881,13 @@
           "body": "Personally -- I don't object to having informative text about this in the spec -- i.e., setting the expectation that if you define a media type with a suffix, it shouldn't conflict with the 'base' type. However, using normative language and especially requiring that the DE reject such registrations is going too far. Give them the discretion to handle things appropriately. E.g.,\n\n> A registration request for a media type that uses a suffix is expected to be coordinated with the change controller for any already registered media type with the same type and subtype names without the suffix -- in particular regarding semantics and data model. \n",
           "createdAt": "2025-06-22T06:09:18Z",
           "updatedAt": "2025-06-22T06:09:18Z"
+        },
+        {
+          "author": "bc-pi",
+          "authorAssociation": "NONE",
+          "body": "Something like that that provides the DEs with discretion and doesn't put undue burden on them to police some notion of ownership would be, in my opinion, more reasonable.",
+          "createdAt": "2025-07-08T18:57:16Z",
+          "updatedAt": "2025-07-08T18:57:16Z"
         }
       ]
     },
@@ -1172,7 +1186,7 @@
       ],
       "body": "Should we have an early allocation procedure? (make a placeholder, and get Designated Expert review)? (this applies also to other organizations) (Relevant: RFC 7120)\n\n(From #8)",
       "createdAt": "2025-05-27T02:59:57Z",
-      "updatedAt": "2025-06-06T20:06:24Z",
+      "updatedAt": "2025-07-08T06:29:03Z",
       "closedAt": null,
       "comments": [
         {
@@ -1202,6 +1216,13 @@
           "body": "It seems like this can be closed with no action, then.",
           "createdAt": "2025-06-06T20:06:23Z",
           "updatedAt": "2025-06-06T20:06:23Z"
+        },
+        {
+          "author": "CxRes",
+          "authorAssociation": "NONE",
+          "body": "From what I recall of the Bangkok meeting, most IETF participants, including DEs were unaware of the early allocation procedure.  Since IETF processes are more rigorous for a regular registration, we had an instance where another SDO was able to claim a registration as discussed in #8. \n\nAt a minimum, 6838bis should point to RFC7120 and an equivalent (or higher) bar be set for other SDOs to request an early allocation. Other SDOs should be asked to communicate their early allocation request requirements to the DEs through IANA. DEs can bring them up at a meeting/in issues if they feel the other SDOs request are inconsistent.",
+          "createdAt": "2025-07-08T06:29:03Z",
+          "updatedAt": "2025-07-08T06:29:03Z"
         }
       ]
     },
