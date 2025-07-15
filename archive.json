@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-07-10T01:09:59.169203+00:00",
+  "timestamp": "2025-07-15T01:13:53.936693+00:00",
   "repo": "ietf-wg-mediaman/6838bis",
   "labels": [
     {
@@ -858,7 +858,7 @@
       ],
       "body": "It is extremely frustrating and belittling to feel that perfectly reasonable input is being ignored. \n\n> This is text that I was explicitly objecting to at the previous in-person meeting and that I was under the impression that the author of this PR agreed as did at least one of the DEs.\n\n_Originally posted by @bc-pi in https://github.com/ietf-wg-mediaman/6838bis/pull/14#discussion_r2000685271_\n\n![Image](https://github.com/user-attachments/assets/df706dda-2b9e-454c-93fa-cca1639b5f4b)\n",
       "createdAt": "2025-05-06T23:34:54Z",
-      "updatedAt": "2025-07-08T18:57:16Z",
+      "updatedAt": "2025-07-14T16:10:17Z",
       "closedAt": null,
       "comments": [
         {
@@ -888,6 +888,13 @@
           "body": "Something like that that provides the DEs with discretion and doesn't put undue burden on them to police some notion of ownership would be, in my opinion, more reasonable.",
           "createdAt": "2025-07-08T18:57:16Z",
           "updatedAt": "2025-07-08T18:57:16Z"
+        },
+        {
+          "author": "brentzundel",
+          "authorAssociation": "NONE",
+          "body": "I raised #41 as a starting point toward drafting language that can find consensus.",
+          "createdAt": "2025-07-14T16:10:17Z",
+          "updatedAt": "2025-07-14T16:10:17Z"
         }
       ]
     },
@@ -1981,6 +1988,32 @@
       "mergeCommit": {
         "oid": "8f5251a5ee7df4e2bf1e835b94cf63ddce49e516"
       },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 41,
+      "id": "PR_kwDOMdBaOc6e1HmR",
+      "title": "attempting softer language for Issue 24",
+      "url": "https://github.com/ietf-wg-mediaman/6838bis/pull/41",
+      "state": "OPEN",
+      "author": "brentzundel",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This PR attempts to soften language in line with the comments in Issue 24.",
+      "createdAt": "2025-07-14T16:09:07Z",
+      "updatedAt": "2025-07-14T16:11:58Z",
+      "baseRepository": "ietf-wg-mediaman/6838bis",
+      "baseRefName": "main",
+      "baseRefOid": "80a658a9c55e02009bc70045003cfdeee248fc05",
+      "headRepository": "brentzundel/6838bis",
+      "headRefName": "issue-24",
+      "headRefOid": "8f23a38486236f215e92ff711c392ef5388e552a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
       "comments": [],
       "reviews": []
     }
