@@ -32,7 +32,7 @@ author:
  -
     ins: P. Resnick
     name: Pete Resnick
-    organization:
+    organization: Episteme Technology Consulting
     email: resnick@episteme.net
 
 informative:
@@ -641,6 +641,35 @@ In the Top-Level Media Types registry, IANA should link the reference field for 
 The current authors would like to acknowledge their debt to the late Dr. Jon Postel, whose general model of IANA registration procedures and specific contributions shaped the predecessors of this document {{?RFC2048}} {{?RFC4288}}. We hope that the current version is one with which he would have agreed but, as it is impossible to verify that agreement, we have regretfully removed his name as a co-author.
 
 Randy Bush, Francis Dupont, Bjoern Hoehrmann, Barry Leiba, Murray Kucherawy, Alexey Melnikov, S. Moonesamy, Mark Nottingham, Tom Petch, Peter Saint-Andre, and Jeni Tennison provided many helpful review comments and suggestions.
+
+# Contributors
+
+Much of the text of this document is directly taken from {{?RFC6838}} and {{?RFC9694}}. We acknowledge the following authors of those documents as contributors to this:
+
+Ned Freed
+
+John C. Klensin
+1770 Massachusetts Ave, #322
+Cambridge, MA  02140
+USA
+EMail: john+ietf@jck.com
+
+
+Tony Hansen
+AT&T Laboratories
+200 Laurel Ave.
+Middletown, NJ  07748
+USA
+EMail: tony+mtsuffix@maillennium.att.com
+
+Martin J. Dürst
+Aoyama Gakuin University
+Fuchinobe 5-10-1, Chuo-ku, Sagamihara, Kanagawa
+252-5258
+Japan
+Phone: +81 42 759 6329
+Email: duerst@it.aoyama.ac.jp
+URI: https://www.sw.it.aoyama.ac.jp/Dürst/
 
 --- back
 
