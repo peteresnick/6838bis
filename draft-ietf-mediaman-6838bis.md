@@ -322,7 +322,7 @@ To increase the efficiency and flexibility of the registration process, differen
 
 For example, a subtype that is recommended for wide support and implementation by the Internet community would be registered in the standards tree and not have a prefix, while a subtype that is used to move files associated with proprietary software would be registered in the vendor tree, and so its subtype name would begin with a "vnd." prefix.
 
-Note that some previously defined media types do not conform to the naming conventions described below; see {{grandfather}}.
+Note that some previously defined media types do not conform to the naming conventions described below; see {{legacy}}.
 
 ### Standards Tree
 
@@ -342,7 +342,7 @@ In the second case, the IESG makes a one-time decision on whether the registrati
 
 The third case is described in {{community}}.
 
-Media types in the standards tree do not have faceted subtype names, unless they are grandfathered in using the process described in {{grandfather}}.
+Media types in the standards tree do not have faceted subtype names, unless they are given legacy status using the process described in {{legacy}}.
 
 The change controller of a media type registered in the standards tree is assumed to be the standards-related organization itself. In the case of IETF standards, the change controller is normally the IESG.
 
@@ -396,7 +396,7 @@ Subtype names with "x." as the first facet are intended exclusively for use in p
 
 The low barrier to registration in the vendor and personal trees means it should rarely, if ever, be necessary to use unregistered types. Therefore, use of types in the "x." tree is strongly discouraged.
 
-Note that types with subtype names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" subtype name prefix, it can be registered in an alternative tree by following the procedure defined in {{grandfather}}.
+Note that types with subtype names beginning with "x-" are no longer considered to be members of this tree (see {{?RFC6648}}). Also note that if a generally useful and widely deployed type incorrectly uses an "x-" subtype name prefix, it can be registered in an alternative tree by following the procedure defined in {{legacy}}.
 
 ### Additional Registration Trees
 
@@ -679,7 +679,7 @@ The media type registration process was initially defined for registering media 
 
 It may be desirable to restrict the use of media types to specific environments or to prohibit their use in other environments. This specification incorporates such restrictions into media type registrations in a systematic way. See {{non-requirements}} for additional discussion.
 
-# Grandfathered Media Types {#grandfather}
+# Legacy Media Types {#legacy}
 
 Some media types registered prior to 1996 with unfaceted subtype names, would, if registered under the guidelines in this document, be given a faceted name and placed into either the vendor or personal trees. Reregistration of those types to reflect the appropriate trees is encouraged but not required. Ownership and change control principles outlined in this document apply to those types as if they had been registered in those trees.
 
